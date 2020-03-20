@@ -16,6 +16,7 @@
 		0CE75E452423121F006CD68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE75E442423121F006CD68B /* Assets.xcassets */; };
 		0CE75E482423121F006CD68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE75E462423121F006CD68B /* LaunchScreen.storyboard */; };
 		0CE7F62124246B3A004242C3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7F62024246B3A004242C3 /* Player.swift */; };
+		0CE7F6232424775D004242C3 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0CE75E472423121F006CD68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CE75E492423121F006CD68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CE7F62024246B3A004242C3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				0CE75E3C2423121E006CD68B /* ReportMatchViewController.swift */,
 				0CD0C4C124245399000714F1 /* PlayersViewController.swift */,
+				0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE7F6232424775D004242C3 /* PlayerTableViewCell.swift in Sources */,
 				0CE75E3D2423121E006CD68B /* ReportMatchViewController.swift in Sources */,
 				0CD0C4C72424587F000714F1 /* Extensions.swift in Sources */,
 				0CE75E392423121E006CD68B /* AppDelegate.swift in Sources */,

@@ -11,7 +11,8 @@ import Foundation
 struct Player: Codable {
 	let playerId: String = UUID().uuidString
 	let name: String
-	let rating: Double
+	let singlesRating: Double
+	let doublesRating: Double
 	
 	static func loadAll() -> [Player] {
 		guard
@@ -19,7 +20,9 @@ struct Player: Codable {
 			let array = try? JSONDecoder().decode([Player].self, from: data)
 			else { return [] }
 		
-		return array
+		return array.sorted { (lhs, rhs) -> Bool in
+			lhs.name < rhs.name
+		}
 	}
 }
 

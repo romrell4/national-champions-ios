@@ -31,10 +31,10 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let player = players[indexPath.row]
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		cell.textLabel?.text = player.name
-		cell.detailTextLabel?.text = "\(player.rating)"
+		if let cell = cell as? PlayerTableViewCell {
+			cell.player = players[indexPath.row]
+		}
 		return cell
 	}
 	
@@ -42,19 +42,19 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	
 	@IBAction func addPlayer(_ sender: Any) {
 		let alert = UIAlertController(title: "Add Player", message: nil, preferredStyle: .alert)
-		alert.addTextField { (textField) in
-			textField.placeholder = "Name"
-		}
-		alert.addTextField { (textField) in
-			textField.placeholder = "Rating"
+		["Name", "Singles Rating", "Doubles Rating"].forEach { placeholder in
+			alert.addTextField { textField in
+				textField.placeholder = placeholder
+			}
 		}
 		alert.addAction(UIAlertAction(title: "Add", style: .default) { [weak self] (_) in
 			guard
 				let name = alert.textFields?[0].text,
-				let rating = alert.textFields?[1].text?.toDouble()
+				let singlesRating = alert.textFields?[1].text?.toDouble(),
+				let doublesRating = alert.textFields?[2].text?.toDouble()
 			else { return }
 			
-			self?.players.append(Player(name: name, rating: rating))
+			self?.players.append(Player(name: name, singlesRating: singlesRating, doublesRating: doublesRating))
 						
 			self?.tableView.reloadData()
 		})
