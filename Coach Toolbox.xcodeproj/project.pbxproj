@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C124245399000714F1 /* PlayersViewController.swift */; };
+		0CD0C4C72424587F000714F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C62424587F000714F1 /* Extensions.swift */; };
 		0CE75E392423121E006CD68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE75E382423121E006CD68B /* AppDelegate.swift */; };
 		0CE75E3B2423121E006CD68B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE75E3A2423121E006CD68B /* SceneDelegate.swift */; };
-		0CE75E3D2423121E006CD68B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE75E3C2423121E006CD68B /* ViewController.swift */; };
+		0CE75E3D2423121E006CD68B /* ReportMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE75E3C2423121E006CD68B /* ReportMatchViewController.swift */; };
 		0CE75E402423121E006CD68B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE75E3E2423121E006CD68B /* Main.storyboard */; };
-		0CE75E432423121E006CD68B /* Coach_Toolbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CE75E412423121E006CD68B /* Coach_Toolbox.xcdatamodeld */; };
 		0CE75E452423121F006CD68B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE75E442423121F006CD68B /* Assets.xcassets */; };
 		0CE75E482423121F006CD68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE75E462423121F006CD68B /* LaunchScreen.storyboard */; };
+		0CE7F62124246B3A004242C3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7F62024246B3A004242C3 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CD0C4C124245399000714F1 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		0CD0C4C62424587F000714F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0CE75E352423121E006CD68B /* Coach Toolbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Toolbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE75E382423121E006CD68B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CE75E3A2423121E006CD68B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0CE75E3C2423121E006CD68B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CE75E3C2423121E006CD68B /* ReportMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMatchViewController.swift; sourceTree = "<group>"; };
 		0CE75E3F2423121E006CD68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0CE75E422423121E006CD68B /* Coach_Toolbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coach_Toolbox.xcdatamodel; sourceTree = "<group>"; };
 		0CE75E442423121F006CD68B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE75E472423121F006CD68B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CE75E492423121F006CD68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CE7F62024246B3A004242C3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CD0C4C324245833000714F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CE75E462423121F006CD68B /* LaunchScreen.storyboard */,
+				0CE75E3E2423121E006CD68B /* Main.storyboard */,
+				0CE75E442423121F006CD68B /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CD0C4C42424583B000714F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CE75E3C2423121E006CD68B /* ReportMatchViewController.swift */,
+				0CD0C4C124245399000714F1 /* PlayersViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0CD0C4C524245843000714F1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0CE75E382423121E006CD68B /* AppDelegate.swift */,
+				0CE75E3A2423121E006CD68B /* SceneDelegate.swift */,
+				0CD0C4C62424587F000714F1 /* Extensions.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		0CE75E2C2423121E006CD68B = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +91,21 @@
 		0CE75E372423121E006CD68B /* Coach Toolbox */ = {
 			isa = PBXGroup;
 			children = (
-				0CE75E382423121E006CD68B /* AppDelegate.swift */,
-				0CE75E3A2423121E006CD68B /* SceneDelegate.swift */,
-				0CE75E3C2423121E006CD68B /* ViewController.swift */,
-				0CE75E3E2423121E006CD68B /* Main.storyboard */,
-				0CE75E442423121F006CD68B /* Assets.xcassets */,
-				0CE75E462423121F006CD68B /* LaunchScreen.storyboard */,
+				0CD0C4C324245833000714F1 /* View */,
+				0CD0C4C42424583B000714F1 /* Controller */,
+				0CE7F61F24246B29004242C3 /* Model */,
+				0CD0C4C524245843000714F1 /* Support */,
 				0CE75E492423121F006CD68B /* Info.plist */,
-				0CE75E412423121E006CD68B /* Coach_Toolbox.xcdatamodeld */,
 			);
 			path = "Coach Toolbox";
+			sourceTree = "<group>";
+		};
+		0CE7F61F24246B29004242C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CE7F62024246B3A004242C3 /* Player.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE75E3D2423121E006CD68B /* ViewController.swift in Sources */,
+				0CE75E3D2423121E006CD68B /* ReportMatchViewController.swift in Sources */,
+				0CD0C4C72424587F000714F1 /* Extensions.swift in Sources */,
 				0CE75E392423121E006CD68B /* AppDelegate.swift in Sources */,
-				0CE75E432423121E006CD68B /* Coach_Toolbox.xcdatamodeld in Sources */,
+				0CE7F62124246B3A004242C3 /* Player.swift in Sources */,
+				0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */,
 				0CE75E3B2423121E006CD68B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,19 +382,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0CE75E412423121E006CD68B /* Coach_Toolbox.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0CE75E422423121E006CD68B /* Coach_Toolbox.xcdatamodel */,
-			);
-			currentVersion = 0CE75E422423121E006CD68B /* Coach_Toolbox.xcdatamodel */;
-			path = Coach_Toolbox.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 0CE75E2D2423121E006CD68B /* Project object */;
 }

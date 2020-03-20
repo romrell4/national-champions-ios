@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ReportMatchViewController.swift
 //  Coach Toolbox
 //
 //  Created by Eric Romrell on 3/18/20.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ReportMatchViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
 	}
 
 
