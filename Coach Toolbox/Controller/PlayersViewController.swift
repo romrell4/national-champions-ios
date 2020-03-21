@@ -10,11 +10,12 @@ import UIKit
 
 class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 	
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet private weak var sortControl: UISegmentedControl!
+	@IBOutlet private weak var tableView: UITableView!
 	
 	private var players = Player.loadAll() {
 		didSet {
-			players.save()
+			tableView.reloadData()
 		}
 	}
 	
@@ -23,6 +24,10 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		
 		self.tableView.tableFooterView = UIView()
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		updateSort()
+	}
 	
 	//MARK: UITableViewDelegate/DataSource
 	
@@ -55,9 +60,19 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 			else { return }
 			
 			self?.players.append(Player(name: name, singlesRating: singlesRating, doublesRating: doublesRating))
-						
-			self?.tableView.reloadData()
+			self?.players.save()
+			self?.updateSort()
 		})
 		self.present(alert, animated: true)
+	}
+	
+	@IBAction func updateSort(_ sender: Any? = nil) {
+		players = players.sorted { (lhs, rhs) -> Bool in
+			if self.sortControl.selectedSegmentIndex == 0 {
+				return lhs.singlesRating > rhs.singlesRating
+			} else {
+				return lhs.doublesRating > rhs.doublesRating
+			}
+		}
 	}
 }

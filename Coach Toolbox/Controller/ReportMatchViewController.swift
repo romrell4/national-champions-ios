@@ -13,7 +13,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	@IBOutlet private weak var winnerTextField: UITextField!
 	@IBOutlet private weak var loserTextField: UITextField!
 	
-	private let players = Player.loadAll()
+	private var players = [Player]()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -23,6 +23,12 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		picker.dataSource = self
 		[winnerTextField, loserTextField].forEach {
 			$0?.inputView = picker
+		}
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		players = Player.loadAll().sorted { (lhs, rhs) -> Bool in
+			lhs.name < rhs.name
 		}
 	}
 	

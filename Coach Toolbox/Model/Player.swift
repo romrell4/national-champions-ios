@@ -20,9 +20,7 @@ struct Player: Codable {
 			let array = try? JSONDecoder().decode([Player].self, from: data)
 			else { return [] }
 		
-		return array.sorted { (lhs, rhs) -> Bool in
-			lhs.name < rhs.name
-		}
+		return array
 	}
 }
 

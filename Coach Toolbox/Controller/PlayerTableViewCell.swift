@@ -16,8 +16,8 @@ class PlayerTableViewCell: UITableViewCell {
 	var player: Player! {
 		didSet {
 			nameLabel.text = player.name
-			singlesRatingLabel.text = "Singles: \(player.singlesRating)"
-			doublesRatingLabel.text = "Doubles: \(player.doublesRating)"
+			singlesRatingLabel.text = "\(player.singlesRating)"
+			doublesRatingLabel.text = "\(player.doublesRating)"
 		}
 	}
 }
