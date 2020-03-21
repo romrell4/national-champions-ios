@@ -149,19 +149,28 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dlo-ff-ZVn" firstAttribute="centerY" secondItem="49o-hE-X07" secondAttribute="centerY" id="YWw-Hx-6QE"/>
                             <constraint firstItem="dlo-ff-ZVn" firstAttribute="centerX" secondItem="49o-hE-X07" secondAttribute="centerX" id="xbY-9f-Xa9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="49o-hE-X07"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="koQ-lE-VkQ" appends="YES" id="Nc9-nx-d5o"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Report Matches" id="xxO-WX-ZRJ"/>
+                    <tabBarItem key="tabBarItem" title="Report Matches" image="ReportMatch" id="xxO-WX-ZRJ"/>
                     <connections>
                         <outlet property="loserTextField" destination="tFa-v6-UUv" id="bFb-mB-BdB"/>
                         <outlet property="winnerTextField" destination="zKU-PN-5II" id="Ifq-1c-2dq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYe-jD-2Px" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="koQ-lE-VkQ">
+                    <connections>
+                        <action selector="viewTapped:" destination="wwX-UN-So8" id="Jcc-ni-Zv9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1100" y="-38"/>
         </scene>
@@ -169,7 +178,7 @@
         <scene sceneID="25o-xo-XGS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Guq-b7-NBS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Players" id="6vS-0K-iIW"/>
+                    <tabBarItem key="tabBarItem" title="Players" image="Players" id="6vS-0K-iIW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ryF-V3-SxM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -185,4 +194,8 @@
             <point key="canvasLocation" x="1098.5507246376812" y="629.46428571428567"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Players" width="25" height="25"/>
+        <image name="ReportMatch" width="25" height="25"/>
+    </resources>
 </document>

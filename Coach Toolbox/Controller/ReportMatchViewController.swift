@@ -33,4 +33,9 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 		players[row].name
 	}
+	
+	@IBAction func viewTapped(_ sender: Any) {
+		winnerTextField.resignFirstResponder()
+		loserTextField.resignFirstResponder()
+	}
 }
