@@ -350,7 +350,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Report Matches" image="ReportMatch" id="xxO-WX-ZRJ"/>
                     <connections>
+                        <outlet property="loserSet1" destination="0ze-7B-3xz" id="yyN-Bi-dXC"/>
+                        <outlet property="loserSet2" destination="0DR-oj-cMw" id="Rkz-xo-EF3"/>
+                        <outlet property="loserSet3" destination="zaW-uB-UUi" id="Rwe-m1-zjJ"/>
                         <outlet property="loserTextField" destination="tFa-v6-UUv" id="bFb-mB-BdB"/>
+                        <outlet property="winnerSet1" destination="pOX-rb-Rlr" id="UWU-d3-wC5"/>
+                        <outlet property="winnerSet2" destination="ISa-7J-HTi" id="qbE-UA-Uh1"/>
+                        <outlet property="winnerSet3" destination="g9d-fy-C1V" id="BhE-K2-1qj"/>
                         <outlet property="winnerTextField" destination="zKU-PN-5II" id="Ifq-1c-2dq"/>
                     </connections>
                 </viewController>

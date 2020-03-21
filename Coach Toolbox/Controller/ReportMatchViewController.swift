@@ -8,10 +8,26 @@
 
 import UIKit
 
-class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 	
 	@IBOutlet private weak var winnerTextField: UITextField!
 	@IBOutlet private weak var loserTextField: UITextField!
+	@IBOutlet private weak var winnerSet1: UITextField!
+	@IBOutlet private weak var loserSet1: UITextField!
+	@IBOutlet private weak var winnerSet2: UITextField!
+	@IBOutlet private weak var loserSet2: UITextField!
+	@IBOutlet private weak var winnerSet3: UITextField!
+	@IBOutlet private weak var loserSet3: UITextField!
+	
+	private var playerTextFields: [UITextField] {
+		[winnerTextField, loserTextField]
+	}
+	private var scoreTextFields: [UITextField] {
+		[winnerSet1, loserSet1, winnerSet2, loserSet2, winnerSet3, loserSet3]
+	}
+	private var allTextFields: [UITextField] {
+		playerTextFields + scoreTextFields
+	}
 	
 	private var players = [Player]()
 
@@ -21,8 +37,11 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		let picker = UIPickerView()
 		picker.delegate = self
 		picker.dataSource = self
-		[winnerTextField, loserTextField].forEach {
-			$0?.inputView = picker
+		playerTextFields.forEach {
+			$0.inputView = picker
+		}
+		allTextFields.forEach {
+			$0.delegate = self
 		}
 	}
 	
@@ -40,8 +59,23 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		players[row].name
 	}
 	
+	func textFieldDidBeginEditing(_ textField: UITextField) {
+		UIView.animate(withDuration: 0.3, animations: {
+			self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
+
+		})
+	}
+
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		UIView.animate(withDuration: 0.3, animations: {
+			self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
+
+		})
+	}
+	
 	@IBAction func viewTapped(_ sender: Any) {
-		winnerTextField.resignFirstResponder()
-		loserTextField.resignFirstResponder()
+		allTextFields.forEach {
+			$0.resignFirstResponder()
+		}
 	}
 }
