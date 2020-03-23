@@ -23,7 +23,7 @@
                                     <segment title="Doubles"/>
                                 </segments>
                                 <connections>
-                                    <action selector="updateSort:" destination="BYZ-38-t0r" eventType="valueChanged" id="UuZ-zm-VrI"/>
+                                    <action selector="sortAndReload:" destination="BYZ-38-t0r" eventType="valueChanged" id="UuZ-zm-VrI"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUr-cZ-CrX">

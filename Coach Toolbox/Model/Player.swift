@@ -12,9 +12,9 @@ private let DEFAULTS_KEY = "players"
 
 struct Player: Codable {
 	let playerId: String = UUID().uuidString
-	let name: String
-	let singlesRating: Double
-	let doublesRating: Double
+	var name: String
+	var singlesRating: Double
+	var doublesRating: Double
 	
 	static func loadAll() -> [Player] {
 		guard

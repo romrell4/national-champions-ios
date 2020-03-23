@@ -159,26 +159,11 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 }
 
-private extension Collection {
-    // Returns the element at the specified index if it is within bounds, otherwise nil.
-    subscript (safe index: Index) -> Element? {
-        return indices.contains(index) ? self[index] : nil
-    }
-}
-
 private extension UITextField {
 	func toInt() -> Int? {
 		if let text = self.text {
 			return Int(text)
 		}
 		return nil
-	}
-}
-
-private extension UIViewController {
-	func displayAlert(title: String, message: String? = nil) {
-		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "OK", style: .default))
-		present(alert, animated: true)
 	}
 }
