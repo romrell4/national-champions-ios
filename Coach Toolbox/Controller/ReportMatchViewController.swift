@@ -43,6 +43,10 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		allTextFields.forEach {
 			$0.delegate = self
 		}
+		
+		scoreTextFields.forEach {
+			$0.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+		}
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +55,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		}
 	}
 	
+	//UIPickerView delegate
+	
 	func numberOfComponents(in pickerView: UIPickerView) -> Int { 1 }
 	
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int { players.count }
@@ -58,6 +64,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 		players[row].name
 	}
+	
+	//UITextField delegate
 	
 	func textFieldDidBeginEditing(_ textField: UITextField) {
 		UIView.animate(withDuration: 0.3, animations: {
@@ -73,9 +81,28 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		})
 	}
 	
+	//Listeners
+	
+	@objc private func textFieldDidChange(textField: UITextField) {
+		if let index = scoreTextFields.firstIndex(of: textField) {
+			if let nextTextField = scoreTextFields[safe: index + 1] {
+				nextTextField.becomeFirstResponder()
+			} else {
+				textField.resignFirstResponder()
+			}
+		}
+	}
+	
 	@IBAction func viewTapped(_ sender: Any) {
 		allTextFields.forEach {
 			$0.resignFirstResponder()
 		}
 	}
+}
+
+extension Collection {
+    // Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
 }
