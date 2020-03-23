@@ -3,6 +3,16 @@
     {
       "idiom" : "universal",
       "filename" : "doubles.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "doubles-inverted.pdf",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
     }
   ],
   "info" : {

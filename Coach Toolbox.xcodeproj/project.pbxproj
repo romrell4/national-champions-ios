@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C44D6C42428506100BA96AF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44D6C32428506100BA96AF /* Match.swift */; };
 		0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C124245399000714F1 /* PlayersViewController.swift */; };
 		0CD0C4C72424587F000714F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C62424587F000714F1 /* Extensions.swift */; };
 		0CE75E392423121E006CD68B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE75E382423121E006CD68B /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C44D6C32428506100BA96AF /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		0CD0C4C124245399000714F1 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		0CD0C4C62424587F000714F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0CE75E352423121E006CD68B /* Coach Toolbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coach Toolbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE7F62024246B3A004242C3 /* Player.swift */,
+				0C44D6C32428506100BA96AF /* Match.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				0CE7F6232424775D004242C3 /* PlayerTableViewCell.swift in Sources */,
 				0CE75E3D2423121E006CD68B /* ReportMatchViewController.swift in Sources */,
 				0CD0C4C72424587F000714F1 /* Extensions.swift in Sources */,
+				0C44D6C42428506100BA96AF /* Match.swift in Sources */,
 				0CE75E392423121E006CD68B /* AppDelegate.swift in Sources */,
 				0CE7F62124246B3A004242C3 /* Player.swift in Sources */,
 				0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */,

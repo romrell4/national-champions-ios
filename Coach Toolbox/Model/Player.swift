@@ -8,6 +8,8 @@
 
 import Foundation
 
+private let DEFAULTS_KEY = "players"
+
 struct Player: Codable {
 	let playerId: String = UUID().uuidString
 	let name: String
@@ -16,7 +18,7 @@ struct Player: Codable {
 	
 	static func loadAll() -> [Player] {
 		guard
-			let data = UserDefaults.standard.data(forKey: "players"),
+			let data = UserDefaults.standard.data(forKey: DEFAULTS_KEY),
 			let array = try? JSONDecoder().decode([Player].self, from: data)
 			else { return [] }
 		
@@ -26,6 +28,6 @@ struct Player: Codable {
 
 extension Array where Element == Player {
 	func save() {
-		try? UserDefaults.standard.set(JSONEncoder().encode(self), forKey: "players")
+		try? UserDefaults.standard.set(JSONEncoder().encode(self), forKey: DEFAULTS_KEY)
 	}
 }

@@ -30,6 +30,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	private var players = [Player]()
+	private var winner: Player?
+	private var loser: Player?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -65,20 +67,45 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		players[row].name
 	}
 	
+	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		if !players.isEmpty {
+			if winnerTextField.isFirstResponder {
+				winner = players[row]
+				winnerTextField.text = winner?.name
+			} else {
+				loser = players[row]
+				loserTextField.text = loser?.name
+			}
+
+		}
+	}
+	
 	//UITextField delegate
 	
+	private let KEYBOARD_OFFSET: CGFloat = 150
+	private let OFFSET_ANIMATION_DURATION: TimeInterval = 0.3
+	
 	func textFieldDidBeginEditing(_ textField: UITextField) {
-		UIView.animate(withDuration: 0.3, animations: {
-			self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
-
-		})
+		UIView.animate(withDuration: OFFSET_ANIMATION_DURATION) {
+			self.view.frame = CGRect(
+				x: self.view.frame.origin.x,
+				y: self.view.frame.origin.y - self.KEYBOARD_OFFSET,
+				width: self.view.frame.size.width,
+				height: self.view.frame.size.height
+			)
+		}
 	}
 
 	func textFieldDidEndEditing(_ textField: UITextField) {
-		UIView.animate(withDuration: 0.3, animations: {
-			self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 200, width:self.view.frame.size.width, height:self.view.frame.size.height);
-
-		})
+		UIView.animate(withDuration: OFFSET_ANIMATION_DURATION) {
+			self.view.frame = CGRect(
+				x: self.view.frame.origin.x,
+				y: self.view.frame.origin.y + self.KEYBOARD_OFFSET,
+				width: self.view.frame.size.width,
+				height: self.view.frame.size.height
+			)
+		}
+		self.navigationController?.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
 	}
 	
 	//Listeners
@@ -98,11 +125,60 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 			$0.resignFirstResponder()
 		}
 	}
+	
+	@IBAction func saveMatch(_ sender: Any) {
+		if let match = getMatch() {
+			if match.wasCompleted {
+				match.save()
+			} else {
+				
+			}
+			
+			displayAlert(title: "Success", message: "Match was saved successfully")
+		} else {
+			displayAlert(title: "Error", message: "An error occurred while trying to save your match. Please make sure all fields are entered properly.")
+		}
+	}
+	
+	private func getMatch() -> Match? {
+		if let winnerId = self.winner?.playerId, let loserId = self.loser?.playerId {
+			
+			return Match(
+				winnerId: winnerId,
+				loserId: loserId,
+				winnerSet1Score: self.winnerSet1.toInt(),
+				loserSet1Score: self.loserSet1.toInt(),
+				winnerSet2Score: self.winnerSet2.toInt(),
+				loserSet2Score: self.loserSet2.toInt(),
+				winnerSet3Score: self.winnerSet3.toInt(),
+				loserSet3Score: self.loserSet3.toInt()
+			)
+		} else {
+			return nil
+		}
+	}
 }
 
-extension Collection {
+private extension Collection {
     // Returns the element at the specified index if it is within bounds, otherwise nil.
     subscript (safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
+}
+
+private extension UITextField {
+	func toInt() -> Int? {
+		if let text = self.text {
+			return Int(text)
+		}
+		return nil
+	}
+}
+
+private extension UIViewController {
+	func displayAlert(title: String, message: String? = nil) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .default))
+		present(alert, animated: true)
+	}
 }

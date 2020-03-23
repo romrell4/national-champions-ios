@@ -3,6 +3,16 @@
     {
       "idiom" : "universal",
       "filename" : "singles.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "singles-inverted.pdf",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
     }
   ],
   "info" : {
