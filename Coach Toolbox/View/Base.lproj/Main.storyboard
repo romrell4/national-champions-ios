@@ -3,6 +3,7 @@
     <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -123,6 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Players" id="qm1-9M-bO6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h2w-XL-CNJ">
+                            <color key="tintColor" name="SecondaryColor"/>
                             <connections>
                                 <action selector="addPlayer:" destination="BYZ-38-t0r" id="Xpf-rJ-ik9"/>
                             </connections>
@@ -135,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3005.625" y="628.75"/>
+            <point key="canvasLocation" x="2096" y="629"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pdw-Oi-n9Z">
@@ -344,6 +346,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Report a Match" id="7HE-Ht-3ub">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Submit" id="iWw-JS-qu0">
+                            <color key="tintColor" name="SecondaryColor"/>
                             <connections>
                                 <action selector="saveMatch:" destination="wwX-UN-So8" id="SnW-3S-NNY"/>
                             </connections>
@@ -378,6 +381,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ryF-V3-SxM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="PrimaryColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -397,6 +401,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WXj-Wi-6On">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="PrimaryColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -412,5 +417,11 @@
         <image name="Doubles" width="25" height="25"/>
         <image name="ReportMatch" width="25" height="25"/>
         <image name="Singles" width="25" height="25"/>
+        <namedColor name="PrimaryColor">
+            <color red="1" green="0.69803921568627447" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryColor">
+            <color red="0.92941176470588238" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
