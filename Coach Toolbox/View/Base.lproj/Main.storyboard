@@ -484,6 +484,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="SecondaryColor"/>
                         <color key="barTintColor" name="PrimaryColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -505,6 +508,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="SecondaryColor"/>
                         <color key="barTintColor" name="PrimaryColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

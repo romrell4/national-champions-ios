@@ -98,7 +98,14 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 				player.doublesRating = doublesRating
 				self?.players[playerIndex] = player
 			} else {
-				self?.players.append(Player(name: name, singlesRating: singlesRating, doublesRating: doublesRating))
+				self?.players.append(
+					Player(
+						playerId: UUID().uuidString,
+						name: name,
+						singlesRating: singlesRating,
+						doublesRating: doublesRating
+					)
+				)
 			}
 			self?.players.save()
 			self?.sortAndReload()

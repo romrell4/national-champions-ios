@@ -11,7 +11,7 @@ import Foundation
 private let DEFAULTS_KEY = "players"
 
 struct Player: Codable {
-	let playerId: String = UUID().uuidString
+	let playerId: String
 	var name: String
 	var singlesRating: Double
 	var doublesRating: Double
