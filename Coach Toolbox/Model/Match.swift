@@ -74,7 +74,7 @@ struct MatchSet {
 	var wasCompleted: Bool {
 		let scores = [winnerScore, loserScore].compactMap { $0 }.sorted()
 		if scores.count == 2 {
-			return (scores[0] == 6 && scores[1] < 6) || (scores[0] == 7 && scores[1] == 6)
+			return (scores[1] == 6 && scores[0] < 6) || (scores[1] == 7 && scores[0] == 6)
 		}
 		return false
 	}
