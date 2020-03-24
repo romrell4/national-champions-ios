@@ -167,7 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ZaQ-Vx-zbe">
-                                <rect key="frame" x="16" y="104" width="288" height="272"/>
+                                <rect key="frame" x="16" y="76" width="288" height="272"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="21j-cm-f4k">
                                         <rect key="frame" x="0.5" y="0.0" width="287.5" height="90"/>
@@ -335,7 +335,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ZaQ-Vx-zbe" firstAttribute="centerX" secondItem="fbT-zb-AA8" secondAttribute="centerX" id="8eg-3E-P1Z"/>
-                            <constraint firstItem="ZaQ-Vx-zbe" firstAttribute="centerY" secondItem="fbT-zb-AA8" secondAttribute="centerY" id="Qjs-Ei-h6O"/>
+                            <constraint firstItem="ZaQ-Vx-zbe" firstAttribute="top" secondItem="49o-hE-X07" secondAttribute="top" constant="32" id="Psf-JU-8bd"/>
                             <constraint firstItem="ZaQ-Vx-zbe" firstAttribute="leading" secondItem="fbT-zb-AA8" secondAttribute="leading" constant="16" id="X1Q-ML-4mR"/>
                             <constraint firstAttribute="trailing" secondItem="ZaQ-Vx-zbe" secondAttribute="trailing" constant="16" id="geT-mZ-LaX"/>
                         </constraints>
@@ -379,7 +379,7 @@
                     <tabBarItem key="tabBarItem" title="Players" image="Doubles" id="6vS-0K-iIW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ryF-V3-SxM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="PrimaryColor"/>
                     </navigationBar>
@@ -399,7 +399,7 @@
                     <tabBarItem key="tabBarItem" title="Report Matches" image="ReportMatch" id="xxO-WX-ZRJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WXj-Wi-6On">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="PrimaryColor"/>
                     </navigationBar>

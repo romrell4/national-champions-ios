@@ -30,17 +30,22 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	private var players = [Player]()
-	private var winner: Player?
-	private var loser: Player?
+	private var winner: Player? {
+		didSet {
+			winnerTextField.text = winner?.name
+		}
+	}
+	private var loser: Player? {
+		didSet {
+			loserTextField.text = loser?.name
+		}
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let picker = UIPickerView()
-		picker.delegate = self
-		picker.dataSource = self
 		playerTextFields.forEach {
-			$0.inputView = picker
+			$0.inputView = UIPickerView(delegate: self)
 		}
 		allTextFields.forEach {
 			$0.delegate = self
@@ -71,41 +76,26 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		if !players.isEmpty {
 			if winnerTextField.isFirstResponder {
 				winner = players[row]
-				winnerTextField.text = winner?.name
-			} else {
+			} else if loserTextField.isFirstResponder {
 				loser = players[row]
-				loserTextField.text = loser?.name
 			}
-
 		}
 	}
 	
 	//UITextField delegate
 	
-	private let KEYBOARD_OFFSET: CGFloat = 150
-	private let OFFSET_ANIMATION_DURATION: TimeInterval = 0.3
-	
 	func textFieldDidBeginEditing(_ textField: UITextField) {
-		UIView.animate(withDuration: OFFSET_ANIMATION_DURATION) {
-			self.view.frame = CGRect(
-				x: self.view.frame.origin.x,
-				y: self.view.frame.origin.y - self.KEYBOARD_OFFSET,
-				width: self.view.frame.size.width,
-				height: self.view.frame.size.height
-			)
+		if textField.text?.isEmpty != false {
+			if textField == winnerTextField {
+				winner = players[0]
+			} else if textField == loserTextField {
+				loser = players[0]
+			}
 		}
 	}
 
 	func textFieldDidEndEditing(_ textField: UITextField) {
-		UIView.animate(withDuration: OFFSET_ANIMATION_DURATION) {
-			self.view.frame = CGRect(
-				x: self.view.frame.origin.x,
-				y: self.view.frame.origin.y + self.KEYBOARD_OFFSET,
-				width: self.view.frame.size.width,
-				height: self.view.frame.size.height
-			)
-		}
-		self.navigationController?.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
+		self.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
 	}
 	
 	//Listeners
@@ -141,8 +131,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	private func getMatch() -> Match? {
-		if let winnerId = self.winner?.playerId, let loserId = self.loser?.playerId {
-			
+		if let winnerId = self.winner?.playerId, let loserId = self.loser?.playerId, winnerId != loserId {
 			return Match(
 				winnerId: winnerId,
 				loserId: loserId,
@@ -153,9 +142,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 				winnerSet3Score: self.winnerSet3.toInt(),
 				loserSet3Score: self.loserSet3.toInt()
 			)
-		} else {
-			return nil
 		}
+		return nil
 	}
 }
 
@@ -165,5 +153,13 @@ private extension UITextField {
 			return Int(text)
 		}
 		return nil
+	}
+}
+
+private extension UIPickerView {
+	convenience init(delegate: UIPickerViewDelegate & UIPickerViewDataSource) {
+		self.init()
+		self.delegate = delegate
+		self.dataSource = dataSource
 	}
 }
