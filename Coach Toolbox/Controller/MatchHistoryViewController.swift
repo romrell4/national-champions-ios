@@ -12,10 +12,10 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	
 	@IBOutlet private weak var tableView: UITableView!
 	
-	let matches = Match.loadAll().sorted { (lhs, rhs) -> Bool in
+	private var matches = Match.loadAll().sorted { (lhs, rhs) -> Bool in
 		return lhs.matchDate > rhs.matchDate
 	}
-	let players = Player.loadAll()
+	private let players = Player.loadAll()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,17 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		return UISwipeActionsConfiguration(actions: [
+			UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
+				self.matches.remove(at: indexPath.row)
+				self.matches.save()
+				self.tableView.deleteRows(at: [indexPath], with: .automatic)
+			}
+		])
+	}
+	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		//TODO: Edit or delete?
+		//TODO: Edit?
 	}
 }
