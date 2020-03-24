@@ -118,10 +118,20 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	
 	@IBAction func saveMatch(_ sender: Any) {
 		if let match = getMatch() {
-			if match.wasCompleted {
+			let save = {
 				match.save()
+				//TODO: Reset UI
+			}
+			
+			if !match.wasCompleted {
+				let alert = UIAlertController(title: "Warning", message: "This match is incomplete. Are you sure you'd like to record it anyway?", preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Save", style: .default) { (_) in
+					save()
+				})
+				alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+				present(alert, animated: true)
 			} else {
-				
+				save()
 			}
 			
 			displayAlert(title: "Success", message: "Match was saved successfully")
@@ -133,6 +143,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	private func getMatch() -> Match? {
 		if let winnerId = self.winner?.playerId, let loserId = self.loser?.playerId, winnerId != loserId {
 			return Match(
+				matchDate: Date(),
 				winnerId: winnerId,
 				loserId: loserId,
 				winnerSet1Score: self.winnerSet1.toInt(),

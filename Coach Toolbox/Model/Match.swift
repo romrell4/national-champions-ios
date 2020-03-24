@@ -12,6 +12,7 @@ private let DEFAULTS_KEY = "matches"
 
 struct Match: Codable {
 	let matchId: String = UUID().uuidString
+	let matchDate: Date
 	let winnerId: String
 	let loserId: String
 	let winnerSet1Score: Int?
