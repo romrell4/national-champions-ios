@@ -80,6 +80,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 				loser = players[row]
 			}
 		}
+		self.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
 	}
 	
 	//UITextField delegate

@@ -124,7 +124,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Players" id="qm1-9M-bO6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h2w-XL-CNJ">
-                            <color key="tintColor" name="SecondaryColor"/>
                             <connections>
                                 <action selector="addPlayer:" destination="BYZ-38-t0r" id="Xpf-rJ-ik9"/>
                             </connections>
@@ -181,8 +180,8 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="dlo-ff-ZVn">
-                                        <rect key="frame" x="8" y="122" width="272" height="34"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dlo-ff-ZVn">
+                                        <rect key="frame" x="7.5" y="122" width="273.5" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Winner" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zKU-PN-5II">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
@@ -192,8 +191,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgR-M5-KPN">
+                                                <rect key="frame" x="128" y="0.0" width="17.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Loser" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tFa-v6-UUv">
-                                                <rect key="frame" x="152" y="0.0" width="120" height="34"/>
+                                                <rect key="frame" x="153.5" y="0.0" width="120" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="fmZ-XD-3bz"/>
                                                 </constraints>
@@ -346,10 +351,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Report a Match" id="7HE-Ht-3ub">
                         <barButtonItem key="leftBarButtonItem" title="History" id="Hfm-Mb-wP1">
-                            <color key="tintColor" name="SecondaryColor"/>
+                            <connections>
+                                <segue destination="D94-si-RvC" kind="show" id="Qpa-Dj-cYJ"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Submit" id="iWw-JS-qu0">
-                            <color key="tintColor" name="SecondaryColor"/>
                             <connections>
                                 <action selector="saveMatch:" destination="wwX-UN-So8" id="SnW-3S-NNY"/>
                             </connections>
@@ -375,6 +381,98 @@
             </objects>
             <point key="canvasLocation" x="2096.25" y="-38.75"/>
         </scene>
+        <!--Match History-->
+        <scene sceneID="a3x-JC-H0J">
+            <objects>
+                <viewController id="D94-si-RvC" customClass="MatchHistoryViewController" customModule="Coach_Toolbox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZAs-iE-I0a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8kM-c9-jR1">
+                                <rect key="frame" x="0.0" y="44" width="320" height="387"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="67" id="CAR-FQ-XKB" customClass="MatchTableViewCell" customModule="Coach_Toolbox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CAR-FQ-XKB" id="ndV-Sd-3Cb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7KV-Gg-FCG">
+                                                    <rect key="frame" x="85.5" y="8" width="149.5" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75s-Nd-XGs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAw-hz-Y00">
+                                                            <rect key="frame" x="67" y="0.0" width="17.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j15-fk-Jgn">
+                                                            <rect key="frame" x="92.5" y="0.0" width="57" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6-0 1-6 6-3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3V-nW-NWr">
+                                                    <rect key="frame" x="114.5" y="36.5" width="91.5" height="22.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="B3V-nW-NWr" firstAttribute="top" secondItem="7KV-Gg-FCG" secondAttribute="bottom" constant="8" id="2Ke-4k-F1G"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B3V-nW-NWr" secondAttribute="trailing" constant="8" id="2nC-hG-nni"/>
+                                                <constraint firstAttribute="bottom" secondItem="B3V-nW-NWr" secondAttribute="bottom" constant="8" id="AgF-dP-4dA"/>
+                                                <constraint firstItem="B3V-nW-NWr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ndV-Sd-3Cb" secondAttribute="leading" constant="8" id="Mij-TS-RIR"/>
+                                                <constraint firstItem="7KV-Gg-FCG" firstAttribute="centerX" secondItem="ndV-Sd-3Cb" secondAttribute="centerX" id="OM0-gA-94a"/>
+                                                <constraint firstItem="7KV-Gg-FCG" firstAttribute="top" secondItem="ndV-Sd-3Cb" secondAttribute="top" constant="8" id="VsW-aB-duH"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7KV-Gg-FCG" secondAttribute="trailing" constant="8" id="e2S-1I-Rr9"/>
+                                                <constraint firstItem="B3V-nW-NWr" firstAttribute="centerX" secondItem="7KV-Gg-FCG" secondAttribute="centerX" id="e39-O0-Acq"/>
+                                                <constraint firstItem="7KV-Gg-FCG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ndV-Sd-3Cb" secondAttribute="leading" constant="8" id="pgd-go-aAw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="loserLabel" destination="j15-fk-Jgn" id="e7c-6G-ECX"/>
+                                            <outlet property="scoreLabel" destination="B3V-nW-NWr" id="rA1-aJ-S21"/>
+                                            <outlet property="winnerLabel" destination="75s-Nd-XGs" id="wEh-Ek-BxP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="D94-si-RvC" id="Ii2-35-Rnn"/>
+                                    <outlet property="delegate" destination="D94-si-RvC" id="6Gc-LS-l8C"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="knK-vu-skW" firstAttribute="trailing" secondItem="8kM-c9-jR1" secondAttribute="trailing" id="4yx-E6-xaz"/>
+                            <constraint firstItem="knK-vu-skW" firstAttribute="bottom" secondItem="8kM-c9-jR1" secondAttribute="bottom" id="CeR-X0-dEH"/>
+                            <constraint firstItem="8kM-c9-jR1" firstAttribute="top" secondItem="knK-vu-skW" secondAttribute="top" id="VRR-be-3JJ"/>
+                            <constraint firstItem="8kM-c9-jR1" firstAttribute="leading" secondItem="knK-vu-skW" secondAttribute="leading" id="zxt-ze-k8v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="knK-vu-skW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Match History" id="csI-SX-R5K"/>
+                    <connections>
+                        <outlet property="tableView" destination="8kM-c9-jR1" id="hhA-hr-ska"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNM-GS-KGp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2947.5" y="-40"/>
+        </scene>
         <!--Players-->
         <scene sceneID="25o-xo-XGS">
             <objects>
@@ -382,8 +480,9 @@
                     <tabBarItem key="tabBarItem" title="Players" image="Doubles" id="6vS-0K-iIW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ryF-V3-SxM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="SecondaryColor"/>
                         <color key="barTintColor" name="PrimaryColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -395,15 +494,16 @@
             </objects>
             <point key="canvasLocation" x="1098.5507246376812" y="629.46428571428567"/>
         </scene>
-        <!--Report Matches-->
+        <!--Matches-->
         <scene sceneID="AgK-zD-djF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8D0-ys-AZQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Report Matches" image="ReportMatch" id="xxO-WX-ZRJ"/>
+                    <tabBarItem key="tabBarItem" title="Matches" image="ReportMatch" id="xxO-WX-ZRJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WXj-Wi-6On">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="SecondaryColor"/>
                         <color key="barTintColor" name="PrimaryColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

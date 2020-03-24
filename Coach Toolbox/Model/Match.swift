@@ -26,6 +26,10 @@ struct Match: Codable {
 	private var set2: MatchSet { MatchSet(winnerScore: winnerSet2Score, loserScore: loserSet2Score) }
 	private var set3: MatchSet { MatchSet(winnerScore: winnerSet3Score, loserScore: loserSet3Score) }
 	
+	var scoreText: String {
+		[set1.scoreText, set2.scoreText, set3.scoreText].compactMap { $0 }.joined(separator: " ")
+	}
+	
 	static func loadAll() -> [Match] {
 		guard
 			let data = UserDefaults.standard.data(forKey: DEFAULTS_KEY),
@@ -55,6 +59,13 @@ struct Match: Codable {
 struct MatchSet {
 	let winnerScore: Int?
 	let loserScore: Int?
+	
+	var scoreText: String? {
+		if let winnerScore = winnerScore, let loserScore = loserScore {
+			return "(\(winnerScore)-\(loserScore))"
+		}
+		return nil
+	}
 	
 	var wasPlayed: Bool {
 		return winnerScore != nil && loserScore != nil
