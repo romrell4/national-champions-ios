@@ -144,6 +144,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	private func getMatch() -> Match? {
 		if let winnerId = self.winner?.playerId, let loserId = self.loser?.playerId, winnerId != loserId {
 			return Match(
+				matchId: UUID().uuidString,
+				matchDate: Date(),
 				winnerId: winnerId,
 				loserId: loserId,
 				winnerSet1Score: self.winnerSet1.toInt(),
