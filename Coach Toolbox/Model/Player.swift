@@ -28,34 +28,37 @@ struct Player: Codable {
 	static func loadFromUrl(url urlString: String, completionHandler: @escaping ([Player]?) -> Void) {
 		if let url = URL(string: urlString) {
 			URLSession.shared.dataTask(with: url) { data, _, _ in
-				let decoder = JSONDecoder()
-				decoder.keyDecodingStrategy = .convertFromSnakeCase
-				do {
-					if let data = data, let array = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
-						let players = array.compactMap { (dict) -> Player? in
-							if let name = dict["name"] as? String,
-								let singlesRating = dict["singles_rating"] as? Double,
-								let doublesRating = dict["doubles_rating"] as? Double {
-								
-								return Player(
-									playerId: UUID().uuidString,
-									name: name,
-									singlesRating: singlesRating,
-									doublesRating: doublesRating
-								)
-							} else {
-								return nil
+				DispatchQueue.main.async {
+					let decoder = JSONDecoder()
+					decoder.keyDecodingStrategy = .convertFromSnakeCase
+					do {
+						if let data = data, let array = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
+							let players = array.compactMap { (dict) -> Player? in
+								if let name = dict["name"] as? String,
+									let singlesRating = dict["singles_rating"] as? Double,
+									let doublesRating = dict["doubles_rating"] as? Double {
+									
+									return Player(
+										playerId: UUID().uuidString,
+										name: name,
+										singlesRating: singlesRating,
+										doublesRating: doublesRating
+									)
+								} else {
+									return nil
+								}
 							}
+							let allPlayers = Player.loadAll() + players
+							allPlayers.save()
+							completionHandler(allPlayers)
+						} else {
+							completionHandler(nil)
 						}
-						let allPlayers = Player.loadAll() + players
-						allPlayers.save()
-//						completionHandler(allPlayers)
-					} else {
+					} catch {
+						print("\(error)")
 						completionHandler(nil)
 					}
-				} catch {
-					print("\(error)")
-					completionHandler(nil)
+
 				}
 			}.resume()
 		} else {

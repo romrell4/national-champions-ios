@@ -61,6 +61,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 				Player.loadFromUrl(url: url) { (players) in
 					if let players = players {
 						self.players = players
+						self.sortAndReload()
 					}
 				}
 			}
