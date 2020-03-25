@@ -51,6 +51,24 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		displayPlayerPopUp(title: "Add Player")
 	}
 	
+	@IBAction func importPlayers(_ sender: Any) {
+		let alert = UIAlertController(title: "Import Players", message: "Please enter a URL to import players from.", preferredStyle: .alert)
+		alert.addTextField {
+			$0.keyboardType = .URL
+		}
+		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
+			if let url = alert.textFields?.first?.text {
+				Player.loadFromUrl(url: url) { (players) in
+					if let players = players {
+						self.players = players
+					}
+				}
+			}
+		}))
+		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		present(alert, animated: true)
+	}
+	
 	@IBAction func sortAndReload(_ sender: Any? = nil) {
 		players = players.sorted { (lhs, rhs) -> Bool in
 			if self.sortControl.selectedSegmentIndex == 0 {

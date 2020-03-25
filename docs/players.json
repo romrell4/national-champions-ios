@@ -1,7 +1,254 @@
 [
-	{
-		"name": "Eric Romrell",
-		"singles_rating": 4.2,
-		"doubles_rating": 3.9
-	}
+  {
+    "singles_rating": 4.11,
+    "doubles_rating": 4.07,
+    "name": "Spencer Ellis",
+    "email": "sre360@gmail.com"
+  },
+  {
+    "singles_rating": 4,
+    "doubles_rating": 4.15,
+    "name": "Todd Castagna",
+    "email": "todd.castagna@gmail.com"
+  },
+  {
+    "singles_rating": 3.95,
+    "doubles_rating": 4.18,
+    "name": "Derek Elison",
+    "email": "delison@alpinedistrict.org"
+  },
+  {
+    "singles_rating": 4.11,
+    "doubles_rating": 3.9,
+    "name": "Adam Peterson",
+    "email": "adampeterson112@gmail.com"
+  },
+  {
+    "singles_rating": 4.1,
+    "doubles_rating": 3.91,
+    "name": "Jackson Aubrey",
+    "email": "jackaubrey15@gmail.com"
+  },
+  {
+    "singles_rating": 4.12,
+    "doubles_rating": 3.92,
+    "name": "Jake Harris",
+    "email": "jacobharris2468@gmail.com"
+  },
+  {
+    "singles_rating": 4.65,
+    "doubles_rating": 4.39,
+    "name": "Jihoon Noh",
+    "email": "jihoonsoccer@gmail.com"
+  },
+  {
+    "singles_rating": 3.91,
+    "doubles_rating": 4.16,
+    "name": "Scott Hinton",
+    "email": "shinton@archsyst.com"
+  },
+  {
+    "singles_rating": 3.93,
+    "doubles_rating": 4.22,
+    "name": "Matthew Pineda",
+    "email": "matthewpineda71@gmail.com"
+  },
+  {
+    "singles_rating": 4.07,
+    "doubles_rating": 4.37,
+    "name": "Scott Sowby",
+    "email": "sowby23@gmail.com"
+  },
+  {
+    "singles_rating": 4.09,
+    "doubles_rating": 3.91,
+    "name": "Vasil Osipenko",
+    "email": "vasil.osipenko@gmail.com"
+  },
+  {
+    "singles_rating": 3.88,
+    "doubles_rating": 4.05,
+    "name": "Ryan Holmes",
+    "email": "ryanhholmes@gmail.com"
+  },
+  {
+    "singles_rating": 3.97,
+    "doubles_rating": 3.84,
+    "name": "Alex Venegas",
+    "email": "amoronni@hotmail.com"
+  },
+  {
+    "singles_rating": 4.04,
+    "doubles_rating": 4.22,
+    "name": "Royce Plowman",
+    "email": "skeeter.plowman@gmail.com"
+  },
+  {
+    "singles_rating": 3.91,
+    "doubles_rating": 3.92,
+    "name": "Zach Siddoway",
+    "email": "zachery.siddoway@hotmail.com"
+  },
+  {
+    "singles_rating": 3.94,
+    "doubles_rating": 3.88,
+    "name": "Legend Lee",
+    "email": "kleechipsao@gmail.com"
+  },
+  {
+    "singles_rating": 3.9,
+    "doubles_rating": 3.78,
+    "name": "Kurt Winkler",
+    "email": "kurtwinkler7@gmail.com"
+  },
+  {
+    "singles_rating": 4.07,
+    "doubles_rating": 3.93,
+    "name": "Kenny Johnson",
+    "email": "kennysjohnson@gmail.com"
+  },
+  {
+    "singles_rating": 3.87,
+    "doubles_rating": 4.08,
+    "name": "KC Johnson",
+    "email": "johnstonkc@hotmail.com"
+  },
+  {
+    "singles_rating": 3.89,
+    "doubles_rating": 4.01,
+    "name": "Paul Williams",
+    "email": "prwilliams13@gmail.com"
+  },
+  {
+    "singles_rating": 3.88,
+    "doubles_rating": 4,
+    "name": "Fred Heath",
+    "email": "utah0188@gmail.com"
+  },
+  {
+    "singles_rating": 3.94,
+    "doubles_rating": 4.01,
+    "name": "Stuart Weichers",
+    "email": "stuweich@yahoo.com"
+  },
+  {
+    "singles_rating": 4.2,
+    "doubles_rating": 3.98,
+    "name": "Eric Romrell",
+    "email": "emromrell14@gmail.com"
+  },
+  {
+    "singles_rating": 3.9,
+    "doubles_rating": 3.89,
+    "name": "Joseph Venoza",
+    "email": "venozajoseph@gmail.com"
+  },
+  {
+    "singles_rating": 3.83,
+    "doubles_rating": 3.88,
+    "name": "Dave Van",
+    "email": "Blerkom    davidvb2@gmail.com"
+  },
+  {
+    "singles_rating": 3.73,
+    "doubles_rating": 3.83,
+    "name": "Matt Linford",
+    "email": "mrlinford@chem.byu.edu"
+  },
+  {
+    "singles_rating": 3.7,
+    "doubles_rating": 3.89,
+    "name": "Lance Beare",
+    "email": "lance.beare@yahoo.com"
+  },
+  {
+    "singles_rating": 3.87,
+    "doubles_rating": 3.88,
+    "name": "Brian Crowe",
+    "email": "bricrowe71@gmail.com"
+  },
+  {
+    "singles_rating": 3.91,
+    "doubles_rating": 3.89,
+    "name": "Jarrod Morrill",
+    "email": "morrilljarrod@yahoo.com"
+  },
+  {
+    "singles_rating": 3.9,
+    "doubles_rating": 3.89,
+    "name": "Brad Brooks",
+    "email": "brooks.brad@gmail.com"
+  },
+  {
+    "singles_rating": 3.99,
+    "doubles_rating": 3.96,
+    "name": "Glen Zobell",
+    "email": "glenzilla1@gmail.com"
+  },
+  {
+    "singles_rating": 3.81,
+    "doubles_rating": 3.75,
+    "name": "Joe Christensen",
+    "email": "brainofjnc@gmail.com"
+  },
+  {
+    "singles_rating": 3.89,
+    "doubles_rating": 3.83,
+    "name": "Adam Anderson",
+    "email": "ama748@gmail.com"
+  },
+  {
+    "singles_rating": 3.87,
+    "doubles_rating": 3.78,
+    "name": "Evan Teshima",
+    "email": "eteshima@foreup.com"
+  },
+  {
+    "singles_rating": 3.69,
+    "doubles_rating": 3.75,
+    "name": "Matt Groesbeck",
+    "email": "mattskypuck@yahoo.com"
+  },
+  {
+    "singles_rating": 3.72,
+    "doubles_rating": 3.75,
+    "name": "Arun Muthukkumaraswamy",
+    "email": "arunnatesh@gmail.com"
+  },
+  {
+    "singles_rating": 3.92,
+    "doubles_rating": 3.89,
+    "name": "Cole Reese",
+    "email": "coletreese@gmail.com"
+  },
+  {
+    "singles_rating": 3.85,
+    "doubles_rating": 3.95,
+    "name": "Chad McCall",
+    "email": "chad@re90x.com"
+  },
+  {
+    "singles_rating": 3.88,
+    "doubles_rating": 3.86,
+    "name": "Nate Wood",
+    "email": "wood.nathan91@gmail.com"
+  },
+  {
+    "singles_rating": 3.69,
+    "doubles_rating": 3.73,
+    "name": "Will Wu",
+    "email": "waywu2001@yahoo.com"
+  },
+  {
+    "singles_rating": 3.84,
+    "doubles_rating": 3.71,
+    "name": "Oscar Morales",
+    "email": "oscarmorales312@gmail.com"
+  },
+  {
+    "singles_rating": 4.01,
+    "doubles_rating": 3.9,
+    "name": "Ryan Bell",
+    "email": "bell.ryan.k@gmail.com"
+  }
 ]

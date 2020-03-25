@@ -123,6 +123,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Players" id="qm1-9M-bO6">
+                        <barButtonItem key="leftBarButtonItem" title="Import" id="34a-wb-AoL">
+                            <connections>
+                                <action selector="importPlayers:" destination="BYZ-38-t0r" id="oyY-wr-kFA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h2w-XL-CNJ">
                             <connections>
                                 <action selector="addPlayer:" destination="BYZ-38-t0r" id="Xpf-rJ-ik9"/>
