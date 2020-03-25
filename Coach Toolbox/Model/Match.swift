@@ -27,7 +27,7 @@ struct Match: Codable {
 	private var set3: MatchSet { MatchSet(winnerScore: winnerSet3Score, loserScore: loserSet3Score) }
 	
 	var scoreText: String {
-		[set1.scoreText, set2.scoreText, set3.scoreText].compactMap { $0 }.joined(separator: " ")
+		[set1.scoreText, set2.scoreText, set3.scoreText].compactMap { $0 }.joined(separator: ", ")
 	}
 	
 	static func loadAll() -> [Match] {
@@ -43,7 +43,7 @@ struct Match: Codable {
 		if set1.wasCompleted, set2.wasCompleted {
 			if set1.winnerWon == true && set2.winnerWon == true && !set3.wasPlayed {
 				return true
-			} else if set1.winnerWon != set2.winnerWon, set3.wasCompleted {
+			} else if set1.winnerWon != set2.winnerWon, set3.wasSet3Completed {
 				return true
 			}
 		}
@@ -51,7 +51,7 @@ struct Match: Codable {
 	}
 	
 	func save() {
-		//TODO: Update players ratings
+		//TODO: Update players ratings and display changes
 		(Match.loadAll() + [self]).save()
 	}
 }
@@ -62,7 +62,7 @@ struct MatchSet {
 	
 	var scoreText: String? {
 		if let winnerScore = winnerScore, let loserScore = loserScore {
-			return "(\(winnerScore)-\(loserScore))"
+			return "\(winnerScore)-\(loserScore)"
 		}
 		return nil
 	}
@@ -74,7 +74,14 @@ struct MatchSet {
 	var wasCompleted: Bool {
 		let scores = [winnerScore, loserScore].compactMap { $0 }.sorted()
 		if scores.count == 2 {
-			return (scores[1] == 6 && scores[0] < 6) || (scores[1] == 7 && scores[0] == 6)
+			return (scores[1] == 6 && scores[0] < 6) || (scores[1] == 7 && [5, 6].contains(scores[0]))
+		}
+		return false
+	}
+	
+	var wasSet3Completed: Bool {
+		if let winnerScore = winnerScore, let loserScore = loserScore {
+			return (winnerScore == 7 && [5, 6].contains(loserScore)) || (winnerScore == 6 && loserScore < 6) || (winnerScore == 1 && loserScore == 0)
 		}
 		return false
 	}
