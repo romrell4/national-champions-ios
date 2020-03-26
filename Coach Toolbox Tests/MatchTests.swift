@@ -1,5 +1,5 @@
 //
-//  Coach_Toolbox_Tests.swift
+//  MatchTests.swift
 //  Coach Toolbox Tests
 //
 //  Created by Eric Romrell on 3/25/20.
@@ -25,6 +25,23 @@ private let sam = Player(
 	previousSinglesRatings: [3.73, 3.85, 3.75],
 	previousDoublesRatings: [3.85, 3.75, 3.78]
 )
+private let brad = Player(
+	playerId: "3",
+	name: "Brad",
+	singlesRating: 0.0,
+	doublesRating: 3.78,
+	previousSinglesRatings: [],
+	previousDoublesRatings: [3.71, 3.79, 3.68]
+)
+private let adam = Player(
+	playerId: "4",
+	name: "Adam",
+	singlesRating: 0.0,
+	doublesRating: 3.73,
+	previousSinglesRatings: [],
+	previousDoublesRatings: [3.69, 3.72, 3.79]
+)
+
 
 class MatchTests: XCTestCase {
 	
@@ -47,6 +64,22 @@ class MatchTests: XCTestCase {
     }
 	
 	func testDoubleMatchesRatings() {
-		//TODO: Do this once you can do doubles matches
+		let match = Match(
+			matchId: "1",
+			matchDate: Date(),
+			winners: [alex, sam],
+			losers: [brad, adam],
+			winnerSet1Score: 6,
+			loserSet1Score: 4,
+			winnerSet2Score: 6,
+			loserSet2Score: 4,
+			winnerSet3Score: nil,
+			loserSet3Score: nil
+		)
+		let (winnerRatings, loserRatings) = match.computeRatingChanges()
+		XCTAssertEqual(3.98, winnerRatings[0])
+		XCTAssertEqual(3.78, winnerRatings[1])
+		XCTAssertEqual(3.75, loserRatings[0])
+		XCTAssertEqual(3.74, loserRatings[1])
 	}
 }

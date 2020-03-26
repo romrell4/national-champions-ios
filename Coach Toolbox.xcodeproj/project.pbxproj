@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C44D6C42428506100BA96AF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44D6C32428506100BA96AF /* Match.swift */; };
-		0CA66251242C4C00001C24D2 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA66250242C4C00001C24D2 /* PlayerTests.swift */; };
+		0CA66251242C4C00001C24D2 /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA66250242C4C00001C24D2 /* MatchTests.swift */; };
 		0CAEE0112429A4A800BB60D9 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */; };
 		0CAEE0132429A4EF00BB60D9 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */; };
 		0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C124245399000714F1 /* PlayersViewController.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		0C44D6C32428506100BA96AF /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		0CA6624E242C4C00001C24D2 /* Coach Toolbox Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coach Toolbox Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CA66250242C4C00001C24D2 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		0CA66250242C4C00001C24D2 /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		0CA66252242C4C00001C24D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		0CA6624F242C4C00001C24D2 /* Coach Toolbox Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0CA66250242C4C00001C24D2 /* PlayerTests.swift */,
+				0CA66250242C4C00001C24D2 /* MatchTests.swift */,
 				0CA66252242C4C00001C24D2 /* Info.plist */,
 			);
 			path = "Coach Toolbox Tests";
@@ -253,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA66251242C4C00001C24D2 /* PlayerTests.swift in Sources */,
+				0CA66251242C4C00001C24D2 /* MatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

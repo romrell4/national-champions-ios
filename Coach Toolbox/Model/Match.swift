@@ -61,14 +61,26 @@ struct Match: Codable {
 	}
 	
 	private func computePlayerRatingChanges(for players: [Player], against opponents: [Player], gameDiff: Int) -> [Double] {
+		let ratingDiff = Double(gameDiff) * GAME_VALUE
 		if players.count == 1, opponents.count == 1 {
-			let matchRating = opponents[0].singlesRating + (Double(gameDiff) * GAME_VALUE)
+			let matchRating = opponents[0].singlesRating + ratingDiff
 			let newRating = (players[0].previousSinglesRatings + [matchRating]).average()
-			return [Double(Int(newRating * 100)) / 100.0]
+			return [trunc(newRating)]
+		} else if players.count == 2, opponents.count == 2 {
+			let matchRating = opponents.map { $0.doublesRating }.sum() + ratingDiff
+			let player1MatchRating = matchRating - players[1].doublesRating
+			let player2MatchRating = matchRating - players[0].doublesRating
+			let player1NewRating = (players[0].previousDoublesRatings + [player1MatchRating]).average()
+			let player2NewRating = (players[1].previousDoublesRatings + [player2MatchRating]).average()
+			return [trunc(player1NewRating), trunc(player2NewRating)]
 		} else {
-			//TODO: Implement
-			return [0.0, 0.0]
+			fatalError("You can only be playing singles or doubles")
 		}
+	}
+	
+	private func trunc(_ value: Double) -> Double {
+		//Round to the nearest thousands place, then truncate to the hundreds palce
+		Double(Int(round(value * 1000) / 1000 * 100)) / 100.0
 	}
 	
 	func save() {
@@ -123,7 +135,11 @@ extension Array where Element == Match {
 }
 
 extension Array where Element == Double {
+	func sum() -> Double {
+		reduce(0, { $0 + $1 })
+	}
+	
 	func average() -> Double {
-		reduce(0, { $0 + $1 }) / Double(count)
+		sum() / Double(count)
 	}
 }
