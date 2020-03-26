@@ -20,7 +20,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	@IBOutlet private weak var loserSet3: UITextField!
 	
 	private var playerTextFields: [UITextField] {
-		[winnerTextField, loserTextField]
+		[winnerTextField, loserTextField] //TODO: Add doubles
 	}
 	private var scoreTextFields: [UITextField] {
 		[winnerSet1, loserSet1, winnerSet2, loserSet2, winnerSet3, loserSet3]
@@ -88,9 +88,9 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	func textFieldDidBeginEditing(_ textField: UITextField) {
 		if textField.text?.isEmpty != false {
 			if textField == winnerTextField {
-				winner = players[0]
+				winner = players.first
 			} else if textField == loserTextField {
-				loser = players[0]
+				loser = players.first
 			}
 		}
 	}
@@ -142,12 +142,12 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	private func getMatch() -> Match? {
-		if let winnerId = self.winner?.playerId, let loserId = self.loser?.playerId, winnerId != loserId {
+		if let winner = self.winner, let loser = self.loser, winner.playerId != loser.playerId {
 			return Match(
 				matchId: UUID().uuidString,
 				matchDate: Date(),
-				winnerId: winnerId,
-				loserId: loserId,
+				winner: winner,
+				loser: loser,
 				winnerSet1Score: self.winnerSet1.toInt(),
 				loserSet1Score: self.loserSet1.toInt(),
 				winnerSet2Score: self.winnerSet2.toInt(),

@@ -15,6 +15,8 @@ struct Player: Codable {
 	var name: String
 	var singlesRating: Double
 	var doublesRating: Double
+	var previousSinglesRatings: [Double]
+	var previousDoublesRatings: [Double]
 	
 	static func loadAll() -> [Player] {
 		guard
@@ -42,7 +44,9 @@ struct Player: Codable {
 										playerId: UUID().uuidString,
 										name: name,
 										singlesRating: singlesRating,
-										doublesRating: doublesRating
+										doublesRating: doublesRating,
+										previousSinglesRatings: dict["previous_singles_ratings"] as? [Double] ?? [],
+										previousDoublesRatings: dict["previous_doubles_ratings"] as? [Double] ?? []
 									)
 								} else {
 									return nil

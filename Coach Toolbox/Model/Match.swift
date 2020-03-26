@@ -9,12 +9,13 @@
 import Foundation
 
 private let DEFAULTS_KEY = "matches"
+private let GAME_VALUE = 0.06
 
 struct Match: Codable {
 	let matchId: String
 	let matchDate: Date
-	let winnerId: String
-	let loserId: String
+	let winner: Player
+	let loser: Player
 	let winnerSet1Score: Int?
 	let loserSet1Score: Int?
 	let winnerSet2Score: Int?
@@ -50,8 +51,22 @@ struct Match: Codable {
 		return false
 	}
 	
+	func computeRatingChanges() -> (Double, Double) {
+		let winnerTotalGames = [winnerSet1Score, winnerSet2Score, winnerSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
+		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
+		let gameDiff = winnerTotalGames - loserTotalGames
+		return (computePlayerRatingChanges(for: winner, gameDiff: gameDiff), computePlayerRatingChanges(for: loser, gameDiff: -gameDiff))
+	}
+	
+	private func computePlayerRatingChanges(for player: Player, gameDiff: Int) -> Double {
+		let matchRating = player.singlesRating + (Double(gameDiff) * GAME_VALUE)
+		let newRating = (player.previousSinglesRatings + [matchRating]).average()
+		return newRating
+	}
+	
 	func save() {
 		//TODO: Update players ratings and display changes
+		//TODO: Update previous matches
 		(Match.loadAll() + [self]).save()
 	}
 }
@@ -97,5 +112,11 @@ struct MatchSet {
 extension Array where Element == Match {
 	func save() {
 		try? UserDefaults.standard.set(JSONEncoder().encode(self), forKey: DEFAULTS_KEY)
+	}
+}
+
+extension Array where Element == Double {
+	func average() -> Double {
+		reduce(0, { $0 + $1 }) / Double(count)
 	}
 }

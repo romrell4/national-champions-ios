@@ -122,7 +122,9 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 						playerId: UUID().uuidString,
 						name: name,
 						singlesRating: singlesRating,
-						doublesRating: doublesRating
+						doublesRating: doublesRating,
+						previousSinglesRatings: [],
+						previousDoublesRatings: []
 					)
 				)
 			}
@@ -132,7 +134,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		if let playerIndex = playerIndex {
 			alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] (_) in
 				let matches = Match.loadAll().filter {
-					[$0.winnerId, $0.loserId].contains(player?.playerId)
+					[$0.winner.playerId, $0.loser.playerId].contains(player?.playerId)
 				}
 				if matches.count > 0 {
 					self?.displayAlert(title: "Error", message: "This player cannot be deleted, because this player has been involved in matches already saved.")
