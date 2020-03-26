@@ -147,7 +147,9 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		if let match = getMatch() {
 			let save = {
 				match.save()
-				//TODO: Reset UI
+				self.allTextFields.forEach {
+					$0.text = nil
+				}
 			}
 			
 			if !match.wasCompleted {
