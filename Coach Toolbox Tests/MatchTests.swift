@@ -63,6 +63,11 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual([3.78, 4.16, 4.01], winners[0].previousSinglesRatings)
 		XCTAssertEqual(3.78, losers[0].singlesRating)
 		XCTAssertEqual([3.85, 3.75, 3.78], losers[0].previousSinglesRatings)
+		XCTAssertEqual("""
+			Changes:
+			- Alex: 4.05 -> 4.01
+			- Sam: 3.76 -> 3.78
+			""", match.getChangeDescription())
     }
 	
 	func testNormalDoubleMatchesRatings() {
@@ -87,6 +92,13 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual([3.79, 3.68, 3.75], losers[0].previousDoublesRatings)
 		XCTAssertEqual(3.74, losers[1].doublesRating)
 		XCTAssertEqual([3.72, 3.79, 3.74], losers[1].previousDoublesRatings)
+		XCTAssertEqual("""
+			Changes:
+			- Alex: 4.01 -> 3.98
+			- Sam: 3.78 -> 3.78
+			- Brad: 3.78 -> 3.75
+			- Adam: 3.73 -> 3.74
+			""", match.getChangeDescription())
 	}
 	
 	func testSinglesWithNoHistory() {
@@ -107,5 +119,10 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual([0.06], winners[0].previousSinglesRatings)
 		XCTAssertEqual(-0.06, losers[0].singlesRating)
 		XCTAssertEqual([-0.06], losers[0].previousSinglesRatings)
+		XCTAssertEqual("""
+			Changes:
+			- Brad: 0.0 -> 0.06
+			- Adam: 0.0 -> -0.06
+			""", match.getChangeDescription())
 	}
 }

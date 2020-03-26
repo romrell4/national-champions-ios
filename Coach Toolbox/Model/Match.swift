@@ -51,6 +51,14 @@ struct Match: Codable {
 		return false
 	}
 	
+	var isSingles: Bool {
+		winners.count == 1 && losers.count == 1
+	}
+	
+	var isDoubles: Bool {
+		winners.count == 2 && losers.count == 2
+	}
+	
 	func applyRatingChanges() {
 		let (winners, losers) = computeRatingChanges()
 		(winners + losers).forEach { (player) in
@@ -69,12 +77,12 @@ struct Match: Codable {
 	
 	private func computePlayerRatingChanges(for players: [Player], against opponents: [Player], gameDiff: Int) -> [Player] {
 		let ratingDiff = Double(gameDiff) * GAME_VALUE
-		if players.count == 1, opponents.count == 1 {
+		if isSingles {
 			var player = players[0]
 			let matchRating = opponents[0].singlesRating + ratingDiff
 			player.singlesRating = trunc((players[0].previousSinglesRatings + [matchRating]).average())
 			return [player]
-		} else if players.count == 2, opponents.count == 2 {
+		} else if isDoubles {
 			var (player1, player2) = (players[0], players[1])
 			let matchRating = opponents.map { $0.doublesRating }.sum() + ratingDiff
 			let player1MatchRating = matchRating - player2.doublesRating
@@ -98,8 +106,23 @@ struct Match: Codable {
 	}
 	
 	func getChangeDescription() -> String {
-		//TODO: Implement
-		return "This is a test"
+		let getPlayerChangeDesc: (Player, Player) -> String = { (old, new) in
+			if self.isSingles {
+				return "- \(old.name): \(old.singlesRating) -> \(new.singlesRating)"
+			} else if self.isDoubles {
+				return "- \(old.name): \(old.doublesRating) -> \(new.doublesRating)"
+			} else {
+				return "Shouldn't ever hit this..."
+			}
+		}
+		
+		let (newWinners, newLosers) = computeRatingChanges()
+		return """
+		Changes:
+		\(zip(self.winners + self.losers, newWinners + newLosers).map { (old, new) in
+			getPlayerChangeDesc(old, new)
+		}.joined(separator: "\n"))
+		"""
 	}
 }
 	
