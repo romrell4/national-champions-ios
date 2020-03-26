@@ -133,8 +133,9 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		})
 		if let playerIndex = playerIndex {
 			alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] (_) in
+				//Find any matches this player played
 				let matches = Match.loadAll().filter {
-					[$0.winner.playerId, $0.loser.playerId].contains(player?.playerId)
+					($0.winners.map { $0.playerId } + $0.losers.map { $0.playerId }).contains(player?.playerId)
 				}
 				if matches.count > 0 {
 					self?.displayAlert(title: "Error", message: "This player cannot be deleted, because this player has been involved in matches already saved.")

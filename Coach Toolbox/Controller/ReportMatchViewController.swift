@@ -10,8 +10,10 @@ import UIKit
 
 class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 	
-	@IBOutlet private weak var winnerTextField: UITextField!
-	@IBOutlet private weak var loserTextField: UITextField!
+	@IBOutlet private weak var winner1TextField: UITextField!
+	@IBOutlet private weak var winner2TextField: UITextField!
+	@IBOutlet private weak var loser1TextField: UITextField!
+	@IBOutlet private weak var loser2TextField: UITextField!
 	@IBOutlet private weak var winnerSet1: UITextField!
 	@IBOutlet private weak var loserSet1: UITextField!
 	@IBOutlet private weak var winnerSet2: UITextField!
@@ -20,7 +22,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	@IBOutlet private weak var loserSet3: UITextField!
 	
 	private var playerTextFields: [UITextField] {
-		[winnerTextField, loserTextField] //TODO: Add doubles
+		[winner1TextField, winner2TextField, loser1TextField, loser2TextField]
 	}
 	private var scoreTextFields: [UITextField] {
 		[winnerSet1, loserSet1, winnerSet2, loserSet2, winnerSet3, loserSet3]
@@ -29,15 +31,25 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		playerTextFields + scoreTextFields
 	}
 	
-	private var players = [Player]()
-	private var winner: Player? {
+	private var players = [Player?]()
+	private var winner1: Player? {
 		didSet {
-			winnerTextField.text = winner?.name
+			winner1TextField.text = winner1?.name
 		}
 	}
-	private var loser: Player? {
+	private var winner2: Player? {
 		didSet {
-			loserTextField.text = loser?.name
+			winner2TextField.text = winner2?.name
+		}
+	}
+	private var loser1: Player? {
+		didSet {
+			loser1TextField.text = loser1?.name
+		}
+	}
+	private var loser2: Player? {
+		didSet {
+			loser2TextField.text = loser2?.name
 		}
 	}
 
@@ -57,8 +69,12 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
-		players = Player.loadAll().sorted { (lhs, rhs) -> Bool in
-			lhs.name < rhs.name
+		// Add a "nil" so that they can deselect a player
+		players = (Player.loadAll() + [nil]).sorted { (lhs, rhs) -> Bool in
+			if let lhs = lhs, let rhs = rhs {
+				return lhs.name < rhs.name
+			}
+			return true
 		}
 	}
 	
@@ -69,15 +85,19 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int { players.count }
 	
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		players[row].name
+		players[row]?.name
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		if !players.isEmpty {
-			if winnerTextField.isFirstResponder {
-				winner = players[row]
-			} else if loserTextField.isFirstResponder {
-				loser = players[row]
+			if winner1TextField.isFirstResponder {
+				winner1 = players[row]
+			} else if winner2TextField.isFirstResponder {
+				winner2 = players[row]
+			} else if loser1TextField.isFirstResponder {
+				loser1 = players[row]
+			} else if loser2TextField.isFirstResponder {
+				loser2 = players[row]
 			}
 		}
 		self.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
@@ -87,12 +107,17 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	
 	func textFieldDidBeginEditing(_ textField: UITextField) {
 		if textField.text?.isEmpty != false {
-			if textField == winnerTextField {
-				winner = players.first
-			} else if textField == loserTextField {
-				loser = players.first
+			if textField == winner1TextField {
+				winner1 = players[0]
+			} else if textField == winner2TextField {
+				winner2 = players[0]
+			} else if textField == loser1TextField {
+				loser1 = players[0]
+			} else if textField == loser2TextField {
+				loser2 = players[0]
 			}
 		}
+		self.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
 	}
 
 	func textFieldDidEndEditing(_ textField: UITextField) {
@@ -102,7 +127,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	//Listeners
 	
 	@objc private func textFieldDidChange(textField: UITextField) {
-		if let index = scoreTextFields.firstIndex(of: textField) {
+		//Only force the responder to change if they just added a score. If they are correcting, don't switch the field
+		if textField.text?.count == 1, let index = scoreTextFields.firstIndex(of: textField) {
 			if let nextTextField = scoreTextFields[safe: index + 1] {
 				nextTextField.becomeFirstResponder()
 			} else {
@@ -142,12 +168,14 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	private func getMatch() -> Match? {
-		if let winner = self.winner, let loser = self.loser, winner.playerId != loser.playerId {
+		//They must either have 2 distinct players, or 4 distinct players
+		if (Set([winner1, loser1].compactMap { $0?.playerId }).count == 2 && winner2 == nil && loser2 == nil) ||
+			Set([winner1, winner2, loser1, loser2].compactMap { $0?.playerId }).count == 4 {
 			return Match(
 				matchId: UUID().uuidString,
 				matchDate: Date(),
-				winner: winner,
-				loser: loser,
+				winners: [winner1, winner2].compactMap { $0 },
+				losers: [loser1, loser2].compactMap { $0 },
 				winnerSet1Score: self.winnerSet1.toInt(),
 				loserSet1Score: self.loserSet1.toInt(),
 				winnerSet2Score: self.winnerSet2.toInt(),

@@ -14,8 +14,8 @@ private let GAME_VALUE = 0.06
 struct Match: Codable {
 	let matchId: String
 	let matchDate: Date
-	let winner: Player
-	let loser: Player
+	let winners: [Player]
+	let losers: [Player]
 	let winnerSet1Score: Int?
 	let loserSet1Score: Int?
 	let winnerSet2Score: Int?
@@ -51,19 +51,24 @@ struct Match: Codable {
 		return false
 	}
 	
-	func computeRatingChanges() -> (Double, Double) {
+	func computeRatingChanges() -> ([Double], [Double]) {
 		let winnerTotalGames = [winnerSet1Score, winnerSet2Score, winnerSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		return (
-			computePlayerRatingChanges(for: winner, against: loser, gameDiff: winnerTotalGames - loserTotalGames),
-			computePlayerRatingChanges(for: loser, against: winner, gameDiff: loserTotalGames - winnerTotalGames)
+			computePlayerRatingChanges(for: winners, against: losers, gameDiff: winnerTotalGames - loserTotalGames),
+			computePlayerRatingChanges(for: losers, against: winners, gameDiff: loserTotalGames - winnerTotalGames)
 		)
 	}
 	
-	private func computePlayerRatingChanges(for player: Player, against opponent: Player, gameDiff: Int) -> Double {
-		let matchRating = opponent.singlesRating + (Double(gameDiff) * GAME_VALUE)
-		let newRating = (player.previousSinglesRatings + [matchRating]).average()
-		return Double(Int(newRating * 100)) / 100.0
+	private func computePlayerRatingChanges(for players: [Player], against opponents: [Player], gameDiff: Int) -> [Double] {
+		if players.count == 1, opponents.count == 1 {
+			let matchRating = opponents[0].singlesRating + (Double(gameDiff) * GAME_VALUE)
+			let newRating = (players[0].previousSinglesRatings + [matchRating]).average()
+			return [Double(Int(newRating * 100)) / 100.0]
+		} else {
+			//TODO: Implement
+			return [0.0, 0.0]
+		}
 	}
 	
 	func save() {

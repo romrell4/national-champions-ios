@@ -9,7 +9,7 @@
 import UIKit
 
 class MatchTableViewCell: UITableViewCell {
-	@IBOutlet weak var winnerLabel: UILabel!
-	@IBOutlet weak var loserLabel: UILabel!
+	@IBOutlet var winnerLabels: [UILabel]!
+	@IBOutlet var loserLabels: [UILabel]!
 	@IBOutlet weak var scoreLabel: UILabel!
 }

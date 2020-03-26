@@ -31,8 +31,14 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 		if let cell = cell as? MatchTableViewCell {
 			let match = matches[indexPath.row]
-			cell.winnerLabel.text = players.first { $0.playerId == match.winner.playerId }?.name
-			cell.loserLabel.text = players.first { $0.playerId == match.loser.playerId }?.name
+			//Start them all as nil (so that they only become visible if they have data)
+			(cell.winnerLabels + cell.loserLabels).forEach {
+				$0.isHidden = true
+			}
+			(zip(cell.winnerLabels, match.winners).map { $0 } + zip(cell.loserLabels, match.losers).map { $0 }).forEach { (label, player) in
+				label.isHidden = false
+				label.text = player.name
+			}
 			cell.scoreLabel.text = match.scoreText
 		}
 		return cell

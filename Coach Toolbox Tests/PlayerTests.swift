@@ -32,8 +32,8 @@ class MatchTests: XCTestCase {
 		let match = Match(
 			matchId: "1",
 			matchDate: Date(),
-			winner: alex,
-			loser: sam,
+			winners: [alex],
+			losers: [sam],
 			winnerSet1Score: 6,
 			loserSet1Score: 4,
 			winnerSet2Score: 6,
@@ -42,8 +42,8 @@ class MatchTests: XCTestCase {
 			loserSet3Score: nil
 		)
 		let (alexRating, samRating) = match.computeRatingChanges()
-		XCTAssertEqual(4.01, alexRating)
-		XCTAssertEqual(3.78, samRating)
+		XCTAssertEqual(4.01, alexRating[0])
+		XCTAssertEqual(3.78, samRating[0])
     }
 	
 	func testDoubleMatchesRatings() {
