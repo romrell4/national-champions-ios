@@ -13,10 +13,28 @@ private let DEFAULTS_KEY = "players"
 struct Player: Codable {
 	let playerId: String
 	var name: String
-	var singlesRating: Double
-	var doublesRating: Double
+	var singlesRating: Double {
+		didSet {
+			previousSinglesRatings.safeRemoveFirst()
+			previousSinglesRatings.append(singlesRating)
+		}
+	}
+	var doublesRating: Double {
+		didSet {
+			previousDoublesRatings.safeRemoveFirst()
+			previousDoublesRatings.append(doublesRating)
+		}
+	}
 	var previousSinglesRatings: [Double]
 	var previousDoublesRatings: [Double]
+	
+	func update() {
+		var players = Player.loadAll()
+		if let index = players.firstIndex(where: { $0.playerId == playerId }) {
+			players[index] = self
+			players.save()
+		}
+	}
 	
 	static func loadAll() -> [Player] {
 		guard
@@ -74,5 +92,13 @@ struct Player: Codable {
 extension Array where Element == Player {
 	func save() {
 		try? UserDefaults.standard.set(JSONEncoder().encode(self), forKey: DEFAULTS_KEY)
+	}
+}
+
+private extension Array {
+	mutating func safeRemoveFirst() {
+		if !isEmpty {
+			removeFirst()
+		}
 	}
 }

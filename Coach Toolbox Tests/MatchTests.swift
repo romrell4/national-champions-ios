@@ -58,9 +58,11 @@ class MatchTests: XCTestCase {
 			winnerSet3Score: nil,
 			loserSet3Score: nil
 		)
-		let (winnerRatings, loserRatings) = match.computeRatingChanges()
-		XCTAssertEqual(4.01, winnerRatings[0])
-		XCTAssertEqual(3.78, loserRatings[0])
+		let (winners, losers) = match.computeRatingChanges()
+		XCTAssertEqual(4.01, winners[0].singlesRating)
+		XCTAssertEqual([3.78, 4.16, 4.01], winners[0].previousSinglesRatings)
+		XCTAssertEqual(3.78, losers[0].singlesRating)
+		XCTAssertEqual([3.85, 3.75, 3.78], losers[0].previousSinglesRatings)
     }
 	
 	func testNormalDoubleMatchesRatings() {
@@ -76,11 +78,15 @@ class MatchTests: XCTestCase {
 			winnerSet3Score: nil,
 			loserSet3Score: nil
 		)
-		let (winnerRatings, loserRatings) = match.computeRatingChanges()
-		XCTAssertEqual(3.98, winnerRatings[0])
-		XCTAssertEqual(3.78, winnerRatings[1])
-		XCTAssertEqual(3.75, loserRatings[0])
-		XCTAssertEqual(3.74, loserRatings[1])
+		let (winners, losers) = match.computeRatingChanges()
+		XCTAssertEqual(3.98, winners[0].doublesRating)
+		XCTAssertEqual([4.16, 4.01, 3.98], winners[0].previousDoublesRatings)
+		XCTAssertEqual(3.78, winners[1].doublesRating)
+		XCTAssertEqual([3.75, 3.78, 3.78], winners[1].previousDoublesRatings)
+		XCTAssertEqual(3.75, losers[0].doublesRating)
+		XCTAssertEqual([3.79, 3.68, 3.75], losers[0].previousDoublesRatings)
+		XCTAssertEqual(3.74, losers[1].doublesRating)
+		XCTAssertEqual([3.72, 3.79, 3.74], losers[1].previousDoublesRatings)
 	}
 	
 	func testSinglesWithNoHistory() {
@@ -96,8 +102,10 @@ class MatchTests: XCTestCase {
 			winnerSet3Score: 1,
 			loserSet3Score: 0
 		)
-		let (winnerRatings, loserRatings) = match.computeRatingChanges()
-		XCTAssertEqual(0.06, winnerRatings[0])
-		XCTAssertEqual(-0.06, loserRatings[0])
+		let (winners, losers) = match.computeRatingChanges()
+		XCTAssertEqual(0.06, winners[0].singlesRating)
+		XCTAssertEqual([0.06], winners[0].previousSinglesRatings)
+		XCTAssertEqual(-0.06, losers[0].singlesRating)
+		XCTAssertEqual([-0.06], losers[0].previousSinglesRatings)
 	}
 }

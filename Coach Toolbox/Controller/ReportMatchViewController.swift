@@ -146,7 +146,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	@IBAction func saveMatch(_ sender: Any) {
 		if let match = getMatch() {
 			let save = {
-				match.save()
+				//TODO: display changes
+				match.insert()
 				self.allTextFields.forEach {
 					$0.text = nil
 				}

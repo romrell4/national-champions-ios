@@ -51,7 +51,14 @@ struct Match: Codable {
 		return false
 	}
 	
-	func computeRatingChanges() -> ([Double], [Double]) {
+	func applyRatingChanges() {
+		let (winners, losers) = computeRatingChanges()
+		(winners + losers).forEach { (player) in
+			player.update()
+		}
+	}
+	
+	func computeRatingChanges() -> ([Player], [Player]) {
 		let winnerTotalGames = [winnerSet1Score, winnerSet2Score, winnerSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		return (
@@ -60,19 +67,21 @@ struct Match: Codable {
 		)
 	}
 	
-	private func computePlayerRatingChanges(for players: [Player], against opponents: [Player], gameDiff: Int) -> [Double] {
+	private func computePlayerRatingChanges(for players: [Player], against opponents: [Player], gameDiff: Int) -> [Player] {
 		let ratingDiff = Double(gameDiff) * GAME_VALUE
 		if players.count == 1, opponents.count == 1 {
+			var player = players[0]
 			let matchRating = opponents[0].singlesRating + ratingDiff
-			let newRating = (players[0].previousSinglesRatings + [matchRating]).average()
-			return [trunc(newRating)]
+			player.singlesRating = trunc((players[0].previousSinglesRatings + [matchRating]).average())
+			return [player]
 		} else if players.count == 2, opponents.count == 2 {
+			var (player1, player2) = (players[0], players[1])
 			let matchRating = opponents.map { $0.doublesRating }.sum() + ratingDiff
-			let player1MatchRating = matchRating - players[1].doublesRating
-			let player2MatchRating = matchRating - players[0].doublesRating
-			let player1NewRating = (players[0].previousDoublesRatings + [player1MatchRating]).average()
-			let player2NewRating = (players[1].previousDoublesRatings + [player2MatchRating]).average()
-			return [trunc(player1NewRating), trunc(player2NewRating)]
+			let player1MatchRating = matchRating - player2.doublesRating
+			let player2MatchRating = matchRating - player1.doublesRating
+			player1.doublesRating = trunc((player1.previousDoublesRatings + [player1MatchRating]).average())
+			player2.doublesRating = trunc((player2.previousDoublesRatings + [player2MatchRating]).average())
+			return [player1, player2]
 		} else {
 			fatalError("You can only be playing singles or doubles")
 		}
@@ -83,9 +92,8 @@ struct Match: Codable {
 		Double(Int(round(value * 1000) / 1000 * 100)) / 100.0
 	}
 	
-	func save() {
-		//TODO: Update players ratings and display changes
-		//TODO: Update previous matches
+	func insert() {
+		applyRatingChanges()
 		(Match.loadAll() + [self]).save()
 	}
 }
