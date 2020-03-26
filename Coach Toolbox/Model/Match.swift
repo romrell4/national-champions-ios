@@ -96,6 +96,11 @@ struct Match: Codable {
 		applyRatingChanges()
 		(Match.loadAll() + [self]).save()
 	}
+	
+	func getChangeDescription() -> String {
+		//TODO: Implement
+		return "This is a test"
+	}
 }
 	
 struct MatchSet {
@@ -116,14 +121,14 @@ struct MatchSet {
 	var wasCompleted: Bool {
 		let scores = [winnerScore, loserScore].compactMap { $0 }.sorted()
 		if scores.count == 2 {
-			return (scores[1] == 6 && scores[0] < 6) || (scores[1] == 7 && [5, 6].contains(scores[0]))
+			return (scores[1] == 6 && scores[0] < 5) || (scores[1] == 7 && [5, 6].contains(scores[0]))
 		}
 		return false
 	}
 	
 	var wasSet3Completed: Bool {
 		if let winnerScore = winnerScore, let loserScore = loserScore {
-			return (winnerScore == 7 && [5, 6].contains(loserScore)) || (winnerScore == 6 && loserScore < 6) || (winnerScore == 1 && loserScore == 0)
+			return (winnerScore == 7 && [5, 6].contains(loserScore)) || (winnerScore == 6 && loserScore < 5) || (winnerScore == 1 && loserScore == 0)
 		}
 		return false
 	}

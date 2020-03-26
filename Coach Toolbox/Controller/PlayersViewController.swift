@@ -22,6 +22,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
+		players = Player.loadAll()
 		sortAndReload()
 	}
 	

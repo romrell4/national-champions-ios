@@ -20,6 +20,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	@IBOutlet private weak var loserSet2: UITextField!
 	@IBOutlet private weak var winnerSet3: UITextField!
 	@IBOutlet private weak var loserSet3: UITextField!
+	@IBOutlet private weak var explanationView: UITextView!
 	
 	private var playerTextFields: [UITextField] {
 		[winner1TextField, winner2TextField, loser1TextField, loser2TextField]
@@ -143,14 +144,18 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		}
 	}
 	
+	@IBAction func clear(_ sender: Any) {
+		self.allTextFields.forEach {
+			$0.text = nil
+		}
+		self.explanationView.text = nil
+	}
+	
 	@IBAction func saveMatch(_ sender: Any) {
 		if let match = getMatch() {
 			let save = {
-				//TODO: display changes
+				self.explanationView.text = match.getChangeDescription()
 				match.insert()
-				self.allTextFields.forEach {
-					$0.text = nil
-				}
 			}
 			
 			if !match.wasCompleted {
