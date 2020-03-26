@@ -54,14 +54,16 @@ struct Match: Codable {
 	func computeRatingChanges() -> (Double, Double) {
 		let winnerTotalGames = [winnerSet1Score, winnerSet2Score, winnerSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
-		let gameDiff = winnerTotalGames - loserTotalGames
-		return (computePlayerRatingChanges(for: winner, gameDiff: gameDiff), computePlayerRatingChanges(for: loser, gameDiff: -gameDiff))
+		return (
+			computePlayerRatingChanges(for: winner, against: loser, gameDiff: winnerTotalGames - loserTotalGames),
+			computePlayerRatingChanges(for: loser, against: winner, gameDiff: loserTotalGames - winnerTotalGames)
+		)
 	}
 	
-	private func computePlayerRatingChanges(for player: Player, gameDiff: Int) -> Double {
-		let matchRating = player.singlesRating + (Double(gameDiff) * GAME_VALUE)
+	private func computePlayerRatingChanges(for player: Player, against opponent: Player, gameDiff: Int) -> Double {
+		let matchRating = opponent.singlesRating + (Double(gameDiff) * GAME_VALUE)
 		let newRating = (player.previousSinglesRatings + [matchRating]).average()
-		return newRating
+		return Double(Int(newRating * 100)) / 100.0
 	}
 	
 	func save() {

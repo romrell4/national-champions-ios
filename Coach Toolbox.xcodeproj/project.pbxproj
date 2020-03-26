@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C44D6C42428506100BA96AF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44D6C32428506100BA96AF /* Match.swift */; };
+		0CA66251242C4C00001C24D2 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA66250242C4C00001C24D2 /* PlayerTests.swift */; };
 		0CAEE0112429A4A800BB60D9 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */; };
 		0CAEE0132429A4EF00BB60D9 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */; };
 		0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C124245399000714F1 /* PlayersViewController.swift */; };
@@ -22,8 +23,21 @@
 		0CE7F6232424775D004242C3 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0CA66253242C4C00001C24D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CE75E2D2423121E006CD68B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CE75E342423121E006CD68B;
+			remoteInfo = "Coach Toolbox";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0C44D6C32428506100BA96AF /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		0CA6624E242C4C00001C24D2 /* Coach Toolbox Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coach Toolbox Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CA66250242C4C00001C24D2 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		0CA66252242C4C00001C24D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		0CD0C4C124245399000714F1 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0CA6624B242C4C00001C24D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CE75E322423121E006CD68B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CA6624F242C4C00001C24D2 /* Coach Toolbox Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0CA66250242C4C00001C24D2 /* PlayerTests.swift */,
+				0CA66252242C4C00001C24D2 /* Info.plist */,
+			);
+			path = "Coach Toolbox Tests";
+			sourceTree = "<group>";
+		};
 		0CD0C4C324245833000714F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE75E372423121E006CD68B /* Coach Toolbox */,
+				0CA6624F242C4C00001C24D2 /* Coach Toolbox Tests */,
 				0CE75E362423121E006CD68B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE75E352423121E006CD68B /* Coach Toolbox.app */,
+				0CA6624E242C4C00001C24D2 /* Coach Toolbox Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +155,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0CA6624D242C4C00001C24D2 /* Coach Toolbox Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CA66255242C4C00001C24D2 /* Build configuration list for PBXNativeTarget "Coach Toolbox Tests" */;
+			buildPhases = (
+				0CA6624A242C4C00001C24D2 /* Sources */,
+				0CA6624B242C4C00001C24D2 /* Frameworks */,
+				0CA6624C242C4C00001C24D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CA66254242C4C00001C24D2 /* PBXTargetDependency */,
+			);
+			name = "Coach Toolbox Tests";
+			productName = "Coach Toolbox Tests";
+			productReference = 0CA6624E242C4C00001C24D2 /* Coach Toolbox Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0CE75E342423121E006CD68B /* Coach Toolbox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CE75E4C2423121F006CD68B /* Build configuration list for PBXNativeTarget "Coach Toolbox" */;
@@ -150,6 +200,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Eric Romrell";
 				TargetAttributes = {
+					0CA6624D242C4C00001C24D2 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 0CE75E342423121E006CD68B;
+					};
 					0CE75E342423121E006CD68B = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -169,11 +223,19 @@
 			projectRoot = "";
 			targets = (
 				0CE75E342423121E006CD68B /* Coach Toolbox */,
+				0CA6624D242C4C00001C24D2 /* Coach Toolbox Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0CA6624C242C4C00001C24D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CE75E332423121E006CD68B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +249,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0CA6624A242C4C00001C24D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CA66251242C4C00001C24D2 /* PlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CE75E312423121E006CD68B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +275,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CA66254242C4C00001C24D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CE75E342423121E006CD68B /* Coach Toolbox */;
+			targetProxy = 0CA66253242C4C00001C24D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0CE75E3E2423121E006CD68B /* Main.storyboard */ = {
@@ -226,6 +304,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0CA66256242C4C00001C24D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9JN5J3VZ9;
+				INFOPLIST_FILE = "Coach Toolbox Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romrell4.Coach-Toolbox-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coach Toolbox.app/Coach Toolbox";
+			};
+			name = Debug;
+		};
+		0CA66257242C4C00001C24D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9JN5J3VZ9;
+				INFOPLIST_FILE = "Coach Toolbox Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romrell4.Coach-Toolbox-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coach Toolbox.app/Coach Toolbox";
+			};
+			name = Release;
+		};
 		0CE75E4A2423121F006CD68B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -379,6 +497,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0CA66255242C4C00001C24D2 /* Build configuration list for PBXNativeTarget "Coach Toolbox Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CA66256242C4C00001C24D2 /* Debug */,
+				0CA66257242C4C00001C24D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0CE75E302423121E006CD68B /* Build configuration list for PBXProject "Coach Toolbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
