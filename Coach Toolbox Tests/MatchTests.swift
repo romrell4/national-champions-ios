@@ -45,7 +45,7 @@ private let adam = Player(
 
 class MatchTests: XCTestCase {
 	
-    func testSinglesMatchRatings() {
+    func testNormalSinglesMatchRatings() {
 		let match = Match(
 			matchId: "1",
 			matchDate: Date(),
@@ -58,12 +58,12 @@ class MatchTests: XCTestCase {
 			winnerSet3Score: nil,
 			loserSet3Score: nil
 		)
-		let (alexRating, samRating) = match.computeRatingChanges()
-		XCTAssertEqual(4.01, alexRating[0])
-		XCTAssertEqual(3.78, samRating[0])
+		let (winnerRatings, loserRatings) = match.computeRatingChanges()
+		XCTAssertEqual(4.01, winnerRatings[0])
+		XCTAssertEqual(3.78, loserRatings[0])
     }
 	
-	func testDoubleMatchesRatings() {
+	func testNormalDoubleMatchesRatings() {
 		let match = Match(
 			matchId: "1",
 			matchDate: Date(),
@@ -81,5 +81,23 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(3.78, winnerRatings[1])
 		XCTAssertEqual(3.75, loserRatings[0])
 		XCTAssertEqual(3.74, loserRatings[1])
+	}
+	
+	func testSinglesWithNoHistory() {
+		let match = Match(
+			matchId: "1",
+			matchDate: Date(),
+			winners: [brad],
+			losers: [adam],
+			winnerSet1Score: 6,
+			loserSet1Score: 4,
+			winnerSet2Score: 4,
+			loserSet2Score: 6,
+			winnerSet3Score: 1,
+			loserSet3Score: 0
+		)
+		let (winnerRatings, loserRatings) = match.computeRatingChanges()
+		XCTAssertEqual(0.06, winnerRatings[0])
+		XCTAssertEqual(-0.06, loserRatings[0])
 	}
 }
