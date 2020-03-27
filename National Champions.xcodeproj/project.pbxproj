@@ -22,6 +22,7 @@
 		0CE75E482423121F006CD68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE75E462423121F006CD68B /* LaunchScreen.storyboard */; };
 		0CE7F62124246B3A004242C3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7F62024246B3A004242C3 /* Player.swift */; };
 		0CE7F6232424775D004242C3 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */; };
+		DC3118A82BB9D1108C21BA81 /* Pods_National_Champions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4B706FDEAE42BDF796DCEA /* Pods_National_Champions.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		0CE75E492423121F006CD68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CE7F62024246B3A004242C3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		50CBC24AAF8B6DC63256F6CD /* Pods-National Champions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-National Champions.release.xcconfig"; path = "Target Support Files/Pods-National Champions/Pods-National Champions.release.xcconfig"; sourceTree = "<group>"; };
+		5D4B706FDEAE42BDF796DCEA /* Pods_National_Champions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_National_Champions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4DF339D3B75A7DA43607A1 /* Pods-National Champions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-National Champions.debug.xcconfig"; path = "Target Support Files/Pods-National Champions/Pods-National Champions.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3118A82BB9D1108C21BA81 /* Pods_National_Champions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +127,8 @@
 				0CE75E372423121E006CD68B /* National Champions */,
 				0C9EE905242D9747005737B7 /* NationalChampionsTests */,
 				0CE75E362423121E006CD68B /* Products */,
+				C2F7EB6C98D3E67111D62594 /* Pods */,
+				5334032B7882EBB2C04414C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +162,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5334032B7882EBB2C04414C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D4B706FDEAE42BDF796DCEA /* Pods_National_Champions.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2F7EB6C98D3E67111D62594 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD4DF339D3B75A7DA43607A1 /* Pods-National Champions.debug.xcconfig */,
+				50CBC24AAF8B6DC63256F6CD /* Pods-National Champions.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CE75E4C2423121F006CD68B /* Build configuration list for PBXNativeTarget "National Champions" */;
 			buildPhases = (
+				12E2993BB8DC8A862EEE79B5 /* [CP] Check Pods Manifest.lock */,
 				0CE75E312423121E006CD68B /* Sources */,
 				0CE75E322423121E006CD68B /* Frameworks */,
 				0CE75E332423121E006CD68B /* Resources */,
+				50B0AA18DA6373E0C227FEE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12E2993BB8DC8A862EEE79B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-National Champions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50B0AA18DA6373E0C227FEE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-National Champions/Pods-National Champions-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-National Champions/Pods-National Champions-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-National Champions/Pods-National Champions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C9EE900242D9747005737B7 /* Sources */ = {
@@ -464,6 +533,7 @@
 		};
 		0CE75E4D2423121F006CD68B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD4DF339D3B75A7DA43607A1 /* Pods-National Champions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -483,6 +553,7 @@
 		};
 		0CE75E4E2423121F006CD68B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50CBC24AAF8B6DC63256F6CD /* Pods-National Champions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
