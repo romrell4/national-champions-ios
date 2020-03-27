@@ -80,15 +80,15 @@ struct Match: Codable {
 		if isSingles {
 			var player = players[0]
 			let matchRating = opponents[0].singlesRating + ratingDiff
-			player.singlesRating = trunc((players[0].previousSinglesRatings + [matchRating]).average())
+			player.singlesRating = trunc((players[0].previousSinglesRatings.suffix(3) + [matchRating]).average())
 			return [player]
 		} else if isDoubles {
 			var (player1, player2) = (players[0], players[1])
 			let matchRating = opponents.map { $0.doublesRating }.sum() + ratingDiff
 			let player1MatchRating = matchRating - player2.doublesRating
 			let player2MatchRating = matchRating - player1.doublesRating
-			player1.doublesRating = trunc((player1.previousDoublesRatings + [player1MatchRating]).average())
-			player2.doublesRating = trunc((player2.previousDoublesRatings + [player2MatchRating]).average())
+			player1.doublesRating = trunc((player1.previousDoublesRatings.suffix(3) + [player1MatchRating]).average())
+			player2.doublesRating = trunc((player2.previousDoublesRatings.suffix(3) + [player2MatchRating]).average())
 			return [player1, player2]
 		} else {
 			fatalError("You can only be playing singles or doubles")

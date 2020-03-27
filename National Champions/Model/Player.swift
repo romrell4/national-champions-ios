@@ -15,13 +15,11 @@ struct Player: Codable {
 	var name: String
 	var singlesRating: Double {
 		didSet {
-			previousSinglesRatings.safeRemoveFirst()
 			previousSinglesRatings.append(singlesRating)
 		}
 	}
 	var doublesRating: Double {
 		didSet {
-			previousDoublesRatings.safeRemoveFirst()
 			previousDoublesRatings.append(doublesRating)
 		}
 	}
@@ -92,13 +90,5 @@ struct Player: Codable {
 extension Array where Element == Player {
 	func save() {
 		try? UserDefaults.standard.set(JSONEncoder().encode(self), forKey: DEFAULTS_KEY)
-	}
-}
-
-private extension Array {
-	mutating func safeRemoveFirst() {
-		if !isEmpty {
-			removeFirst()
-		}
 	}
 }

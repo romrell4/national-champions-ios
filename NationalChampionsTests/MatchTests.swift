@@ -41,7 +41,14 @@ private let adam = Player(
 	previousSinglesRatings: [],
 	previousDoublesRatings: [3.69, 3.72, 3.79]
 )
-
+private let olderPlayer = Player(
+	playerId: "5",
+	name: "Older Player",
+	singlesRating: 0.0,
+	doublesRating: 0.0,
+	previousSinglesRatings: [500.0, 0.06, 0.06, 0.06],
+	previousDoublesRatings: []
+)
 
 class MatchTests: XCTestCase {
 	
@@ -60,9 +67,9 @@ class MatchTests: XCTestCase {
 		)
 		let (winners, losers) = match.computeRatingChanges()
 		XCTAssertEqual(4.01, winners[0].singlesRating)
-		XCTAssertEqual([3.78, 4.16, 4.01], winners[0].previousSinglesRatings)
+		XCTAssertEqual([4.10, 3.78, 4.16, 4.01], winners[0].previousSinglesRatings)
 		XCTAssertEqual(3.78, losers[0].singlesRating)
-		XCTAssertEqual([3.85, 3.75, 3.78], losers[0].previousSinglesRatings)
+		XCTAssertEqual([3.73, 3.85, 3.75, 3.78], losers[0].previousSinglesRatings)
 		XCTAssertEqual("""
 			Changes:
 			- Alex: 4.05 -> 4.01
@@ -85,13 +92,13 @@ class MatchTests: XCTestCase {
 		)
 		let (winners, losers) = match.computeRatingChanges()
 		XCTAssertEqual(3.98, winners[0].doublesRating)
-		XCTAssertEqual([4.16, 4.01, 3.98], winners[0].previousDoublesRatings)
+		XCTAssertEqual([3.78, 4.16, 4.01, 3.98], winners[0].previousDoublesRatings)
 		XCTAssertEqual(3.78, winners[1].doublesRating)
-		XCTAssertEqual([3.75, 3.78, 3.78], winners[1].previousDoublesRatings)
+		XCTAssertEqual([3.85, 3.75, 3.78, 3.78], winners[1].previousDoublesRatings)
 		XCTAssertEqual(3.75, losers[0].doublesRating)
-		XCTAssertEqual([3.79, 3.68, 3.75], losers[0].previousDoublesRatings)
+		XCTAssertEqual([3.71, 3.79, 3.68, 3.75], losers[0].previousDoublesRatings)
 		XCTAssertEqual(3.74, losers[1].doublesRating)
-		XCTAssertEqual([3.72, 3.79, 3.74], losers[1].previousDoublesRatings)
+		XCTAssertEqual([3.69, 3.72, 3.79, 3.74], losers[1].previousDoublesRatings)
 		XCTAssertEqual("""
 			Changes:
 			- Alex: 4.01 -> 3.98
@@ -124,5 +131,23 @@ class MatchTests: XCTestCase {
 			- Brad: 0.0 -> 0.06
 			- Adam: 0.0 -> -0.06
 			""", match.getChangeDescription())
+	}
+	
+	func testSomeoneWithLargerHistory() {
+		let match = Match(
+			matchId: "1",
+			matchDate: Date(),
+			winners: [olderPlayer],
+			losers: [adam],
+			winnerSet1Score: 1,
+			loserSet1Score: 0,
+			winnerSet2Score: 0,
+			loserSet2Score: 0,
+			winnerSet3Score: 0,
+			loserSet3Score: 0
+		)
+		let (winners, _) = match.computeRatingChanges()
+		XCTAssertEqual(0.06, winners[0].singlesRating)
+		XCTAssertEqual([500.0, 0.06, 0.06, 0.06, 0.06], winners[0].previousSinglesRatings)
 	}
 }
