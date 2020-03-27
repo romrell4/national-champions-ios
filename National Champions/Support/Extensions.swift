@@ -38,3 +38,29 @@ extension UIViewController {
 		present(alert, animated: true)
 	}
 }
+
+extension Optional where Wrapped == URL {
+	func get<T>(completionHandler: @escaping ([T]?) -> Void, deserializer: @escaping ([[String: Any]]) -> [T]) -> Void {
+		if let url = self {
+			URLSession.shared.dataTask(with: url) { data, _, _ in
+				DispatchQueue.main.async {
+					let decoder = JSONDecoder()
+					decoder.keyDecodingStrategy = .convertFromSnakeCase
+					do {
+						if let data = data, let array = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
+							completionHandler(deserializer(array))
+						} else {
+							completionHandler(nil)
+						}
+					} catch {
+						print("\(error)")
+						completionHandler(nil)
+					}
+
+				}
+			}.resume()
+		} else {
+			completionHandler(nil)
+		}
+	}
+}

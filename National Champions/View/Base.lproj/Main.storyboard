@@ -603,7 +603,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="knK-vu-skW"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Match History" id="csI-SX-R5K"/>
+                    <navigationItem key="navigationItem" title="Match History" id="csI-SX-R5K">
+                        <barButtonItem key="rightBarButtonItem" title="Import" id="5Rb-KN-pbK">
+                            <connections>
+                                <action selector="importTapped:" destination="D94-si-RvC" id="wdG-70-Rbz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="8kM-c9-jR1" id="hhA-hr-ska"/>
                     </connections>

@@ -42,6 +42,49 @@ struct Match: Codable {
 		return array
 	}
 	
+	static func loadFromUrl(url: String, completionHandler: @escaping ([Match]?) -> Void) {
+		URL(string: url).get(completionHandler: completionHandler) { dictArray in
+			let newMatches = dictArray.compactMap { dict -> Match? in
+				let players = Player.loadAll()
+				
+				let getPlayerByKey: (String) -> Player? = {
+					guard let name = dict[$0] as? String else { return nil }
+					
+					guard let player = players.first(where: { $0.name == name }) else {
+						fatalError("Attempting to import \(name), but no player found with that name")
+					}
+					return player
+				}
+				
+				guard let winner1 = getPlayerByKey("winner1"),
+					let loser1 = getPlayerByKey("loser1"),
+					let score = dict["score"] as? String
+					else { return nil }
+				
+				let scores = score.split(separator: ",").flatMap {
+					$0.trimmingCharacters(in: .whitespaces).split(separator: "-").map {
+						Int($0.trimmingCharacters(in: .whitespaces)) ?? 0
+					}
+				}
+				
+				return Match(
+					matchId: UUID().uuidString,
+					matchDate: Date(),
+					winners: [winner1, getPlayerByKey("winner2")].compactMap { $0 },
+					losers: [loser1, getPlayerByKey("loser2")].compactMap { $0 },
+					winnerSet1Score: scores[safe: 0],
+					loserSet1Score: scores[safe: 1],
+					winnerSet2Score: scores[safe: 2],
+					loserSet2Score: scores[safe: 3],
+					winnerSet3Score: scores[safe: 4],
+					loserSet3Score: scores[safe: 5]
+				)
+			}
+			let allMatches = Match.loadAll() + newMatches
+			return allMatches
+		}
+	}
+	
 	var wasCompleted: Bool {
 		if set1.wasCompleted, set2.wasCompleted {
 			if set1.winnerWon == true && set2.winnerWon == true && !set3.wasPlayed {

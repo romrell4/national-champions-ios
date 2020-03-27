@@ -23,6 +23,8 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		tableView.tableFooterView = UIView()
     }
 	
+	//UITableView functions
+	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return matches.count
 	}
@@ -54,7 +56,26 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		])
 	}
 	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		//TODO: Edit?
+	//MARK: Listeners
+	
+	@IBAction func importTapped(_ sender: Any) {
+		let alert = UIAlertController(title: "Import Matches", message: "Please enter a URL to import matches from.", preferredStyle: .alert)
+		alert.addTextField {
+			$0.keyboardType = .URL
+		}
+		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
+			if let url = alert.textFields?.first?.text {
+				Match.loadFromUrl(url: url) {
+					if let matches = $0 {
+						self.matches = matches.sorted { (lhs, rhs) -> Bool in
+							return lhs.matchDate > rhs.matchDate
+						}
+						self.tableView.reloadData()
+					}
+				}
+			}
+		}))
+		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		present(alert, animated: true)
 	}
 }
