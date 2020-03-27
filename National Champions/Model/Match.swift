@@ -44,7 +44,7 @@ struct Match: Codable {
 	
 	static func loadFromUrl(url: String, completionHandler: @escaping (Result<Match>) -> Void) {
 		URL(string: url).get(completionHandler: completionHandler) { dictArray in
-			try dictArray.compactMap { dict -> Match? in
+			try dictArray.forEach { dict in
 				let players = Player.loadAll()
 				
 				let getPlayerByKey: (String) throws -> Player? = {
@@ -59,7 +59,7 @@ struct Match: Codable {
 				guard let winner1 = try getPlayerByKey("winner1"),
 					let loser1 = try getPlayerByKey("loser1"),
 					let score = dict["score"] as? String
-					else { return nil }
+					else { return }
 				
 				let scores = score.split(separator: ",").flatMap {
 					$0.trimmingCharacters(in: .whitespaces).split(separator: "-").map {
@@ -80,7 +80,6 @@ struct Match: Codable {
 					loserSet3Score: scores[safe: 5]
 				)
 				match.insert()
-				return match
 			}
 			return Match.loadAll()
 		}
