@@ -48,7 +48,7 @@ struct Match: Codable {
 				let players = Player.loadAll()
 				
 				let getPlayerByKey: (String) throws -> Player? = {
-					guard let name = dict[$0] as? String else { return nil }
+					guard let name = dict[$0] as? String, !name.isEmpty else { return nil }
 					
 					guard let player = players.first(where: { $0.name == name }) else {
 						throw MyError.unableToImport("Attempting to import \(name), but no player found with that name")
@@ -81,6 +81,7 @@ struct Match: Codable {
 				)
 			}
 			let allMatches = Match.loadAll() + newMatches
+			allMatches.save()
 			return allMatches
 		}
 	}
