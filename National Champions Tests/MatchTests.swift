@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Coach_Toolbox
+@testable import National_Champs
 
 private let alex = Player(
 	playerId: "1",

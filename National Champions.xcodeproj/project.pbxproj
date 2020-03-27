@@ -310,17 +310,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9JN5J3VZ9;
-				INFOPLIST_FILE = "Coach Toolbox Tests/Info.plist";
+				INFOPLIST_FILE = "National Champions Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.romrell4.Coach-Toolbox-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.romrell4.NationalChampionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/National Champions.app/National Champions";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/National Champs.app/National Champs";
 			};
 			name = Debug;
 		};
@@ -330,17 +330,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9JN5J3VZ9;
-				INFOPLIST_FILE = "Coach Toolbox Tests/Info.plist";
+				INFOPLIST_FILE = "National Champions Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.romrell4.Coach-Toolbox-Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.romrell4.NationalChampionsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/National Champions.app/National Champions";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/National Champs.app/National Champs";
 			};
 			name = Release;
 		};
