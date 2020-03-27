@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C44D6C42428506100BA96AF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44D6C32428506100BA96AF /* Match.swift */; };
-		0CA66251242C4C00001C24D2 /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA66250242C4C00001C24D2 /* MatchTests.swift */; };
+		0C9EE907242D9747005737B7 /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EE906242D9747005737B7 /* MatchTests.swift */; };
 		0CAEE0112429A4A800BB60D9 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */; };
 		0CAEE0132429A4EF00BB60D9 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */; };
 		0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C124245399000714F1 /* PlayersViewController.swift */; };
@@ -24,20 +24,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0CA66253242C4C00001C24D2 /* PBXContainerItemProxy */ = {
+		0C9EE909242D9747005737B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0CE75E2D2423121E006CD68B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0CE75E342423121E006CD68B;
-			remoteInfo = "Coach Toolbox";
+			remoteInfo = "National Champions";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0C44D6C32428506100BA96AF /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
-		0CA6624E242C4C00001C24D2 /* National Champions Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "National Champions Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CA66250242C4C00001C24D2 /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
-		0CA66252242C4C00001C24D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9EE904242D9747005737B7 /* NationalChampionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NationalChampionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9EE906242D9747005737B7 /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
+		0C9EE908242D9747005737B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		0CD0C4C124245399000714F1 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0CA6624B242C4C00001C24D2 /* Frameworks */ = {
+		0C9EE901242D9747005737B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,13 +72,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CA6624F242C4C00001C24D2 /* National Champions Tests */ = {
+		0C9EE905242D9747005737B7 /* NationalChampionsTests */ = {
 			isa = PBXGroup;
 			children = (
-				0CA66250242C4C00001C24D2 /* MatchTests.swift */,
-				0CA66252242C4C00001C24D2 /* Info.plist */,
+				0C9EE906242D9747005737B7 /* MatchTests.swift */,
+				0C9EE908242D9747005737B7 /* Info.plist */,
 			);
-			path = "National Champions Tests";
+			path = NationalChampionsTests;
 			sourceTree = "<group>";
 		};
 		0CD0C4C324245833000714F1 /* View */ = {
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE75E372423121E006CD68B /* National Champions */,
-				0CA6624F242C4C00001C24D2 /* National Champions Tests */,
+				0C9EE905242D9747005737B7 /* NationalChampionsTests */,
 				0CE75E362423121E006CD68B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				0CE75E352423121E006CD68B /* National Champs.app */,
-				0CA6624E242C4C00001C24D2 /* National Champions Tests.xctest */,
+				0C9EE904242D9747005737B7 /* NationalChampionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,22 +155,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CA6624D242C4C00001C24D2 /* National Champions Tests */ = {
+		0C9EE903242D9747005737B7 /* NationalChampionsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CA66255242C4C00001C24D2 /* Build configuration list for PBXNativeTarget "National Champions Tests" */;
+			buildConfigurationList = 0C9EE90B242D9747005737B7 /* Build configuration list for PBXNativeTarget "NationalChampionsTests" */;
 			buildPhases = (
-				0CA6624A242C4C00001C24D2 /* Sources */,
-				0CA6624B242C4C00001C24D2 /* Frameworks */,
-				0CA6624C242C4C00001C24D2 /* Resources */,
+				0C9EE900242D9747005737B7 /* Sources */,
+				0C9EE901242D9747005737B7 /* Frameworks */,
+				0C9EE902242D9747005737B7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0CA66254242C4C00001C24D2 /* PBXTargetDependency */,
+				0C9EE90A242D9747005737B7 /* PBXTargetDependency */,
 			);
-			name = "National Champions Tests";
-			productName = "Coach Toolbox Tests";
-			productReference = 0CA6624E242C4C00001C24D2 /* National Champions Tests.xctest */;
+			name = NationalChampionsTests;
+			productName = NationalChampionsTests;
+			productReference = 0C9EE904242D9747005737B7 /* NationalChampionsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		0CE75E342423121E006CD68B /* National Champions */ = {
@@ -200,7 +200,7 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Eric Romrell";
 				TargetAttributes = {
-					0CA6624D242C4C00001C24D2 = {
+					0C9EE903242D9747005737B7 = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 0CE75E342423121E006CD68B;
 					};
@@ -223,13 +223,13 @@
 			projectRoot = "";
 			targets = (
 				0CE75E342423121E006CD68B /* National Champions */,
-				0CA6624D242C4C00001C24D2 /* National Champions Tests */,
+				0C9EE903242D9747005737B7 /* NationalChampionsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0CA6624C242C4C00001C24D2 /* Resources */ = {
+		0C9EE902242D9747005737B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -249,11 +249,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0CA6624A242C4C00001C24D2 /* Sources */ = {
+		0C9EE900242D9747005737B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CA66251242C4C00001C24D2 /* MatchTests.swift in Sources */,
+				0C9EE907242D9747005737B7 /* MatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,10 +277,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0CA66254242C4C00001C24D2 /* PBXTargetDependency */ = {
+		0C9EE90A242D9747005737B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0CE75E342423121E006CD68B /* National Champions */;
-			targetProxy = 0CA66253242C4C00001C24D2 /* PBXContainerItemProxy */;
+			targetProxy = 0C9EE909242D9747005737B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -304,13 +304,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0CA66256242C4C00001C24D2 /* Debug */ = {
+		0C9EE90C242D9747005737B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9JN5J3VZ9;
-				INFOPLIST_FILE = "National Champions Tests/Info.plist";
+				INFOPLIST_FILE = NationalChampionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,13 +324,13 @@
 			};
 			name = Debug;
 		};
-		0CA66257242C4C00001C24D2 /* Release */ = {
+		0C9EE90D242D9747005737B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9JN5J3VZ9;
-				INFOPLIST_FILE = "National Champions Tests/Info.plist";
+				INFOPLIST_FILE = NationalChampionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,11 +497,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CA66255242C4C00001C24D2 /* Build configuration list for PBXNativeTarget "National Champions Tests" */ = {
+		0C9EE90B242D9747005737B7 /* Build configuration list for PBXNativeTarget "NationalChampionsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CA66256242C4C00001C24D2 /* Debug */,
-				0CA66257242C4C00001C24D2 /* Release */,
+				0C9EE90C242D9747005737B7 /* Debug */,
+				0C9EE90D242D9747005737B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
