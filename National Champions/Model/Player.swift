@@ -62,7 +62,16 @@ struct Player: Codable {
 					return nil
 				}
 			}
-			let allPlayers = Player.loadAll() + newPlayers
+			
+			//Combine old players with new players by name
+			var allPlayers = Player.loadAll()
+			for newPlayer in newPlayers {
+				if let oldPlayerIndex = allPlayers.firstIndex(where: { $0.name == newPlayer.name }) {
+					allPlayers[oldPlayerIndex] = newPlayer
+				} else {
+					allPlayers.append(newPlayer)
+				}
+			}
 			allPlayers.save()
 			return allPlayers
 		}
