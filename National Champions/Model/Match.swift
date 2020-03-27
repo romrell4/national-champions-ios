@@ -67,7 +67,7 @@ struct Match: Codable {
 					}
 				}
 				
-				return Match(
+				var match = Match(
 					matchId: UUID().uuidString,
 					matchDate: Date(),
 					winners: [winner1, try getPlayerByKey("winner2")].compactMap { $0 },
@@ -79,10 +79,10 @@ struct Match: Codable {
 					winnerSet3Score: scores[safe: 4],
 					loserSet3Score: scores[safe: 5]
 				)
+				match.insert()
+				return match
 			}
-			let allMatches = Match.loadAll() + newMatches
-			allMatches.save()
-			return allMatches
+			return Match.loadAll()
 		}
 	}
 	
