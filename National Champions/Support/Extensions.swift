@@ -39,28 +39,36 @@ extension UIViewController {
 	}
 }
 
+enum Result<T> {
+	case Success(_ list: [T])
+	case Error(_ message: String?)
+}
+
 extension Optional where Wrapped == URL {
-	func get<T>(completionHandler: @escaping ([T]?) -> Void, deserializer: @escaping ([[String: Any]]) -> [T]) -> Void {
+	func get<T>(completionHandler: @escaping (Result<T>) -> Void, deserializer: @escaping ([[String: Any]]) throws -> [T]) -> Void {
 		if let url = self {
 			URLSession.shared.dataTask(with: url) { data, _, _ in
 				DispatchQueue.main.async {
-					let decoder = JSONDecoder()
-					decoder.keyDecodingStrategy = .convertFromSnakeCase
 					do {
 						if let data = data, let array = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
-							completionHandler(deserializer(array))
+							do {
+								completionHandler(.Success(try deserializer(array)))
+							}
 						} else {
-							completionHandler(nil)
+							completionHandler(.Error("Unable to process data from \(url)"))
 						}
 					} catch {
-						print("\(error)")
-						completionHandler(nil)
+						switch error as? MyError {
+						case .unableToImport(let message):
+							completionHandler(.Error(message))
+						default:
+							completionHandler(.Error("Error processing data from \(url): \(error)"))
+						}
 					}
-
 				}
 			}.resume()
 		} else {
-			completionHandler(nil)
+			completionHandler(.Error("Unable to connect to that URL"))
 		}
 	}
 }

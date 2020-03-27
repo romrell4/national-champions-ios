@@ -43,7 +43,7 @@ struct Player: Codable {
 		return array
 	}
 	
-	static func loadFromUrl(url urlString: String, completionHandler: @escaping ([Player]?) -> Void) {
+	static func loadFromUrl(url urlString: String, completionHandler: @escaping (Result<Player>) -> Void) {
 		URL(string: urlString).get(completionHandler: completionHandler) { dictArray in
 			let newPlayers = dictArray.compactMap { dict -> Player? in
 				if let name = dict["name"] as? String,

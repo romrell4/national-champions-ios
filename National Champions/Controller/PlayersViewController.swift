@@ -93,10 +93,13 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		}
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
 			if let url = alert.textFields?.first?.text {
-				Player.loadFromUrl(url: url) { (players) in
-					if let players = players {
-						self.players = players
+				Player.loadFromUrl(url: url) {
+					switch $0 {
+					case .Success(let list):
+						self.players = list
 						self.sortAndReload()
+					case .Error(let message):
+						self.displayAlert(title: "Error", message: message)
 					}
 				}
 			}

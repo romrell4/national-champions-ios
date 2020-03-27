@@ -42,22 +42,22 @@ struct Match: Codable {
 		return array
 	}
 	
-	static func loadFromUrl(url: String, completionHandler: @escaping ([Match]?) -> Void) {
+	static func loadFromUrl(url: String, completionHandler: @escaping (Result<Match>) -> Void) {
 		URL(string: url).get(completionHandler: completionHandler) { dictArray in
-			let newMatches = dictArray.compactMap { dict -> Match? in
+			let newMatches = try dictArray.compactMap { dict -> Match? in
 				let players = Player.loadAll()
 				
-				let getPlayerByKey: (String) -> Player? = {
+				let getPlayerByKey: (String) throws -> Player? = {
 					guard let name = dict[$0] as? String else { return nil }
 					
 					guard let player = players.first(where: { $0.name == name }) else {
-						fatalError("Attempting to import \(name), but no player found with that name")
+						throw MyError.unableToImport("Attempting to import \(name), but no player found with that name")
 					}
 					return player
 				}
 				
-				guard let winner1 = getPlayerByKey("winner1"),
-					let loser1 = getPlayerByKey("loser1"),
+				guard let winner1 = try getPlayerByKey("winner1"),
+					let loser1 = try getPlayerByKey("loser1"),
 					let score = dict["score"] as? String
 					else { return nil }
 				
@@ -70,8 +70,8 @@ struct Match: Codable {
 				return Match(
 					matchId: UUID().uuidString,
 					matchDate: Date(),
-					winners: [winner1, getPlayerByKey("winner2")].compactMap { $0 },
-					losers: [loser1, getPlayerByKey("loser2")].compactMap { $0 },
+					winners: [winner1, try getPlayerByKey("winner2")].compactMap { $0 },
+					losers: [loser1, try getPlayerByKey("loser2")].compactMap { $0 },
 					winnerSet1Score: scores[safe: 0],
 					loserSet1Score: scores[safe: 1],
 					winnerSet2Score: scores[safe: 2],
@@ -207,6 +207,10 @@ struct MatchSet {
 		}
 		return nil
 	}
+}
+
+enum MyError: Error {
+	case unableToImport(_ message: String)
 }
 
 extension Array where Element == Match {

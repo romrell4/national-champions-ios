@@ -66,11 +66,14 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
 			if let url = alert.textFields?.first?.text {
 				Match.loadFromUrl(url: url) {
-					if let matches = $0 {
-						self.matches = matches.sorted { (lhs, rhs) -> Bool in
+					switch $0 {
+					case .Success(let list):
+						self.matches = list.sorted { (lhs, rhs) -> Bool in
 							return lhs.matchDate > rhs.matchDate
 						}
 						self.tableView.reloadData()
+					case .Error(let message):
+						self.displayAlert(title: "Error", message: message)
 					}
 				}
 			}
