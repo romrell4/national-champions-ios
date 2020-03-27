@@ -14,8 +14,8 @@ private let GAME_VALUE = 0.06
 struct Match: Codable {
 	let matchId: String
 	let matchDate: Date
-	let winners: [Player]
-	let losers: [Player]
+	var winners: [Player]
+	var losers: [Player]
 	let winnerSet1Score: Int?
 	let loserSet1Score: Int?
 	let winnerSet2Score: Int?
@@ -30,6 +30,8 @@ struct Match: Codable {
 	var scoreText: String {
 		[set1.scoreText, set2.scoreText, set3.scoreText].compactMap { $0 }.joined(separator: ", ")
 	}
+	
+	var allPlayers: [Player] { winners + losers }
 	
 	static func loadAll() -> [Match] {
 		guard
@@ -59,9 +61,9 @@ struct Match: Codable {
 		winners.count == 2 && losers.count == 2
 	}
 	
-	func applyRatingChanges() {
-		let (winners, losers) = computeRatingChanges()
-		(winners + losers).forEach { (player) in
+	mutating func applyRatingChanges() {
+		(winners, losers) = computeRatingChanges()
+		allPlayers.forEach { (player) in
 			player.update()
 		}
 	}
@@ -100,7 +102,7 @@ struct Match: Codable {
 		Double(Int(round(value * 1000) / 1000 * 100)) / 100.0
 	}
 	
-	func insert() {
+	mutating func insert() {
 		applyRatingChanges()
 		(Match.loadAll() + [self]).save()
 	}

@@ -152,7 +152,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	@IBAction func saveMatch(_ sender: Any) {
-		if let match = getMatch() {
+		if var match = getMatch() {
 			let save = {
 				self.explanationView.text = match.getChangeDescription()
 				match.insert()

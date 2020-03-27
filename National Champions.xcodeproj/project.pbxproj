@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C44D6C42428506100BA96AF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44D6C32428506100BA96AF /* Match.swift */; };
 		0C9EE907242D9747005737B7 /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EE906242D9747005737B7 /* MatchTests.swift */; };
+		0C9EE90F242DA0B9005737B7 /* PlayerRatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EE90E242DA0B9005737B7 /* PlayerRatingsViewController.swift */; };
 		0CAEE0112429A4A800BB60D9 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */; };
 		0CAEE0132429A4EF00BB60D9 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */; };
 		0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C124245399000714F1 /* PlayersViewController.swift */; };
@@ -38,6 +39,7 @@
 		0C9EE904242D9747005737B7 /* NationalChampionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NationalChampionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9EE906242D9747005737B7 /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		0C9EE908242D9747005737B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9EE90E242DA0B9005737B7 /* PlayerRatingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRatingsViewController.swift; sourceTree = "<group>"; };
 		0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		0CD0C4C124245399000714F1 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */,
 				0CD0C4C124245399000714F1 /* PlayersViewController.swift */,
 				0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */,
+				0C9EE90E242DA0B9005737B7 /* PlayerRatingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				0CE7F62124246B3A004242C3 /* Player.swift in Sources */,
 				0CAEE0132429A4EF00BB60D9 /* MatchTableViewCell.swift in Sources */,
 				0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */,
+				0C9EE90F242DA0B9005737B7 /* PlayerRatingsViewController.swift in Sources */,
 				0CE75E3B2423121E006CD68B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

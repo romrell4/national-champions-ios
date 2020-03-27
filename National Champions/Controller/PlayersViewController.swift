@@ -26,6 +26,14 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		sortAndReload()
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let vc = segue.destination as? PlayerRatingsViewController,
+			let cell = sender as? UITableViewCell,
+			let indexPath = tableView.indexPath(for: cell) {
+			vc.player = players[indexPath.row]
+		}
+	}
+	
 	//MARK: UITableViewDelegate/DataSource
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
