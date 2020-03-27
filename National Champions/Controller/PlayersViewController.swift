@@ -31,32 +31,34 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
-		let addShowcase: (String, String, ((MaterialShowcase) -> Void)?) -> Void = { (title, subtitle, extraConfiguration) in
-			let showcase = MaterialShowcase()
-			showcase.targetHolderColor = .systemOrange
-			showcase.primaryText = title
-			showcase.secondaryText = subtitle
-			showcase.delegate = self
-			extraConfiguration?(showcase)
-			self.sequence = self.sequence.temp(showcase)
-		}
-		
-		addShowcase("Add Players", "Tap this button to start adding players that you'd like to track.") {
-			$0.setTargetView(barButtonItem: self.addPlayerButton)
-		}
-		
-		addShowcase("Import Players", "Or tap this button to import players from an external JSON URL.") {
-			$0.setTargetView(barButtonItem: self.importPlayersButton)
-		}
-		
-		if let tabVc = self.tabBarController {
-			addShowcase("Report Matches", "After adding any players you want to track, tap this button to start reporting matches! Don't worry, you can always come back and add more players if you need to.") {
-				$0.setTargetView(tabBar: tabVc.tabBar, itemIndex: 0)
-				$0.targetHolderColor = .clear
+		if players.isEmpty {
+			let addShowcase: (String, String, ((MaterialShowcase) -> Void)?) -> Void = { (title, subtitle, extraConfiguration) in
+				let showcase = MaterialShowcase()
+				showcase.targetHolderColor = .systemOrange
+				showcase.primaryText = title
+				showcase.secondaryText = subtitle
+				showcase.delegate = self
+				extraConfiguration?(showcase)
+				self.sequence = self.sequence.temp(showcase)
 			}
+			
+			addShowcase("Add Players", "Tap this button to start adding players that you'd like to track.") {
+				$0.setTargetView(barButtonItem: self.addPlayerButton)
+			}
+			
+			addShowcase("Import Players", "Or tap this button to import players from an external JSON URL.") {
+				$0.setTargetView(barButtonItem: self.importPlayersButton)
+			}
+			
+			if let tabVc = self.tabBarController {
+				addShowcase("Report Matches", "After adding any players you want to track, tap this button to start reporting matches! Don't worry, you can always come back and add more players if you need to.") {
+					$0.setTargetView(tabBar: tabVc.tabBar, itemIndex: 0)
+					$0.targetHolderColor = .clear
+				}
+			}
+			
+			sequence.setKey(key: "players").start()
 		}
-		
-		sequence.setKey(key: "players").start()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
