@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Coach Toolbox.xcodeproj">
+      location = "self:/Users/romrell4/SourceCode/coach-toolbox-ios/National Champions.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,6 +1,6 @@
 //
 //  MatchHistoryViewController.swift
-//  Coach Toolbox
+//  National Champions
 //
 //  Created by Eric Romrell on 3/23/20.
 //  Copyright © 2020 Eric Romrell. All rights reserved.

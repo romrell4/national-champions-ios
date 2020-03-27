@@ -1,6 +1,6 @@
 //
 //  MatchTests.swift
-//  Coach Toolbox Tests
+//  National Champions Tests
 //
 //  Created by Eric Romrell on 3/25/20.
 //  Copyright © 2020 Eric Romrell. All rights reserved.
