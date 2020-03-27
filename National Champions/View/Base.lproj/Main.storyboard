@@ -136,6 +136,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPlayerButton" destination="h2w-XL-CNJ" id="wCD-Lt-hzt"/>
+                        <outlet property="importPlayersButton" destination="34a-wb-AoL" id="qse-80-rEp"/>
                         <outlet property="sortControl" destination="j21-uo-mtS" id="xl6-gb-HsS"/>
                         <outlet property="tableView" destination="NUr-cZ-CrX" id="ErM-2q-Rk9"/>
                     </connections>

@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import MaterialShowcase
 
-class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MaterialShowcaseDelegate {
 	
+	@IBOutlet private weak var importPlayersButton: UIBarButtonItem!
+	@IBOutlet private weak var addPlayerButton: UIBarButtonItem!
 	@IBOutlet private weak var sortControl: UISegmentedControl!
 	@IBOutlet private weak var tableView: UITableView!
 	
 	private var players = Player.loadAll()
+	private var sequence = MaterialShowcaseSequence()
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +30,47 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		sortAndReload()
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		let addShowcase: (String, String, ((MaterialShowcase) -> Void)?) -> Void = { (title, subtitle, extraConfiguration) in
+			let showcase = MaterialShowcase()
+			showcase.targetHolderColor = .systemOrange
+			showcase.primaryText = title
+			showcase.secondaryText = subtitle
+			showcase.delegate = self
+			extraConfiguration?(showcase)
+			self.sequence = self.sequence.temp(showcase)
+		}
+		
+		addShowcase("Add Players", "Tap this button to start adding players that you'd like to track.") {
+			$0.setTargetView(barButtonItem: self.addPlayerButton)
+		}
+		
+		addShowcase("Import Players", "Or tap this button to import players from an external JSON URL.") {
+			$0.setTargetView(barButtonItem: self.importPlayersButton)
+		}
+		
+		if let tabVc = self.tabBarController {
+			addShowcase("Report Matches", "After adding any players you want to track, tap this button to start reporting matches! Don't worry, you can always come back and add more players if you need to.") {
+				$0.setTargetView(tabBar: tabVc.tabBar, itemIndex: 0)
+				$0.targetHolderColor = .clear
+			}
+		}
+		
+		sequence.setKey(key: "players").start()
+	}
+	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let vc = segue.destination as? PlayerRatingsViewController,
 			let cell = sender as? UITableViewCell,
 			let indexPath = tableView.indexPath(for: cell) {
 			vc.player = players[indexPath.row]
 		}
+	}
+	
+	//MARK: MaterialShowcaseDelegate
+	
+	func showCaseDidDismiss(showcase: MaterialShowcase, didTapTarget: Bool) {
+		sequence.showCaseWillDismis()
 	}
 	
 	//MARK: UITableViewDelegate/DataSource

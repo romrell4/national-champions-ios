@@ -77,6 +77,11 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 			}
 			return true
 		}
+		
+		//If they haven't added any players yet, send them to the players screen
+		if players.compactMap({ $0 }).isEmpty {
+			self.tabBarController?.selectedIndex = 1
+		}
 	}
 	
 	//UIPickerView delegate
