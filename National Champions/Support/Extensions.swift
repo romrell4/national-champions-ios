@@ -32,9 +32,9 @@ extension UITableView {
 }
 
 extension UIViewController {
-	func displayAlert(title: String, message: String? = nil) {
+	func displayAlert(title: String, message: String? = nil, handler: ((UIAlertAction) -> Void)? = nil) {
 		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "OK", style: .default))
+		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
 		present(alert, animated: true)
 	}
 }

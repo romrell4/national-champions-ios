@@ -40,10 +40,36 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		return cell
 	}
 	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		displayPlayerPopUp(title: "Edit Player", playerIndex: indexPath.row) {
-			tableView.deselectSelectedRow()
+	func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let editAction = UIContextualAction(style: .normal, title: "Edit") { _, _, _ in
+			self.displayPlayerPopUp(title: "Edit Player", playerIndex: indexPath.row) { _ in
+				self.tableView.reloadRows(at: [indexPath], with: .automatic)
+			}
 		}
+		editAction.backgroundColor = .blue
+		return UISwipeActionsConfiguration(actions: [editAction])
+	}
+	
+	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		UISwipeActionsConfiguration(actions: [
+			UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
+				let player = self.players[indexPath.row]
+				
+				//Find any matches this player played
+				let matches = Match.loadAll().filter {
+					($0.winners.map { $0.playerId } + $0.losers.map { $0.playerId }).contains(player.playerId)
+				}
+				if matches.count > 0 {
+					self.displayAlert(title: "Error", message: "This player cannot be deleted, because this player has been involved in matches already saved.") { _ in
+						self.tableView.reloadRows(at: [indexPath], with: .automatic)
+					}
+				} else {
+					self.players.remove(at: indexPath.row)
+					self.players.save()
+					self.tableView.deleteRows(at: [indexPath], with: .automatic)
+				}
+			}
+		])
 	}
 	
 	//MARK: Actions
@@ -84,7 +110,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	
 	//MARK: Private functions
 	
-	private func displayPlayerPopUp(title: String, playerIndex: Int? = nil, completionHandler: (() -> Void)? = nil) {
+	private func displayPlayerPopUp(title: String, playerIndex: Int? = nil, completionHandler: ((UIAlertAction) -> Void)? = nil) {
 		let player = players[safe: playerIndex]
 		let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
 		alert.addTextField {
@@ -132,22 +158,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 			self?.players.save()
 			self?.sortAndReload()
 		})
-		if let playerIndex = playerIndex {
-			alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { [weak self] (_) in
-				//Find any matches this player played
-				let matches = Match.loadAll().filter {
-					($0.winners.map { $0.playerId } + $0.losers.map { $0.playerId }).contains(player?.playerId)
-				}
-				if matches.count > 0 {
-					self?.displayAlert(title: "Error", message: "This player cannot be deleted, because this player has been involved in matches already saved.")
-				} else {
-					self?.players.remove(at: playerIndex)
-					self?.players.save()
-					self?.tableView.deleteRows(at: [IndexPath(row: playerIndex, section: 0)], with: .automatic)
-				}
-			})
-		}
-		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-		self.present(alert, animated: true, completion: completionHandler)
+		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: completionHandler))
+		self.present(alert, animated: true)
 	}
 }
