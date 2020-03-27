@@ -44,7 +44,7 @@ struct Match: Codable {
 	
 	static func loadFromUrl(url: String, completionHandler: @escaping (Result<Match>) -> Void) {
 		URL(string: url).get(completionHandler: completionHandler) { dictArray in
-			let newMatches = try dictArray.compactMap { dict -> Match? in
+			try dictArray.compactMap { dict -> Match? in
 				let players = Player.loadAll()
 				
 				let getPlayerByKey: (String) throws -> Player? = {
