@@ -10,6 +10,16 @@
     "doubles_rating": 3.98
   },
   {
+    "name": "Scotty Wynn",
+    "singles_rating": 4.18,
+    "doubles_rating": 3.92
+  },
+  {
+    "name": "Luke Dance",
+    "singles_rating": 4.15,
+    "doubles_rating": 3.91
+  },
+  {
     "name": "Jake Harris",
     "singles_rating": 4.12,
     "doubles_rating": 3.92
@@ -30,6 +40,11 @@
     "doubles_rating": 3.91
   },
   {
+    "name": "Stockton Aubrey",
+    "singles_rating": 4.09,
+    "doubles_rating": 3.86
+  },
+  {
     "name": "Vasil Osipenko",
     "singles_rating": 4.09,
     "doubles_rating": 3.91
@@ -45,14 +60,19 @@
     "doubles_rating": 3.93
   },
   {
+    "name": "Andrew Whittle",
+    "singles_rating": 4.05,
+    "doubles_rating": 3.82
+  },
+  {
     "name": "Royce Plowman",
     "singles_rating": 4.04,
     "doubles_rating": 4.22
   },
   {
-    "name": "Ryan Bell",
-    "singles_rating": 4.01,
-    "doubles_rating": 3.9
+    "name": "Josh Ziegner",
+    "singles_rating": 4.02,
+    "doubles_rating": 3.87
   },
   {
     "name": "Todd Castagna",
@@ -70,9 +90,19 @@
     "doubles_rating": 3.84
   },
   {
+    "name": "Scott Soelberg",
+    "singles_rating": 3.95,
+    "doubles_rating": 3.81
+  },
+  {
     "name": "Derek Elison",
     "singles_rating": 3.95,
     "doubles_rating": 4.18
+  },
+  {
+    "name": "Sam Strickland",
+    "singles_rating": 3.95,
+    "doubles_rating": 3.88
   },
   {
     "name": "Legend Lee",
@@ -85,14 +115,19 @@
     "doubles_rating": 4.01
   },
   {
+    "name": "Pedro Abreu",
+    "singles_rating": 3.93,
+    "doubles_rating": 3.79
+  },
+  {
     "name": "Matthew Pineda",
     "singles_rating": 3.93,
     "doubles_rating": 4.22
   },
   {
-    "name": "Scotty Wynn",
+    "name": "Jonas Kurihara",
     "singles_rating": 3.92,
-    "doubles_rating": 4.18
+    "doubles_rating": 3.82
   },
   {
     "name": "Cole Reese",
@@ -100,9 +135,9 @@
     "doubles_rating": 3.89
   },
   {
-    "name": "Luke Dance",
+    "name": "Tytan Thurgood",
     "singles_rating": 3.91,
-    "doubles_rating": 4.15
+    "doubles_rating": 3.8
   },
   {
     "name": "Scott Hinton",
@@ -120,11 +155,6 @@
     "doubles_rating": 3.89
   },
   {
-    "name": "Rob Acevedo",
-    "singles_rating": 3.9,
-    "doubles_rating": 3.85
-  },
-  {
     "name": "Kurt Winkler",
     "singles_rating": 3.9,
     "doubles_rating": 3.78
@@ -140,9 +170,9 @@
     "doubles_rating": 3.89
   },
   {
-    "name": "Pat Oneill",
-    "singles_rating": 3.89,
-    "doubles_rating": 3.88
+    "name": "Cole Hunt",
+    "singles_rating": 3.9,
+    "doubles_rating": 3.8
   },
   {
     "name": "Paul Williams",
@@ -155,9 +185,9 @@
     "doubles_rating": 3.83
   },
   {
-    "name": "Sam Strickland",
+    "name": "Pat Oneill",
     "singles_rating": 3.88,
-    "doubles_rating": 3.95
+    "doubles_rating": 3.89
   },
   {
     "name": "Ryan Holmes",
@@ -172,12 +202,7 @@
   {
     "name": "Nate Wood",
     "singles_rating": 3.88,
-    "doubles_rating": 3.86
-  },
-  {
-    "name": "Josh Ziegner",
-    "singles_rating": 3.87,
-    "doubles_rating": 4.02
+    "doubles_rating": 3.87
   },
   {
     "name": "KC Johnson",
@@ -195,9 +220,24 @@
     "doubles_rating": 3.78
   },
   {
-    "name": "Stockton Aubrey",
+    "name": "Brad Gessell",
     "singles_rating": 3.86,
-    "doubles_rating": 4.09
+    "doubles_rating": 3.78
+  },
+  {
+    "name": "Evan Hiller",
+    "singles_rating": 3.86,
+    "doubles_rating": 3.8
+  },
+  {
+    "name": "Rob Acevedo",
+    "singles_rating": 3.85,
+    "doubles_rating": 3.9
+  },
+  {
+    "name": "Mike Harris",
+    "singles_rating": 3.85,
+    "doubles_rating": 3.79
   },
   {
     "name": "Chad McCall",
@@ -210,24 +250,19 @@
     "doubles_rating": 3.71
   },
   {
+    "name": "Koa Kauwe",
+    "singles_rating": 3.83,
+    "doubles_rating": 3.78
+  },
+  {
     "name": "Dave Van",
     "singles_rating": 3.83,
     "doubles_rating": 3.88
   },
   {
-    "name": "Andrew Whittle",
-    "singles_rating": 3.82,
-    "doubles_rating": 4.05
-  },
-  {
-    "name": "Jonas Kurihara",
-    "singles_rating": 3.82,
-    "doubles_rating": 3.92
-  },
-  {
-    "name": "Scott Soelberg",
+    "name": "Ryan Hiller",
     "singles_rating": 3.81,
-    "doubles_rating": 3.95
+    "doubles_rating": 3.8
   },
   {
     "name": "Joe Christensen",
@@ -235,44 +270,14 @@
     "doubles_rating": 3.75
   },
   {
-    "name": "Evan Hiller",
-    "singles_rating": 3.8,
-    "doubles_rating": 3.86
-  },
-  {
-    "name": "Ryan Hiller",
-    "singles_rating": 3.8,
-    "doubles_rating": 3.81
-  },
-  {
-    "name": "Tytan Thurgood",
-    "singles_rating": 3.8,
-    "doubles_rating": 3.91
-  },
-  {
-    "name": "Cole Hunt",
-    "singles_rating": 3.8,
-    "doubles_rating": 3.9
-  },
-  {
-    "name": "Mike Harris",
+    "name": "Adam Pullan",
     "singles_rating": 3.79,
-    "doubles_rating": 3.85
+    "doubles_rating": 3.73
   },
   {
-    "name": "Pedro Abreu",
-    "singles_rating": 3.79,
-    "doubles_rating": 3.93
-  },
-  {
-    "name": "Brad Gessell",
+    "name": "Dave Comish",
     "singles_rating": 3.78,
-    "doubles_rating": 3.86
-  },
-  {
-    "name": "Koa Kauwe",
-    "singles_rating": 3.78,
-    "doubles_rating": 3.83
+    "doubles_rating": 3.71
   },
   {
     "name": "Barry Craft",
@@ -280,39 +285,24 @@
     "doubles_rating": 3.76
   },
   {
+    "name": "Geraldo Ramos",
+    "singles_rating": 3.75,
+    "doubles_rating": 3.72
+  },
+  {
     "name": "Sam Carillo",
     "singles_rating": 3.75,
     "doubles_rating": 3.75
   },
   {
-    "name": "Adam Pullan",
-    "singles_rating": 3.73,
-    "doubles_rating": 3.79
+    "name": "Arun Muthukkumaraswamy",
+    "singles_rating": 3.74,
+    "doubles_rating": 3.78
   },
   {
     "name": "Matt Linford",
     "singles_rating": 3.73,
     "doubles_rating": 3.83
-  },
-  {
-    "name": "Geraldo Ramos",
-    "singles_rating": 3.72,
-    "doubles_rating": 3.75
-  },
-  {
-    "name": "Arun Muthukkumaraswamy",
-    "singles_rating": 3.72,
-    "doubles_rating": 3.75
-  },
-  {
-    "name": "Dave Comish",
-    "singles_rating": 3.71,
-    "doubles_rating": 3.78
-  },
-  {
-    "name": "Doug Fowkes",
-    "singles_rating": 3.7,
-    "doubles_rating": 3.57
   },
   {
     "name": "Lance Beare",
@@ -322,7 +312,7 @@
   {
     "name": "Matt Groesbeck",
     "singles_rating": 3.69,
-    "doubles_rating": 3.75
+    "doubles_rating": 3.78
   },
   {
     "name": "Will Wu",
@@ -330,8 +320,13 @@
     "doubles_rating": 3.73
   },
   {
+    "name": "Doug Fowkes",
+    "singles_rating": 3.59,
+    "doubles_rating": 3.7
+  },
+  {
     "name": "Bob Crane",
-    "singles_rating": 3.68,
-    "doubles_rating": 3.56
+    "singles_rating": 3.58,
+    "doubles_rating": 3.68
   }
 ]
