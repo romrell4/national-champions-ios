@@ -59,22 +59,17 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	//MARK: Listeners
 	
 	@IBAction func importTapped(_ sender: Any) {
-		let alert = UIAlertController(title: "Import Matches", message: "Please enter a URL to import matches from.", preferredStyle: .alert)
-		alert.addTextField {
-			$0.keyboardType = .URL
-		}
+		let alert = UIAlertController(title: "Import Matches", message: "Are you sure you'd like to import matches? This will add these new matches to the matches you already have tracked in your system.", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
-			if let url = alert.textFields?.first?.text {
-				Match.loadFromUrl(url: url) {
-					switch $0 {
-					case .Success(let list):
-						self.matches = list.sorted { (lhs, rhs) -> Bool in
-							return lhs.matchDate > rhs.matchDate
-						}
-						self.tableView.reloadData()
-					case .Error(let message):
-						self.displayAlert(title: "Error", message: message)
+			Match.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/matches.json") {
+				switch $0 {
+				case .Success(let list):
+					self.matches = list.sorted { (lhs, rhs) -> Bool in
+						return lhs.matchDate > rhs.matchDate
 					}
+					self.tableView.reloadData()
+				case .Error(let message):
+					self.displayAlert(title: "Error", message: message)
 				}
 			}
 		}))

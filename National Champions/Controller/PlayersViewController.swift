@@ -128,20 +128,15 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	}
 	
 	@IBAction func importPlayers(_ sender: Any) {
-		let alert = UIAlertController(title: "Import Players", message: "Please enter a URL to import players from.", preferredStyle: .alert)
-		alert.addTextField {
-			$0.keyboardType = .URL
-		}
+		let alert = UIAlertController(title: "Import Players", message: "Are you sure you'd like to import players? This will add new players and update any existing players that already exist in your system.", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
-			if let url = alert.textFields?.first?.text {
-				Player.loadFromUrl(url: url) {
-					switch $0 {
-					case .Success(let list):
-						self.players = list
-						self.sortAndReload()
-					case .Error(let message):
-						self.displayAlert(title: "Error", message: message)
-					}
+			Player.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/players.json") {
+				switch $0 {
+				case .Success(let list):
+					self.players = list
+					self.sortAndReload()
+				case .Error(let message):
+					self.displayAlert(title: "Error", message: message)
 				}
 			}
 		}))
