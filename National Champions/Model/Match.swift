@@ -33,6 +33,18 @@ struct Match: Codable {
 	
 	var allPlayers: [Player] { winners + losers }
 	
+	var winner1: Player? { winners[safe: 0] }
+	var winner2: Player? { winners[safe: 1] }
+	var loser1: Player? { losers[safe: 0] }
+	var loser2: Player? { losers[safe: 1] }
+	
+	func findPlayer(player: Player) -> Player? {
+		if let index = allPlayers.firstIndex(of: player) {
+			return allPlayers[index]
+		}
+		return nil
+	}
+	
 	static func loadAll() -> [Match] {
 		guard
 			let data = UserDefaults.standard.data(forKey: DEFAULTS_KEY),
@@ -111,33 +123,49 @@ struct Match: Codable {
 		}
 	}
 	
-	func computeRatingChanges() -> ([Player], [Player]) {
+	var gameDiff: Int {
 		let winnerTotalGames = [winnerSet1Score, winnerSet2Score, winnerSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
+		return winnerTotalGames - loserTotalGames
+	}
+	
+	func computeRatingChanges() -> ([Player], [Player]) {
 		return (
-			computePlayerRatingChanges(for: winners, against: losers, gameDiff: winnerTotalGames - loserTotalGames),
-			computePlayerRatingChanges(for: losers, against: winners, gameDiff: loserTotalGames - winnerTotalGames)
+			computePlayerRatingChanges(for: winners, against: losers, gameDiff: gameDiff),
+			computePlayerRatingChanges(for: losers, against: winners, gameDiff: -gameDiff)
 		)
 	}
 	
 	private func computePlayerRatingChanges(for players: [Player], against opponents: [Player], gameDiff: Int) -> [Player] {
-		let ratingDiff = Double(gameDiff) * GAME_VALUE
 		if isSingles {
 			var player = players[0]
-			let matchRating = opponents[0].singlesRating + ratingDiff
-			player.singlesRating = trunc((players[0].previousSinglesRatings.suffix(3) + [matchRating]).average())
+			player.singlesRating = computeDynamicRating(player: player)
 			return [player]
 		} else if isDoubles {
 			var (player1, player2) = (players[0], players[1])
-			let matchRating = opponents.map { $0.doublesRating }.sum() + ratingDiff
-			let player1MatchRating = matchRating - player2.doublesRating
-			let player2MatchRating = matchRating - player1.doublesRating
-			player1.doublesRating = trunc((player1.previousDoublesRatings.suffix(3) + [player1MatchRating]).average())
-			player2.doublesRating = trunc((player2.previousDoublesRatings.suffix(3) + [player2MatchRating]).average())
+			player1.doublesRating = computeDynamicRating(player: player1)
+			player2.doublesRating = computeDynamicRating(player: player2)
 			return [player1, player2]
 		} else {
 			fatalError("You can only be playing singles or doubles")
 		}
+	}
+	
+	func computeMatchRating(player: Player) -> Double {
+		let isWinner = winners.contains(player)
+		let (myTeam, opponents) = isWinner ? (winners, losers) : (losers, winners)
+		let ratingDiff = Double(gameDiff) * (isWinner ? GAME_VALUE : -GAME_VALUE)
+		let teamMatchRating = opponents.map { isSingles ? $0.singlesRating : $0.doublesRating }.sum() + ratingDiff
+		let myRating = teamMatchRating - myTeam.filter { $0 != player }.map { isSingles ? $0.singlesRating : $0.doublesRating }.sum()
+		return myRating
+	}
+
+	func computeDynamicRating(player: Player) -> Double {
+		guard let player = findPlayer(player: player) else { fatalError("This player did not play in this match") }
+		
+		let matchRating = computeMatchRating(player: player)
+		let previousRatings = isSingles ? player.previousSinglesRatings : player.previousDoublesRatings
+		return trunc((previousRatings.suffix(3) + [matchRating]).average())
 	}
 	
 	private func trunc(_ value: Double) -> Double {

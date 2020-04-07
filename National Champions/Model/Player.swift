@@ -10,7 +10,7 @@ import Foundation
 
 private let DEFAULTS_KEY = "players"
 
-struct Player: Codable {
+struct Player: Codable, Equatable {
 	let playerId: String
 	var name: String
 	var singlesRating: Double {
@@ -75,6 +75,10 @@ struct Player: Codable {
 			allPlayers.save()
 			return allPlayers
 		}
+	}
+	
+	static func == (lhs: Player, rhs: Player) -> Bool {
+		return lhs.playerId == rhs.playerId
 	}
 }
 
