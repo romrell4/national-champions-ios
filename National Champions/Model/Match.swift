@@ -151,13 +151,13 @@ struct Match: Codable {
 		}
 	}
 	
-	func computeMatchRating(player: Player) -> Double {
+	func computeMatchRating(player: Player, truncated: Bool = false) -> Double {
 		let isWinner = winners.contains(player)
 		let (myTeam, opponents) = isWinner ? (winners, losers) : (losers, winners)
 		let ratingDiff = Double(gameDiff) * (isWinner ? GAME_VALUE : -GAME_VALUE)
 		let teamMatchRating = opponents.map { isSingles ? $0.singlesRating : $0.doublesRating }.sum() + ratingDiff
 		let myRating = teamMatchRating - myTeam.filter { $0 != player }.map { isSingles ? $0.singlesRating : $0.doublesRating }.sum()
-		return myRating
+		return truncated ? trunc(myRating) : myRating
 	}
 
 	func computeDynamicRating(player: Player) -> Double {

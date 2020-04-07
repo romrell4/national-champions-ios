@@ -49,11 +49,11 @@ class PlayerRatingsViewController: UIViewController, UITableViewDataSource, UITa
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		let match = filteredMatches[indexPath.row]
-		let matchPlayer = match.allPlayers.first { $0.playerId == player.playerId }
-		cell.imageView?.image = match.isSingles ? #imageLiteral(resourceName: "Singles") : #imageLiteral(resourceName: "Doubles")
-		cell.textLabel?.text = DATE_FORMATTER.string(from: match.matchDate)
-		cell.detailTextLabel?.text = match.isSingles ? matchPlayer?.singlesRating.description : matchPlayer?.doublesRating.description
+		
+		if let cell = cell as? MatchTableViewCell {
+			let match = filteredMatches[indexPath.row]
+			cell.setMatch(filteredMatches[indexPath.row], forPlayer: match.allPlayers.first { $0.playerId == player.playerId })
+		}
 		return cell
 	}
 	

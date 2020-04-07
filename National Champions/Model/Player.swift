@@ -34,6 +34,10 @@ struct Player: Codable, Equatable {
 		}
 	}
 	
+	func displayName(isSingles: Bool) -> String {
+		"\(name) (\(isSingles ? singlesRating : doublesRating))"
+	}
+	
 	static func loadAll() -> [Player] {
 		guard
 			let data = UserDefaults.standard.data(forKey: DEFAULTS_KEY),
