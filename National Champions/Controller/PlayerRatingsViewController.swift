@@ -34,8 +34,6 @@ class PlayerRatingsViewController: UIViewController, UITableViewDataSource, UITa
 		
 		allMatches = Match.loadAll().filter {
 			$0.allPlayers.map { $0.playerId }.contains(player.playerId)
-		}.sorted { lhs, rhs in
-			lhs.matchDate > rhs.matchDate
 		}
 		tableView.tableFooterView = UIView()
 		tableView.reloadData()

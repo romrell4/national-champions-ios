@@ -81,7 +81,9 @@ struct Match: Codable {
 			let array = try? JSONDecoder().decode([Match].self, from: data)
 			else { return [] }
 		
-		return array
+		return array.sorted { lhs, rhs in
+			lhs.matchDate > rhs.matchDate
+		}
 	}
 	
 	static func loadFromUrl(url: String, completionHandler: @escaping (Result<Match>) -> Void) {
@@ -180,7 +182,7 @@ struct Match: Codable {
 		
 		let matchRating = computeMatchRating(player: player)
 		let previousRatings = isSingles ? player.previousSinglesRatings : player.previousDoublesRatings
-		return trunc((previousRatings.suffix(3) + [matchRating]).average())
+		return trunc((previousRatings.prefix(3) + [matchRating]).average())
 	}
 	
 	private func trunc(_ value: Double) -> Double {
