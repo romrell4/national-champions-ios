@@ -26,6 +26,6 @@ platform :ios do
     git_add(path: "manifest.plist")
     commit_version_bump
     push_to_git_remote
-    gym
+    gym(output_directory: "s3", output_name: "National Champions.ipa")
   end
 end
