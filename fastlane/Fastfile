@@ -18,13 +18,14 @@ default_platform(:ios)
 platform :ios do
   desc "Description of what the lane does"
   lane :deploy do
-    #ensure_git_status_clean
-    #run_tests
+    ensure_git_status_clean
+    run_tests
     old_build_number = get_build_number
     new_build_number = increment_build_number
     sh("sed", "-i", "", "s/(#{old_build_number})/(#{new_build_number})/g", "../manifest.plist")
-    #commit_version_bump
-    #push_to_git_remote
-    #gym
+    git_add(path: "manifest.plist")
+    commit_version_bump
+    push_to_git_remote
+    gym
   end
 end
