@@ -1,3 +1,5 @@
 Pods
 *.ipa
 *.dSYM.zip
+fastlane/report.xml
+fastlane/test_output
