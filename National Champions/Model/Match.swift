@@ -109,7 +109,7 @@ struct Match: Codable {
 					}
 				}
 				
-				var match = Match(
+				Match(
 					matchId: UUID().uuidString,
 					matchDate: Date(),
 					winners: [winner1, try getPlayerByKey("winner2")].compactMap { $0 },
@@ -120,8 +120,7 @@ struct Match: Codable {
 					loserSet2Score: scores[safe: 3],
 					winnerSet3Score: scores[safe: 4],
 					loserSet3Score: scores[safe: 5]
-				)
-				match.insert()
+				).insert()
 			}
 			return Match.loadAll()
 		}
@@ -146,7 +145,7 @@ struct Match: Codable {
 		winners.count == 2 && losers.count == 2
 	}
 	
-	mutating func applyRatingChanges() {
+	func applyRatingChanges() {
 		let allPlayers = winners + losers
 		let allDynamicRatings = winnerDynamicRatings + loserDynamicRatings
 		zip(allPlayers, allDynamicRatings).enumerated().forEach {
@@ -189,7 +188,7 @@ struct Match: Codable {
 		floor(round(value * 1000) / 10) / 100.0
 	}
 	
-	mutating func insert() {
+	func insert() {
 		applyRatingChanges()
 		(Match.loadAll() + [self]).save()
 	}
