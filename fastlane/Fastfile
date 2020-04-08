@@ -24,7 +24,7 @@ platform :ios do
     new_build_number = increment_build_number
     sh("sed", "-i", "", "s/(#{old_build_number})/(#{new_build_number})/g", "../s3/manifest.plist")
     git_add(path: "s3/manifest.plist")
-    commit_version_bump
+    git_commit("*", message: "Upgraded to build #{new_build_number}")
     push_to_git_remote
     gym(output_directory: "s3", output_name: "National Champions.ipa")
   end
