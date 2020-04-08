@@ -140,6 +140,11 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 				}
 			}
 		}))
+		alert.addAction(UIAlertAction(title: "Delete All", style: .default, handler: { (_) in
+			self.players = []
+			self.players.save()
+			self.sortAndReload()
+		}))
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		present(alert, animated: true)
 	}
