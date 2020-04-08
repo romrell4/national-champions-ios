@@ -70,18 +70,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
-		// Add a "nil" so that they can deselect a player
-		players = (Player.loadAll() + [nil]).sorted { (lhs, rhs) -> Bool in
-			if let lhs = lhs, let rhs = rhs {
-				return lhs.name < rhs.name
-			}
-			return true
-		}
-		
-		//If they haven't added any players yet, send them to the players screen
-		if players.compactMap({ $0 }).isEmpty {
-			self.tabBarController?.selectedIndex = 1
-		}
+		reloadPlayers()
 	}
 	
 	//UIPickerView delegate
@@ -157,10 +146,11 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	@IBAction func saveMatch(_ sender: Any) {
-		if var match = getMatch() {
+		if let match = getMatch() {
 			let save = {
 				self.explanationView.text = match.getChangeDescription()
 				match.insert()
+				self.reloadPlayers()
 			}
 			
 			if !match.wasCompleted {
@@ -177,6 +167,34 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 			displayAlert(title: "Success", message: "Match was saved successfully")
 		} else {
 			displayAlert(title: "Error", message: "An error occurred while trying to save your match. Please make sure all fields are entered properly.")
+		}
+	}
+	
+	//Private functions
+	
+	private func reloadPlayers() {
+		// Add a "nil" so that they can deselect a player
+		players = (Player.loadAll() + [nil]).sorted { (lhs, rhs) -> Bool in
+			if let lhs = lhs, let rhs = rhs {
+				return lhs.name < rhs.name
+			}
+			return true
+		}
+		
+		//If they haven't added any players yet, send them to the players screen
+		if players.compactMap({ $0 }).isEmpty {
+			self.tabBarController?.selectedIndex = 1
+		}// Add a "nil" so that they can deselect a player
+		players = (Player.loadAll() + [nil]).sorted { (lhs, rhs) -> Bool in
+			if let lhs = lhs, let rhs = rhs {
+				return lhs.name < rhs.name
+			}
+			return true
+		}
+		
+		//If they haven't added any players yet, send them to the players screen
+		if players.compactMap({ $0 }).isEmpty {
+			self.tabBarController?.selectedIndex = 1
 		}
 	}
 	
