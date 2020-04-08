@@ -22,8 +22,8 @@ platform :ios do
     run_tests
     old_build_number = get_build_number
     new_build_number = increment_build_number
-    sh("sed", "-i", "", "s/(#{old_build_number})/(#{new_build_number})/g", "../manifest.plist")
-    git_add(path: "manifest.plist")
+    sh("sed", "-i", "", "s/(#{old_build_number})/(#{new_build_number})/g", "../s3/manifest.plist")
+    git_add(path: "s3/manifest.plist")
     commit_version_bump
     push_to_git_remote
     gym(output_directory: "s3", output_name: "National Champions.ipa")
