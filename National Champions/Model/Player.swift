@@ -13,18 +13,30 @@ private let DEFAULTS_KEY = "players"
 struct Player: Codable, Equatable {
 	let playerId: String
 	var name: String
-	var singlesRating: Double {
-		didSet {
-			previousSinglesRatings.append(singlesRating)
+	var singlesRating: Double
+	var doublesRating: Double
+	var previousSinglesRatings: [Double] {
+		Match.loadAll().filter { $0.isSingles }.compactMap {
+			if let winnerIndex = $0.winners.firstIndex(of: self) {
+				return $0.winnerDynamicRatings[winnerIndex]
+			} else if let loserIndex = $0.losers.firstIndex(of: self) {
+				return $0.loserDynamicRatings[loserIndex]
+			} else {
+				return nil
+			}
 		}
 	}
-	var doublesRating: Double {
-		didSet {
-			previousDoublesRatings.append(doublesRating)
+	var previousDoublesRatings: [Double] {
+		Match.loadAll().filter { $0.isDoubles }.compactMap {
+			if let winnerIndex = $0.winners.firstIndex(of: self) {
+				return $0.winnerDynamicRatings[winnerIndex]
+			} else if let loserIndex = $0.losers.firstIndex(of: self) {
+				return $0.loserDynamicRatings[loserIndex]
+			} else {
+				return nil
+			}
 		}
 	}
-	var previousSinglesRatings: [Double]
-	var previousDoublesRatings: [Double]
 	
 	func update() {
 		var players = Player.loadAll()
@@ -58,9 +70,7 @@ struct Player: Codable, Equatable {
 						playerId: UUID().uuidString,
 						name: name,
 						singlesRating: singlesRating,
-						doublesRating: doublesRating,
-						previousSinglesRatings: dict["previous_singles_ratings"] as? [Double] ?? [],
-						previousDoublesRatings: dict["previous_doubles_ratings"] as? [Double] ?? []
+						doublesRating: doublesRating
 					)
 				} else {
 					return nil

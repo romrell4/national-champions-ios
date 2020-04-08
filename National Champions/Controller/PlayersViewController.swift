@@ -201,9 +201,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 						playerId: UUID().uuidString,
 						name: name,
 						singlesRating: singlesRating,
-						doublesRating: doublesRating,
-						previousSinglesRatings: [],
-						previousDoublesRatings: []
+						doublesRating: doublesRating
 					)
 				)
 			}

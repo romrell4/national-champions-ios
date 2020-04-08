@@ -9,145 +9,119 @@
 import XCTest
 @testable import National_Champs
 
-private let alex = Player(
-	playerId: "1",
-	name: "Alex",
-	singlesRating: 4.05,
-	doublesRating: 4.01,
-	previousSinglesRatings: [4.10, 3.78, 4.16],
-	previousDoublesRatings: [3.78, 4.16, 4.01]
-)
-private let sam = Player(
-	playerId: "2",
-	name: "Sam",
-	singlesRating: 3.76,
-	doublesRating: 3.78,
-	previousSinglesRatings: [3.73, 3.85, 3.75],
-	previousDoublesRatings: [3.85, 3.75, 3.78]
-)
-private let brad = Player(
-	playerId: "3",
-	name: "Brad",
-	singlesRating: 0.0,
-	doublesRating: 3.78,
-	previousSinglesRatings: [],
-	previousDoublesRatings: [3.71, 3.79, 3.68]
-)
-private let adam = Player(
-	playerId: "4",
-	name: "Adam",
-	singlesRating: 0.0,
-	doublesRating: 3.73,
-	previousSinglesRatings: [],
-	previousDoublesRatings: [3.69, 3.72, 3.79]
-)
-private let olderPlayer = Player(
-	playerId: "5",
-	name: "Older Player",
-	singlesRating: 0.0,
-	doublesRating: 0.0,
-	previousSinglesRatings: [500.0, 0.06, 0.06, 0.06],
-	previousDoublesRatings: []
-)
-
 class MatchTests: XCTestCase {
 	
-    func testNormalSinglesMatchRatings() {
-		let match = Match(
-			matchId: "1",
-			matchDate: Date(),
-			winners: [alex],
-			losers: [sam],
-			winnerSet1Score: 6,
-			loserSet1Score: 4,
-			winnerSet2Score: 6,
-			loserSet2Score: 4,
-			winnerSet3Score: nil,
-			loserSet3Score: nil
+	private func p(_ rating: Double) -> Player {
+		Player(playerId: UUID().uuidString, name: "\(rating)", singlesRating: rating, doublesRating: rating)
+	}
+	
+	private func m(players: ([Player], [Player]), score: [Int]) -> Match {
+		Match(matchId: UUID().uuidString, matchDate: Date(), winners: players.0, losers: players.1, winnerSet1Score: score[safe: 0], loserSet1Score: score[safe: 1], winnerSet2Score: score[safe: 2], loserSet2Score: score[safe: 3], winnerSet3Score: score[safe: 4], loserSet3Score: score[safe: 5])
+	}
+	
+	private func m(player: Player, dynamicRating: Double, singles: Bool) -> Match {
+		//Create a fake match, then override the rating
+		let players = singles ? ([player], [p(0.0)]) : ([player, p(0.0)], [p(0.0), p(0.0)])
+		var match = m(players: players, score: [])
+		match.winnerDynamicRatings[0] = dynamicRating
+		return match
+	}
+	
+	private func setUpMatchHistory(_ playerRatings: [(Player, [Double], [Double])]) {
+		playerRatings.flatMap { (player, singlesRatings, doublesRatings) in
+			singlesRatings.map {
+				m(player: player, dynamicRating: $0, singles: true)
+			} + doublesRatings.map {
+				m(player: player, dynamicRating: $0, singles: false)
+			}
+		}.save()
+	}
+	
+	override func tearDown() {
+		[Match]().save()
+	}
+	
+	func testSinglesNoHistory() {
+		let match = m(players: ([p(4.65)], [p(4.20)]), score: [6, 4, 6, 4])
+		XCTAssertEqual(4.44, match.winnerMatchRatings[0])
+		XCTAssertEqual(4.44, match.winnerDynamicRatings[0])
+		XCTAssertEqual(4.41, match.loserMatchRatings[0])
+		XCTAssertEqual(4.41, match.loserDynamicRatings[0])
+	}
+	
+	func testDoublesNoHistory() {
+		let match = m(players: ([p(4.00), p(4.01)], [p(4.02), p(4.03)]), score: [6, 1])
+		XCTAssertEqual(4.34, match.winnerMatchRatings[0])
+		XCTAssertEqual(4.34, match.winnerDynamicRatings[0])
+		XCTAssertEqual(4.35, match.winnerMatchRatings[1])
+		XCTAssertEqual(4.35, match.winnerDynamicRatings[1])
+		XCTAssertEqual(3.68, match.loserMatchRatings[0])
+		XCTAssertEqual(3.68, match.loserDynamicRatings[0])
+		XCTAssertEqual(3.69, match.loserMatchRatings[1])
+		XCTAssertEqual(3.69, match.loserDynamicRatings[1])
+	}
+	
+	func testSinglesWithHistory() {
+		let p4_05 = p(4.05)
+		let p3_76 = p(3.76)
+		setUpMatchHistory(
+			[
+				(p4_05, [4.10, 3.78, 4.16], []),
+				(p3_76, [3.73, 3.85, 3.75], [])
+			]
 		)
-		let (winners, losers) = match.computeRatingChanges()
-		XCTAssertEqual(4.01, winners[0].singlesRating)
-		XCTAssertEqual([4.10, 3.78, 4.16, 4.01], winners[0].previousSinglesRatings)
-		XCTAssertEqual(3.78, losers[0].singlesRating)
-		XCTAssertEqual([3.73, 3.85, 3.75, 3.78], losers[0].previousSinglesRatings)
+		let match = m(players: ([p4_05], [p3_76]), score: [6, 4, 6, 4])
+
+		XCTAssertEqual(4.00, match.winnerMatchRatings[0])
+		XCTAssertEqual(4.01, match.winnerDynamicRatings[0])
+		XCTAssertEqual(3.81, match.loserMatchRatings[0])
+		XCTAssertEqual(3.78, match.loserDynamicRatings[0])
 		XCTAssertEqual("""
 			Changes:
-			- Alex: 4.05 -> 4.01
-			- Sam: 3.76 -> 3.78
+			- 4.05: 4.05 -> 4.01
+			- 3.76: 3.76 -> 3.78
 			""", match.getChangeDescription())
-    }
-	
+	}
+
 	func testNormalDoubleMatchesRatings() {
-		let match = Match(
-			matchId: "1",
-			matchDate: Date(),
-			winners: [alex, sam],
-			losers: [brad, adam],
-			winnerSet1Score: 6,
-			loserSet1Score: 4,
-			winnerSet2Score: 6,
-			loserSet2Score: 4,
-			winnerSet3Score: nil,
-			loserSet3Score: nil
+		let p4_01 = p(4.01)
+		let p3_78 = p(3.78)
+		let p3_78_2 = p(3.78)
+		let p3_73 = p(3.73)
+		setUpMatchHistory(
+			[
+				(p4_01, [], [3.78, 4.16, 4.01]),
+				(p3_78, [], [3.85, 3.75, 3.78]),
+				(p3_78_2, [], [3.71, 3.79, 3.68]),
+				(p3_73, [], [3.69, 3.72, 3.79])
+			]
 		)
-		let (winners, losers) = match.computeRatingChanges()
-		XCTAssertEqual(3.98, winners[0].doublesRating)
-		XCTAssertEqual([3.78, 4.16, 4.01, 3.98], winners[0].previousDoublesRatings)
-		XCTAssertEqual(3.78, winners[1].doublesRating)
-		XCTAssertEqual([3.85, 3.75, 3.78, 3.78], winners[1].previousDoublesRatings)
-		XCTAssertEqual(3.75, losers[0].doublesRating)
-		XCTAssertEqual([3.71, 3.79, 3.68, 3.75], losers[0].previousDoublesRatings)
-		XCTAssertEqual(3.74, losers[1].doublesRating)
-		XCTAssertEqual([3.69, 3.72, 3.79, 3.74], losers[1].previousDoublesRatings)
+		let match = m(players: ([p4_01, p3_78], [p3_78_2, p3_73]), score: [6, 4, 6, 4])
+		XCTAssertEqual(3.97, match.winnerMatchRatings[0])
+		XCTAssertEqual(3.98, match.winnerDynamicRatings[0])
+		XCTAssertEqual(3.74, match.winnerMatchRatings[1])
+		XCTAssertEqual(3.78, match.winnerDynamicRatings[1])
+		XCTAssertEqual(3.82, match.loserMatchRatings[0])
+		XCTAssertEqual(3.75, match.loserDynamicRatings[0])
+		XCTAssertEqual(3.77, match.loserMatchRatings[1])
+		XCTAssertEqual(3.74, match.loserDynamicRatings[1])
 		XCTAssertEqual("""
 			Changes:
-			- Alex: 4.01 -> 3.98
-			- Sam: 3.78 -> 3.78
-			- Brad: 3.78 -> 3.75
-			- Adam: 3.73 -> 3.74
+			- 4.01: 4.01 -> 3.98
+			- 3.78: 3.78 -> 3.78
+			- 3.78: 3.78 -> 3.75
+			- 3.73: 3.73 -> 3.74
 			""", match.getChangeDescription())
 	}
-	
-	func testSinglesWithNoHistory() {
-		let match = Match(
-			matchId: "1",
-			matchDate: Date(),
-			winners: [brad],
-			losers: [adam],
-			winnerSet1Score: 6,
-			loserSet1Score: 4,
-			winnerSet2Score: 4,
-			loserSet2Score: 6,
-			winnerSet3Score: 1,
-			loserSet3Score: 0
-		)
-		let (winners, losers) = match.computeRatingChanges()
-		XCTAssertEqual(0.06, winners[0].singlesRating)
-		XCTAssertEqual([0.06], winners[0].previousSinglesRatings)
-		XCTAssertEqual(-0.06, losers[0].singlesRating)
-		XCTAssertEqual([-0.06], losers[0].previousSinglesRatings)
-		XCTAssertEqual("""
-			Changes:
-			- Brad: 0.0 -> 0.06
-			- Adam: 0.0 -> -0.06
-			""", match.getChangeDescription())
-	}
-	
+
 	func testSomeoneWithLargerHistory() {
-		let match = Match(
-			matchId: "1",
-			matchDate: Date(),
-			winners: [olderPlayer],
-			losers: [adam],
-			winnerSet1Score: 1,
-			loserSet1Score: 0,
-			winnerSet2Score: 0,
-			loserSet2Score: 0,
-			winnerSet3Score: 0,
-			loserSet3Score: 0
+		let p0_0 = p(0.0)
+		setUpMatchHistory(
+			[
+				(p0_0, [500.0, 0.06, 0.06, 0.06], [])
+			]
 		)
-		let (winners, _) = match.computeRatingChanges()
-		XCTAssertEqual(0.06, winners[0].singlesRating)
-		XCTAssertEqual([500.0, 0.06, 0.06, 0.06, 0.06], winners[0].previousSinglesRatings)
+		let match = m(players: ([p0_0], [p(0.0)]), score: [1, 0])
+		XCTAssertEqual(0.06, match.winnerDynamicRatings[0])
 	}
 }

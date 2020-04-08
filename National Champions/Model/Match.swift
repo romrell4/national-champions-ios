@@ -23,6 +23,36 @@ struct Match: Codable {
 	let winnerSet3Score: Int?
 	let loserSet3Score: Int?
 	
+	var winnerMatchRatings: [Double]
+	var loserMatchRatings: [Double]
+	
+	var winnerDynamicRatings: [Double]
+	var loserDynamicRatings: [Double]
+	
+	init(matchId: String, matchDate: Date, winners: [Player], losers: [Player], winnerSet1Score: Int?, loserSet1Score: Int?, winnerSet2Score: Int?, loserSet2Score: Int?, winnerSet3Score: Int?, loserSet3Score: Int?) {
+		self.matchId = matchId
+		self.matchDate = matchDate
+		self.winners = winners
+		self.losers = losers
+		self.winnerSet1Score = winnerSet1Score
+		self.loserSet1Score = loserSet1Score
+		self.winnerSet2Score = winnerSet2Score
+		self.loserSet2Score = loserSet2Score
+		self.winnerSet3Score = winnerSet3Score
+		self.loserSet3Score = loserSet3Score
+		
+		//Initialize to nothing, then compute them
+		self.winnerMatchRatings = []
+		self.loserMatchRatings = []
+		self.winnerDynamicRatings = []
+		self.loserDynamicRatings = []
+		
+		self.winnerMatchRatings = winners.map { self.computeMatchRating(player: $0, truncated: true) }
+		self.loserMatchRatings = losers.map { self.computeMatchRating(player: $0, truncated: true) }
+		self.winnerDynamicRatings = winners.map { self.computeDynamicRating(player: $0) }
+		self.loserDynamicRatings = losers.map { self.computeDynamicRating(player: $0) }
+	}
+	
 	private var set1: MatchSet { MatchSet(winnerScore: winnerSet1Score, loserScore: loserSet1Score) }
 	private var set2: MatchSet { MatchSet(winnerScore: winnerSet2Score, loserScore: loserSet2Score) }
 	private var set3: MatchSet { MatchSet(winnerScore: winnerSet3Score, loserScore: loserSet3Score) }
@@ -117,8 +147,16 @@ struct Match: Codable {
 	}
 	
 	mutating func applyRatingChanges() {
-		(winners, losers) = computeRatingChanges()
-		allPlayers.forEach { (player) in
+		let allPlayers = winners + losers
+		let allDynamicRatings = winnerDynamicRatings + loserDynamicRatings
+		zip(allPlayers, allDynamicRatings).enumerated().forEach {
+			var player = allPlayers[$0.offset]
+			let newRating = allDynamicRatings[$0.offset]
+			if isSingles {
+				player.singlesRating = newRating
+			} else {
+				player.doublesRating = newRating
+			}
 			player.update()
 		}
 	}
@@ -127,28 +165,6 @@ struct Match: Codable {
 		let winnerTotalGames = [winnerSet1Score, winnerSet2Score, winnerSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		return winnerTotalGames - loserTotalGames
-	}
-	
-	func computeRatingChanges() -> ([Player], [Player]) {
-		return (
-			computePlayerRatingChanges(for: winners, against: losers, gameDiff: gameDiff),
-			computePlayerRatingChanges(for: losers, against: winners, gameDiff: -gameDiff)
-		)
-	}
-	
-	private func computePlayerRatingChanges(for players: [Player], against opponents: [Player], gameDiff: Int) -> [Player] {
-		if isSingles {
-			var player = players[0]
-			player.singlesRating = computeDynamicRating(player: player)
-			return [player]
-		} else if isDoubles {
-			var (player1, player2) = (players[0], players[1])
-			player1.doublesRating = computeDynamicRating(player: player1)
-			player2.doublesRating = computeDynamicRating(player: player2)
-			return [player1, player2]
-		} else {
-			fatalError("You can only be playing singles or doubles")
-		}
 	}
 	
 	func computeMatchRating(player: Player, truncated: Bool = false) -> Double {
@@ -170,7 +186,7 @@ struct Match: Codable {
 	
 	private func trunc(_ value: Double) -> Double {
 		//Round to the nearest thousands place, then truncate to the hundreds palce
-		Double(Int(round(value * 1000) / 1000 * 100)) / 100.0
+		floor(round(value * 1000) / 10) / 100.0
 	}
 	
 	mutating func insert() {
@@ -179,20 +195,19 @@ struct Match: Codable {
 	}
 	
 	func getChangeDescription() -> String {
-		let getPlayerChangeDesc: (Player, Player) -> String = { (old, new) in
+		let getPlayerChangeDesc: (Player, Double) -> String = { (old, newRating) in
 			if self.isSingles {
-				return "- \(old.name): \(old.singlesRating) -> \(new.singlesRating)"
+				return "- \(old.name): \(old.singlesRating) -> \(newRating)"
 			} else if self.isDoubles {
-				return "- \(old.name): \(old.doublesRating) -> \(new.doublesRating)"
+				return "- \(old.name): \(old.doublesRating) -> \(newRating)"
 			} else {
 				return "Shouldn't ever hit this..."
 			}
 		}
 		
-		let (newWinners, newLosers) = computeRatingChanges()
 		return """
 		Changes:
-		\(zip(self.winners + self.losers, newWinners + newLosers).map { (old, new) in
+		\(zip(self.winners + self.losers, winnerDynamicRatings + loserDynamicRatings).map { (old, new) in
 			getPlayerChangeDesc(old, new)
 		}.joined(separator: "\n"))
 		"""
