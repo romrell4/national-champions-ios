@@ -11,7 +11,7 @@ platform :ios do
     git_add(path: "s3/manifest.plist")
     git_commit(path: "*", message: "Upgraded to build #{new_build_number}")
     push_to_git_remote
-    gym(output_directory: "s3", output_name: "National Champions.ipa")
-    sh("aws", "s3", "sync", "s3", "s3://national-champions", "--profile", "personal", "--acl", "public-read")
+    gym(output_directory: "s3", output_name: "National Champions.ipa", export_method: "ad-hoc")
+    sh("aws", "s3", "sync", "../s3", "s3://national-champions", "--profile", "personal", "--acl", "public-read")
   end
 end
