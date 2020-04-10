@@ -182,7 +182,7 @@ struct Match: Codable {
 		
 		let matchRating = computeMatchRating(player: player)
 		let previousRatings = isSingles ? player.previousSinglesRatings : player.previousDoublesRatings
-		return trunc((previousRatings.prefix(3) + [matchRating]).average())
+		return trunc((previousRatings + [matchRating]).average())
 	}
 	
 	private func trunc(_ value: Double) -> Double {

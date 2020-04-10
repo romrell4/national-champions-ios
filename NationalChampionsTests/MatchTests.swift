@@ -44,21 +44,21 @@ class MatchTests: XCTestCase {
 	func testSinglesNoHistory() {
 		let match = m(players: ([p(4.65)], [p(4.20)]), score: [6, 4, 6, 4])
 		XCTAssertEqual(4.44, match.winnerMatchRatings[0])
-		XCTAssertEqual(4.44, match.winnerDynamicRatings[0])
+		XCTAssertEqual(4.59, match.winnerDynamicRatings[0])
 		XCTAssertEqual(4.41, match.loserMatchRatings[0])
-		XCTAssertEqual(4.41, match.loserDynamicRatings[0])
+		XCTAssertEqual(4.25, match.loserDynamicRatings[0])
 	}
 	
 	func testDoublesNoHistory() {
 		let match = m(players: ([p(4.00), p(4.01)], [p(4.02), p(4.03)]), score: [6, 1])
 		XCTAssertEqual(4.34, match.winnerMatchRatings[0])
-		XCTAssertEqual(4.34, match.winnerDynamicRatings[0])
+		XCTAssertEqual(4.08, match.winnerDynamicRatings[0])
 		XCTAssertEqual(4.35, match.winnerMatchRatings[1])
-		XCTAssertEqual(4.35, match.winnerDynamicRatings[1])
+		XCTAssertEqual(4.09, match.winnerDynamicRatings[1])
 		XCTAssertEqual(3.68, match.loserMatchRatings[0])
-		XCTAssertEqual(3.68, match.loserDynamicRatings[0])
+		XCTAssertEqual(3.93, match.loserDynamicRatings[0])
 		XCTAssertEqual(3.69, match.loserMatchRatings[1])
-		XCTAssertEqual(3.69, match.loserDynamicRatings[1])
+		XCTAssertEqual(3.94, match.loserDynamicRatings[1])
 	}
 	
 	func testSinglesWithHistory() {
@@ -83,7 +83,7 @@ class MatchTests: XCTestCase {
 			""", match.getChangeDescription())
 	}
 
-	func testNormalDoubleMatchesRatings() {
+	func testDoublesWithHistory() {
 		let p4_01 = p(4.01)
 		let p3_78 = p(3.78)
 		let p3_78_2 = p(3.78)
@@ -126,59 +126,70 @@ class MatchTests: XCTestCase {
 	}
 	
 	func testMultipleSinglesMatches() {
-		let p4_65 = p(4.65)
-		let p4_20 = p(4.20)
-		[p4_65, p4_20].save()
+		let jihoon = p(4.65)
+		let eric = p(4.20)
+		[jihoon, eric].save()
 		
 		let findPlayer: (Player) -> Player = { player in
 			return Player.loadAll().first { $0 == player }!
 		}
 		
-		var match = m(players: ([findPlayer(p4_65)], [findPlayer(p4_20)]), score: [6, 4, 6, 4])
+		XCTAssertEqual([4.65, 4.65, 4.65], jihoon.previousSinglesRatings)
+		XCTAssertEqual([4.20, 4.20, 4.20], eric.previousSinglesRatings)
+		
+		var match = m(players: ([findPlayer(jihoon)], [findPlayer(eric)]), score: [6, 4, 6, 4])
 		XCTAssertEqual(4.44, match.winnerMatchRatings[0])
-		XCTAssertEqual(4.44, match.winnerDynamicRatings[0])
-		XCTAssertEqual(4.41, match.loserMatchRatings[0])
-		XCTAssertEqual(4.41, match.loserDynamicRatings[0])
-		XCTAssertEqual([], p4_65.previousSinglesRatings)
-		XCTAssertEqual([], p4_20.previousSinglesRatings)
-		match.insert()
-		XCTAssertEqual([4.44], p4_65.previousSinglesRatings)
-		XCTAssertEqual([4.41], p4_20.previousSinglesRatings)
-		
-		match = m(players: ([findPlayer(p4_65)], [findPlayer(p4_20)]), score: [5, 7, 6, 4, 1, 0])
-		XCTAssertEqual(4.47, match.winnerMatchRatings[0])
-		XCTAssertEqual(4.45, match.winnerDynamicRatings[0])
-		XCTAssertEqual(4.38, match.loserMatchRatings[0])
-		XCTAssertEqual(4.39, match.loserDynamicRatings[0])
-		match.insert()
-		XCTAssertEqual([4.45, 4.44], p4_65.previousSinglesRatings)
-		XCTAssertEqual([4.39, 4.41], p4_20.previousSinglesRatings)
-		
-		match = m(players: ([findPlayer(p4_20)], [findPlayer(p4_65)]), score: [1, 0])
-		XCTAssertEqual(4.51, match.winnerMatchRatings[0])
-		XCTAssertEqual(4.43, match.winnerDynamicRatings[0])
-		XCTAssertEqual(4.33, match.loserMatchRatings[0])
-		XCTAssertEqual(4.40, match.loserDynamicRatings[0])
-		match.insert()
-		XCTAssertEqual([4.40, 4.45, 4.44], p4_65.previousSinglesRatings)
-		XCTAssertEqual([4.43, 4.39, 4.41], p4_20.previousSinglesRatings)
-		
-		match = m(players: ([findPlayer(p4_65)], [findPlayer(p4_20)]), score: [6, 0, 6, 1])
-		XCTAssertEqual(5.09, match.winnerMatchRatings[0])
 		XCTAssertEqual(4.59, match.winnerDynamicRatings[0])
-		XCTAssertEqual(3.74, match.loserMatchRatings[0])
-		XCTAssertEqual(4.24, match.loserDynamicRatings[0])
+		XCTAssertEqual(4.41, match.loserMatchRatings[0])
+		XCTAssertEqual(4.25, match.loserDynamicRatings[0])
 		match.insert()
-		XCTAssertEqual([4.59, 4.40, 4.45, 4.44], p4_65.previousSinglesRatings)
-		XCTAssertEqual([4.24, 4.43, 4.39, 4.41], p4_20.previousSinglesRatings)
+		XCTAssertEqual(4.59, findPlayer(jihoon).singlesRating)
+		XCTAssertEqual(4.25, findPlayer(eric).singlesRating)
+		XCTAssertEqual([4.59, 4.65, 4.65], jihoon.previousSinglesRatings)
+		XCTAssertEqual([4.25, 4.20, 4.20], eric.previousSinglesRatings)
 		
-		match = m(players: ([findPlayer(p4_65)], [findPlayer(p4_20)]), score: [6, 2, 6, 1])
-		XCTAssertEqual(4.78, match.winnerMatchRatings[0])
+		match = m(players: ([findPlayer(jihoon)], [findPlayer(eric)]), score: [5, 7, 6, 4, 1, 0])
+		XCTAssertEqual(4.31, match.winnerMatchRatings[0])
 		XCTAssertEqual(4.55, match.winnerDynamicRatings[0])
-		XCTAssertEqual(4.05, match.loserMatchRatings[0])
-		XCTAssertEqual(4.27, match.loserDynamicRatings[0])
+		XCTAssertEqual(4.53, match.loserMatchRatings[0])
+		XCTAssertEqual(4.29, match.loserDynamicRatings[0])
 		match.insert()
-		XCTAssertEqual([4.55, 4.59, 4.40, 4.45, 4.44], p4_65.previousSinglesRatings)
-		XCTAssertEqual([4.27, 4.24, 4.43, 4.39, 4.41], p4_20.previousSinglesRatings)
+		XCTAssertEqual(4.55, findPlayer(jihoon).singlesRating)
+		XCTAssertEqual(4.29, findPlayer(eric).singlesRating)
+		XCTAssertEqual([4.55, 4.59, 4.65], jihoon.previousSinglesRatings)
+		XCTAssertEqual([4.29, 4.25, 4.20], eric.previousSinglesRatings)
+		
+		match = m(players: ([findPlayer(eric)], [findPlayer(jihoon)]), score: [1, 0])
+		XCTAssertEqual(4.61, match.winnerMatchRatings[0])
+		XCTAssertEqual(4.33, match.winnerDynamicRatings[0])
+		XCTAssertEqual(4.23, match.loserMatchRatings[0])
+		XCTAssertEqual(4.50, match.loserDynamicRatings[0])
+		match.insert()
+		XCTAssertEqual(4.50, findPlayer(jihoon).singlesRating)
+		XCTAssertEqual(4.33, findPlayer(eric).singlesRating)
+		XCTAssertEqual([4.50, 4.55, 4.59], jihoon.previousSinglesRatings)
+		XCTAssertEqual([4.33, 4.29, 4.25], eric.previousSinglesRatings)
+
+		match = m(players: ([findPlayer(jihoon)], [findPlayer(eric)]), score: [6, 0, 6, 1])
+		XCTAssertEqual(4.99, match.winnerMatchRatings[0])
+		XCTAssertEqual(4.65, match.winnerDynamicRatings[0])
+		XCTAssertEqual(3.84, match.loserMatchRatings[0])
+		XCTAssertEqual(4.17, match.loserDynamicRatings[0])
+		match.insert()
+		XCTAssertEqual(4.65, findPlayer(jihoon).singlesRating)
+		XCTAssertEqual(4.17, findPlayer(eric).singlesRating)
+		XCTAssertEqual([4.65, 4.50, 4.55], jihoon.previousSinglesRatings)
+		XCTAssertEqual([4.17, 4.33, 4.29], eric.previousSinglesRatings)
+
+		match = m(players: ([findPlayer(jihoon)], [findPlayer(eric)]), score: [6, 2, 6, 1])
+		XCTAssertEqual(4.71, match.winnerMatchRatings[0])
+		XCTAssertEqual(4.60, match.winnerDynamicRatings[0])
+		XCTAssertEqual(4.11, match.loserMatchRatings[0])
+		XCTAssertEqual(4.22, match.loserDynamicRatings[0])
+		match.insert()
+		XCTAssertEqual(4.60, findPlayer(jihoon).singlesRating)
+		XCTAssertEqual(4.22, findPlayer(eric).singlesRating)
+		XCTAssertEqual([4.60, 4.65, 4.50], jihoon.previousSinglesRatings)
+		XCTAssertEqual([4.22, 4.17, 4.33], eric.previousSinglesRatings)
 	}
 }

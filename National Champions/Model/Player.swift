@@ -15,8 +15,10 @@ struct Player: Codable, Equatable {
 	var name: String
 	var singlesRating: Double
 	var doublesRating: Double
+	let initialSinglesRating: Double
+	let initialDoublesRating: Double
 	var previousSinglesRatings: [Double] {
-		Match.loadAll().filter { $0.isSingles }.compactMap {
+		Array((Match.loadAll().filter { $0.isSingles }.compactMap {
 			if let winnerIndex = $0.winners.firstIndex(of: self) {
 				return $0.winnerDynamicRatings[winnerIndex]
 			} else if let loserIndex = $0.losers.firstIndex(of: self) {
@@ -24,10 +26,10 @@ struct Player: Codable, Equatable {
 			} else {
 				return nil
 			}
-		}
+		} + Array(repeating: initialSinglesRating, count: 3)).prefix(3))
 	}
 	var previousDoublesRatings: [Double] {
-		Match.loadAll().filter { $0.isDoubles }.compactMap {
+		Array((Match.loadAll().filter { $0.isDoubles }.compactMap {
 			if let winnerIndex = $0.winners.firstIndex(of: self) {
 				return $0.winnerDynamicRatings[winnerIndex]
 			} else if let loserIndex = $0.losers.firstIndex(of: self) {
@@ -35,7 +37,16 @@ struct Player: Codable, Equatable {
 			} else {
 				return nil
 			}
-		}
+		} + Array(repeating: initialDoublesRating, count: 3)).prefix(3))
+	}
+	
+	init(playerId: String, name: String, singlesRating: Double, doublesRating: Double) {
+		self.playerId = playerId
+		self.name = name
+		self.singlesRating = singlesRating
+		self.doublesRating = doublesRating
+		self.initialSinglesRating = singlesRating
+		self.initialDoublesRating = doublesRating
 	}
 	
 	func update() {
