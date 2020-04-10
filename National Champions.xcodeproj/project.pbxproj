@@ -535,7 +535,8 @@
 			baseConfigurationReference = CD4DF339D3B75A7DA43607A1 /* Pods-National Champions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = G9JN5J3VZ9;
 				INFOPLIST_FILE = "National Champions/Info.plist";
@@ -545,6 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.romrell4.NationalChampions;
 				PRODUCT_NAME = "National Champs";
+				PROVISIONING_PROFILE_SPECIFIER = "National Champions Distribution Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -555,7 +557,8 @@
 			baseConfigurationReference = 50CBC24AAF8B6DC63256F6CD /* Pods-National Champions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = G9JN5J3VZ9;
 				INFOPLIST_FILE = "National Champions/Info.plist";
@@ -565,6 +568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.romrell4.NationalChampions;
 				PRODUCT_NAME = "National Champs";
+				PROVISIONING_PROFILE_SPECIFIER = "National Champions Distribution Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
