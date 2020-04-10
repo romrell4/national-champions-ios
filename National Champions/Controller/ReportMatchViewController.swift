@@ -58,6 +58,9 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		super.viewDidLoad()
 		
 		self.navigationItem.setTitle("Report a Match", subtitle: Bundle.main.fullVersionNumber)
+		let titleTap = UITapGestureRecognizer(target: self, action: #selector(self.titleTapped(_:)))
+		self.navigationItem.titleView?.isUserInteractionEnabled = true
+		self.navigationItem.titleView?.addGestureRecognizer(titleTap)
 		
 		playerTextFields.forEach {
 			$0.inputView = UIPickerView(delegate: self)
@@ -122,6 +125,12 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	//Listeners
+	
+	@objc private func titleTapped(_ sender: Any) {
+		if let url = URL(string: "https://national-champions.s3-us-west-2.amazonaws.com/index.html") {
+			UIApplication.shared.open(url)
+		}
+	}
 	
 	@objc private func textFieldDidChange(textField: UITextField) {
 		//Only force the responder to change if they just added a score. If they are correcting, don't switch the field
