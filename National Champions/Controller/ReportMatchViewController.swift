@@ -57,6 +57,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.navigationItem.setTitle("Report a Match", subtitle: Bundle.main.fullVersionNumber)
+		
 		playerTextFields.forEach {
 			$0.inputView = UIPickerView(delegate: self)
 		}

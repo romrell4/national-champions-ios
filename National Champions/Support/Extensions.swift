@@ -8,6 +8,19 @@
 
 import UIKit
 
+extension Bundle {
+	var fullVersionNumber: String {
+		"Version \(versionNumber) (\(buildNumber))"
+	}
+	
+    private var versionNumber: String {
+        infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+    }
+    private var buildNumber: String {
+        infoDictionary?["CFBundleVersion"] as? String ?? ""
+    }
+}
+
 extension Collection {
     // Returns the element at the specified index if it is within bounds, otherwise nil.
     subscript (safe index: Index?) -> Element? {
@@ -28,6 +41,31 @@ extension UITableView {
 		if let indexPath = self.indexPathForSelectedRow {
 			self.deselectRow(at: indexPath, animated: true)
 		}
+	}
+}
+
+extension UINavigationItem {
+	func setTitle(_ title: String, subtitle: String) {
+		let one = UILabel()
+		one.text = title
+		one.font = UIFont.systemFont(ofSize: 17)
+		one.sizeToFit()
+
+		let two = UILabel()
+		two.text = subtitle
+		two.font = UIFont.systemFont(ofSize: 12)
+		two.textAlignment = .center
+		two.sizeToFit()
+
+		let stackView = UIStackView(arrangedSubviews: [one, two])
+		stackView.distribution = .equalCentering
+		stackView.axis = .vertical
+		stackView.alignment = .center
+
+		let width = max(one.frame.size.width, two.frame.size.width)
+		stackView.frame = CGRect(x: 0, y: 0, width: width, height: 35)
+		
+		self.titleView = stackView
 	}
 }
 
