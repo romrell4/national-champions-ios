@@ -47,10 +47,8 @@ class MatchTableViewCell: UITableViewCell {
 		loser1Label.setBold(bold: player == match.loser1)
 		loser2Label.setBold(bold: player == match.loser2)
 		
-		if let player = player {
+		if let player = player, let (matchRating, dynamicRating) = match.findRatings(for: player) {
 			ratingsStackView.isHidden = false
-			let matchRating = match.computeMatchRating(player: player, truncated: true)
-			let dynamicRating = match.computeDynamicRating(player: player)
 			matchRatingLabel.text = "Match: \(matchRating)"
 			dynamicRatingLabel.text = "Dynamic: \(dynamicRating)"
 		} else {
