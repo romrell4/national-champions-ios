@@ -7,6 +7,5 @@ target 'National Champions' do
   inhibit_all_warnings!
 
   # Pods for National Champions
-  pod 'MaterialShowcase'
 
 end

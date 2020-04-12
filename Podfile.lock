@@ -1,16 +1,3 @@
-PODS:
-  - MaterialShowcase (0.7.1)
-
-DEPENDENCIES:
-  - MaterialShowcase
-
-SPEC REPOS:
-  trunk:
-    - MaterialShowcase
-
-SPEC CHECKSUMS:
-  MaterialShowcase: baaca60627058085d6b304f5a30ee952e99cee21
-
-PODFILE CHECKSUM: 214e44b9a65cd73292b8778c9c530698b1309438
+PODFILE CHECKSUM: 95fb72c5fb14b3aba36484a15d9620c542fcd2e2
 
 COCOAPODS: 1.8.4
