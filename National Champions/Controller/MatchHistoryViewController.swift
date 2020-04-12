@@ -66,7 +66,8 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 			}
 		}))
 		alert.addAction(UIAlertAction(title: "Delete All", style: .default, handler: { (_) in
-			[Match]().save()
+			self.matches = []
+			self.matches.save()
 			self.tableView.reloadData()
 		}))
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
