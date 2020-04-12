@@ -122,7 +122,7 @@ struct Match: Codable {
 					loserSet2Score: scores[safe: 3],
 					winnerSet3Score: scores[safe: 4],
 					loserSet3Score: scores[safe: 5]
-				).insert()
+				).insert(shouldUpdatePlayers: false)
 			}
 			return Match.loadAll()
 		}
@@ -190,8 +190,10 @@ struct Match: Codable {
 		floor(round(value * 1000) / 10) / 100.0
 	}
 	
-	func insert() {
-		applyRatingChanges()
+	func insert(shouldUpdatePlayers: Bool = true) {
+		if shouldUpdatePlayers {
+			applyRatingChanges()
+		}
 		(Match.loadAll() + [self]).save()
 	}
 	
