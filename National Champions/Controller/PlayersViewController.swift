@@ -62,7 +62,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if let vc = segue.destination as? PlayerRatingsViewController,
+		if let vc = segue.destination as? PlayerMatchesViewController,
 			let cell = sender as? UITableViewCell,
 			let indexPath = tableView.indexPath(for: cell) {
 			vc.player = players[indexPath.row]

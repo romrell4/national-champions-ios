@@ -15,7 +15,7 @@ private let DATE_FORMATTER: DateFormatter = {
 	return formatter
 }()
 
-class PlayerRatingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PlayerMatchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet private weak var filterControl: UISegmentedControl!
 	@IBOutlet private weak var tableView: UITableView!
@@ -31,6 +31,8 @@ class PlayerRatingsViewController: UIViewController, UITableViewDataSource, UITa
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		self.title = player.name
 		
 		allMatches = Match.loadAll().filter {
 			$0.allPlayers.map { $0.playerId }.contains(player.playerId)
