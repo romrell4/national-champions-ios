@@ -24,16 +24,19 @@ class MatchTableViewCell: UITableViewCell {
 	@IBOutlet private weak var loserSet2ScoreLabel: UILabel!
 	@IBOutlet private weak var loserSet3ScoreLabel: UILabel!
 	
-	
 	@IBOutlet private weak var ratingsStackView: UIStackView!
 	@IBOutlet private weak var matchRatingLabel: UILabel!
 	@IBOutlet private weak var dynamicRatingLabel: UILabel!
 	
+	private var match: Match!
+	
 	func setMatch(_ match: Match, forPlayer player: Player? = nil) {
-		winner1Label.setTextOrHide(text: match.winner1?.displayName(isSingles: match.isSingles))
-		winner2Label.setTextOrHide(text: match.winner2?.displayName(isSingles: match.isSingles), additionalViewsToHide: [winnerDividerLabel])
-		loser1Label.setTextOrHide(text: match.loser1?.displayName(isSingles: match.isSingles))
-		loser2Label.setTextOrHide(text: match.loser2?.displayName(isSingles: match.isSingles), additionalViewsToHide: [loserDividerLabel])
+		self.match = match
+		
+		winner1Label.setTextOrHide(text: getPlayerName(for: match.winner1, in: match))
+		winner2Label.setTextOrHide(text: getPlayerName(for: match.winner2, in: match), additionalViewsToHide: [winnerDividerLabel])
+		loser1Label.setTextOrHide(text: getPlayerName(for: match.loser1, in: match))
+		loser2Label.setTextOrHide(text: getPlayerName(for: match.loser2, in: match), additionalViewsToHide: [loserDividerLabel])
 		
 		winnerSet1ScoreLabel.setTextOrHide(text: match.winnerSet1Score)
 		winnerSet2ScoreLabel.setTextOrHide(text: match.winnerSet2Score)
@@ -54,6 +57,41 @@ class MatchTableViewCell: UITableViewCell {
 		} else {
 			ratingsStackView.isHidden = true
 		}
+	}
+	
+	override func setSelected(_ selected: Bool, animated: Bool) {
+		super.setSelected(selected, animated: animated)
+		
+		let labelsWithPlayers = zip(
+			[self.winner1Label, self.winner2Label, self.loser1Label, self.loser2Label],
+			[self.match.winner1, self.match.winner2, self.match.loser1, self.match.loser2]
+		)
+		
+		UIView.animate(withDuration: 0.5, animations: {
+			labelsWithPlayers.forEach { (label, _) in
+				label?.alpha = 0
+			}
+		}) { _ in
+			labelsWithPlayers.forEach { (label, player) in
+				label?.text = self.getPlayerName(for: player, in: self.match)
+			}
+			UIView.animate(withDuration: 0.5) {
+				labelsWithPlayers.forEach { (label, _) in
+					label?.alpha = 1
+				}
+			}
+		}
+	}
+	
+	private func getPlayerName(for player: Player?, in match: Match) -> String? {
+		guard let player = player else { return nil }
+		let rating: Double
+		if isSelected, let newMatchRating = match.findRatings(for: player)?.0 {
+			rating = newMatchRating
+		} else {
+			rating = match.isSingles ? player.singlesRating : player.doublesRating
+		}
+		return "\(player.name) (\(rating))"
 	}
 }
 

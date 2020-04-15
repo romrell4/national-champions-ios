@@ -14,6 +14,10 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	
 	private var matches = Match.loadAll().sorted { (lhs, rhs) -> Bool in
 		return lhs.matchDate > rhs.matchDate
+	} {
+		didSet {
+			self.tableView.reloadData()
+		}
 	}
 	private let players = Player.loadAll()
 
@@ -32,20 +36,9 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 		if let cell = cell as? MatchTableViewCell {
-			let match = matches[indexPath.row]
-			cell.setMatch(match)
+			cell.setMatch(matches[indexPath.row])
 		}
 		return cell
-	}
-	
-	func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-		return UISwipeActionsConfiguration(actions: [
-			UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
-				self.matches.remove(at: indexPath.row)
-				self.matches.save()
-				self.tableView.deleteRows(at: [indexPath], with: .automatic)
-			}
-		])
 	}
 	
 	//MARK: Listeners
@@ -59,7 +52,6 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 					self.matches = list.sorted { (lhs, rhs) -> Bool in
 						return lhs.matchDate > rhs.matchDate
 					}
-					self.tableView.reloadData()
 				case .Error(let message):
 					self.displayAlert(title: "Error", message: message)
 				}
@@ -68,7 +60,6 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		alert.addAction(UIAlertAction(title: "Delete All", style: .default, handler: { (_) in
 			self.matches = []
 			self.matches.save()
-			self.tableView.reloadData()
 		}))
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		present(alert, animated: true)
