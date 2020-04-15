@@ -57,6 +57,10 @@ class MatchTableViewCell: UITableViewCell {
 		} else {
 			ratingsStackView.isHidden = true
 		}
+		
+		let background = UIView()
+		background.backgroundColor = UIColor.systemOrange.withAlphaComponent(0.3)
+		selectedBackgroundView = background
 	}
 	
 	override func setSelected(_ selected: Bool, animated: Bool) {
