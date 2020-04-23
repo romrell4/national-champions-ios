@@ -24,9 +24,9 @@ class MatchTableViewCell: UITableViewCell {
 	@IBOutlet private weak var loserSet2ScoreLabel: UILabel!
 	@IBOutlet private weak var loserSet3ScoreLabel: UILabel!
 	
-	@IBOutlet private weak var ratingsStackView: UIStackView!
-	@IBOutlet private weak var matchRatingLabel: UILabel!
-	@IBOutlet private weak var dynamicRatingLabel: UILabel!
+	@IBOutlet private weak var ratingsStackView: UIStackView?
+	@IBOutlet private weak var matchRatingLabel: UILabel?
+	@IBOutlet private weak var dynamicRatingLabel: UILabel?
 	
 	private var match: Match!
 	
@@ -51,11 +51,11 @@ class MatchTableViewCell: UITableViewCell {
 		loser2Label.setBold(bold: player == match.loser2)
 		
 		if let player = player, let (matchRating, dynamicRating) = match.findRatings(for: player) {
-			ratingsStackView.isHidden = false
-			matchRatingLabel.text = "Match: \(matchRating)"
-			dynamicRatingLabel.text = "Dynamic: \(dynamicRating)"
+			ratingsStackView?.isHidden = false
+			matchRatingLabel?.text = "Match: \(matchRating)"
+			dynamicRatingLabel?.text = "Dynamic: \(dynamicRating)"
 		} else {
-			ratingsStackView.isHidden = true
+			ratingsStackView?.isHidden = true
 		}
 		
 		let background = UIView()

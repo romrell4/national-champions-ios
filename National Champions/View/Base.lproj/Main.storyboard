@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HMl-WT-Pxq">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -688,15 +688,15 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="85" id="4K0-64-ebN" customClass="MatchTableViewCell" customModule="National_Champs" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="85"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="57" id="4K0-64-ebN" customClass="MatchTableViewCell" customModule="National_Champs" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4K0-64-ebN" id="ePj-Sd-f3J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Elw-2H-YZt">
-                                                    <rect key="frame" x="8" y="8" width="398" height="69"/>
+                                                    <rect key="frame" x="8" y="8" width="398" height="41"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="183" translatesAutoresizingMaskIntoConstraints="NO" id="nOv-qa-Yrw">
                                                             <rect key="frame" x="0.0" y="0.0" width="398" height="41"/>
@@ -828,43 +828,23 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="McH-iC-Hlp">
-                                                            <rect key="frame" x="0.0" y="49" width="398" height="20"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Match: 3.57" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxG-G4-zEP">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="20"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Dynamic: 3.75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc9-Am-Sz9">
-                                                                    <rect key="frame" x="199" y="0.0" width="199" height="20"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Elw-2H-YZt" secondAttribute="trailing" constant="8" id="Euo-GC-WW7"/>
                                                 <constraint firstItem="Elw-2H-YZt" firstAttribute="leading" secondItem="ePj-Sd-f3J" secondAttribute="leading" constant="8" id="oBs-5z-TFu"/>
-                                                <constraint firstAttribute="bottom" secondItem="Elw-2H-YZt" secondAttribute="bottom" constant="8" id="wx1-yL-1A5"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Elw-2H-YZt" secondAttribute="bottom" constant="8" id="wx1-yL-1A5"/>
                                                 <constraint firstItem="Elw-2H-YZt" firstAttribute="top" secondItem="ePj-Sd-f3J" secondAttribute="top" constant="8" id="zVE-si-Dwf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dynamicRatingLabel" destination="Fc9-Am-Sz9" id="nhA-qo-AjB"/>
                                             <outlet property="loser1Label" destination="6PW-Lc-zYi" id="0lD-ty-3sY"/>
                                             <outlet property="loser2Label" destination="BJO-CO-2BN" id="9yh-Pv-p6K"/>
                                             <outlet property="loserDividerLabel" destination="Dho-rb-kCa" id="NT3-qm-I6e"/>
                                             <outlet property="loserSet1ScoreLabel" destination="OmR-RV-PbU" id="Cel-JT-w0V"/>
                                             <outlet property="loserSet2ScoreLabel" destination="SNs-3a-wlg" id="e5U-6K-oD0"/>
                                             <outlet property="loserSet3ScoreLabel" destination="o01-0K-6Rf" id="9Z2-bL-HgV"/>
-                                            <outlet property="matchRatingLabel" destination="YxG-G4-zEP" id="hpw-1n-iQ5"/>
-                                            <outlet property="ratingsStackView" destination="McH-iC-Hlp" id="ArA-fR-YCn"/>
                                             <outlet property="winner1Label" destination="d99-p2-IgH" id="vJT-Z1-kEp"/>
                                             <outlet property="winner2Label" destination="v6E-75-DvG" id="fnp-E5-zVa"/>
                                             <outlet property="winnerDividerLabel" destination="JDc-UC-g6v" id="tgh-RN-skB"/>
@@ -902,7 +882,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNM-GS-KGp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2946.4000000000001" y="-40.64039408866995"/>
+            <point key="canvasLocation" x="2946.376811594203" y="-40.848214285714285"/>
         </scene>
         <!--Players-->
         <scene sceneID="25o-xo-XGS">
