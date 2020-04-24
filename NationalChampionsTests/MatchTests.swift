@@ -45,8 +45,10 @@ class MatchTests: XCTestCase {
 		let match = m(players: ([p(4.65)], [p(4.20)]), score: [6, 4, 6, 4])
 		XCTAssertEqual(4.44, match.winnerMatchRatings[0])
 		XCTAssertEqual(4.59, match.winnerDynamicRatings[0])
+		XCTAssertEqual(4.44, match.winnerCompRating)
 		XCTAssertEqual(4.41, match.loserMatchRatings[0])
 		XCTAssertEqual(4.25, match.loserDynamicRatings[0])
+		XCTAssertEqual(4.41, match.loserCompRating)
 	}
 	
 	func testDoublesNoHistory() {
@@ -55,10 +57,12 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(4.08, match.winnerDynamicRatings[0])
 		XCTAssertEqual(4.35, match.winnerMatchRatings[1])
 		XCTAssertEqual(4.09, match.winnerDynamicRatings[1])
+		XCTAssertEqual(8.69, match.winnerCompRating)
 		XCTAssertEqual(3.68, match.loserMatchRatings[0])
 		XCTAssertEqual(3.93, match.loserDynamicRatings[0])
 		XCTAssertEqual(3.69, match.loserMatchRatings[1])
 		XCTAssertEqual(3.94, match.loserDynamicRatings[1])
+		XCTAssertEqual(7.37, match.loserCompRating)
 	}
 	
 	func testSinglesWithHistory() {
@@ -74,8 +78,10 @@ class MatchTests: XCTestCase {
 
 		XCTAssertEqual(4.00, match.winnerMatchRatings[0])
 		XCTAssertEqual(4.01, match.winnerDynamicRatings[0])
+		XCTAssertEqual(4.00, match.winnerCompRating)
 		XCTAssertEqual(3.81, match.loserMatchRatings[0])
 		XCTAssertEqual(3.78, match.loserDynamicRatings[0])
+		XCTAssertEqual(3.81, match.loserCompRating)
 		XCTAssertEqual("""
 			Changes:
 			- 4.05: 4.05 -> 4.01
@@ -101,10 +107,12 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(3.98, match.winnerDynamicRatings[0])
 		XCTAssertEqual(3.74, match.winnerMatchRatings[1])
 		XCTAssertEqual(3.78, match.winnerDynamicRatings[1])
+		XCTAssertEqual(7.71, match.winnerCompRating)
 		XCTAssertEqual(3.82, match.loserMatchRatings[0])
 		XCTAssertEqual(3.75, match.loserDynamicRatings[0])
 		XCTAssertEqual(3.77, match.loserMatchRatings[1])
 		XCTAssertEqual(3.74, match.loserDynamicRatings[1])
+		XCTAssertEqual(7.59, match.loserCompRating)
 		XCTAssertEqual("""
 			Changes:
 			- 4.01: 4.01 -> 3.98

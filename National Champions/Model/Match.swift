@@ -23,8 +23,11 @@ struct Match: Codable {
 	let winnerSet3Score: Int?
 	let loserSet3Score: Int?
 	
-	var winnerMatchRatings: [Double]
-	var loserMatchRatings: [Double]
+	var winnerCompRating: Double { trunc(winnerMatchRatings.sum()) }
+	var loserCompRating: Double { trunc(loserMatchRatings.sum()) }
+	
+	var winnerMatchRatings: [Double] { winners.map { computeMatchRating(player: $0, truncated: true) } }
+	var loserMatchRatings: [Double] { losers.map { computeMatchRating(player: $0, truncated: true) } }
 	
 	var winnerDynamicRatings: [Double]
 	var loserDynamicRatings: [Double]
@@ -42,13 +45,9 @@ struct Match: Codable {
 		self.loserSet3Score = loserSet3Score
 		
 		//Initialize to nothing, then compute them
-		self.winnerMatchRatings = []
-		self.loserMatchRatings = []
 		self.winnerDynamicRatings = []
 		self.loserDynamicRatings = []
 		
-		self.winnerMatchRatings = winners.map { self.computeMatchRating(player: $0, truncated: true) }
-		self.loserMatchRatings = losers.map { self.computeMatchRating(player: $0, truncated: true) }
 		self.winnerDynamicRatings = winners.map { self.computeDynamicRating(player: $0) }
 		self.loserDynamicRatings = losers.map { self.computeDynamicRating(player: $0) }
 	}
@@ -75,11 +74,11 @@ struct Match: Codable {
 		return nil
 	}
 	
-	func findRatings(for player: Player) -> (Double, Double)? {
+	func findRatings(for player: Player) -> (Double, Double, Double)? {
 		if let index = winners.firstIndex(of: player) {
-			return (winnerMatchRatings[index], winnerDynamicRatings[index])
+			return (winnerMatchRatings[index], winnerCompRating, winnerDynamicRatings[index])
 		} else if let index = losers.firstIndex(of: player) {
-			return (loserMatchRatings[index], loserDynamicRatings[index])
+			return (loserMatchRatings[index], loserCompRating, loserDynamicRatings[index])
 		} else {
 			return nil
 		}

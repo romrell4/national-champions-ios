@@ -302,13 +302,19 @@
                                                             <rect key="frame" x="0.0" y="49" width="398" height="20"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Match: 3.57" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odm-E8-mZZ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="132.5" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Comp: 7.25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEQ-xv-EKz">
+                                                                    <rect key="frame" x="132.5" y="0.0" width="133" height="20"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Dynamic: 3.75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmS-0N-lOv">
-                                                                    <rect key="frame" x="199" y="0.0" width="199" height="20"/>
+                                                                    <rect key="frame" x="265.5" y="0.0" width="132.5" height="20"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -326,6 +332,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="companionshipRatingLabel" destination="QEQ-xv-EKz" id="zRN-Nd-r1c"/>
                                             <outlet property="dynamicRatingLabel" destination="AmS-0N-lOv" id="nbk-U4-jFw"/>
                                             <outlet property="loser1Label" destination="emg-UY-C19" id="oz3-1U-RXJ"/>
                                             <outlet property="loser2Label" destination="UCB-5b-vz6" id="fXO-DR-p52"/>

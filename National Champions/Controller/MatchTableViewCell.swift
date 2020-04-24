@@ -26,6 +26,7 @@ class MatchTableViewCell: UITableViewCell {
 	
 	@IBOutlet private weak var ratingsStackView: UIStackView?
 	@IBOutlet private weak var matchRatingLabel: UILabel?
+	@IBOutlet private weak var companionshipRatingLabel: UILabel!
 	@IBOutlet private weak var dynamicRatingLabel: UILabel?
 	
 	private var match: Match!
@@ -50,9 +51,13 @@ class MatchTableViewCell: UITableViewCell {
 		loser1Label.setBold(bold: player == match.loser1)
 		loser2Label.setBold(bold: player == match.loser2)
 		
-		if let player = player, let (matchRating, dynamicRating) = match.findRatings(for: player) {
+		//Only display the personal ratings if they're viewing from a player's perspective
+		if let player = player, let (matchRating, compRating, dynamicRating) = match.findRatings(for: player) {
 			ratingsStackView?.isHidden = false
+			//Only display the comp rating if it's a double match
+			companionshipRatingLabel?.isHidden = !match.isDoubles
 			matchRatingLabel?.text = "Match: \(matchRating)"
+			companionshipRatingLabel?.text = "Comp: \(compRating)"
 			dynamicRatingLabel?.text = "Dynamic: \(dynamicRating)"
 		} else {
 			ratingsStackView?.isHidden = true
