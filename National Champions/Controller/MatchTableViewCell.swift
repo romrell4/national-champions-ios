@@ -69,7 +69,10 @@ class MatchTableViewCell: UITableViewCell {
 	}
 	
 	override func setSelected(_ selected: Bool, animated: Bool) {
+		let changing = selected != isSelected
 		super.setSelected(selected, animated: animated)
+		
+		guard changing else { return }
 		
 		let labelsWithPlayers = zip(
 			[self.winner1Label, self.winner2Label, self.loser1Label, self.loser2Label],
