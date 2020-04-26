@@ -34,10 +34,10 @@ class MatchTableViewCell: UITableViewCell {
 	func setMatch(_ match: Match, forPlayer player: Player? = nil) {
 		self.match = match
 		
-		winner1Label.setTextOrHide(text: getPlayerName(for: match.winner1, in: match))
-		winner2Label.setTextOrHide(text: getPlayerName(for: match.winner2, in: match), additionalViewsToHide: [winnerDividerLabel])
-		loser1Label.setTextOrHide(text: getPlayerName(for: match.loser1, in: match))
-		loser2Label.setTextOrHide(text: getPlayerName(for: match.loser2, in: match), additionalViewsToHide: [loserDividerLabel])
+		winner1Label.setTextOrHide(text: getPlayerName(for: match.winner1))
+		winner2Label.setTextOrHide(text: getPlayerName(for: match.winner2), additionalViewsToHide: [winnerDividerLabel])
+		loser1Label.setTextOrHide(text: getPlayerName(for: match.loser1))
+		loser2Label.setTextOrHide(text: getPlayerName(for: match.loser2), additionalViewsToHide: [loserDividerLabel])
 		
 		winnerSet1ScoreLabel.setTextOrHide(text: match.winnerSet1Score)
 		winnerSet2ScoreLabel.setTextOrHide(text: match.winnerSet2Score)
@@ -85,7 +85,7 @@ class MatchTableViewCell: UITableViewCell {
 			}
 		}) { _ in
 			labelsWithPlayers.forEach { (label, player) in
-				label?.text = self.getPlayerName(for: player, in: self.match)
+				label?.text = self.getPlayerName(for: player)
 			}
 			UIView.animate(withDuration: 0.5) {
 				labelsWithPlayers.forEach { (label, _) in
@@ -95,13 +95,13 @@ class MatchTableViewCell: UITableViewCell {
 		}
 	}
 	
-	private func getPlayerName(for player: Player?, in match: Match) -> String? {
+	private func getPlayerName(for player: Player?) -> String? {
 		guard let player = player else { return nil }
 		let rating: Double
-		if isSelected, let newMatchRating = match.findRatings(for: player)?.0 {
+		if isSelected, let newMatchRating = self.match.findRatings(for: player)?.0 {
 			rating = newMatchRating
 		} else {
-			rating = match.isSingles ? player.singlesRating : player.doublesRating
+			rating = self.match.isSingles ? player.singlesRating : player.doublesRating
 		}
 		return "\(player.name) (\(rating))"
 	}
