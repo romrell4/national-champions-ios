@@ -74,23 +74,17 @@ class MatchTableViewCell: UITableViewCell {
 		
 		guard changing else { return }
 		
-		let labelsWithPlayers = zip(
-			[self.winner1Label, self.winner2Label, self.loser1Label, self.loser2Label],
-			[self.match.winner1, self.match.winner2, self.match.loser1, self.match.loser2]
-		)
+		let labels = [self.winner1Label, self.winner2Label, self.loser1Label, self.loser2Label]
 		
 		UIView.animate(withDuration: 0.5, animations: {
-			labelsWithPlayers.forEach { (label, _) in
-				label?.alpha = 0
-			}
+			labels.forEach { $0?.alpha = 0 }
 		}) { _ in
-			labelsWithPlayers.forEach { (label, player) in
+			//Make sure this doesn't happen immediately (wait until after delay), or else the old, reycled match's players will be used
+			zip(labels, [self.match.winner1, self.match.winner2, self.match.loser1, self.match.loser2]).forEach { (label, player) in
 				label?.text = self.getPlayerName(for: player)
 			}
 			UIView.animate(withDuration: 0.5) {
-				labelsWithPlayers.forEach { (label, _) in
-					label?.alpha = 1
-				}
+				labels.forEach { $0?.alpha = 1 }
 			}
 		}
 	}
