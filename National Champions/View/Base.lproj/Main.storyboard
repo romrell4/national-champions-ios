@@ -110,9 +110,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="s48-Db-jen"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="oPT-05-RsL">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="PrimaryColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="oPT-05-RsL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8C0-Ya-8Ve"/>
                             <constraint firstItem="NUr-cZ-CrX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AKr-qB-yJJ"/>
                             <constraint firstItem="NUr-cZ-CrX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OzU-eX-jpo"/>
                             <constraint firstItem="NUr-cZ-CrX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PC5-p7-xWl"/>
@@ -120,6 +125,7 @@
                             <constraint firstItem="NUr-cZ-CrX" firstAttribute="top" secondItem="j21-uo-mtS" secondAttribute="bottom" constant="8" id="V2o-po-0fB"/>
                             <constraint firstItem="j21-uo-mtS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="jDj-2o-Rvf"/>
                             <constraint firstItem="j21-uo-mtS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="mZ4-g4-WeR"/>
+                            <constraint firstItem="oPT-05-RsL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t6P-EN-IzV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -139,6 +145,7 @@
                         <outlet property="addPlayerButton" destination="h2w-XL-CNJ" id="wCD-Lt-hzt"/>
                         <outlet property="importPlayersButton" destination="34a-wb-AoL" id="qse-80-rEp"/>
                         <outlet property="sortControl" destination="j21-uo-mtS" id="xl6-gb-HsS"/>
+                        <outlet property="spinner" destination="oPT-05-RsL" id="nTc-ea-LyL"/>
                         <outlet property="tableView" destination="NUr-cZ-CrX" id="ErM-2q-Rk9"/>
                     </connections>
                 </viewController>
@@ -866,12 +873,18 @@
                                     <outlet property="delegate" destination="D94-si-RvC" id="6Gc-LS-l8C"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="YzM-Hk-HJA">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="PrimaryColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="knK-vu-skW" firstAttribute="trailing" secondItem="8kM-c9-jR1" secondAttribute="trailing" id="4yx-E6-xaz"/>
+                            <constraint firstItem="YzM-Hk-HJA" firstAttribute="centerX" secondItem="ZAs-iE-I0a" secondAttribute="centerX" id="BB7-GV-Dyo"/>
                             <constraint firstItem="knK-vu-skW" firstAttribute="bottom" secondItem="8kM-c9-jR1" secondAttribute="bottom" id="CeR-X0-dEH"/>
                             <constraint firstItem="8kM-c9-jR1" firstAttribute="top" secondItem="knK-vu-skW" secondAttribute="top" id="VRR-be-3JJ"/>
+                            <constraint firstItem="YzM-Hk-HJA" firstAttribute="centerY" secondItem="ZAs-iE-I0a" secondAttribute="centerY" id="kzf-2u-Z6E"/>
                             <constraint firstItem="8kM-c9-jR1" firstAttribute="leading" secondItem="knK-vu-skW" secondAttribute="leading" id="zxt-ze-k8v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="knK-vu-skW"/>
@@ -884,6 +897,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="spinner" destination="YzM-Hk-HJA" id="ygA-fE-IHb"/>
                         <outlet property="tableView" destination="8kM-c9-jR1" id="hhA-hr-ska"/>
                     </connections>
                 </viewController>

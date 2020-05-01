@@ -131,7 +131,7 @@ struct Match: Codable {
 					loserSet2Score: scores[safe: 3],
 					winnerSet3Score: scores[safe: 4],
 					loserSet3Score: scores[safe: 5]
-				).insert(shouldUpdatePlayers: false)
+				).insert()
 			}
 			return Match.loadAll()
 		}

@@ -14,6 +14,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	@IBOutlet private weak var addPlayerButton: UIBarButtonItem!
 	@IBOutlet private weak var sortControl: UISegmentedControl!
 	@IBOutlet private weak var tableView: UITableView!
+	@IBOutlet private weak var spinner: UIActivityIndicatorView!
 	
 	private var players = Player.loadAll()
 	
@@ -91,7 +92,9 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	@IBAction func importPlayers(_ sender: Any) {
 		let alert = UIAlertController(title: "Import Players", message: "Are you sure you'd like to import players? This will add new players and update any existing players that already exist in your system.", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
+			self.spinner.startAnimating()
 			Player.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/players.json") {
+				self.spinner.stopAnimating()
 				switch $0 {
 				case .Success(let list):
 					self.players = list

@@ -11,6 +11,7 @@ import UIKit
 class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	@IBOutlet private weak var tableView: UITableView!
+	@IBOutlet private weak var spinner: UIActivityIndicatorView!
 	
 	private var matches = Match.loadAll().sorted { (lhs, rhs) -> Bool in
 		return lhs.matchDate > rhs.matchDate
@@ -46,7 +47,9 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	@IBAction func importTapped(_ sender: Any) {
 		let alert = UIAlertController(title: "Import Matches", message: "Are you sure you'd like to import matches? This will add these new matches to the matches you already have tracked in your system.", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
+			self.spinner.startAnimating()
 			Match.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/matches.json") {
+				self.spinner.stopAnimating()
 				switch $0 {
 				case .Success(let list):
 					self.matches = list.sorted { (lhs, rhs) -> Bool in
