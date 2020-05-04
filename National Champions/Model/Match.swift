@@ -280,6 +280,13 @@ extension Array where Element == Match {
 	func save() {
 		try? UserDefaults.standard.set(JSONEncoder().encode(self), forKey: DEFAULTS_KEY)
 	}
+	
+	func toCSV() -> String {
+		return "Match Date,Winner 1,Winner 2,Loser 1,Loser 2,Score\n" +
+			self.sorted { (lhs, rhs) in lhs.matchDate < rhs.matchDate }.map {
+				"\($0.matchDate),\($0.winner1?.name ?? ""),\($0.winner2?.name ?? ""),\($0.loser1?.name ?? ""),\($0.loser2?.name ?? ""),\"\($0.scoreText)\""
+			}.joined(separator: "\n")
+	}
 }
 
 extension Array where Element == Double {
