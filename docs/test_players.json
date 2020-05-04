@@ -1,0 +1,538 @@
+[
+  {
+    "singlesRating": 4.6500000000000004,
+    "playerId": "251FE48C-1F5C-4320-B132-F40BE01CCF3E",
+    "initialDoublesRating": 4.3899999999999997,
+    "name": "Jihoon Noh",
+    "doublesRating": 4.3899999999999997,
+    "initialSinglesRating": 4.6500000000000004
+  },
+  {
+    "singlesRating": 4.2000000000000002,
+    "playerId": "592DAA4B-F663-4DFB-BA58-C8EAE50D43C4",
+    "initialDoublesRating": 3.98,
+    "name": "Eric Romrell",
+    "doublesRating": 3.98,
+    "initialSinglesRating": 4.2000000000000002
+  },
+  {
+    "singlesRating": 4.1799999999999997,
+    "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+    "initialDoublesRating": 3.9199999999999999,
+    "name": "Scotty Wynn",
+    "doublesRating": 3.9199999999999999,
+    "initialSinglesRating": 4.1799999999999997
+  },
+  {
+    "singlesRating": 4.1500000000000004,
+    "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+    "initialDoublesRating": 3.9100000000000001,
+    "name": "Luke Dance",
+    "doublesRating": 3.9100000000000001,
+    "initialSinglesRating": 4.1500000000000004
+  },
+  {
+    "singlesRating": 4.1200000000000001,
+    "playerId": "65D66097-2807-4009-AE35-513DB9011B29",
+    "initialDoublesRating": 3.9199999999999999,
+    "name": "Jake Harris",
+    "doublesRating": 3.9199999999999999,
+    "initialSinglesRating": 4.1200000000000001
+  },
+  {
+    "singlesRating": 4.1100000000000003,
+    "playerId": "19726E81-03E1-4D8F-9EDC-72A5143C814F",
+    "initialDoublesRating": 3.8999999999999999,
+    "name": "Adam Peterson",
+    "doublesRating": 3.8999999999999999,
+    "initialSinglesRating": 4.1100000000000003
+  },
+  {
+    "singlesRating": 4.1100000000000003,
+    "playerId": "CD6033CB-FF14-493E-97C0-B2C8E2DCAA83",
+    "initialDoublesRating": 4.0700000000000003,
+    "name": "Spencer Ellis",
+    "doublesRating": 4.0700000000000003,
+    "initialSinglesRating": 4.1100000000000003
+  },
+  {
+    "singlesRating": 4.0999999999999996,
+    "playerId": "F680D8AB-B230-49A4-8539-5F78D380E292",
+    "initialDoublesRating": 3.9100000000000001,
+    "name": "Jackson Aubrey",
+    "doublesRating": 3.9100000000000001,
+    "initialSinglesRating": 4.0999999999999996
+  },
+  {
+    "singlesRating": 4.0899999999999999,
+    "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+    "initialDoublesRating": 3.8599999999999999,
+    "name": "Stockton Aubrey",
+    "doublesRating": 3.8599999999999999,
+    "initialSinglesRating": 4.0899999999999999
+  },
+  {
+    "singlesRating": 4.0899999999999999,
+    "playerId": "9B93C81D-AEB3-4160-8277-BEEF90FE48D1",
+    "initialDoublesRating": 3.9100000000000001,
+    "name": "Vasil Osipenko",
+    "doublesRating": 3.9100000000000001,
+    "initialSinglesRating": 4.0899999999999999
+  },
+  {
+    "singlesRating": 4.0700000000000003,
+    "playerId": "2A72BF2C-AC21-4DB2-B54E-BCAF8B917FE9",
+    "initialDoublesRating": 3.9300000000000002,
+    "name": "Kenny Johnson",
+    "doublesRating": 3.9300000000000002,
+    "initialSinglesRating": 4.0700000000000003
+  },
+  {
+    "singlesRating": 4.0700000000000003,
+    "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+    "initialDoublesRating": 4.3700000000000001,
+    "name": "Scott Sowby",
+    "doublesRating": 4.3700000000000001,
+    "initialSinglesRating": 4.0700000000000003
+  },
+  {
+    "singlesRating": 4.0499999999999998,
+    "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+    "initialDoublesRating": 3.8199999999999998,
+    "name": "Andrew Whittle",
+    "doublesRating": 3.8199999999999998,
+    "initialSinglesRating": 4.0499999999999998
+  },
+  {
+    "singlesRating": 4.04,
+    "playerId": "0220AA0F-B25E-41C2-9E27-7A8D0D18A2F9",
+    "initialDoublesRating": 4.2199999999999998,
+    "name": "Royce Plowman",
+    "doublesRating": 4.2199999999999998,
+    "initialSinglesRating": 4.04
+  },
+  {
+    "singlesRating": 4.0199999999999996,
+    "playerId": "FBBEC5A2-4AD9-4C15-9DB9-8F96DF45AC55",
+    "initialDoublesRating": 3.8700000000000001,
+    "name": "Josh Ziegner",
+    "doublesRating": 3.8700000000000001,
+    "initialSinglesRating": 4.0199999999999996
+  },
+  {
+    "singlesRating": 4.0099999999999998,
+    "playerId": "7FDD3C8D-3174-47FA-A123-B396A27A70E3",
+    "initialDoublesRating": 3.8999999999999999,
+    "name": "Ryan Bell",
+    "doublesRating": 3.8999999999999999,
+    "initialSinglesRating": 4.0099999999999998
+  },
+  {
+    "singlesRating": 4,
+    "playerId": "526C33C4-C45B-4091-AAE6-FAD1CEA2E188",
+    "initialDoublesRating": 4.1500000000000004,
+    "name": "Todd Castagna",
+    "doublesRating": 4.1500000000000004,
+    "initialSinglesRating": 4
+  },
+  {
+    "singlesRating": 3.9900000000000002,
+    "playerId": "0CF6F0F7-5A9F-4DEF-84CB-2CDFC0DF182E",
+    "initialDoublesRating": 3.96,
+    "name": "Glen Zobell",
+    "doublesRating": 3.96,
+    "initialSinglesRating": 3.9900000000000002
+  },
+  {
+    "singlesRating": 3.9700000000000002,
+    "playerId": "B43304D3-FD50-48D1-B750-116D522A93A4",
+    "initialDoublesRating": 3.8399999999999999,
+    "name": "Alex Venegas",
+    "doublesRating": 3.8399999999999999,
+    "initialSinglesRating": 3.9700000000000002
+  },
+  {
+    "singlesRating": 3.9500000000000002,
+    "playerId": "9F0E9CFC-68BA-4DD8-9972-C5C16D1B6DF6",
+    "initialDoublesRating": 4.1799999999999997,
+    "name": "Derek Elison",
+    "doublesRating": 4.1799999999999997,
+    "initialSinglesRating": 3.9500000000000002
+  },
+  {
+    "singlesRating": 3.9500000000000002,
+    "playerId": "BD600CF9-0F9C-40CD-B162-7D82234DAA7D",
+    "initialDoublesRating": 3.8799999999999999,
+    "name": "Sam Strickland",
+    "doublesRating": 3.8799999999999999,
+    "initialSinglesRating": 3.9500000000000002
+  },
+  {
+    "singlesRating": 3.9500000000000002,
+    "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+    "initialDoublesRating": 3.8100000000000001,
+    "name": "Scott Soelberg",
+    "doublesRating": 3.8100000000000001,
+    "initialSinglesRating": 3.9500000000000002
+  },
+  {
+    "singlesRating": 3.9399999999999999,
+    "playerId": "DA874A86-87C0-4C51-84AE-AFE61432D466",
+    "initialDoublesRating": 3.8799999999999999,
+    "name": "Legend Lee",
+    "doublesRating": 3.8799999999999999,
+    "initialSinglesRating": 3.9399999999999999
+  },
+  {
+    "singlesRating": 3.9399999999999999,
+    "playerId": "FFBBBD9B-558F-41C0-8FB7-0F760A5A02B3",
+    "initialDoublesRating": 4.0099999999999998,
+    "name": "Stuart Weichers",
+    "doublesRating": 4.0099999999999998,
+    "initialSinglesRating": 3.9399999999999999
+  },
+  {
+    "singlesRating": 3.9300000000000002,
+    "playerId": "5A90C63B-742F-42A5-B86D-761C57B9BBBE",
+    "initialDoublesRating": 4.2199999999999998,
+    "name": "Matthew Pineda",
+    "doublesRating": 4.2199999999999998,
+    "initialSinglesRating": 3.9300000000000002
+  },
+  {
+    "singlesRating": 3.9300000000000002,
+    "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+    "initialDoublesRating": 3.79,
+    "name": "Pedro Abreu",
+    "doublesRating": 3.79,
+    "initialSinglesRating": 3.9300000000000002
+  },
+  {
+    "singlesRating": 3.9199999999999999,
+    "playerId": "5D53C01D-1236-4F91-AEDF-CBAF732829D3",
+    "initialDoublesRating": 3.8900000000000001,
+    "name": "Cole Reese",
+    "doublesRating": 3.8900000000000001,
+    "initialSinglesRating": 3.9199999999999999
+  },
+  {
+    "singlesRating": 3.9199999999999999,
+    "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+    "initialDoublesRating": 3.8199999999999998,
+    "name": "Jonas Kurihara",
+    "doublesRating": 3.8199999999999998,
+    "initialSinglesRating": 3.9199999999999999
+  },
+  {
+    "singlesRating": 3.9100000000000001,
+    "playerId": "4C161A46-372B-4DE7-9A58-EE42BD6E42E6",
+    "initialDoublesRating": 3.8900000000000001,
+    "name": "Jarrod Morrill",
+    "doublesRating": 3.8900000000000001,
+    "initialSinglesRating": 3.9100000000000001
+  },
+  {
+    "singlesRating": 3.9100000000000001,
+    "playerId": "944F7F9C-601F-4A92-89CB-6E566256C5F1",
+    "initialDoublesRating": 4.1600000000000001,
+    "name": "Scott Hinton",
+    "doublesRating": 4.1600000000000001,
+    "initialSinglesRating": 3.9100000000000001
+  },
+  {
+    "singlesRating": 3.9100000000000001,
+    "playerId": "3EA0DE5D-3FAE-4409-8D7F-91F0A100109A",
+    "initialDoublesRating": 3.7999999999999998,
+    "name": "Tytan Thurgood",
+    "doublesRating": 3.7999999999999998,
+    "initialSinglesRating": 3.9100000000000001
+  },
+  {
+    "singlesRating": 3.9100000000000001,
+    "playerId": "98E0C81D-7C77-4652-9C80-28EBA6A786A8",
+    "initialDoublesRating": 3.9199999999999999,
+    "name": "Zach Siddoway",
+    "doublesRating": 3.9199999999999999,
+    "initialSinglesRating": 3.9100000000000001
+  },
+  {
+    "singlesRating": 3.8999999999999999,
+    "playerId": "894E223F-5048-4017-867B-D8C903F0A7B4",
+    "initialDoublesRating": 3.8900000000000001,
+    "name": "Brad Brooks",
+    "doublesRating": 3.8900000000000001,
+    "initialSinglesRating": 3.8999999999999999
+  },
+  {
+    "singlesRating": 3.8999999999999999,
+    "playerId": "B16FC636-3A25-49F9-9B54-02CF78D15477",
+    "initialDoublesRating": 3.7999999999999998,
+    "name": "Cole Hunt",
+    "doublesRating": 3.7999999999999998,
+    "initialSinglesRating": 3.8999999999999999
+  },
+  {
+    "singlesRating": 3.8999999999999999,
+    "playerId": "C3002B04-9A50-4EBA-8E9E-295BD85C9DD5",
+    "initialDoublesRating": 3.8900000000000001,
+    "name": "Joseph Venoza",
+    "doublesRating": 3.8900000000000001,
+    "initialSinglesRating": 3.8999999999999999
+  },
+  {
+    "singlesRating": 3.8999999999999999,
+    "playerId": "84359646-A29B-48E7-AB6F-E54CFD73420B",
+    "initialDoublesRating": 3.7799999999999998,
+    "name": "Kurt Winkler",
+    "doublesRating": 3.7799999999999998,
+    "initialSinglesRating": 3.8999999999999999
+  },
+  {
+    "singlesRating": 3.8900000000000001,
+    "playerId": "7F72678B-1785-4036-974E-3B2008408ED9",
+    "initialDoublesRating": 3.8300000000000001,
+    "name": "Adam Anderson",
+    "doublesRating": 3.8300000000000001,
+    "initialSinglesRating": 3.8900000000000001
+  },
+  {
+    "singlesRating": 3.8900000000000001,
+    "playerId": "6806FCBD-3F83-452B-B0A3-1344BF0407B6",
+    "initialDoublesRating": 4.0099999999999998,
+    "name": "Paul Williams",
+    "doublesRating": 4.0099999999999998,
+    "initialSinglesRating": 3.8900000000000001
+  },
+  {
+    "singlesRating": 3.8799999999999999,
+    "playerId": "9FAA0388-3255-414A-AC20-05E2432D157C",
+    "initialDoublesRating": 4,
+    "name": "Fred Heath",
+    "doublesRating": 4,
+    "initialSinglesRating": 3.8799999999999999
+  },
+  {
+    "singlesRating": 3.8799999999999999,
+    "playerId": "687AEE33-2F07-487F-8A2F-43BFCE920723",
+    "initialDoublesRating": 3.8700000000000001,
+    "name": "Nate Wood",
+    "doublesRating": 3.8700000000000001,
+    "initialSinglesRating": 3.8799999999999999
+  },
+  {
+    "singlesRating": 3.8799999999999999,
+    "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+    "initialDoublesRating": 3.8900000000000001,
+    "name": "Pat Oneill",
+    "doublesRating": 3.8900000000000001,
+    "initialSinglesRating": 3.8799999999999999
+  },
+  {
+    "singlesRating": 3.8799999999999999,
+    "playerId": "9A31D7ED-969D-429E-A1D3-90E2AACA909E",
+    "initialDoublesRating": 4.0499999999999998,
+    "name": "Ryan Holmes",
+    "doublesRating": 4.0499999999999998,
+    "initialSinglesRating": 3.8799999999999999
+  },
+  {
+    "singlesRating": 3.8700000000000001,
+    "playerId": "9C216E89-AA28-4B62-8613-027E99D87EBD",
+    "initialDoublesRating": 3.8799999999999999,
+    "name": "Brian Crowe",
+    "doublesRating": 3.8799999999999999,
+    "initialSinglesRating": 3.8700000000000001
+  },
+  {
+    "singlesRating": 3.8700000000000001,
+    "playerId": "F2A61880-F2F1-4B4F-A51D-45790E9E873D",
+    "initialDoublesRating": 3.7799999999999998,
+    "name": "Evan Teshima",
+    "doublesRating": 3.7799999999999998,
+    "initialSinglesRating": 3.8700000000000001
+  },
+  {
+    "singlesRating": 3.8700000000000001,
+    "playerId": "F7ABDBEA-03B7-449E-AB5F-64DA9DFAE004",
+    "initialDoublesRating": 4.0800000000000001,
+    "name": "KC Johnson",
+    "doublesRating": 4.0800000000000001,
+    "initialSinglesRating": 3.8700000000000001
+  },
+  {
+    "singlesRating": 3.8599999999999999,
+    "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+    "initialDoublesRating": 3.7799999999999998,
+    "name": "Brad Gessell",
+    "doublesRating": 3.7799999999999998,
+    "initialSinglesRating": 3.8599999999999999
+  },
+  {
+    "singlesRating": 3.8599999999999999,
+    "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+    "initialDoublesRating": 3.7999999999999998,
+    "name": "Evan Hiller",
+    "doublesRating": 3.7999999999999998,
+    "initialSinglesRating": 3.8599999999999999
+  },
+  {
+    "singlesRating": 3.8500000000000001,
+    "playerId": "6A7BF97A-EC86-4285-8D61-5C3554355FD2",
+    "initialDoublesRating": 3.9500000000000002,
+    "name": "Chad McCall",
+    "doublesRating": 3.9500000000000002,
+    "initialSinglesRating": 3.8500000000000001
+  },
+  {
+    "singlesRating": 3.8500000000000001,
+    "playerId": "03E35D3F-30D7-449A-A0D3-821270B40CA4",
+    "initialDoublesRating": 3.79,
+    "name": "Mike Harris",
+    "doublesRating": 3.79,
+    "initialSinglesRating": 3.8500000000000001
+  },
+  {
+    "singlesRating": 3.8500000000000001,
+    "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+    "initialDoublesRating": 3.8999999999999999,
+    "name": "Rob Acevedo",
+    "doublesRating": 3.8999999999999999,
+    "initialSinglesRating": 3.8500000000000001
+  },
+  {
+    "singlesRating": 3.8399999999999999,
+    "playerId": "16A2EEDA-D695-450D-8FAF-0703C071F833",
+    "initialDoublesRating": 3.71,
+    "name": "Oscar Morales",
+    "doublesRating": 3.71,
+    "initialSinglesRating": 3.8399999999999999
+  },
+  {
+    "singlesRating": 3.8300000000000001,
+    "playerId": "7465B6C2-153D-419A-98A4-0CF5597C81E8",
+    "initialDoublesRating": 3.8799999999999999,
+    "name": "Dave Van",
+    "doublesRating": 3.8799999999999999,
+    "initialSinglesRating": 3.8300000000000001
+  },
+  {
+    "singlesRating": 3.8300000000000001,
+    "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+    "initialDoublesRating": 3.7799999999999998,
+    "name": "Koa Kauwe",
+    "doublesRating": 3.7799999999999998,
+    "initialSinglesRating": 3.8300000000000001
+  },
+  {
+    "singlesRating": 3.8100000000000001,
+    "playerId": "41CCFCA9-D73E-4CF6-8258-F4458AD7DEC7",
+    "initialDoublesRating": 3.75,
+    "name": "Joe Christensen",
+    "doublesRating": 3.75,
+    "initialSinglesRating": 3.8100000000000001
+  },
+  {
+    "singlesRating": 3.8100000000000001,
+    "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+    "initialDoublesRating": 3.7999999999999998,
+    "name": "Ryan Hiller",
+    "doublesRating": 3.7999999999999998,
+    "initialSinglesRating": 3.8100000000000001
+  },
+  {
+    "singlesRating": 3.79,
+    "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+    "initialDoublesRating": 3.73,
+    "name": "Adam Pullan",
+    "doublesRating": 3.73,
+    "initialSinglesRating": 3.79
+  },
+  {
+    "singlesRating": 3.7799999999999998,
+    "playerId": "14B6E6E0-E788-4B43-A1D1-C62B5E32C1C9",
+    "initialDoublesRating": 3.71,
+    "name": "Dave Comish",
+    "doublesRating": 3.71,
+    "initialSinglesRating": 3.7799999999999998
+  },
+  {
+    "singlesRating": 3.7599999999999998,
+    "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+    "initialDoublesRating": 3.7599999999999998,
+    "name": "Barry Craft",
+    "doublesRating": 3.7599999999999998,
+    "initialSinglesRating": 3.7599999999999998
+  },
+  {
+    "singlesRating": 3.75,
+    "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+    "initialDoublesRating": 3.7200000000000002,
+    "name": "Geraldo Ramos",
+    "doublesRating": 3.7200000000000002,
+    "initialSinglesRating": 3.75
+  },
+  {
+    "singlesRating": 3.75,
+    "playerId": "8F97DE81-C45F-4493-A94D-2BAA67A7FBAD",
+    "initialDoublesRating": 3.75,
+    "name": "Sam Carillo",
+    "doublesRating": 3.75,
+    "initialSinglesRating": 3.75
+  },
+  {
+    "singlesRating": 3.7400000000000002,
+    "playerId": "98901EA4-77B2-4222-9C6C-9981022F40EC",
+    "initialDoublesRating": 3.7799999999999998,
+    "name": "Arun Muthukkumaraswamy",
+    "doublesRating": 3.7799999999999998,
+    "initialSinglesRating": 3.7400000000000002
+  },
+  {
+    "singlesRating": 3.73,
+    "playerId": "FA5CE002-C6D9-4EA9-BC95-A89AE644F43C",
+    "initialDoublesRating": 3.8300000000000001,
+    "name": "Matt Linford",
+    "doublesRating": 3.8300000000000001,
+    "initialSinglesRating": 3.73
+  },
+  {
+    "singlesRating": 3.7000000000000002,
+    "playerId": "4E6A6474-05F5-46AF-994D-3D71CCE34379",
+    "initialDoublesRating": 3.8900000000000001,
+    "name": "Lance Beare",
+    "doublesRating": 3.8900000000000001,
+    "initialSinglesRating": 3.7000000000000002
+  },
+  {
+    "singlesRating": 3.6899999999999999,
+    "playerId": "B51B13EB-546E-4895-936B-F5C1D8F0ADE2",
+    "initialDoublesRating": 3.7799999999999998,
+    "name": "Matt Groesbeck",
+    "doublesRating": 3.7799999999999998,
+    "initialSinglesRating": 3.6899999999999999
+  },
+  {
+    "singlesRating": 3.6899999999999999,
+    "playerId": "0832B0EE-9441-4309-82DC-415550295EEC",
+    "initialDoublesRating": 3.73,
+    "name": "Will Wu",
+    "doublesRating": 3.73,
+    "initialSinglesRating": 3.6899999999999999
+  },
+  {
+    "singlesRating": 3.5899999999999999,
+    "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+    "initialDoublesRating": 3.7000000000000002,
+    "name": "Doug Fowkes",
+    "doublesRating": 3.7000000000000002,
+    "initialSinglesRating": 3.5899999999999999
+  },
+  {
+    "singlesRating": 3.5800000000000001,
+    "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+    "initialDoublesRating": 3.6800000000000002,
+    "name": "Bob Crane",
+    "doublesRating": 3.6800000000000002,
+    "initialSinglesRating": 3.5800000000000001
+  }
+]
