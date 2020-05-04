@@ -282,9 +282,11 @@ extension Array where Element == Match {
 	}
 	
 	func toCSV() -> String {
+		let formatter = DateFormatter()
+		formatter.dateFormat = "M/d/yyyy h:mm"
 		return "Match Date,Winner 1,Winner 2,Loser 1,Loser 2,Score\n" +
 			self.sorted { (lhs, rhs) in lhs.matchDate < rhs.matchDate }.map {
-				"\($0.matchDate),\($0.winner1?.name ?? ""),\($0.winner2?.name ?? ""),\($0.loser1?.name ?? ""),\($0.loser2?.name ?? ""),\"\($0.scoreText)\""
+				"\(formatter.string(from: $0.matchDate)),\($0.winner1?.name ?? ""),\($0.winner2?.name ?? ""),\($0.loser1?.name ?? ""),\($0.loser2?.name ?? ""),\"\($0.scoreText)\""
 			}.joined(separator: "\n")
 	}
 }
