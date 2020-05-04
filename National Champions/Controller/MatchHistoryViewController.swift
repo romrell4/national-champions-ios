@@ -48,6 +48,8 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		let alert = UIAlertController(title: "Import Matches", message: "Are you sure you'd like to import matches? This will add these new matches to the matches you already have tracked in your system.", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
 			self.spinner.startAnimating()
+			// Uncomment out the next line to test with another import file
+			// Match.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/test_matches.json") {
 			Match.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/matches.json") {
 				self.spinner.stopAnimating()
 				switch $0 {

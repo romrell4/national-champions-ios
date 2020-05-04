@@ -93,6 +93,8 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 		let alert = UIAlertController(title: "Import Players", message: "Are you sure you'd like to import players? This will add new players and update any existing players that already exist in your system.", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
 			self.spinner.startAnimating()
+			// Uncomment out the next line to test with another import file
+			// Player.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/test_players.json") {
 			Player.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/players.json") {
 				self.spinner.stopAnimating()
 				switch $0 {

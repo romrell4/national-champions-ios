@@ -83,14 +83,14 @@ enum Result<T> {
 }
 
 extension Optional where Wrapped == URL {
-	func get<T>(completionHandler: @escaping (Result<T>) -> Void, deserializer: @escaping ([[String: Any]]) throws -> [T]) -> Void {
+	func get<T>(completionHandler: @escaping (Result<T>) -> Void, deserializer: @escaping (Data) throws -> [T]) -> Void {
 		if let url = self {
 			URLSession.shared.dataTask(with: url) { data, _, _ in
 				DispatchQueue.main.async {
 					do {
-						if let data = data, let array = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
+						if let data = data {
 							do {
-								completionHandler(.Success(try deserializer(array)))
+								completionHandler(.Success(try deserializer(data)))
 							}
 						} else {
 							completionHandler(.Error("Unable to process data from \(url)"))

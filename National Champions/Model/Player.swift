@@ -67,7 +67,15 @@ struct Player: Codable, Equatable {
 	}
 	
 	static func loadFromUrl(url urlString: String, completionHandler: @escaping (Result<Player>) -> Void) {
-		URL(string: urlString).get(completionHandler: completionHandler) { dictArray in
+		URL(string: urlString).get(completionHandler: completionHandler) { data in
+			//First try deserializing with the JSONDecoder. This will only succeed if the data was exported using the encoder
+			if let players = try? JSONDecoder().decode([Player].self, from: data) {
+				players.save()
+				return players
+			}
+			
+			let dictArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] ?? []
+			
 			let newPlayers = dictArray.compactMap { dict -> Player? in
 				if let name = dict["name"] as? String,
 					let singlesRating = dict["singles_rating"] as? Double,

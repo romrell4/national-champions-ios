@@ -96,10 +96,17 @@ struct Match: Codable {
 	}
 	
 	static func loadFromUrl(url: String, completionHandler: @escaping (Result<Match>) -> Void) {
-		URL(string: url).get(completionHandler: completionHandler) { dictArray in
+		URL(string: url).get(completionHandler: completionHandler) { data in
+			//First try deserializing with the JSONDecoder. This will only succeed if the data was exported using the encoder
+			if let matches = try? JSONDecoder().decode([Match].self, from: data) {
+				matches.save()
+				return matches
+			}
+			
+			let dictArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] ?? []
+			let players = Player.loadAll()
+			
 			try dictArray.forEach { dict in
-				let players = Player.loadAll()
-				
 				let getPlayerByKey: (String) throws -> Player? = {
 					guard let name = dict[$0] as? String, !name.isEmpty else { return nil }
 					
