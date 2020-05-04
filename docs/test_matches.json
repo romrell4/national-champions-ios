@@ -1,0 +1,5440 @@
+[
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002,
+      3.8199999999999998
+    ],
+    "matchDate": 610250251.74910104,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "D19A5089-5911-4B39-B30F-22D6693DC72B",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.7799999999999998,
+      3.8300000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6600000000000001,
+      3.6499999999999999
+    ],
+    "matchDate": 610250251.68515003,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "DD9322C1-1B05-4DA8-B716-A204B6488EB8",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      3.9900000000000002,
+      3.8700000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.5800000000000001,
+      3.7000000000000002
+    ],
+    "matchDate": 610250251.62075496,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "73E60EB2-A025-4BFA-A6F5-CD207F11395D",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      3.9399999999999999,
+      3.9100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002,
+      3.7200000000000002
+    ],
+    "matchDate": 610250251.55385804,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 5,
+    "winnerSet1Score": 7,
+    "matchId": "D12BEED0-0A2B-4A98-BF75-D9E9559BE65A",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9199999999999999,
+      3.7999999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ]
+  },
+  {
+    "winnerSet3Score": 1,
+    "loserSet1Score": 4,
+    "winnerSet2Score": 1,
+    "winnerSet1Score": 6,
+    "winnerDynamicRatings": [
+      3.8399999999999999,
+      3.77
+    ],
+    "loserDynamicRatings": [
+      4.1699999999999999,
+      3.6600000000000001
+    ],
+    "losers": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "matchDate": 610250251.48736894,
+    "loserSet3Score": 0,
+    "loserSet2Score": 6,
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "matchId": "B61A411F-68F5-4B5B-8EFE-CCBCBC122E68"
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      4.1299999999999999,
+      3.6299999999999999
+    ],
+    "matchDate": 610250251.42502904,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 5,
+    "winnerSet1Score": 7,
+    "matchId": "70607714-9B7E-4E35-9599-9F755AFB5E55",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      4.0199999999999996,
+      4.0300000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0199999999999996,
+        "playerId": "FBBEC5A2-4AD9-4C15-9DB9-8F96DF45AC55",
+        "initialDoublesRating": 3.8700000000000001,
+        "name": "Josh Ziegner",
+        "doublesRating": 3.8700000000000001,
+        "initialSinglesRating": 4.0199999999999996
+      },
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "2A72BF2C-AC21-4DB2-B54E-BCAF8B917FE9",
+        "initialDoublesRating": 3.9300000000000002,
+        "name": "Kenny Johnson",
+        "doublesRating": 3.9300000000000002,
+        "initialSinglesRating": 4.0700000000000003
+      }
+    ]
+  },
+  {
+    "winnerSet3Score": 2,
+    "loserSet1Score": 1,
+    "winnerSet2Score": 6,
+    "winnerSet1Score": 6,
+    "winnerDynamicRatings": [
+      3.7999999999999998,
+      3.79
+    ],
+    "loserDynamicRatings": [
+      3.96,
+      3.6600000000000001
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "9FAA0388-3255-414A-AC20-05E2432D157C",
+        "initialDoublesRating": 4,
+        "name": "Fred Heath",
+        "doublesRating": 4,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "matchDate": 610250251.36245406,
+    "loserSet3Score": 6,
+    "loserSet2Score": 4,
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "matchId": "B7DA29A9-34FB-4C84-82BB-E7A359A48606"
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      },
+      {
+        "singlesRating": 4.0199999999999996,
+        "playerId": "FBBEC5A2-4AD9-4C15-9DB9-8F96DF45AC55",
+        "initialDoublesRating": 3.8700000000000001,
+        "name": "Josh Ziegner",
+        "doublesRating": 3.8700000000000001,
+        "initialSinglesRating": 4.0199999999999996
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8799999999999999,
+      3.9399999999999999
+    ],
+    "matchDate": 610250251.29842401,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "60AF5609-25FF-4949-916A-A4D2E7341DE6",
+    "loserSet2Score": 2,
+    "winnerDynamicRatings": [
+      4.1900000000000004,
+      3.8799999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "2A72BF2C-AC21-4DB2-B54E-BCAF8B917FE9",
+        "initialDoublesRating": 3.9300000000000002,
+        "name": "Kenny Johnson",
+        "doublesRating": 3.9300000000000002,
+        "initialSinglesRating": 4.0700000000000003
+      }
+    ]
+  },
+  {
+    "winnerSet3Score": 1,
+    "loserSet1Score": 2,
+    "winnerSet2Score": 4,
+    "winnerSet1Score": 6,
+    "winnerDynamicRatings": [
+      3.8999999999999999,
+      3.8900000000000001
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002,
+      3.7599999999999998
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      }
+    ],
+    "matchDate": 610250251.233706,
+    "loserSet3Score": 0,
+    "loserSet2Score": 6,
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "BD600CF9-0F9C-40CD-B162-7D82234DAA7D",
+        "initialDoublesRating": 3.8799999999999999,
+        "name": "Sam Strickland",
+        "doublesRating": 3.8799999999999999,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "matchId": "E9292954-6509-4EC6-A02F-BE38124ECAF5"
+  },
+  {
+    "winnerSet3Score": 1,
+    "loserSet1Score": 7,
+    "winnerSet2Score": 6,
+    "winnerSet1Score": 5,
+    "winnerDynamicRatings": [
+      3.8700000000000001,
+      3.77
+    ],
+    "loserDynamicRatings": [
+      3.71,
+      3.6800000000000002
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "matchDate": 610250251.17322695,
+    "loserSet3Score": 0,
+    "loserSet2Score": 2,
+    "winners": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "matchId": "10109E8C-AD0B-43AB-9B9F-7957DC1839B6"
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      },
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8399999999999999,
+      4
+    ],
+    "matchDate": 610250251.11501503,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "62313320-6036-41D4-B640-08E1C08E7A78",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      4.0499999999999998,
+      3.8799999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1100000000000003,
+        "playerId": "CD6033CB-FF14-493E-97C0-B2C8E2DCAA83",
+        "initialDoublesRating": 4.0700000000000003,
+        "name": "Spencer Ellis",
+        "doublesRating": 4.0700000000000003,
+        "initialSinglesRating": 4.1100000000000003
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "7465B6C2-153D-419A-98A4-0CF5597C81E8",
+        "initialDoublesRating": 3.8799999999999999,
+        "name": "Dave Van",
+        "doublesRating": 3.8799999999999999,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8100000000000001
+    ],
+    "matchDate": 610250251.07500696,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "8291FDD0-489F-4A4C-A0E7-C7C4559D60A0",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      4.0999999999999996
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      }
+    ]
+  },
+  {
+    "winnerSet3Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet2Score": 6,
+    "winnerSet1Score": 6,
+    "winnerDynamicRatings": [
+      4.2599999999999998,
+      3.6299999999999999
+    ],
+    "loserDynamicRatings": [
+      3.71,
+      3.8100000000000001
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "matchDate": 610250251.01769698,
+    "loserSet3Score": 1,
+    "loserSet2Score": 3,
+    "winners": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ],
+    "matchId": "D83448D2-8A0D-4C5C-98B5-31F897C9718A"
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6800000000000002,
+      3.6299999999999999
+    ],
+    "matchDate": 610250250.95961905,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "D82DF431-57DB-4F71-8D90-25F344EEEE34",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8399999999999999,
+      3.8300000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "03E35D3F-30D7-449A-A0D3-821270B40CA4",
+        "initialDoublesRating": 3.79,
+        "name": "Mike Harris",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8999999999999999,
+      3.7400000000000002
+    ],
+    "matchDate": 610250250.89948106,
+    "winnerSet2Score": 4,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "DED5927F-EC65-4E20-9FE5-E45A184D05EE",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.73,
+      3.8399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ]
+  },
+  {
+    "winnerSet3Score": 1,
+    "loserSet1Score": 3,
+    "winnerSet2Score": 1,
+    "winnerSet1Score": 6,
+    "winnerDynamicRatings": [
+      3.73,
+      3.71
+    ],
+    "loserDynamicRatings": [
+      3.96,
+      3.7599999999999998
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.9100000000000001,
+        "playerId": "3EA0DE5D-3FAE-4409-8D7F-91F0A100109A",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Tytan Thurgood",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.9100000000000001
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "matchDate": 610250250.842314,
+    "loserSet3Score": 0,
+    "loserSet2Score": 6,
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "matchId": "C7D74A94-D8BA-490D-BC9C-B1A365BD0377"
+  },
+  {
+    "winnerSet3Score": 1,
+    "loserSet1Score": 7,
+    "winnerSet2Score": 6,
+    "winnerSet1Score": 5,
+    "winnerDynamicRatings": [
+      3.9100000000000001,
+      4.0700000000000003
+    ],
+    "loserDynamicRatings": [
+      3.75,
+      4.1399999999999997
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.9700000000000002,
+        "playerId": "B43304D3-FD50-48D1-B750-116D522A93A4",
+        "initialDoublesRating": 3.8399999999999999,
+        "name": "Alex Venegas",
+        "doublesRating": 3.8399999999999999,
+        "initialSinglesRating": 3.9700000000000002
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "5A90C63B-742F-42A5-B86D-761C57B9BBBE",
+        "initialDoublesRating": 4.2199999999999998,
+        "name": "Matthew Pineda",
+        "doublesRating": 4.2199999999999998,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ],
+    "matchDate": 610250250.78646398,
+    "loserSet3Score": 0,
+    "loserSet2Score": 3,
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "9FAA0388-3255-414A-AC20-05E2432D157C",
+        "initialDoublesRating": 4,
+        "name": "Fred Heath",
+        "doublesRating": 4,
+        "initialSinglesRating": 3.8799999999999999
+      }
+    ],
+    "matchId": "328E58DE-5457-416C-B5AC-16A415B8CAFC"
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.75,
+      3.6899999999999999
+    ],
+    "matchDate": 610250250.72868299,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "31BA95CB-61B0-4FC1-AA90-25FB6F4BDD6D",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.79,
+      3.7999999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "03E35D3F-30D7-449A-A0D3-821270B40CA4",
+        "initialDoublesRating": 3.79,
+        "name": "Mike Harris",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.71,
+      3.6499999999999999
+    ],
+    "matchDate": 610250250.67440295,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "234608E6-06E7-4AA0-BD0B-8A16FD450E95",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8599999999999999,
+      3.8399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      },
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8100000000000001,
+      3.6899999999999999
+    ],
+    "matchDate": 610250250.62013495,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "ED240781-EC8F-438B-81E4-01C6E2F19FF0",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.8300000000000001,
+      3.73
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8300000000000001,
+      3.7000000000000002
+    ],
+    "matchDate": 610250250.56531799,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "F1CEE049-2074-41F5-BABF-787BCEC2F3BA",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.9399999999999999,
+      3.9199999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7799999999999998,
+      3.8500000000000001
+    ],
+    "matchDate": 610250250.51326704,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "CFF80711-CCA3-485E-825B-FB863164CC06",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.8599999999999999,
+      3.9300000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ],
+    "loserDynamicRatings": [
+      3.9100000000000001,
+      3.8599999999999999
+    ],
+    "matchDate": 610250250.459723,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "A80267AB-927B-4A9A-B7C6-2A296DA36BF3",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8900000000000001,
+      3.8199999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7000000000000002,
+      3.5899999999999999
+    ],
+    "matchDate": 610250250.40538204,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 5,
+    "winnerSet1Score": 7,
+    "matchId": "E8179AA3-EAEB-491C-A565-B3B258263809",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.8999999999999999,
+      3.8500000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8199999999999998,
+      3.5
+    ],
+    "matchDate": 610250250.35351801,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "7123F8AA-1390-4A04-B67A-DAD15C1C4F6F",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9300000000000002,
+      3.77
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7999999999999998,
+      3.73
+    ],
+    "matchDate": 610250250.29955006,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 5,
+    "winnerSet1Score": 7,
+    "matchId": "9FC4C446-42A7-43D4-9852-FA65A0047480",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.8900000000000001,
+      3.79
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8300000000000001,
+      3.6699999999999999
+    ],
+    "matchDate": 610250250.24774003,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "87FA8B8B-6A73-440D-9ED6-7C52E3F36A94",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.8500000000000001,
+      3.8500000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.75,
+      3.8599999999999999
+    ],
+    "matchDate": 610250250.19744098,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "7EB8948E-E130-4415-8BAD-D7D6D2274594",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.8300000000000001,
+      3.7599999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8300000000000001,
+      3.6299999999999999
+    ],
+    "matchDate": 610250250.14596498,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "4D3F9787-6681-4CD3-BD04-0501053BC9DD",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      4.0199999999999996,
+      3.7200000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.9399999999999999,
+      3.6200000000000001
+    ],
+    "matchDate": 610250250.09733605,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "D61F9CD0-E21A-4A08-925A-4A39B7B7E27A",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9100000000000001,
+      3.75
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "BD600CF9-0F9C-40CD-B162-7D82234DAA7D",
+        "initialDoublesRating": 3.8799999999999999,
+        "name": "Sam Strickland",
+        "doublesRating": 3.8799999999999999,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.9399999999999999
+    ],
+    "matchDate": 610250250.06545198,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "83BD5DCD-7F61-47AB-B490-7D3D82682A62",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      4.1600000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8300000000000001
+    ],
+    "matchDate": 610250250.03522801,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "0FF8E7CA-D6B9-47A1-8126-78B2DEB40821",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      4.0899999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      }
+    ]
+  },
+  {
+    "winnerSet3Score": 1,
+    "loserSet1Score": 2,
+    "winnerSet2Score": 4,
+    "winnerSet1Score": 6,
+    "winnerDynamicRatings": [
+      4.0199999999999996,
+      3.7999999999999998
+    ],
+    "loserDynamicRatings": [
+      3.6299999999999999,
+      3.8300000000000001
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "matchDate": 610250249.98413706,
+    "loserSet3Score": 0,
+    "loserSet2Score": 6,
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "matchId": "30846E13-A105-421A-90F4-E3C5DB3F1E9D"
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6800000000000002,
+      3.7200000000000002
+    ],
+    "matchDate": 610250249.93740499,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "B82F66D3-6686-40B6-A6B9-0CCA2B62433C",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8799999999999999,
+      3.9500000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "BD600CF9-0F9C-40CD-B162-7D82234DAA7D",
+        "initialDoublesRating": 3.8799999999999999,
+        "name": "Sam Strickland",
+        "doublesRating": 3.8799999999999999,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002,
+      3.77
+    ],
+    "matchDate": 610250249.88838696,
+    "winnerSet2Score": 3,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "ED68B17C-9CBF-4F9C-BA73-419302B3B724",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.9500000000000002,
+      3.8100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "winnerSet3Score": 1,
+    "loserSet1Score": 5,
+    "winnerSet2Score": 3,
+    "winnerSet1Score": 7,
+    "winnerDynamicRatings": [
+      3.8500000000000001,
+      3.6899999999999999
+    ],
+    "loserDynamicRatings": [
+      3.7000000000000002,
+      3.7000000000000002
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "03E35D3F-30D7-449A-A0D3-821270B40CA4",
+        "initialDoublesRating": 3.79,
+        "name": "Mike Harris",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ],
+    "matchDate": 610250249.84240603,
+    "loserSet3Score": 0,
+    "loserSet2Score": 6,
+    "winners": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      }
+    ],
+    "matchId": "F7956E0F-386F-44D4-891A-CF75A2B39E8A"
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7999999999999998,
+      3.6200000000000001
+    ],
+    "matchDate": 610250249.79681301,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "7ACDCACD-F700-455D-B13F-B9F4E8679F95",
+    "loserSet2Score": 1,
+    "winnerDynamicRatings": [
+      3.96,
+      3.9100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0199999999999996,
+        "playerId": "FBBEC5A2-4AD9-4C15-9DB9-8F96DF45AC55",
+        "initialDoublesRating": 3.8700000000000001,
+        "name": "Josh Ziegner",
+        "doublesRating": 3.8700000000000001,
+        "initialSinglesRating": 4.0199999999999996
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      },
+      {
+        "singlesRating": 3.9700000000000002,
+        "playerId": "B43304D3-FD50-48D1-B750-116D522A93A4",
+        "initialDoublesRating": 3.8399999999999999,
+        "name": "Alex Venegas",
+        "doublesRating": 3.8399999999999999,
+        "initialSinglesRating": 3.9700000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7000000000000002,
+      3.7799999999999998
+    ],
+    "matchDate": 610250249.75116897,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "B6C7942B-5ACE-4641-BB3D-573A21A5F322",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      4.0599999999999996,
+      3.7599999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 3.7799999999999998,
+        "playerId": "14B6E6E0-E788-4B43-A1D1-C62B5E32C1C9",
+        "initialDoublesRating": 3.71,
+        "name": "Dave Comish",
+        "doublesRating": 3.71,
+        "initialSinglesRating": 3.7799999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      4.1799999999999997,
+      3.6699999999999999
+    ],
+    "matchDate": 610250249.70451105,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "BA479FA9-377A-41EC-BB28-50C6F69B3150",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      4.21,
+      4.04
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.04,
+        "playerId": "0220AA0F-B25E-41C2-9E27-7A8D0D18A2F9",
+        "initialDoublesRating": 4.2199999999999998,
+        "name": "Royce Plowman",
+        "doublesRating": 4.2199999999999998,
+        "initialSinglesRating": 4.04
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.7799999999999998,
+        "playerId": "14B6E6E0-E788-4B43-A1D1-C62B5E32C1C9",
+        "initialDoublesRating": 3.71,
+        "name": "Dave Comish",
+        "doublesRating": 3.71,
+        "initialSinglesRating": 3.7799999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      4.0800000000000001,
+      3.8300000000000001
+    ],
+    "matchDate": 610250249.65901995,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "7C50CB2A-C4D9-440D-9472-BF94BD11101E",
+    "loserSet2Score": 2,
+    "winnerDynamicRatings": [
+      4.1399999999999997,
+      4.0599999999999996
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 4.04,
+        "playerId": "0220AA0F-B25E-41C2-9E27-7A8D0D18A2F9",
+        "initialDoublesRating": 4.2199999999999998,
+        "name": "Royce Plowman",
+        "doublesRating": 4.2199999999999998,
+        "initialSinglesRating": 4.04
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "BD600CF9-0F9C-40CD-B162-7D82234DAA7D",
+        "initialDoublesRating": 3.8799999999999999,
+        "name": "Sam Strickland",
+        "doublesRating": 3.8799999999999999,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8399999999999999,
+      3.7799999999999998
+    ],
+    "matchDate": 610250249.61322296,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "79B92D2E-BA4D-45C5-8CF4-C24E7172EAF8",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.8799999999999999,
+      3.8900000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.8999999999999999,
+        "playerId": "B16FC636-3A25-49F9-9B54-02CF78D15477",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Cole Hunt",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8999999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8999999999999999,
+        "playerId": "B16FC636-3A25-49F9-9B54-02CF78D15477",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Cole Hunt",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8999999999999999
+      },
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.79,
+      3.8300000000000001
+    ],
+    "matchDate": 610250249.56835198,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "C72692AA-7459-49F1-9A36-71AC5861ECE5",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.9300000000000002,
+      3.8399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "BD600CF9-0F9C-40CD-B162-7D82234DAA7D",
+        "initialDoublesRating": 3.8799999999999999,
+        "name": "Sam Strickland",
+        "doublesRating": 3.8799999999999999,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002,
+      3.79
+    ],
+    "matchDate": 610250249.52706897,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "91BC7E02-283C-4E6A-B489-62AFB1D28A76",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.98,
+      3.8999999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "BD600CF9-0F9C-40CD-B162-7D82234DAA7D",
+        "initialDoublesRating": 3.8799999999999999,
+        "name": "Sam Strickland",
+        "doublesRating": 3.8799999999999999,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.8999999999999999,
+        "playerId": "B16FC636-3A25-49F9-9B54-02CF78D15477",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Cole Hunt",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8999999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7599999999999998,
+      3.75
+    ],
+    "matchDate": 610250249.48269796,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "6DCAE411-250C-4938-AB3B-CFCDAD8C763A",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      4,
+      3.7000000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.79,
+      3.6000000000000001
+    ],
+    "matchDate": 610250249.44184005,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "985F35E2-ED29-462C-B8A9-A68635447060",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9300000000000002,
+      3.8599999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "winnerSet3Score": 1,
+    "loserSet1Score": 2,
+    "winnerSet2Score": 6,
+    "winnerSet1Score": 6,
+    "winnerDynamicRatings": [
+      3.9900000000000002,
+      3.8700000000000001
+    ],
+    "loserDynamicRatings": [
+      3.7599999999999998,
+      3.75
+    ],
+    "losers": [
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "matchDate": 610250249.39926803,
+    "loserSet3Score": 0,
+    "loserSet2Score": 7,
+    "winners": [
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "matchId": "5C3E8988-CAD5-45FD-A0D5-A7333EC5F70B"
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.77,
+      3.73
+    ],
+    "matchDate": 610250249.35766399,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "311907C5-A215-4BC7-B196-23CA7198ED1D",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9199999999999999,
+      3.9700000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8100000000000001,
+      3.8199999999999998
+    ],
+    "matchDate": 610250249.31598604,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "A19D4D0B-17C9-4BBB-9716-62A75A73F588",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.8300000000000001,
+      3.8999999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1100000000000003,
+        "playerId": "CD6033CB-FF14-493E-97C0-B2C8E2DCAA83",
+        "initialDoublesRating": 4.0700000000000003,
+        "name": "Spencer Ellis",
+        "doublesRating": 4.0700000000000003,
+        "initialSinglesRating": 4.1100000000000003
+      }
+    ],
+    "loserDynamicRatings": [
+      3.98
+    ],
+    "matchDate": 610250249.29212701,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "F702FFA3-2105-481D-9078-39636CF3A443",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9300000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.5600000000000001,
+      3.52
+    ],
+    "matchDate": 610250249.25072503,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 0,
+    "winnerSet1Score": 7,
+    "matchId": "04EA5D59-49AE-4A2F-8641-A3D66FFC9EF7",
+    "winnerDynamicRatings": [
+      4.0099999999999998,
+      3.9199999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8199999999999998,
+      3.6200000000000001
+    ],
+    "matchDate": 610250249.20949602,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "9C0AF349-412A-4BB5-B626-C67742488BB9",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.8199999999999998,
+      3.7799999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.71,
+      3.6499999999999999
+    ],
+    "matchDate": 610250249.17143905,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "4C90CA3D-63D7-4E35-96F6-6D52D08B8E05",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9199999999999999,
+      3.73
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "9FAA0388-3255-414A-AC20-05E2432D157C",
+        "initialDoublesRating": 4,
+        "name": "Fred Heath",
+        "doublesRating": 4,
+        "initialSinglesRating": 3.8799999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8199999999999998
+    ],
+    "matchDate": 610250249.14721406,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "15C57BE4-AAF6-4119-AA0E-2BC4DD07AECB",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8799999999999999,
+      3.8500000000000001
+    ],
+    "matchDate": 610250249.10734797,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "77D12A14-AEBA-4661-870B-DE7393B5DA0A",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      4.0499999999999998,
+      3.9900000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1100000000000003,
+        "playerId": "CD6033CB-FF14-493E-97C0-B2C8E2DCAA83",
+        "initialDoublesRating": 4.0700000000000003,
+        "name": "Spencer Ellis",
+        "doublesRating": 4.0700000000000003,
+        "initialSinglesRating": 4.1100000000000003
+      },
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "9FAA0388-3255-414A-AC20-05E2432D157C",
+        "initialDoublesRating": 4,
+        "name": "Fred Heath",
+        "doublesRating": 4,
+        "initialSinglesRating": 3.8799999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "03E35D3F-30D7-449A-A0D3-821270B40CA4",
+        "initialDoublesRating": 3.79,
+        "name": "Mike Harris",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6800000000000002,
+      3.6699999999999999
+    ],
+    "matchDate": 610250249.06927395,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "9FF3307F-CF8D-41CB-B913-E4616494621B",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.7999999999999998,
+      3.7200000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      },
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.96,
+      3.8999999999999999
+    ],
+    "matchDate": 610250249.03371406,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "EC899810-26CD-4BAF-923C-A8D03235E05A",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      4.21,
+      3.8100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.9100000000000001,
+      3.96
+    ],
+    "matchDate": 610250248.99576294,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "64DC1C7F-8B5B-4E79-92E7-75F1776D6A95",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      4.2800000000000002,
+      3.73
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.5099999999999998,
+      3.6200000000000001
+    ],
+    "matchDate": 610250248.95977199,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 0,
+    "winnerSet1Score": 7,
+    "matchId": "34252346-5A03-47A4-BD45-12E08B7B986B",
+    "winnerDynamicRatings": [
+      4.0099999999999998,
+      3.96
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8100000000000001,
+      3.73
+    ],
+    "matchDate": 610250248.92398405,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "A176327C-3E79-4CAC-A878-9FD8A0A48335",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.7799999999999998,
+      3.7999999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6400000000000001,
+      3.6899999999999999
+    ],
+    "matchDate": 610250248.88753104,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "F48BA257-1832-46BE-B22F-7519F1E04A01",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      3.9300000000000002,
+      3.8799999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "03E35D3F-30D7-449A-A0D3-821270B40CA4",
+        "initialDoublesRating": 3.79,
+        "name": "Mike Harris",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.71,
+      3.7000000000000002
+    ],
+    "matchDate": 610250248.85426903,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "15BEF413-8DCE-4242-ADCE-9F7C69744D08",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.8199999999999998,
+      3.98
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      },
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6800000000000002,
+      3.8399999999999999
+    ],
+    "matchDate": 610250248.82022095,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "AC40BCDB-CC83-486A-8D29-36E679C8144C",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.8300000000000001,
+      3.8399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8199999999999998,
+      3.73
+    ],
+    "matchDate": 610250248.788275,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "16ADC11C-D9AB-4744-BE6C-05D291F6282C",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8599999999999999,
+      3.7599999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7000000000000002,
+      3.6899999999999999
+    ],
+    "matchDate": 610250248.75329101,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "E588419C-C3B6-4807-A972-F3F093BAA85D",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      3.9500000000000002,
+      3.8599999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6699999999999999,
+      3.5099999999999998
+    ],
+    "matchDate": 610250248.72053695,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "1F289BD6-73FE-411F-AF9D-18BD1840A333",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      3.8799999999999999,
+      3.8700000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6000000000000001,
+      3.6899999999999999
+    ],
+    "matchDate": 610250248.69084406,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "6F1BC47A-47E1-40EA-8162-FFFACAD586E2",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.8399999999999999,
+      3.7999999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.5600000000000001,
+      3.6600000000000001
+    ],
+    "matchDate": 610250248.659688,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "B467F67B-700F-4601-99C2-8BEDD1AB4EA1",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8700000000000001,
+      3.8399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.71,
+      3.6600000000000001
+    ],
+    "matchDate": 610250248.63118696,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "851D25F9-7FF0-478F-9242-4AB2C660BBD8",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9399999999999999,
+      3.7799999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6600000000000001,
+      3.6499999999999999
+    ],
+    "matchDate": 610250248.60246396,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "AA45D740-266A-4F0B-9095-516A96097A6B",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      3.9399999999999999,
+      3.7999999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7799999999999998,
+      3.6200000000000001
+    ],
+    "matchDate": 610250248.57139397,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "AD3A5E86-BB8A-41F7-9C36-7C5BB5689109",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.7999999999999998,
+      3.8199999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7799999999999998,
+      3.73
+    ],
+    "matchDate": 610250248.54317796,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "36B55355-6D65-407A-AB8A-DB3A04110AAC",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      4.0300000000000002,
+      3.8300000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1100000000000003,
+        "playerId": "CD6033CB-FF14-493E-97C0-B2C8E2DCAA83",
+        "initialDoublesRating": 4.0700000000000003,
+        "name": "Spencer Ellis",
+        "doublesRating": 4.0700000000000003,
+        "initialSinglesRating": 4.1100000000000003
+      },
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "687AEE33-2F07-487F-8A2F-43BFCE920723",
+        "initialDoublesRating": 3.8700000000000001,
+        "name": "Nate Wood",
+        "doublesRating": 3.8700000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.73,
+      3.73
+    ],
+    "matchDate": 610250248.515697,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "A6BE7695-E858-4196-94A8-8931A926175D",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.9100000000000001,
+      3.9399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9100000000000001,
+        "playerId": "3EA0DE5D-3FAE-4409-8D7F-91F0A100109A",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Tytan Thurgood",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.9100000000000001
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8599999999999999,
+      3.6800000000000002
+    ],
+    "matchDate": 610250248.48633397,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "BF6B271E-5052-46F4-AD2C-4FD6D7897651",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.96,
+      3.7999999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9100000000000001,
+        "playerId": "3EA0DE5D-3FAE-4409-8D7F-91F0A100109A",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Tytan Thurgood",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.9100000000000001
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.79,
+      3.75
+    ],
+    "matchDate": 610250248.46026003,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "E9B95ACB-40F6-446D-AB9A-A666CAE09D77",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8599999999999999,
+      3.8399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 4.0999999999999996,
+        "playerId": "F680D8AB-B230-49A4-8539-5F78D380E292",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Jackson Aubrey",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.0999999999999996
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8100000000000001,
+      3.7799999999999998
+    ],
+    "matchDate": 610250248.43291903,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "8108F45F-8B56-4B8D-8644-9AE973837FCC",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      4.0099999999999998,
+      3.7999999999999998
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      },
+      {
+        "singlesRating": 4.0999999999999996,
+        "playerId": "F680D8AB-B230-49A4-8539-5F78D380E292",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Jackson Aubrey",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.0999999999999996
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6499999999999999,
+      3.8599999999999999
+    ],
+    "matchDate": 610250248.403826,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "57D8D9C9-5E6F-44FE-B599-2EC27C7F3C07",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9399999999999999,
+      3.98
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      },
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.73,
+      3.6600000000000001
+    ],
+    "matchDate": 610250248.37905896,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "0FA818BF-DF83-46D9-83CA-887BA9A6AC59",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.9399999999999999,
+      3.6699999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6099999999999999,
+      3.6299999999999999
+    ],
+    "matchDate": 610250248.35501003,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "960F55A2-19FA-495D-BADD-19EDDD7DE671",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.75,
+      3.96
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      4.0599999999999996,
+      4.0099999999999998
+    ],
+    "matchDate": 610250248.33048105,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 6,
+    "winnerSet1Score": 7,
+    "matchId": "AA6C41B0-B81A-4C7C-9B81-B2029E23AC41",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      4.2300000000000004,
+      4.0800000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0700000000000003,
+        "playerId": "3A08171C-17A3-4551-921A-15CD03CF387F",
+        "initialDoublesRating": 4.3700000000000001,
+        "name": "Scott Sowby",
+        "doublesRating": 4.3700000000000001,
+        "initialSinglesRating": 4.0700000000000003
+      },
+      {
+        "singlesRating": 4.04,
+        "playerId": "0220AA0F-B25E-41C2-9E27-7A8D0D18A2F9",
+        "initialDoublesRating": 4.2199999999999998,
+        "name": "Royce Plowman",
+        "doublesRating": 4.2199999999999998,
+        "initialSinglesRating": 4.04
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7799999999999998,
+      3.7799999999999998
+    ],
+    "matchDate": 610250248.30589998,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "A5330C3F-CB3F-47EB-A2FD-448253A754FC",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8100000000000001,
+      3.8100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.75,
+        "playerId": "8F97DE81-C45F-4493-A94D-2BAA67A7FBAD",
+        "initialDoublesRating": 3.75,
+        "name": "Sam Carillo",
+        "doublesRating": 3.75,
+        "initialSinglesRating": 3.75
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7999999999999998,
+      3.8300000000000001
+    ],
+    "matchDate": 610250248.28355801,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "B7F96266-01A5-40A3-A01F-B4D4FDA60FFF",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.9100000000000001,
+      3.8599999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      },
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "8F97DE81-C45F-4493-A94D-2BAA67A7FBAD",
+        "initialDoublesRating": 3.75,
+        "name": "Sam Carillo",
+        "doublesRating": 3.75,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.71,
+      3.71
+    ],
+    "matchDate": 610250248.26147604,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "4BCEBFAC-01FB-47B1-86D7-12664F863303",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9199999999999999,
+      3.79
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7799999999999998,
+      3.7000000000000002
+    ],
+    "matchDate": 610250248.23803604,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "467A87F2-2D32-40F7-A703-15A0F14DD3FE",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9399999999999999,
+      3.8399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9100000000000001,
+        "playerId": "3EA0DE5D-3FAE-4409-8D7F-91F0A100109A",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Tytan Thurgood",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.9100000000000001
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.77,
+      3.7200000000000002
+    ],
+    "matchDate": 610250248.21643996,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "9A437B32-CB1A-4CFA-96D6-AB597271D80B",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.8500000000000001,
+      3.9100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9100000000000001,
+        "playerId": "3EA0DE5D-3FAE-4409-8D7F-91F0A100109A",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Tytan Thurgood",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.9100000000000001
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8300000000000001,
+      3.5899999999999999
+    ],
+    "matchDate": 610250248.19630301,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 0,
+    "winnerSet1Score": 6,
+    "matchId": "66F29C9D-8476-4440-804E-AF016ED17F36",
+    "loserSet2Score": 2,
+    "winnerDynamicRatings": [
+      4.04,
+      3.9700000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8300000000000001,
+      3.6800000000000002
+    ],
+    "matchDate": 610250248.17622304,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "A25C72CC-F0C0-48FC-9621-42004169CFBB",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      4.0199999999999996,
+      3.8599999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6899999999999999,
+      3.75
+    ],
+    "matchDate": 610250248.15463698,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "D64D350B-6711-40F0-A475-9642EACA1E73",
+    "loserSet2Score": 3,
+    "winnerDynamicRatings": [
+      4.0199999999999996,
+      3.9399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002,
+      3.6600000000000001
+    ],
+    "matchDate": 610250248.13589501,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "2D2518EE-AE18-4FB6-9C5C-9D8B61A3137C",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.96,
+      3.8399999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7599999999999998,
+      3.6800000000000002
+    ],
+    "matchDate": 610250248.11809695,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 5,
+    "winnerSet1Score": 7,
+    "matchId": "378D2F37-8DB1-4983-A865-9615820D15AA",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.9700000000000002,
+      3.8100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002
+    ],
+    "matchDate": 610250248.10691404,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "10D2179D-006D-4E5E-A22E-2E33CE7D89F9",
+    "loserSet2Score": 1,
+    "winnerDynamicRatings": [
+      4.04
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002,
+      3.6899999999999999
+    ],
+    "matchDate": 610250248.08607399,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 5,
+    "winnerSet1Score": 7,
+    "matchId": "4FABB685-94F3-4F2C-BD56-82B39A207FFA",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.9300000000000002,
+      3.7400000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "3214C912-8298-4B99-8AE5-42A05AE4D6BE",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Brad Gessell",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8199999999999998,
+      3.6600000000000001
+    ],
+    "matchDate": 610250248.06805599,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "31887B49-4ED1-4A6C-973D-696D5A0B90DA",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.9700000000000002,
+      3.9100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.75,
+        "playerId": "8F97DE81-C45F-4493-A94D-2BAA67A7FBAD",
+        "initialDoublesRating": 3.75,
+        "name": "Sam Carillo",
+        "doublesRating": 3.75,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.73
+    ],
+    "matchDate": 610250248.05794001,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "69F016E1-B7A6-4D4E-BF20-BEE3E8EBDDB8",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      4.1100000000000003
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7599999999999998,
+      3.7799999999999998
+    ],
+    "matchDate": 610250248.04120398,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "C4D7516E-8B6A-49F8-A851-4E0E23A26719",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9300000000000002,
+      3.8999999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.79,
+      3.7400000000000002
+    ],
+    "matchDate": 610250248.02549303,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "7FA22871-1B08-401C-869B-17E1D47466F8",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8999999999999999,
+      3.9300000000000002
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      },
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8100000000000001,
+        "playerId": "08B67249-5FBE-45A2-B94F-8047F7683A52",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Ryan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8100000000000001
+      },
+      {
+        "singlesRating": 3.8599999999999999,
+        "playerId": "05CED941-C530-472C-BC5B-59CB8FBFFABE",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Evan Hiller",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.8599999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6899999999999999,
+      3.6899999999999999
+    ],
+    "matchDate": 610250248.00759804,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "BD73D2A2-3C4C-47C3-8CA2-F1BBE26FE1D3",
+    "loserSet2Score": 1,
+    "winnerDynamicRatings": [
+      3.9500000000000002,
+      3.9100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.9100000000000001,
+        "playerId": "3EA0DE5D-3FAE-4409-8D7F-91F0A100109A",
+        "initialDoublesRating": 3.7999999999999998,
+        "name": "Tytan Thurgood",
+        "doublesRating": 3.7999999999999998,
+        "initialSinglesRating": 3.9100000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "03E35D3F-30D7-449A-A0D3-821270B40CA4",
+        "initialDoublesRating": 3.79,
+        "name": "Mike Harris",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.8500000000000001
+      },
+      {
+        "singlesRating": 3.7599999999999998,
+        "playerId": "CCDE26B6-4BA0-4C5D-9221-D5BF12814166",
+        "initialDoublesRating": 3.7599999999999998,
+        "name": "Barry Craft",
+        "doublesRating": 3.7599999999999998,
+        "initialSinglesRating": 3.7599999999999998
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7400000000000002,
+      3.71
+    ],
+    "matchDate": 610250247.98954999,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "6214617C-D48C-4E3D-A5ED-86D062DA94BC",
+    "loserSet2Score": 2,
+    "winnerDynamicRatings": [
+      3.96,
+      3.8700000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 4.0499999999999998,
+        "playerId": "B1569D2E-82B5-420C-B7DE-F1D36A05B74C",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Andrew Whittle",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 4.0499999999999998
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.5699999999999998
+    ],
+    "matchDate": 610250247.98149502,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "E0088D25-A7D1-462D-876C-F9C37583FE09",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.96
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ],
+    "loserDynamicRatings": [
+      3.7000000000000002,
+      3.75
+    ],
+    "matchDate": 610250247.96698999,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "8AAC6375-7C94-4A9E-AFF6-DDCB350FB1D7",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8999999999999999,
+      3.77
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6400000000000001,
+      3.73
+    ],
+    "matchDate": 610250247.95145595,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "ABF19EB8-0885-4E4B-BBD4-2B6CBC1FD165",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.96,
+      3.79
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.5800000000000001,
+        "playerId": "04679CB9-C38F-478B-8F0A-74D2364EF396",
+        "initialDoublesRating": 3.6800000000000002,
+        "name": "Bob Crane",
+        "doublesRating": 3.6800000000000002,
+        "initialSinglesRating": 3.5800000000000001
+      },
+      {
+        "singlesRating": 3.9500000000000002,
+        "playerId": "A056BCF2-CA0C-433F-B2BB-27A7533C4AC3",
+        "initialDoublesRating": 3.8100000000000001,
+        "name": "Scott Soelberg",
+        "doublesRating": 3.8100000000000001,
+        "initialSinglesRating": 3.9500000000000002
+      }
+    ],
+    "loserDynamicRatings": [
+      3.6499999999999999,
+      3.7799999999999998
+    ],
+    "matchDate": 610250247.93215895,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "A9BDD08A-B9ED-4929-AF9B-9B539E9FED36",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.9199999999999999,
+      3.75
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.8799999999999999,
+        "playerId": "5AB376DA-0E2B-4B6A-9405-BDE8B12139AA",
+        "initialDoublesRating": 3.8900000000000001,
+        "name": "Pat Oneill",
+        "doublesRating": 3.8900000000000001,
+        "initialSinglesRating": 3.8799999999999999
+      },
+      {
+        "singlesRating": 3.75,
+        "playerId": "CCF3990D-0617-4197-97CD-93BE25750EC7",
+        "initialDoublesRating": 3.7200000000000002,
+        "name": "Geraldo Ramos",
+        "doublesRating": 3.7200000000000002,
+        "initialSinglesRating": 3.75
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ],
+    "loserDynamicRatings": [
+      3.79,
+      3.6099999999999999
+    ],
+    "matchDate": 610250247.90645003,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 1,
+    "winnerSet1Score": 6,
+    "matchId": "04611BCA-DF9E-42D0-A0C2-F09C66ECA735",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.9300000000000002,
+      3.8900000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9199999999999999,
+        "playerId": "41F60ED8-14AF-47E5-94FD-373445E2BB20",
+        "initialDoublesRating": 3.8199999999999998,
+        "name": "Jonas Kurihara",
+        "doublesRating": 3.8199999999999998,
+        "initialSinglesRating": 3.9199999999999999
+      },
+      {
+        "singlesRating": 3.79,
+        "playerId": "C656BA8C-DA94-494B-97AA-65BC8CC0A334",
+        "initialDoublesRating": 3.73,
+        "name": "Adam Pullan",
+        "doublesRating": 3.73,
+        "initialSinglesRating": 3.79
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8100000000000001,
+      3.7200000000000002
+    ],
+    "matchDate": 610250247.89348102,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 5,
+    "winnerSet1Score": 7,
+    "matchId": "87CB95B9-113A-47E0-BDB8-B94DC675E5A8",
+    "loserSet2Score": 6,
+    "winnerDynamicRatings": [
+      3.9199999999999999,
+      3.79
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1500000000000004,
+        "playerId": "F0996A03-324E-428D-BC00-123FEF04EDD1",
+        "initialDoublesRating": 3.9100000000000001,
+        "name": "Luke Dance",
+        "doublesRating": 3.9100000000000001,
+        "initialSinglesRating": 4.1500000000000004
+      },
+      {
+        "singlesRating": 3.8300000000000001,
+        "playerId": "AD50B48F-F02C-43ED-978E-C5591420935A",
+        "initialDoublesRating": 3.7799999999999998,
+        "name": "Koa Kauwe",
+        "doublesRating": 3.7799999999999998,
+        "initialSinglesRating": 3.8300000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.75,
+      3.79
+    ],
+    "matchDate": 610250247.88004506,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 2,
+    "winnerSet1Score": 6,
+    "matchId": "27676D1C-B6E3-48BF-B6F3-12D8A8FFD5B2",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9700000000000002,
+      3.9199999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      }
+    ],
+    "loserDynamicRatings": [
+      3.77,
+      3.8300000000000001
+    ],
+    "matchDate": 610250247.86659706,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "1758E77E-346F-490C-8D29-494CA07E1AA3",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.9300000000000002,
+      3.8999999999999999
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ],
+    "loserDynamicRatings": [
+      3.79,
+      3.77
+    ],
+    "matchDate": 610250247.85317695,
+    "winnerSet2Score": 7,
+    "loserSet1Score": 3,
+    "winnerSet1Score": 6,
+    "matchId": "5334037B-602C-4E05-83F5-7B5BD17DE3B0",
+    "loserSet2Score": 5,
+    "winnerDynamicRatings": [
+      3.9700000000000002,
+      3.9100000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.0899999999999999,
+        "playerId": "CA84BEE7-232F-4482-815F-0C283920C186",
+        "initialDoublesRating": 3.8599999999999999,
+        "name": "Stockton Aubrey",
+        "doublesRating": 3.8599999999999999,
+        "initialSinglesRating": 4.0899999999999999
+      },
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      }
+    ]
+  },
+  {
+    "losers": [
+      {
+        "singlesRating": 3.9300000000000002,
+        "playerId": "7CFE011E-1B29-4D26-96E6-BD742CF0FBFE",
+        "initialDoublesRating": 3.79,
+        "name": "Pedro Abreu",
+        "doublesRating": 3.79,
+        "initialSinglesRating": 3.9300000000000002
+      },
+      {
+        "singlesRating": 3.5899999999999999,
+        "playerId": "DC1380CC-92B8-4E26-B9CC-C8B58D1CF4EB",
+        "initialDoublesRating": 3.7000000000000002,
+        "name": "Doug Fowkes",
+        "doublesRating": 3.7000000000000002,
+        "initialSinglesRating": 3.5899999999999999
+      }
+    ],
+    "loserDynamicRatings": [
+      3.8100000000000001,
+      3.7200000000000002
+    ],
+    "matchDate": 610250247.837075,
+    "winnerSet2Score": 6,
+    "loserSet1Score": 4,
+    "winnerSet1Score": 6,
+    "matchId": "2B12B7C6-ACB3-4F38-96E5-419D2F0001C7",
+    "loserSet2Score": 4,
+    "winnerDynamicRatings": [
+      3.8900000000000001,
+      3.8700000000000001
+    ],
+    "winners": [
+      {
+        "singlesRating": 4.1799999999999997,
+        "playerId": "DDD43625-19B0-4301-AA73-89E6904336EC",
+        "initialDoublesRating": 3.9199999999999999,
+        "name": "Scotty Wynn",
+        "doublesRating": 3.9199999999999999,
+        "initialSinglesRating": 4.1799999999999997
+      },
+      {
+        "singlesRating": 3.8500000000000001,
+        "playerId": "5D9A2E4A-EC01-4E60-8454-BB34690E816C",
+        "initialDoublesRating": 3.8999999999999999,
+        "name": "Rob Acevedo",
+        "doublesRating": 3.8999999999999999,
+        "initialSinglesRating": 3.8500000000000001
+      }
+    ]
+  }
+]
