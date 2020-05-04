@@ -130,7 +130,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Players" id="qm1-9M-bO6">
-                        <barButtonItem key="leftBarButtonItem" title="Import" id="34a-wb-AoL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="34a-wb-AoL">
                             <connections>
                                 <action selector="importPlayers:" destination="BYZ-38-t0r" id="oyY-wr-kFA"/>
                             </connections>
@@ -890,7 +890,7 @@
                         <viewLayoutGuide key="safeArea" id="knK-vu-skW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Match History" id="csI-SX-R5K">
-                        <barButtonItem key="rightBarButtonItem" title="Import" id="5Rb-KN-pbK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="5Rb-KN-pbK">
                             <connections>
                                 <action selector="importTapped:" destination="D94-si-RvC" id="wdG-70-Rbz"/>
                             </connections>

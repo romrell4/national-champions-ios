@@ -104,6 +104,11 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 				}
 			}
 		}))
+		alert.addAction(UIAlertAction(title: "Export", style: .default, handler: { (_) in
+			UIPasteboard.general.string = try? String(data: JSONEncoder().encode(self.players), encoding: .utf8)
+			self.displayAlert(title: "Success", message: "The data has been copied to your clipboard. Feel free to paste it wherever.")
+			//TODO: Allow multiple formats
+		}))
 		alert.addAction(UIAlertAction(title: "Delete All", style: .default, handler: { (_) in
 			self.players = []
 			self.players.save()
