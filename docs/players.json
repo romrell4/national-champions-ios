@@ -2,336 +2,403 @@
   {
     "name": "Jihoon Noh",
     "singles_rating": 4.65,
-    "doubles_rating": 4.39
+    "doubles_rating": 4.39,
+    "current_team": "N"
   },
   {
     "name": "Eric Romrell",
     "singles_rating": 4.2,
-    "doubles_rating": 3.98
+    "doubles_rating": 3.98,
+    "current_team": "N"
   },
   {
     "name": "Scotty Wynn",
     "singles_rating": 4.18,
-    "doubles_rating": 3.92
+    "doubles_rating": 3.92,
+    "current_team": "Y"
   },
   {
     "name": "Luke Dance",
     "singles_rating": 4.15,
-    "doubles_rating": 3.91
+    "doubles_rating": 3.91,
+    "current_team": "Y"
   },
   {
     "name": "Jake Harris",
     "singles_rating": 4.12,
-    "doubles_rating": 3.92
+    "doubles_rating": 3.92,
+    "current_team": "N"
   },
   {
     "name": "Adam Peterson",
     "singles_rating": 4.11,
-    "doubles_rating": 3.9
+    "doubles_rating": 3.9,
+    "current_team": "N"
   },
   {
     "name": "Spencer Ellis",
     "singles_rating": 4.11,
-    "doubles_rating": 4.07
+    "doubles_rating": 4.07,
+    "current_team": "N"
   },
   {
     "name": "Jackson Aubrey",
     "singles_rating": 4.1,
-    "doubles_rating": 3.91
+    "doubles_rating": 3.91,
+    "current_team": "N"
   },
   {
     "name": "Stockton Aubrey",
     "singles_rating": 4.09,
-    "doubles_rating": 3.86
+    "doubles_rating": 3.86,
+    "current_team": "Y"
   },
   {
     "name": "Vasil Osipenko",
     "singles_rating": 4.09,
-    "doubles_rating": 3.91
+    "doubles_rating": 3.91,
+    "current_team": "N"
   },
   {
     "name": "Kenny Johnson",
     "singles_rating": 4.07,
-    "doubles_rating": 3.93
+    "doubles_rating": 3.93,
+    "current_team": "N"
   },
   {
     "name": "Scott Sowby",
     "singles_rating": 4.07,
-    "doubles_rating": 4.37
+    "doubles_rating": 4.37,
+    "current_team": "N"
   },
   {
     "name": "Andrew Whittle",
     "singles_rating": 4.05,
-    "doubles_rating": 3.82
+    "doubles_rating": 3.82,
+    "current_team": "Y"
   },
   {
     "name": "Royce Plowman",
     "singles_rating": 4.04,
-    "doubles_rating": 4.22
+    "doubles_rating": 4.22,
+    "current_team": "N"
   },
   {
     "name": "Josh Ziegner",
     "singles_rating": 4.02,
-    "doubles_rating": 3.87
+    "doubles_rating": 3.87,
+    "current_team": "Y"
   },
   {
     "name": "Ryan Bell",
     "singles_rating": 4.01,
-    "doubles_rating": 3.9
+    "doubles_rating": 3.9,
+    "current_team": "N"
   },
   {
     "name": "Todd Castagna",
     "singles_rating": 4,
-    "doubles_rating": 4.15
+    "doubles_rating": 4.15,
+    "current_team": "N"
   },
   {
     "name": "Glen Zobell",
     "singles_rating": 3.99,
-    "doubles_rating": 3.96
+    "doubles_rating": 3.96,
+    "current_team": "N"
   },
   {
     "name": "Alex Venegas",
     "singles_rating": 3.97,
-    "doubles_rating": 3.84
+    "doubles_rating": 3.84,
+    "current_team": "N"
   },
   {
     "name": "Derek Elison",
     "singles_rating": 3.95,
-    "doubles_rating": 4.18
+    "doubles_rating": 4.18,
+    "current_team": "N"
   },
   {
     "name": "Sam Strickland",
     "singles_rating": 3.95,
-    "doubles_rating": 3.88
+    "doubles_rating": 3.88,
+    "current_team": "N"
   },
   {
     "name": "Scott Soelberg",
     "singles_rating": 3.95,
-    "doubles_rating": 3.81
+    "doubles_rating": 3.81,
+    "current_team": "Y"
   },
   {
     "name": "Legend Lee",
     "singles_rating": 3.94,
-    "doubles_rating": 3.88
+    "doubles_rating": 3.88,
+    "current_team": "N"
   },
   {
     "name": "Stuart Weichers",
     "singles_rating": 3.94,
-    "doubles_rating": 4.01
+    "doubles_rating": 4.01,
+    "current_team": "N"
   },
   {
     "name": "Matthew Pineda",
     "singles_rating": 3.93,
-    "doubles_rating": 4.22
+    "doubles_rating": 4.22,
+    "current_team": "N"
   },
   {
     "name": "Pedro Abreu",
     "singles_rating": 3.93,
-    "doubles_rating": 3.79
+    "doubles_rating": 3.79,
+    "current_team": "Y"
   },
   {
     "name": "Cole Reese",
     "singles_rating": 3.92,
-    "doubles_rating": 3.89
+    "doubles_rating": 3.89,
+    "current_team": "N"
   },
   {
     "name": "Jonas Kurihara",
     "singles_rating": 3.92,
-    "doubles_rating": 3.82
+    "doubles_rating": 3.82,
+    "current_team": "Y"
   },
   {
     "name": "Jarrod Morrill",
     "singles_rating": 3.91,
-    "doubles_rating": 3.89
+    "doubles_rating": 3.89,
+    "current_team": "N"
   },
   {
     "name": "Scott Hinton",
     "singles_rating": 3.91,
-    "doubles_rating": 4.16
+    "doubles_rating": 4.16,
+    "current_team": "N"
   },
   {
     "name": "Tytan Thurgood",
     "singles_rating": 3.91,
-    "doubles_rating": 3.8
+    "doubles_rating": 3.8,
+    "current_team": "Y"
   },
   {
     "name": "Zach Siddoway",
     "singles_rating": 3.91,
-    "doubles_rating": 3.92
+    "doubles_rating": 3.92,
+    "current_team": "N"
   },
   {
     "name": "Brad Brooks",
     "singles_rating": 3.9,
-    "doubles_rating": 3.89
+    "doubles_rating": 3.89,
+    "current_team": "N"
   },
   {
     "name": "Cole Hunt",
     "singles_rating": 3.9,
-    "doubles_rating": 3.8
+    "doubles_rating": 3.8,
+    "current_team": "N"
   },
   {
     "name": "Joseph Venoza",
     "singles_rating": 3.9,
-    "doubles_rating": 3.89
+    "doubles_rating": 3.89,
+    "current_team": "N"
   },
   {
     "name": "Kurt Winkler",
     "singles_rating": 3.9,
-    "doubles_rating": 3.78
+    "doubles_rating": 3.78,
+    "current_team": "N"
   },
   {
     "name": "Adam Anderson",
     "singles_rating": 3.89,
-    "doubles_rating": 3.83
+    "doubles_rating": 3.83,
+    "current_team": "N"
   },
   {
     "name": "Paul Williams",
     "singles_rating": 3.89,
-    "doubles_rating": 4.01
+    "doubles_rating": 4.01,
+    "current_team": "N"
   },
   {
     "name": "Fred Heath",
     "singles_rating": 3.88,
-    "doubles_rating": 4
+    "doubles_rating": 4,
+    "current_team": "N"
   },
   {
     "name": "Nate Wood",
     "singles_rating": 3.88,
-    "doubles_rating": 3.87
+    "doubles_rating": 3.87,
+    "current_team": "N"
   },
   {
     "name": "Pat Oneill",
     "singles_rating": 3.88,
-    "doubles_rating": 3.89
+    "doubles_rating": 3.89,
+    "current_team": "Y"
   },
   {
     "name": "Ryan Holmes",
     "singles_rating": 3.88,
-    "doubles_rating": 4.05
+    "doubles_rating": 4.05,
+    "current_team": "N"
   },
   {
     "name": "Brian Crowe",
     "singles_rating": 3.87,
-    "doubles_rating": 3.88
+    "doubles_rating": 3.88,
+    "current_team": "N"
   },
   {
     "name": "Evan Teshima",
     "singles_rating": 3.87,
-    "doubles_rating": 3.78
+    "doubles_rating": 3.78,
+    "current_team": "N"
   },
   {
     "name": "KC Johnson",
     "singles_rating": 3.87,
-    "doubles_rating": 4.08
+    "doubles_rating": 4.08,
+    "current_team": "N"
   },
   {
     "name": "Brad Gessell",
     "singles_rating": 3.86,
-    "doubles_rating": 3.78
+    "doubles_rating": 3.78,
+    "current_team": "Y"
   },
   {
     "name": "Evan Hiller",
     "singles_rating": 3.86,
-    "doubles_rating": 3.8
+    "doubles_rating": 3.8,
+    "current_team": "Y"
   },
   {
     "name": "Chad McCall",
     "singles_rating": 3.85,
-    "doubles_rating": 3.95
+    "doubles_rating": 3.95,
+    "current_team": "N"
   },
   {
     "name": "Mike Harris",
     "singles_rating": 3.85,
-    "doubles_rating": 3.79
+    "doubles_rating": 3.79,
+    "current_team": "Y"
   },
   {
     "name": "Rob Acevedo",
     "singles_rating": 3.85,
-    "doubles_rating": 3.9
+    "doubles_rating": 3.9,
+    "current_team": "Y"
   },
   {
     "name": "Oscar Morales",
     "singles_rating": 3.84,
-    "doubles_rating": 3.71
+    "doubles_rating": 3.71,
+    "current_team": "N"
   },
   {
     "name": "Dave Van",
     "singles_rating": 3.83,
-    "doubles_rating": 3.88
+    "doubles_rating": 3.88,
+    "current_team": "N"
   },
   {
     "name": "Koa Kauwe",
     "singles_rating": 3.83,
-    "doubles_rating": 3.78
+    "doubles_rating": 3.78,
+    "current_team": "Y"
   },
   {
     "name": "Joe Christensen",
     "singles_rating": 3.81,
-    "doubles_rating": 3.75
+    "doubles_rating": 3.75,
+    "current_team": "N"
   },
   {
     "name": "Ryan Hiller",
     "singles_rating": 3.81,
-    "doubles_rating": 3.8
+    "doubles_rating": 3.8,
+    "current_team": "Y"
   },
   {
     "name": "Adam Pullan",
     "singles_rating": 3.79,
-    "doubles_rating": 3.73
+    "doubles_rating": 3.73,
+    "current_team": "Y"
   },
   {
     "name": "Dave Comish",
     "singles_rating": 3.78,
-    "doubles_rating": 3.71
+    "doubles_rating": 3.71,
+    "current_team": "N"
   },
   {
     "name": "Barry Craft",
     "singles_rating": 3.76,
-    "doubles_rating": 3.76
+    "doubles_rating": 3.76,
+    "current_team": "Y"
   },
   {
     "name": "Geraldo Ramos",
     "singles_rating": 3.75,
-    "doubles_rating": 3.72
+    "doubles_rating": 3.72,
+    "current_team": "Y"
   },
   {
     "name": "Sam Carillo",
     "singles_rating": 3.75,
-    "doubles_rating": 3.75
+    "doubles_rating": 3.75,
+    "current_team": "N"
   },
   {
     "name": "Arun Muthukkumaraswamy",
     "singles_rating": 3.74,
-    "doubles_rating": 3.78
+    "doubles_rating": 3.78,
+    "current_team": "N"
   },
   {
     "name": "Matt Linford",
     "singles_rating": 3.73,
-    "doubles_rating": 3.83
+    "doubles_rating": 3.83,
+    "current_team": "N"
   },
   {
     "name": "Lance Beare",
     "singles_rating": 3.7,
-    "doubles_rating": 3.89
+    "doubles_rating": 3.89,
+    "current_team": "N"
   },
   {
     "name": "Matt Groesbeck",
     "singles_rating": 3.69,
-    "doubles_rating": 3.78
+    "doubles_rating": 3.78,
+    "current_team": "N"
   },
   {
     "name": "Will Wu",
     "singles_rating": 3.69,
-    "doubles_rating": 3.73
+    "doubles_rating": 3.73,
+    "current_team": "N"
   },
   {
     "name": "Doug Fowkes",
     "singles_rating": 3.59,
-    "doubles_rating": 3.7
+    "doubles_rating": 3.7,
+    "current_team": "Y"
   },
   {
     "name": "Bob Crane",
     "singles_rating": 3.58,
-    "doubles_rating": 3.68
+    "doubles_rating": 3.68,
+    "current_team": "Y"
   }
 ]
