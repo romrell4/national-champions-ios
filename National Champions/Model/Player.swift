@@ -15,6 +15,7 @@ struct Player: Codable, Equatable {
 	var name: String
 	var singlesRating: Double
 	var doublesRating: Double
+	var onCurrentTeam: Bool
 	let initialSinglesRating: Double
 	let initialDoublesRating: Double
 	var previousSinglesRatings: [Double] {
@@ -40,13 +41,14 @@ struct Player: Codable, Equatable {
 		} + Array(repeating: initialDoublesRating, count: 3)).prefix(3))
 	}
 	
-	init(playerId: String, name: String, singlesRating: Double, doublesRating: Double) {
+	init(playerId: String, name: String, singlesRating: Double, doublesRating: Double, onCurrentTeam: Bool) {
 		self.playerId = playerId
 		self.name = name
 		self.singlesRating = singlesRating
 		self.doublesRating = doublesRating
 		self.initialSinglesRating = singlesRating
 		self.initialDoublesRating = doublesRating
+		self.onCurrentTeam = onCurrentTeam
 	}
 	
 	func update() {
@@ -79,13 +81,15 @@ struct Player: Codable, Equatable {
 			let newPlayers = dictArray.compactMap { dict -> Player? in
 				if let name = dict["name"] as? String,
 					let singlesRating = dict["singles_rating"] as? Double,
-					let doublesRating = dict["doubles_rating"] as? Double {
+					let doublesRating = dict["doubles_rating"] as? Double,
+					let onCurrentTeam = dict["current_team"] as? String {
 					
 					return Player(
 						playerId: UUID().uuidString,
 						name: name,
 						singlesRating: singlesRating,
-						doublesRating: doublesRating
+						doublesRating: doublesRating,
+						onCurrentTeam: onCurrentTeam.lowercased() == "y"
 					)
 				} else {
 					return nil

@@ -13,10 +13,23 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	@IBOutlet private weak var importPlayersButton: UIBarButtonItem!
 	@IBOutlet private weak var addPlayerButton: UIBarButtonItem!
 	@IBOutlet private weak var sortControl: UISegmentedControl!
+	@IBOutlet private weak var filterTeamSwitch: UISwitch!
 	@IBOutlet private weak var tableView: UITableView!
 	@IBOutlet private weak var spinner: UIActivityIndicatorView!
 	
-	private var players = Player.loadAll()
+	private var allPlayers = Player.loadAll()
+	private var displayedPlayers: [Player] {
+		return allPlayers.filter {
+			//Only filter if the switch is on
+			!filterTeamSwitch.isOn || $0.onCurrentTeam
+		}.sorted { (lhs, rhs) -> Bool in
+			if self.sortControl.selectedSegmentIndex == 0 {
+				return lhs.singlesRating > rhs.singlesRating
+			} else {
+				return lhs.doublesRating > rhs.doublesRating
+			}
+		}
+	}
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,28 +38,28 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
-		players = Player.loadAll()
-		sortAndReload()
+		allPlayers = Player.loadAll()
+		self.tableView.reloadData()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let vc = segue.destination as? PlayerMatchesViewController,
 			let cell = sender as? UITableViewCell,
 			let indexPath = tableView.indexPath(for: cell) {
-			vc.player = players[indexPath.row]
+			vc.player = displayedPlayers[indexPath.row]
 		}
 	}
 	
 	//MARK: UITableViewDelegate/DataSource
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return players.count
+		return displayedPlayers.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 		if let cell = cell as? PlayerTableViewCell {
-			cell.player = players[indexPath.row]
+			cell.player = displayedPlayers[indexPath.row]
 		}
 		return cell
 	}
@@ -64,7 +77,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		UISwipeActionsConfiguration(actions: [
 			UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
-				let player = self.players[indexPath.row]
+				let player = self.displayedPlayers[indexPath.row]
 				
 				//Find any matches this player played
 				let matches = Match.loadAll().filter {
@@ -75,8 +88,12 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 						self.tableView.reloadRows(at: [indexPath], with: .automatic)
 					}
 				} else {
-					self.players.remove(at: indexPath.row)
-					self.players.save()
+					//Find the player in the unfiltered list and remove them
+					if let index = self.allPlayers.firstIndex(of: player) {
+						self.allPlayers.remove(at: index)
+					}
+					
+					self.allPlayers.save()
 					self.tableView.deleteRows(at: [indexPath], with: .automatic)
 				}
 			}
@@ -99,42 +116,34 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 				self.spinner.stopAnimating()
 				switch $0 {
 				case .Success(let list):
-					self.players = list
-					self.sortAndReload()
+					self.allPlayers = list
+					self.tableView.reloadData()
 				case .Error(let message):
 					self.displayAlert(title: "Error", message: message)
 				}
 			}
 		}))
 		alert.addAction(UIAlertAction(title: "Export", style: .default, handler: { (_) in
-			UIPasteboard.general.string = try? String(data: JSONEncoder().encode(self.players), encoding: .utf8)
+			UIPasteboard.general.string = try? String(data: JSONEncoder().encode(self.allPlayers), encoding: .utf8)
 			self.displayAlert(title: "Success", message: "The data has been copied to your clipboard. Feel free to paste it wherever.")
-			//TODO: Allow multiple formats
 		}))
 		alert.addAction(UIAlertAction(title: "Delete All", style: .default, handler: { (_) in
-			self.players = []
-			self.players.save()
-			self.sortAndReload()
+			self.allPlayers = []
+			self.allPlayers.save()
+			self.tableView.reloadData()
 		}))
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		present(alert, animated: true)
 	}
 	
-	@IBAction func sortAndReload(_ sender: Any? = nil) {
-		players = players.sorted { (lhs, rhs) -> Bool in
-			if self.sortControl.selectedSegmentIndex == 0 {
-				return lhs.singlesRating > rhs.singlesRating
-			} else {
-				return lhs.doublesRating > rhs.doublesRating
-			}
-		}
+	@IBAction func reload(_ sender: Any? = nil) {
 		tableView.reloadData()
 	}
 	
 	//MARK: Private functions
 	
 	private func displayPlayerPopUp(title: String, playerIndex: Int? = nil, completionHandler: ((UIAlertAction) -> Void)? = nil) {
-		let player = players[safe: playerIndex]
+		let player = displayedPlayers[safe: playerIndex]
 		let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
 		alert.addTextField {
 			$0.placeholder = "Name"
@@ -152,32 +161,48 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 			$0.placeholder = "Doubles Rating"
 			$0.keyboardType = .decimalPad
 			$0.text = player?.doublesRating.description
+			$0.returnKeyType = .next
+		}
+		alert.addTextField {
+			$0.placeholder = "On Current Team (y/n)"
+			if let onCurrentTeam = player?.onCurrentTeam {
+				$0.text = onCurrentTeam ? "y" : "n"
+			}
 			$0.returnKeyType = .done
 		}
 		alert.addAction(UIAlertAction(title: "Save", style: .default) { [weak self] (_) in
 			guard
 				let name = alert.textFields?[0].text,
 				let singlesRating = alert.textFields?[1].text?.toDouble(),
-				let doublesRating = alert.textFields?[2].text?.toDouble()
+				let doublesRating = alert.textFields?[2].text?.toDouble(),
+				let onCurrentTeamStr = alert.textFields?[3].text
 			else { return }
 			
-			if let playerIndex = playerIndex, var player = player {
+			let onCurrentTeam = onCurrentTeamStr.lowercased() == "y"
+			
+			if var player = player {
 				player.name = name
 				player.singlesRating = singlesRating
 				player.doublesRating = doublesRating
-				self?.players[playerIndex] = player
+				player.onCurrentTeam = onCurrentTeam
+				
+				//Find the player in the full, unfiltered, list, and updated it
+				if let index = self?.allPlayers.firstIndex(of: player) {
+					self?.allPlayers[index] = player
+				}
 			} else {
-				self?.players.append(
+				self?.allPlayers.append(
 					Player(
 						playerId: UUID().uuidString,
 						name: name,
 						singlesRating: singlesRating,
-						doublesRating: doublesRating
+						doublesRating: doublesRating,
+						onCurrentTeam: onCurrentTeam
 					)
 				)
 			}
-			self?.players.save()
-			self?.sortAndReload()
+			self?.allPlayers.save()
+			self?.tableView.reloadData()
 		})
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: completionHandler))
 		self.present(alert, animated: true)

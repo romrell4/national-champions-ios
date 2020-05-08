@@ -23,11 +23,11 @@
                                     <segment title="Doubles"/>
                                 </segments>
                                 <connections>
-                                    <action selector="sortAndReload:" destination="BYZ-38-t0r" eventType="valueChanged" id="UuZ-zm-VrI"/>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="valueChanged" id="EgD-LP-naY"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUr-cZ-CrX">
-                                <rect key="frame" x="0.0" y="135" width="414" height="678"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="639"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="74" id="a9g-QV-v0G" customClass="PlayerTableViewCell" customModule="National_Champs" customModuleProvider="target">
@@ -114,6 +114,23 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" name="PrimaryColor"/>
                             </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="su1-fs-t4q">
+                                <rect key="frame" x="15" y="135" width="384" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Current Team Only" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPA-ZM-3x4">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="31"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="98L-sx-Ljs">
+                                        <rect key="frame" x="335" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="reload:" destination="BYZ-38-t0r" eventType="valueChanged" id="kif-Hc-hyG"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -122,10 +139,13 @@
                             <constraint firstItem="NUr-cZ-CrX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OzU-eX-jpo"/>
                             <constraint firstItem="NUr-cZ-CrX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PC5-p7-xWl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j21-uo-mtS" secondAttribute="trailing" constant="8" id="RYV-Wk-0vh"/>
-                            <constraint firstItem="NUr-cZ-CrX" firstAttribute="top" secondItem="j21-uo-mtS" secondAttribute="bottom" constant="8" id="V2o-po-0fB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="su1-fs-t4q" secondAttribute="trailing" constant="15" id="ZWe-f9-gTj"/>
+                            <constraint firstItem="su1-fs-t4q" firstAttribute="top" secondItem="j21-uo-mtS" secondAttribute="bottom" constant="8" id="eUT-Sc-Xb8"/>
                             <constraint firstItem="j21-uo-mtS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="jDj-2o-Rvf"/>
                             <constraint firstItem="j21-uo-mtS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="mZ4-g4-WeR"/>
+                            <constraint firstItem="NUr-cZ-CrX" firstAttribute="top" secondItem="su1-fs-t4q" secondAttribute="bottom" constant="8" id="os6-vn-URS"/>
                             <constraint firstItem="oPT-05-RsL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t6P-EN-IzV"/>
+                            <constraint firstItem="su1-fs-t4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="zpN-iv-Rj5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -143,6 +163,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addPlayerButton" destination="h2w-XL-CNJ" id="wCD-Lt-hzt"/>
+                        <outlet property="filterTeamSwitch" destination="98L-sx-Ljs" id="nd0-co-vcE"/>
                         <outlet property="importPlayersButton" destination="34a-wb-AoL" id="qse-80-rEp"/>
                         <outlet property="sortControl" destination="j21-uo-mtS" id="xl6-gb-HsS"/>
                         <outlet property="spinner" destination="oPT-05-RsL" id="nTc-ea-LyL"/>
@@ -151,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2095.1999999999998" y="628.81773399014776"/>
+            <point key="canvasLocation" x="2094.202898550725" y="628.79464285714278"/>
         </scene>
         <!--Previous Match Ratings-->
         <scene sceneID="gyT-Ta-ckR">
