@@ -12,7 +12,7 @@ import XCTest
 class MatchTests: XCTestCase {
 	
 	private func p(_ rating: Double) -> Player {
-		Player(playerId: UUID().uuidString, name: "\(rating)", singlesRating: rating, doublesRating: rating)
+		Player(playerId: UUID().uuidString, name: "\(rating)", singlesRating: rating, doublesRating: rating, onCurrentTeam: false)
 	}
 	
 	private func m(players: ([Player], [Player]), score: [Int]) -> Match {
