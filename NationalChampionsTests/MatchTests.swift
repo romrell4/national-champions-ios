@@ -11,19 +11,11 @@ import XCTest
 
 class MatchTests: XCTestCase {
 	
-	private func p(_ rating: Double) -> Player {
-		Player(playerId: UUID().uuidString, name: "\(rating)", singlesRating: rating, doublesRating: rating, onCurrentTeam: false)
-	}
-	
-	private func m(players: ([Player], [Player]), score: [Int]) -> Match {
-		Match(matchId: UUID().uuidString, matchDate: Date(), winners: players.0, losers: players.1, winnerSet1Score: score[safe: 0], loserSet1Score: score[safe: 1], winnerSet2Score: score[safe: 2], loserSet2Score: score[safe: 3], winnerSet3Score: score[safe: 4], loserSet3Score: score[safe: 5])
-	}
-	
 	private func setUpMatchHistory(_ playerRatings: [(Player, [Double], [Double])]) {
 		let createFakeMatch: (Player, Double, Bool) -> Match = { (player, dynamicRating, singles) in
 			//Create a fake match, then override the rating
-			let players = singles ? ([player], [self.p(0.0)]) : ([player, self.p(0.0)], [self.p(0.0), self.p(0.0)])
-			var match = self.m(players: players, score: [])
+			let players = singles ? ([player], [p(0.0)]) : ([player, p(0.0)], [p(0.0), p(0.0)])
+			var match = m(players: players, score: [])
 			match.winnerDynamicRatings[0] = dynamicRating
 			return match
 		}
