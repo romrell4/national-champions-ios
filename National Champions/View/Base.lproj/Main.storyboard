@@ -37,12 +37,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag8-Sg-A0Y">
-                                                    <rect key="frame" x="20" y="25" width="110" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qhq-07-o4v">
+                                                    <rect key="frame" x="15" y="16.5" width="110" height="41"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag8-Sg-A0Y">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record: 14-2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgm-g6-hr6">
+                                                            <rect key="frame" x="0.0" y="24" width="110" height="17"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2cI-hK-ZFp">
                                                     <rect key="frame" x="336.5" y="10" width="57.5" height="54"/>
                                                     <subviews>
@@ -86,13 +97,12 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ag8-Sg-A0Y" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nD8-qR-tqs" secondAttribute="topMargin" constant="4" id="5is-Rf-PMi"/>
-                                                <constraint firstItem="ag8-Sg-A0Y" firstAttribute="centerY" secondItem="nD8-qR-tqs" secondAttribute="centerY" id="8KJ-JY-Syd"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2cI-hK-ZFp" secondAttribute="bottom" constant="8" id="D1b-QE-lcr"/>
-                                                <constraint firstItem="2cI-hK-ZFp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ag8-Sg-A0Y" secondAttribute="trailing" constant="8" symbolic="YES" id="DHg-my-4fj"/>
-                                                <constraint firstItem="ag8-Sg-A0Y" firstAttribute="leading" secondItem="nD8-qR-tqs" secondAttribute="leadingMargin" id="YUY-KH-Ecb"/>
+                                                <constraint firstItem="Qhq-07-o4v" firstAttribute="centerY" secondItem="nD8-qR-tqs" secondAttribute="centerY" id="Jpa-ZU-PRe"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Qhq-07-o4v" secondAttribute="bottom" constant="4" id="NVj-eX-13R"/>
+                                                <constraint firstItem="Qhq-07-o4v" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nD8-qR-tqs" secondAttribute="top" constant="4" id="ROR-Le-2tl"/>
                                                 <constraint firstItem="2cI-hK-ZFp" firstAttribute="trailing" secondItem="nD8-qR-tqs" secondAttribute="trailingMargin" id="biE-yp-AKd"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ag8-Sg-A0Y" secondAttribute="bottom" constant="8" id="hNk-ng-LNs"/>
+                                                <constraint firstItem="Qhq-07-o4v" firstAttribute="leading" secondItem="nD8-qR-tqs" secondAttribute="leading" constant="15" id="gbe-f7-YhG"/>
                                                 <constraint firstItem="2cI-hK-ZFp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nD8-qR-tqs" secondAttribute="top" constant="4" id="rhM-dj-zF4"/>
                                                 <constraint firstItem="2cI-hK-ZFp" firstAttribute="centerY" secondItem="nD8-qR-tqs" secondAttribute="centerY" id="twf-DL-EGJ"/>
                                             </constraints>
@@ -100,6 +110,7 @@
                                         <connections>
                                             <outlet property="doublesRatingLabel" destination="SDT-kO-JHg" id="Qrh-31-h28"/>
                                             <outlet property="nameLabel" destination="ag8-Sg-A0Y" id="V6w-8e-Zzi"/>
+                                            <outlet property="recordLabel" destination="vgm-g6-hr6" id="YQ7-PL-6uk"/>
                                             <outlet property="singlesRatingLabel" destination="ICe-aG-NsG" id="I4F-Kr-0n1"/>
                                             <segue destination="078-xF-Hqg" kind="show" id="FRQ-f9-dU9"/>
                                         </connections>

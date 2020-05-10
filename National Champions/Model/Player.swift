@@ -40,6 +40,16 @@ struct Player: Codable, Equatable {
 			}
 		} + Array(repeating: initialDoublesRating, count: 3)).prefix(3))
 	}
+	var record: (Int, Int) {
+		let matches = Match.loadAll()
+		let wins = matches.filter {
+			$0.winners.contains(self)
+		}.count
+		let losses = matches.filter {
+			$0.losers.contains(self)
+		}.count
+		return (wins, losses)
+	}
 	
 	init(playerId: String, name: String, singlesRating: Double, doublesRating: Double, onCurrentTeam: Bool) {
 		self.playerId = playerId
