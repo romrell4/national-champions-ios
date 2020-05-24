@@ -224,7 +224,7 @@ struct Match: Codable {
 		guard let player = findPlayer(player: player) else { fatalError("This player did not play in this match") }
 		
 		let matchRating = computeMatchRating(player: player)
-		let previousRatings = isSingles ? player.previousSinglesRatings : player.previousDoublesRatings
+		let previousRatings = isSingles ? player.previousSinglesRatings() : player.previousDoublesRatings()
 		return trunc((previousRatings + [matchRating]).average())
 	}
 	

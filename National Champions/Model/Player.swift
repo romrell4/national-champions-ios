@@ -18,7 +18,7 @@ struct Player: Codable, Equatable {
 	var onCurrentTeam: Bool
 	let initialSinglesRating: Double
 	let initialDoublesRating: Double
-	var previousSinglesRatings: [Double] {
+	func previousSinglesRatings() -> [Double] {
 		Array((Match.loadAll().filter { $0.isSingles }.compactMap {
 			if let winnerIndex = $0.winners.firstIndex(of: self) {
 				return $0.winnerDynamicRatings[winnerIndex]
@@ -29,7 +29,7 @@ struct Player: Codable, Equatable {
 			}
 		} + Array(repeating: initialSinglesRating, count: 3)).prefix(3))
 	}
-	var previousDoublesRatings: [Double] {
+	func previousDoublesRatings() -> [Double] {
 		Array((Match.loadAll().filter { $0.isDoubles }.compactMap {
 			if let winnerIndex = $0.winners.firstIndex(of: self) {
 				return $0.winnerDynamicRatings[winnerIndex]
