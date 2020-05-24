@@ -153,6 +153,9 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		self.allTextFields.forEach {
 			$0.text = nil
 		}
+		
+		self.navigationItem.rightBarButtonItem?.isEnabled = false
+		
 		self.explanationView.text = nil
 	}
 	
