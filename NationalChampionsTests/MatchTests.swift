@@ -207,6 +207,24 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(0, Match.loadAll().count)
 	}
 	
+	func testEditingMostRecentMatch() {
+		let p1 = p(4.0)
+		let p2 = p(3.5)
+		[p1, p2].save()
+		
+		var match = m(players: ([findPlayer(p1)], [findPlayer(p2)]), score: [6, 0, 6, 0])
+		match.insert()
+		XCTAssertEqual(4.05, findPlayer(p1).singlesRating)
+		XCTAssertEqual(3.44, findPlayer(p2).singlesRating)
+		XCTAssertEqual(1, Match.loadAll().count)
+		
+		match.edit(winnerSet1Score: 6, loserSet1Score: 1, winnerSet2Score: 6, loserSet2Score: 0, winnerSet3Score: nil, loserSet3Score: nil)
+
+		XCTAssertEqual(4.04, findPlayer(p1).singlesRating)
+		XCTAssertEqual(3.46, findPlayer(p2).singlesRating)
+		XCTAssertEqual(1, Match.loadAll().count)
+	}
+	
 	private func findPlayer(_ player: Player) -> Player {
 		return Player.loadAll().first { $0 == player }!
 	}

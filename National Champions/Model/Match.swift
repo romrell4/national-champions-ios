@@ -14,42 +14,50 @@ private let GAME_VALUE = 0.06
 struct Match: Codable {
 	let matchId: String
 	let matchDate: Date
-	var winners: [Player]
-	var losers: [Player]
-	let winnerSet1Score: Int?
-	let loserSet1Score: Int?
-	let winnerSet2Score: Int?
-	let loserSet2Score: Int?
-	let winnerSet3Score: Int?
-	let loserSet3Score: Int?
+	let winners: [Player]
+	let losers: [Player]
+	var scores: [Int?] {
+		get {
+			[winnerSet1Score, loserSet1Score, winnerSet2Score, loserSet2Score, winnerSet3Score, loserSet3Score]
+		}
+		set {
+			winnerSet1Score = newValue[safe: 0] ?? nil
+			loserSet1Score = newValue[safe: 1] ?? nil
+			winnerSet2Score = newValue[safe: 2] ?? nil
+			loserSet2Score = newValue[safe: 3] ?? nil
+			winnerSet3Score = newValue[safe: 4] ?? nil
+			loserSet3Score = newValue[safe: 5] ?? nil
+			
+			computeAllDynamicRatings()
+		}
+	}
+	private (set) var winnerSet1Score: Int?
+	private (set) var loserSet1Score: Int?
+	private (set) var winnerSet2Score: Int?
+	private (set) var loserSet2Score: Int?
+	private (set) var winnerSet3Score: Int?
+	private (set) var loserSet3Score: Int?
 	
 	var winnerCompRating: Double { trunc(winnerMatchRatings.sum()) }
 	var loserCompRating: Double { trunc(loserMatchRatings.sum()) }
 	
-	var winnerMatchRatings: [Double] { winners.map { computeMatchRating(player: $0, truncated: true) } }
-	var loserMatchRatings: [Double] { losers.map { computeMatchRating(player: $0, truncated: true) } }
+	var winnerMatchRatings: [Double] { winners.map { computeMatchRating(for: $0, truncated: true) } }
+	var loserMatchRatings: [Double] { losers.map { computeMatchRating(for: $0, truncated: true) } }
 	
 	var winnerDynamicRatings: [Double]
 	var loserDynamicRatings: [Double]
 	
-	init(matchId: String, matchDate: Date, winners: [Player], losers: [Player], winnerSet1Score: Int?, loserSet1Score: Int?, winnerSet2Score: Int?, loserSet2Score: Int?, winnerSet3Score: Int?, loserSet3Score: Int?) {
+	init(matchId: String, matchDate: Date, winners: [Player], losers: [Player], scores: [Int?]) {
 		self.matchId = matchId
 		self.matchDate = matchDate
 		self.winners = winners
 		self.losers = losers
-		self.winnerSet1Score = winnerSet1Score
-		self.loserSet1Score = loserSet1Score
-		self.winnerSet2Score = winnerSet2Score
-		self.loserSet2Score = loserSet2Score
-		self.winnerSet3Score = winnerSet3Score
-		self.loserSet3Score = loserSet3Score
-		
+
 		//Initialize to nothing, then compute them
 		self.winnerDynamicRatings = []
 		self.loserDynamicRatings = []
-		
-		self.winnerDynamicRatings = winners.map { self.computeDynamicRating(player: $0) }
-		self.loserDynamicRatings = losers.map { self.computeDynamicRating(player: $0) }
+
+		self.scores = scores
 	}
 	
 	private var set1: MatchSet { MatchSet(winnerScore: winnerSet1Score, loserScore: loserSet1Score) }
@@ -132,12 +140,7 @@ struct Match: Codable {
 					matchDate: Date(),
 					winners: [winner1, try getPlayerByKey("winner2")].compactMap { $0 },
 					losers: [loser1, try getPlayerByKey("loser2")].compactMap { $0 },
-					winnerSet1Score: scores[safe: 0],
-					loserSet1Score: scores[safe: 1],
-					winnerSet2Score: scores[safe: 2],
-					loserSet2Score: scores[safe: 3],
-					winnerSet3Score: scores[safe: 4],
-					loserSet3Score: scores[safe: 5]
+					scores: scores
 				).insert()
 			}
 			return Match.loadAll()
@@ -205,6 +208,32 @@ struct Match: Codable {
 		undoRatingChanges()
 	}
 	
+	mutating func edit(winnerSet1Score: Int?, loserSet1Score: Int?, winnerSet2Score: Int?, loserSet2Score: Int?, winnerSet3Score: Int?, loserSet3Score: Int?) {
+		//Delete all future matches in descending order
+		let matches = Match.loadAll().filter { $0.matchDate > matchDate }.sorted { (lhs, rhs) -> Bool in
+			lhs.matchDate > rhs.matchDate
+		}
+		matches.forEach { $0.delete() }
+		
+		//Delete this match
+		self.delete()
+		
+		//Apply changes to this match
+		self.winnerSet1Score = winnerSet1Score
+		self.loserSet1Score = loserSet1Score
+		self.winnerSet2Score = winnerSet2Score
+		self.loserSet2Score = loserSet2Score
+		self.winnerSet3Score = winnerSet3Score
+		self.loserSet3Score = loserSet3Score
+		self.computeAllDynamicRatings()
+		
+		//Re-insert this match with the updated values
+		self.insert()
+		
+		//Re-insert all other future matches, in ascending order
+		matches.reversed().forEach { $0.insert() }
+	}
+	
 	func getChangeDescription() -> String {
 		let getPlayerChangeDesc: (Player, Double) -> String = { (old, newRating) in
 			if self.isSingles {
@@ -226,13 +255,20 @@ struct Match: Codable {
 	
 	//MARK: Private
 	
-	private var gameDiff: Int {
-		let winnerTotalGames = [winnerSet1Score, winnerSet2Score, winnerSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
-		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
-		return winnerTotalGames - loserTotalGames
+	private mutating func computeAllDynamicRatings() {
+		self.winnerDynamicRatings = winners.map { self.computeDynamicRating(for: $0) }
+		self.loserDynamicRatings = losers.map { self.computeDynamicRating(for: $0) }
 	}
 	
-	private func computeMatchRating(player: Player, truncated: Bool = false) -> Double {
+	private func computeDynamicRating(for player: Player) -> Double {
+		guard let player = findPlayer(player: player) else { fatalError("This player did not play in this match") }
+		
+		let matchRating = computeMatchRating(for: player)
+		let previousRatings = isSingles ? player.previousSinglesRatings() : player.previousDoublesRatings()
+		return trunc((previousRatings + [matchRating]).average())
+	}
+	
+	private func computeMatchRating(for player: Player, truncated: Bool = false) -> Double {
 		let isWinner = winners.contains(player)
 		let (myTeam, opponents) = isWinner ? (winners, losers) : (losers, winners)
 		let ratingDiff = Double(gameDiff) * (isWinner ? GAME_VALUE : -GAME_VALUE)
@@ -241,12 +277,10 @@ struct Match: Codable {
 		return truncated ? trunc(myRating) : myRating
 	}
 
-	private func computeDynamicRating(player: Player) -> Double {
-		guard let player = findPlayer(player: player) else { fatalError("This player did not play in this match") }
-		
-		let matchRating = computeMatchRating(player: player)
-		let previousRatings = isSingles ? player.previousSinglesRatings() : player.previousDoublesRatings()
-		return trunc((previousRatings + [matchRating]).average())
+	private var gameDiff: Int {
+		let winnerTotalGames = [winnerSet1Score, winnerSet2Score, winnerSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
+		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
+		return winnerTotalGames - loserTotalGames
 	}
 	
 	private func trunc(_ value: Double) -> Double {

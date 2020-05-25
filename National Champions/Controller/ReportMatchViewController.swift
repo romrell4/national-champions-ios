@@ -221,12 +221,14 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 				matchDate: Date(),
 				winners: [winner1, winner2].compactMap { $0 },
 				losers: [loser1, loser2].compactMap { $0 },
-				winnerSet1Score: self.winnerSet1.toInt(),
-				loserSet1Score: self.loserSet1.toInt(),
-				winnerSet2Score: self.winnerSet2.toInt(),
-				loserSet2Score: self.loserSet2.toInt(),
-				winnerSet3Score: self.winnerSet3.toInt(),
-				loserSet3Score: self.loserSet3.toInt()
+				scores: [
+					self.winnerSet1.toInt(),
+					self.loserSet1.toInt(),
+					self.winnerSet2.toInt(),
+					self.loserSet2.toInt(),
+					self.winnerSet3.toInt(),
+					self.loserSet3.toInt()
+				]
 			)
 		}
 		return nil
