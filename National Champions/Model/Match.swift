@@ -165,9 +165,9 @@ struct Match: Codable {
 	
 	func applyRatingChanges() {
 		let allDynamicRatings = winnerDynamicRatings + loserDynamicRatings
-		zip(allPlayers, allDynamicRatings).enumerated().forEach {
-			var player = allPlayers[$0.offset]
-			let newRating = allDynamicRatings[$0.offset]
+		for i in 0 ..< allPlayers.count {
+			var player = allPlayers[i]
+			let newRating = allDynamicRatings[i]
 			if isSingles {
 				player.singlesRating = newRating
 			} else {
@@ -177,11 +177,32 @@ struct Match: Codable {
 		}
 	}
 	
-	func insert(shouldUpdatePlayers: Bool = true) {
-		if shouldUpdatePlayers {
-			applyRatingChanges()
+	func undoRatingChanges() {
+		for i in 0 ..< allPlayers.count {
+			var player = allPlayers[i]
+			if isSingles, let previousRating = player.previousSinglesRatings().last {
+				player.singlesRating = previousRating
+			} else if isDoubles, let previousRating = player.previousDoublesRatings().last {
+				player.doublesRating = previousRating
+			}
+			player.update()
 		}
+	}
+	
+	func insert() {
+		//Apply rating changes BEFORE saving that match, so that it doesn't show up in the player's previous matches during the calculation
+		applyRatingChanges()
+		
 		(Match.loadAll() + [self]).save()
+	}
+	
+	func delete() {
+		var allMatches = Match.loadAll()
+		allMatches.removeAll { $0.matchId == matchId }
+		allMatches.save()
+		
+		//Undo the rating change AFTER deleting the match, so that this match won't display in each player's previous matches
+		undoRatingChanges()
 	}
 	
 	func getChangeDescription() -> String {

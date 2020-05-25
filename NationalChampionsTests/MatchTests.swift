@@ -30,6 +30,7 @@ class MatchTests: XCTestCase {
 	}
 	
 	override func tearDown() {
+		[Player]().save()
 		[Match]().save()
 	}
 	
@@ -130,10 +131,6 @@ class MatchTests: XCTestCase {
 		let eric = p(4.20)
 		[jihoon, eric].save()
 		
-		let findPlayer: (Player) -> Player = { player in
-			return Player.loadAll().first { $0 == player }!
-		}
-		
 		XCTAssertEqual([4.65, 4.65, 4.65], jihoon.previousSinglesRatings())
 		XCTAssertEqual([4.20, 4.20, 4.20], eric.previousSinglesRatings())
 		
@@ -191,5 +188,26 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(4.22, findPlayer(eric).singlesRating)
 		XCTAssertEqual([4.60, 4.65, 4.50], jihoon.previousSinglesRatings())
 		XCTAssertEqual([4.22, 4.17, 4.33], eric.previousSinglesRatings())
+	}
+	
+	func testDeletingMatch() {
+		let p1 = p(4.0)
+		let p2 = p(3.5)
+		[p1, p2].save()
+		
+		let match = m(players: ([findPlayer(p1)], [findPlayer(p2)]), score: [6, 0, 6, 0])
+		match.insert()
+		XCTAssertEqual(4.05, findPlayer(p1).singlesRating)
+		XCTAssertEqual(3.44, findPlayer(p2).singlesRating)
+		XCTAssertEqual(1, Match.loadAll().count)
+		
+		match.delete()
+		XCTAssertEqual(4.0, findPlayer(p1).singlesRating)
+		XCTAssertEqual(3.5, findPlayer(p2).singlesRating)
+		XCTAssertEqual(0, Match.loadAll().count)
+	}
+	
+	private func findPlayer(_ player: Player) -> Player {
+		return Player.loadAll().first { $0 == player }!
 	}
 }

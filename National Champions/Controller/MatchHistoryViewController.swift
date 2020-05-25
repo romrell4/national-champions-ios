@@ -42,6 +42,22 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let mostRecent = matches.max { lhs, rhs in
+			lhs.matchDate < rhs.matchDate
+		}
+		let match = matches[indexPath.row]
+		if match.matchId == mostRecent?.matchId {
+			return UISwipeActionsConfiguration(actions: [
+				UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
+					match.delete()
+				}
+			])
+		} else {
+			return nil
+		}
+	}
+	
 	//MARK: Listeners
 	
 	@IBAction func importTapped(_ sender: Any) {
