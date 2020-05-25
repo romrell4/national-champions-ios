@@ -92,8 +92,8 @@ class MatchTableViewCell: UITableViewCell {
 	private func getPlayerName(for player: Player?) -> String? {
 		guard let player = player else { return nil }
 		let rating: Double
-		if isSelected, let newMatchRating = self.match.findRatings(for: player)?.0 {
-			rating = newMatchRating
+		if isSelected, let newDynamicRating = self.match.findRatings(for: player)?.2 {
+			rating = newDynamicRating
 		} else {
 			rating = self.match.isSingles ? player.singlesRating : player.doublesRating
 		}
