@@ -187,7 +187,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	
 	private func reloadPlayers() {
 		// Add a "nil" so that they can deselect a player
-		players = (Player.loadAll() + [nil]).sorted { (lhs, rhs) -> Bool in
+		let allPlayers = Player.loadAll()
+		players = (allPlayers + [nil]).sorted { (lhs, rhs) -> Bool in
 			if let lhs = lhs, let rhs = rhs {
 				return lhs.name < rhs.name
 			}
@@ -197,17 +198,20 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		//If they haven't added any players yet, send them to the players screen
 		if players.compactMap({ $0 }).isEmpty {
 			self.tabBarController?.selectedIndex = 1
-		}// Add a "nil" so that they can deselect a player
-		players = (Player.loadAll() + [nil]).sorted { (lhs, rhs) -> Bool in
-			if let lhs = lhs, let rhs = rhs {
-				return lhs.name < rhs.name
-			}
-			return true
 		}
 		
-		//If they haven't added any players yet, send them to the players screen
-		if players.compactMap({ $0 }).isEmpty {
-			self.tabBarController?.selectedIndex = 1
+		//Reload the players that are cached
+		if let player = winner1 {
+			winner1 = Player.find(player, playerList: allPlayers)
+		}
+		if let player = winner2 {
+			winner2 = Player.find(player, playerList: allPlayers)
+		}
+		if let player = loser1 {
+			loser1 = Player.find(player, playerList: allPlayers)
+		}
+		if let player = loser2 {
+			loser2 = Player.find(player, playerList: allPlayers)
 		}
 	}
 	
