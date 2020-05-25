@@ -120,6 +120,10 @@ struct Player: Codable, Equatable {
 		}
 	}
 	
+	static func find(_ player: Player, playerList: [Player] = Player.loadAll()) -> Player {
+		return playerList.first { $0 == player }!
+	}
+	
 	static func == (lhs: Player, rhs: Player) -> Bool {
 		return lhs.playerId == rhs.playerId
 	}

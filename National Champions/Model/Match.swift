@@ -199,7 +199,44 @@ struct Match: Codable {
 		(Match.loadAll() + [self]).save()
 	}
 	
-	func delete() {
+	func delete(unwindCompletionHandler: () -> Void = {}) {
+		//Delete all future matches in descending order
+		let matches = Match.loadAll().filter { $0.matchDate > matchDate }.sorted { (lhs, rhs) -> Bool in
+			lhs.matchDate > rhs.matchDate
+		}
+		matches.forEach { $0.undo() }
+		
+		//Delete this match
+		self.undo()
+		
+		//Allow the caller to specify an action to be done after unwinding
+		unwindCompletionHandler()
+		
+		//Re-insert all other future matches, in ascending order
+		let players = Player.loadAll()
+		matches.reversed().forEach { oldMatch in
+			//Call the constructor so that everything gets set up as it should
+			Match(
+				matchId: oldMatch.matchId,
+				matchDate: oldMatch.matchDate,
+				winners: oldMatch.winners.map { Player.find($0, playerList: players) },
+				losers: oldMatch.losers.map { Player.find($0, playerList: players) },
+				scores: oldMatch.scores
+			).insert()
+		}
+	}
+		
+	mutating func edit(scores: [Int?]) {
+		self.delete {
+			//Apply score changes
+			self.scores = scores
+			
+			//Re-insert this match with the updated values
+			self.insert()
+		}
+	}
+	
+	private func undo() {
 		var allMatches = Match.loadAll()
 		allMatches.removeAll { $0.matchId == matchId }
 		allMatches.save()
@@ -207,32 +244,7 @@ struct Match: Codable {
 		//Undo the rating change AFTER deleting the match, so that this match won't display in each player's previous matches
 		undoRatingChanges()
 	}
-	
-	mutating func edit(winnerSet1Score: Int?, loserSet1Score: Int?, winnerSet2Score: Int?, loserSet2Score: Int?, winnerSet3Score: Int?, loserSet3Score: Int?) {
-		//Delete all future matches in descending order
-		let matches = Match.loadAll().filter { $0.matchDate > matchDate }.sorted { (lhs, rhs) -> Bool in
-			lhs.matchDate > rhs.matchDate
-		}
-		matches.forEach { $0.delete() }
-		
-		//Delete this match
-		self.delete()
-		
-		//Apply changes to this match
-		self.winnerSet1Score = winnerSet1Score
-		self.loserSet1Score = loserSet1Score
-		self.winnerSet2Score = winnerSet2Score
-		self.loserSet2Score = loserSet2Score
-		self.winnerSet3Score = winnerSet3Score
-		self.loserSet3Score = loserSet3Score
-		self.computeAllDynamicRatings()
-		
-		//Re-insert this match with the updated values
-		self.insert()
-		
-		//Re-insert all other future matches, in ascending order
-		matches.reversed().forEach { $0.insert() }
-	}
+
 	
 	func getChangeDescription() -> String {
 		let getPlayerChangeDesc: (Player, Double) -> String = { (old, newRating) in

@@ -43,21 +43,31 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	}
 	
 	func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-		let mostRecent = matches.max { lhs, rhs in
-			lhs.matchDate < rhs.matchDate
-		}
-		let match = matches[indexPath.row]
-		if match.matchId == mostRecent?.matchId {
-			return UISwipeActionsConfiguration(actions: [
-				UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
-					match.delete()
-					self.reloadMatches()
-				}
-			])
-		} else {
-			return nil
-		}
+		return UISwipeActionsConfiguration(actions: [
+			UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
+				self.matches[indexPath.row].delete()
+				self.reloadMatches()
+			}
+		])
 	}
+	
+//	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//		let mostRecent = matches.max { lhs, rhs in
+//			lhs.matchDate < rhs.matchDate
+//		}
+//		let match = matches[indexPath.row]
+//		if match.matchId == mostRecent?.matchId {
+//			return UISwipeActionsConfiguration(actions: [
+//				UIContextualAction(style: .destructive, title: "Edit") { (_, _, _) in
+//					//TODO: Edit match
+//
+////					self.reloadMatches()
+//				}
+//			])
+//		} else {
+//			return nil
+//		}
+//	}
 	
 	//MARK: Listeners
 	
