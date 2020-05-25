@@ -13,9 +13,7 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	@IBOutlet private weak var tableView: UITableView!
 	@IBOutlet private weak var spinner: UIActivityIndicatorView!
 	
-	private var matches = Match.loadAll().sorted { (lhs, rhs) -> Bool in
-		return lhs.matchDate > rhs.matchDate
-	} {
+	private var matches = [Match]() {
 		didSet {
 			self.tableView.reloadData()
 		}
@@ -24,6 +22,8 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		reloadMatches()
         
 		tableView.tableFooterView = UIView()
     }
@@ -51,6 +51,7 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 			return UISwipeActionsConfiguration(actions: [
 				UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
 					match.delete()
+					self.reloadMatches()
 				}
 			])
 		} else {
@@ -92,5 +93,13 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		}))
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		present(alert, animated: true)
+	}
+	
+	//MARK: Private functions
+	
+	private func reloadMatches() {
+		matches = Match.loadAll().sorted { (lhs, rhs) -> Bool in
+			return lhs.matchDate > rhs.matchDate
+		}
 	}
 }
