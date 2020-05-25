@@ -49,12 +49,14 @@ extension UINavigationItem {
 		let one = UILabel()
 		one.text = title
 		one.font = UIFont.systemFont(ofSize: 17)
+		one.textColor = .white
 		one.sizeToFit()
 
 		let two = UILabel()
 		two.text = subtitle
 		two.font = UIFont.systemFont(ofSize: 12)
 		two.textAlignment = .center
+		two.textColor = .white
 		two.sizeToFit()
 
 		let stackView = UIStackView(arrangedSubviews: [one, two])
