@@ -144,9 +144,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	@IBAction func viewTapped(_ sender: Any) {
-		allTextFields.forEach {
-			$0.resignFirstResponder()
-		}
+		self.view.endEditing(true)
 	}
 	
 	@IBAction func clear(_ sender: Any) {
@@ -162,6 +160,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	@IBAction func saveMatch(_ sender: Any) {
 		if let match = getMatch() {
 			let save = {
+				self.view.endEditing(true)
 				self.explanationView.text = match.getChangeDescription()
 				match.insert()
 				self.reloadPlayers()

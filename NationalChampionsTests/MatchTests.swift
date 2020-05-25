@@ -34,6 +34,11 @@ class MatchTests: XCTestCase {
 		[Match]().save()
 	}
 	
+	override func tearDown() {
+		[Player]().save()
+		[Match]().save()
+	}
+	
 	func testSinglesNoHistory() {
 		let match = m(players: ([p(4.65)], [p(4.20)]), score: [6, 4, 6, 4])
 		XCTAssertEqual(4.44, match.winnerMatchRatings[0])
