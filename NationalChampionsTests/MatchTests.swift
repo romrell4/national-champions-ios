@@ -191,6 +191,7 @@ class MatchTests: XCTestCase {
 	}
 	
 	func testDeletingMatch() {
+		[Match]().save()
 		let p1 = p(4.0)
 		let p2 = p(3.5)
 		[p1, p2].save()
