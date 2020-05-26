@@ -14,8 +14,8 @@ private let GAME_VALUE = 0.06
 struct Match: Codable {
 	let matchId: String
 	let matchDate: Date
-	let winners: [Player]
-	let losers: [Player]
+	var winners: [Player]
+	var losers: [Player]
 	var scores: [Int?] {
 		get {
 			[winnerSet1Score, loserSet1Score, winnerSet2Score, loserSet2Score, winnerSet3Score, loserSet3Score]
@@ -226,9 +226,16 @@ struct Match: Codable {
 		}
 	}
 		
-	mutating func edit(scores: [Int?]) {
+	mutating func edit(winners: [Player]? = nil, losers: [Player]? = nil, scores: [Int?]) {
 		self.delete {
 			//Apply score changes
+			let players = Player.loadAll()
+			if let winners = winners {
+				self.winners = winners.map { Player.find($0, playerList: players) }
+			}
+			if let losers = losers {
+				self.losers = losers.map { Player.find($0, playerList: players) }
+			}
 			self.scores = scores
 			
 			//Re-insert this match with the updated values

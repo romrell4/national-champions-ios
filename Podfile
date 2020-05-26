@@ -7,5 +7,4 @@ target 'National Champions' do
   inhibit_all_warnings!
 
   # Pods for National Champions
-
 end

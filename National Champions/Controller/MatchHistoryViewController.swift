@@ -22,11 +22,19 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		reloadMatches()
         
 		tableView.tableFooterView = UIView()
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		reloadMatches()
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let vc = segue.destination as? EditMatchViewController, let match = sender as? Match {
+			vc.match = match
+		}
+	}
 	
 	//UITableView functions
 	
@@ -51,23 +59,14 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 		])
 	}
 	
-//	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//		let mostRecent = matches.max { lhs, rhs in
-//			lhs.matchDate < rhs.matchDate
-//		}
-//		let match = matches[indexPath.row]
-//		if match.matchId == mostRecent?.matchId {
-//			return UISwipeActionsConfiguration(actions: [
-//				UIContextualAction(style: .destructive, title: "Edit") { (_, _, _) in
-//					//TODO: Edit match
-//
-////					self.reloadMatches()
-//				}
-//			])
-//		} else {
-//			return nil
-//		}
-//	}
+	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		return UISwipeActionsConfiguration(actions: [
+			UIContextualAction(style: .normal, title: "Edit") { (_, _, _) in
+				self.tableView.reloadRows(at: [indexPath], with: .automatic)
+				self.performSegue(withIdentifier: "editMatch", sender: self.matches[indexPath.row])
+			}
+		])
+	}
 	
 	//MARK: Listeners
 	

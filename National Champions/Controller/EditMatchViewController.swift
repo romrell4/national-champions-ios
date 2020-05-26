@@ -1,15 +1,16 @@
 //
-//  ReportMatchViewController.swift
+//  EditMatchViewController.swift
 //  National Champions
 //
-//  Created by Eric Romrell on 3/18/20.
+//  Created by Eric Romrell on 5/25/20.
 //  Copyright © 2020 Eric Romrell. All rights reserved.
 //
 
 import UIKit
 
-class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 	
+	@IBOutlet private weak var alertView: UIView!
 	@IBOutlet private weak var winner1TextField: UITextField!
 	@IBOutlet private weak var winner2TextField: UITextField!
 	@IBOutlet private weak var loser1TextField: UITextField!
@@ -20,7 +21,9 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	@IBOutlet private weak var loserSet2: UITextField!
 	@IBOutlet private weak var winnerSet3: UITextField!
 	@IBOutlet private weak var loserSet3: UITextField!
-	@IBOutlet private weak var explanationView: UITextView!
+	@IBOutlet private weak var saveButton: UIButton!
+	
+	@IBOutlet private weak var verticalCenterContraint: NSLayoutConstraint!
 	
 	private var playerTextFields: [UITextField] {
 		[winner1TextField, winner2TextField, loser1TextField, loser2TextField]
@@ -53,14 +56,25 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 			loser2TextField.text = loser2?.name
 		}
 	}
-
+	
+	var match: Match?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.navigationItem.setTitle("Report a Match", subtitle: Bundle.main.fullVersionNumber)
-		let titleTap = UITapGestureRecognizer(target: self, action: #selector(self.titleTapped(_:)))
-		self.navigationItem.titleView?.isUserInteractionEnabled = true
-		self.navigationItem.titleView?.addGestureRecognizer(titleTap)
+		alertView.layer.cornerRadius = 15
+		view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+		
+		winner1 = match?.winner1
+		winner2 = match?.winner2
+		loser1 = match?.loser1
+		loser2 = match?.loser2
+		winnerSet1.text = match?.winnerSet1Score?.description
+		loserSet1.text = match?.loserSet1Score?.description
+		winnerSet2.text = match?.winnerSet2Score?.description
+		loserSet2.text = match?.loserSet2Score?.description
+		winnerSet3.text = match?.winnerSet3Score?.description
+		loserSet3.text = match?.loserSet3Score?.description
 		
 		playerTextFields.forEach {
 			$0.inputView = UIPickerView(delegate: self)
@@ -75,6 +89,8 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
 		reloadPlayers()
 	}
 	
@@ -100,7 +116,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 				loser2 = players[row]
 			}
 		}
-		self.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
+		saveButton.isEnabled = getMatch() != nil
 	}
 	
 	//UITextField delegate
@@ -117,20 +133,19 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 				loser2 = players[0]
 			}
 		}
-		self.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
+		
+		saveButton.isEnabled = getMatch() != nil
+		verticalCenterContraint.constant = 32
+		UIView.animate(withDuration: 0.5) {
+			self.view.layoutIfNeeded()
+		}
 	}
 
 	func textFieldDidEndEditing(_ textField: UITextField) {
-		self.navigationItem.rightBarButtonItem?.isEnabled = getMatch() != nil
+		saveButton.isEnabled = getMatch() != nil
 	}
 	
 	//Listeners
-	
-	@objc private func titleTapped(_ sender: Any) {
-		if let url = URL(string: "https://national-champions.s3-us-west-2.amazonaws.com/index.html") {
-			UIApplication.shared.open(url)
-		}
-	}
 	
 	@objc private func textFieldDidChange(textField: UITextField) {
 		//Only force the responder to change if they just added a score. If they are correcting, don't switch the field
@@ -147,23 +162,10 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		self.view.endEditing(true)
 	}
 	
-	@IBAction func clear(_ sender: Any) {
-		self.allTextFields.forEach {
-			$0.text = nil
-		}
-		
-		self.navigationItem.rightBarButtonItem?.isEnabled = false
-		
-		self.explanationView.text = nil
-	}
-	
 	@IBAction func saveMatch(_ sender: Any) {
-		if let match = getMatch() {
+		if var match = getMatch() {
 			let save = {
-				self.view.endEditing(true)
-				self.explanationView.text = match.getChangeDescription()
-				match.insert()
-				self.reloadPlayers()
+				match.edit(winners: match.winners, losers: match.losers, scores: match.scores)
 			}
 			
 			if !match.wasCompleted {
@@ -177,13 +179,19 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 				save()
 			}
 			
-			displayAlert(title: "Success", message: "Match was saved successfully")
+			displayAlert(title: "Success", message: "Match was updated successfully") { _ in
+				self.dismiss(animated: true)
+			}
 		} else {
 			displayAlert(title: "Error", message: "An error occurred while trying to save your match. Please make sure all fields are entered properly.")
 		}
 	}
 	
-	//Private functions
+	@IBAction func cancelTapped(_ sender: Any) {
+		self.dismiss(animated: true)
+	}
+	
+	//MARK: Private functions
 	
 	private func reloadPlayers() {
 		// Add a "nil" so that they can deselect a player
@@ -214,6 +222,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 			loser2 = Player.find(player, playerList: allPlayers)
 		}
 	}
+
 	
 	private func getMatch() -> Match? {
 		//They must either have 2 distinct players, or 4 distinct players
@@ -235,22 +244,5 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 			)
 		}
 		return nil
-	}
-}
-
-extension UITextField {
-	func toInt() -> Int? {
-		if let text = self.text {
-			return Int(text)
-		}
-		return nil
-	}
-}
-
-extension UIPickerView {
-	convenience init(delegate: UIPickerViewDelegate & UIPickerViewDataSource) {
-		self.init()
-		self.delegate = delegate
-		self.dataSource = dataSource
 	}
 }

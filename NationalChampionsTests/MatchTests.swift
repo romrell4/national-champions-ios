@@ -255,6 +255,26 @@ class MatchTests: XCTestCase {
 	}
 	
 	func testEditingOldMatch() {
-		//TODO: Do this
+		let p1 = p(4.0)
+		let p2 = p(3.5)
+		let p3 = p(3.5)
+		
+		[p1, p2, p3].save()
+		
+		var match = m(players: ([Player.find(p1)], [Player.find(p2)]), score: [0, 6, 0, 6])
+		match.insert()
+		XCTAssertEqual(3.69, Player.find(p1).singlesRating)
+		XCTAssertEqual(3.80, Player.find(p2).singlesRating)
+		
+		m(players: ([Player.find(p1)], [Player.find(p3)]), score: [6, 0, 6, 0]).insert()
+		XCTAssertEqual(3.97, Player.find(p1).singlesRating)
+		XCTAssertEqual(3.36, Player.find(p3).singlesRating)
+		
+		//Update the first match to be between P1 and P3. P2 should no longer have been updated, and P1/P3 will change
+		match.edit(winners: [Player.find(p1)], losers: [Player.find(p3)], scores: [6, 3, 6, 3])
+		//After first match updates, before applying second: P1 = 3.96, P3 = 3.53
+		XCTAssertEqual(4.05, Player.find(p1).singlesRating)
+		XCTAssertEqual(3.5, Player.find(p2).singlesRating)
+		XCTAssertEqual(3.44, Player.find(p3).singlesRating)
 	}
 }
