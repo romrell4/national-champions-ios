@@ -107,18 +107,29 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	}
 	
 	@IBAction func importPlayers(_ sender: Any) {
-		let alert = UIAlertController(title: "Import Players", message: "Are you sure you'd like to import players? This will add new players and update any existing players that already exist in your system.", preferredStyle: .alert)
+		let alert = UIAlertController(title: "Import Players and Matches", message: "Are you sure you'd like to import players and matches? This will overwrite any data that you currently have saved on your device.", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Import", style: .default, handler: { (_) in
 			self.spinner.startAnimating()
 			// Uncomment out the next line to test with another import file
 			// Player.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/test_players.json") {
 			Player.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/players.json") {
-				self.spinner.stopAnimating()
 				switch $0 {
-				case .Success(let list):
-					self.allPlayers = list
-					self.tableView.reloadData()
+				case .Success:
+					//Load matches as well, after players have been downloaded
+					// Uncomment out the next line to test with another import file
+					// Match.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/test_matches.json") {
+					Match.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/matches.json") {
+						self.spinner.stopAnimating()
+						switch $0 {
+						case .Success:
+							self.allPlayers = Player.loadAll()
+							self.tableView.reloadData()
+						case .Error(let message):
+							self.displayAlert(title: "Error", message: message)
+						}
+					}
 				case .Error(let message):
+					self.spinner.stopAnimating()
 					self.displayAlert(title: "Error", message: message)
 				}
 			}
