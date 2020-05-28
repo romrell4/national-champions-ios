@@ -119,6 +119,31 @@ class MatchTests: XCTestCase {
 			- 3.73: 3.73 -> 3.74
 			""", match.getChangeDescription())
 	}
+	
+	func testDoublesRegression() {
+		let kk = p(3.82)
+		let ss = p(3.69)
+		let po = p(3.62)
+		let bc = p(3.99)
+		setUpMatchHistory(
+			[
+				(kk, [], [3.71, 3.60, 3.82]),
+				(ss, [], [3.87, 3.88, 3.69]),
+				(po, [], [3.90, 3.73, 3.62]),
+				(bc, [], [3.80, 3.88, 3.99])
+			]
+		)
+		
+		let match = m(players: ([kk, ss], [po, bc]), score: [7, 6, 7, 6])
+		XCTAssertEqual(4.04, match.winnerMatchRatings[0])
+		XCTAssertEqual(3.79, match.winnerDynamicRatings[0])
+		XCTAssertEqual(3.91, match.winnerMatchRatings[1])
+		XCTAssertEqual(3.83, match.winnerDynamicRatings[1])
+		XCTAssertEqual(3.40, match.loserMatchRatings[0])
+		XCTAssertEqual(3.66, match.loserDynamicRatings[0])
+		XCTAssertEqual(3.77, match.loserMatchRatings[1])
+		XCTAssertEqual(3.86, match.loserDynamicRatings[1])
+	}
 
 	func testSomeoneWithLargerHistory() {
 		let p0_0 = p(0.0)
