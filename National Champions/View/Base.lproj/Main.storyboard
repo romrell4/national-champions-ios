@@ -936,7 +936,6 @@
         <!--Edit Match View Controller-->
         <scene sceneID="ISU-4B-6cA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KU2-TZ-gDP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Xnx-eq-kml" customClass="EditMatchViewController" customModule="National_Champs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Si-p4-7cD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1191,6 +1190,7 @@
                         <outlet property="winnerSet3" destination="STw-dZ-Kf8" id="BgY-Ub-meT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KU2-TZ-gDP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="d2c-0K-hqF">
                     <connections>
                         <action selector="viewTapped:" destination="Xnx-eq-kml" id="1na-4S-edP"/>

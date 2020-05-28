@@ -148,6 +148,10 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	}
 	
 	@IBAction func clear(_ sender: Any) {
+		self.winner1 = nil
+		self.winner2 = nil
+		self.loser1 = nil
+		self.loser2 = nil
 		self.allTextFields.forEach {
 			$0.text = nil
 		}
@@ -155,6 +159,7 @@ class ReportMatchViewController: UIViewController, UIPickerViewDelegate, UIPicke
 		self.navigationItem.rightBarButtonItem?.isEnabled = false
 		
 		self.explanationView.text = nil
+		view.endEditing(true)
 	}
 	
 	@IBAction func saveMatch(_ sender: Any) {
