@@ -112,13 +112,12 @@ struct Match: Codable {
 			}
 			
 			let dictArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] ?? []
-			let players = Player.loadAll()
 			
 			try dictArray.forEach { dict in
 				let getPlayerByKey: (String) throws -> Player? = {
 					guard let name = dict[$0] as? String, !name.isEmpty else { return nil }
 					
-					guard let player = players.first(where: { $0.name == name }) else {
+					guard let player = Player.loadAll().first(where: { $0.name == name }) else {
 						throw MyError.unableToImport("Attempting to import \(name), but no player found with that name")
 					}
 					return player
