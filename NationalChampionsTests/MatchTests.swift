@@ -302,4 +302,27 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(3.5, Player.find(p2).singlesRating)
 		XCTAssertEqual(3.44, Player.find(p3).singlesRating)
 	}
+	
+	func testDeletingDoublesMatchWithHistory() {
+		let kk = p(3.82)
+		let ss = p(3.69)
+		let po = p(3.62)
+		let bc = p(3.99)
+		[kk, ss, po, bc].save()
+		setUpMatchHistory(
+			[
+				(kk, [], [3.71, 3.60, 3.82]),
+				(ss, [], [3.87, 3.88, 3.69]),
+				(po, [], [3.90, 3.73, 3.62]),
+				(bc, [], [3.80, 3.88, 3.99])
+			]
+		)
+		
+		XCTAssertEqual(3.82, Player.find(kk).doublesRating)
+		let match = m(players: ([kk, ss], [po, bc]), score: [7, 6, 7, 6])
+		match.insert()
+		XCTAssertEqual(3.79, Player.find(kk).doublesRating)
+		match.delete()
+		XCTAssertEqual(3.82, Player.find(kk).doublesRating)
+	}
 }

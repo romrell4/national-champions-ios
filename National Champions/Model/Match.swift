@@ -182,9 +182,9 @@ struct Match: Codable {
 	func undoRatingChanges() {
 		for i in 0 ..< allPlayers.count {
 			var player = allPlayers[i]
-			if isSingles, let previousRating = player.previousSinglesRatings().last {
+			if isSingles, let previousRating = player.previousSinglesRatings().first {
 				player.singlesRating = previousRating
-			} else if isDoubles, let previousRating = player.previousDoublesRatings().last {
+			} else if isDoubles, let previousRating = player.previousDoublesRatings().first {
 				player.doublesRating = previousRating
 			}
 			player.update()
