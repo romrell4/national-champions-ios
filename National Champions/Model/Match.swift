@@ -111,6 +111,8 @@ struct Match: Codable {
 				return matches
 			}
 			
+			[Match]().save()
+			
 			let dictArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] ?? []
 			
 			try dictArray.forEach { dict in
