@@ -33,6 +33,7 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let vc = segue.destination as? EditMatchViewController, let match = sender as? Match {
 			vc.match = match
+			vc.delegate = self
 		}
 	}
 	
