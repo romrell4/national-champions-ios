@@ -52,19 +52,19 @@ extension DataWrapper {
 			allData.players.save()
 			allData.matches.save()
 			self = allData
+		} else {
+			let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: [[String: Any]]]
+
+			//Deserialize players, then overwrite existing list
+			dict?["players"]?.compactMap { Player(dict: $0) }.save()
+
+			//Clear all matches, deserialize new matches, then insert each - which will update the players
+			[Match]().save()
+			try dict?["matches"]?.forEach {
+				try Match(dict: $0)?.insert()
+			}
+
+			self.init(players: Player.loadAll(), matches: Match.loadAll())
 		}
-
-		let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: [[String: Any]]]
-
-		//Deserialize players, then overwrite existing list
-		dict?["players"]?.compactMap { Player(dict: $0) }.save()
-
-		//Clear all matches, deserialize new matches, then insert each - which will update the players
-		[Match]().save()
-		try dict?["matches"]?.forEach {
-			try Match(dict: $0)?.insert()
-		}
-
-		self.init(players: Player.loadAll(), matches: Match.loadAll())
 	}
 }
