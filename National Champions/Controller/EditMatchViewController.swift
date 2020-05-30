@@ -235,8 +235,8 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 		if (Set([winner1, loser1].compactMap { $0?.playerId }).count == 2 && winner2 == nil && loser2 == nil) ||
 			Set([winner1, winner2, loser1, loser2].compactMap { $0?.playerId }).count == 4 {
 			return Match(
-				matchId: UUID().uuidString,
-				matchDate: Date(),
+				matchId: match?.matchId ?? UUID().uuidString,
+				matchDate: match?.matchDate ?? Date(),
 				winners: [winner1, winner2].compactMap { $0 },
 				losers: [loser1, loser2].compactMap { $0 },
 				scores: [
