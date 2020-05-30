@@ -77,6 +77,13 @@ extension UIViewController {
 		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
 		present(alert, animated: true)
 	}
+	
+	func displayConfirmDialog(title: String, message: String? = nil, confirmHandler: ((UIAlertAction) -> Void)? = nil) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: confirmHandler))
+		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		present(alert, animated: true)
+	}
 }
 
 enum Result<T> {
