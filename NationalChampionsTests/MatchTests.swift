@@ -327,4 +327,33 @@ class MatchTests: XCTestCase {
 		match.delete()
 		XCTAssertEqual(3.82, Player.find(kk).doublesRating)
 	}
+	
+	func testEditingDoublesMatchWithHistory() {
+		let kk = p(3.71)
+		let ss = p(3.87)
+		let po = p(3.90)
+		let bc = p(3.80)
+		[kk, ss, po, bc].save()
+		setUpMatchHistory(
+			[
+				(kk, [], [3.79, 3.66, 3.77, 3.71]),
+				(ss, [], [3.84, 3.64, 3.75, 3.87]),
+				(po, [], [3.95, 3.84, 3.73, 3.90]),
+				(bc, [], [3.76, 3.73, 3.80, 3.80])
+			]
+		)
+		var match = m(players: ([Player.find(bc), Player.find(ss)], [Player.find(kk), Player.find(po)]), score: [6, 1, 6, 3])
+		match.insert()
+		m(players: ([Player.find(bc), Player.find(kk)], [Player.find(ss), Player.find(po)]), score: [6, 1, 6, 3]).insert()
+		m(players: ([Player.find(kk), Player.find(ss)], [Player.find(po), Player.find(bc)]), score: [7, 6, 7, 6]).insert()
+		XCTAssertEqual(3.79, Player.find(kk).doublesRating)
+		XCTAssertEqual(3.83, Player.find(ss).doublesRating)
+		XCTAssertEqual(3.66, Player.find(po).doublesRating)
+		XCTAssertEqual(3.86, Player.find(bc).doublesRating)
+		match.edit(scores: [6, 0, 6, 0])
+		XCTAssertEqual(3.76, Player.find(kk).doublesRating)
+		XCTAssertEqual(3.86, Player.find(ss).doublesRating)
+		XCTAssertEqual(3.63, Player.find(po).doublesRating)
+		XCTAssertEqual(3.89, Player.find(bc).doublesRating)
+	}
 }

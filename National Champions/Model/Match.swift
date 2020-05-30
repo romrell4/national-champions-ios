@@ -214,8 +214,10 @@ struct Match: Codable {
 		unwindCompletionHandler()
 		
 		//Re-insert all other future matches, in ascending order
-		let players = Player.loadAll()
 		matches.reversed().forEach { oldMatch in
+			//Reload the players each time, so that their new scores are reflected
+			let players = Player.loadAll()
+			
 			//Call the constructor so that everything gets set up as it should
 			Match(
 				matchId: oldMatch.matchId,
