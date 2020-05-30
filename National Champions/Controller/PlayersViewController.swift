@@ -124,7 +124,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 			}
 		}))
 		actionSheet.addAction(UIAlertAction(title: "Export", style: .default, handler: { (_) in
-			UIPasteboard.general.string = try? String(data: JSONEncoder().encode(self.allPlayers), encoding: .utf8)
+			UIPasteboard.general.string = try? String(data: JSONEncoder().encode(DataWrapper(players: Player.loadAll(), matches: Match.loadAll())), encoding: .utf8)
 			self.displayAlert(title: "Success", message: "The data has been copied to your clipboard. Feel free to paste it wherever.")
 		}))
 		actionSheet.addAction(UIAlertAction(title: "Delete All", style: .default, handler: { (_) in
