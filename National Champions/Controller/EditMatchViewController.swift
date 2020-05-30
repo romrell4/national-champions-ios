@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EditMatchDelegate {
+	func matchEdited()
+}
+
 class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 	
 	@IBOutlet private weak var alertView: UIView!
@@ -58,6 +62,7 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 	}
 	
 	var match: Match?
+	var delegate: EditMatchDelegate?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -180,6 +185,7 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 			}
 			
 			displayAlert(title: "Success", message: "Match was updated successfully") { _ in
+				self.delegate?.matchEdited()
 				self.dismiss(animated: true)
 			}
 		} else {

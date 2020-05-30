@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EditMatchDelegate {
 	
 	@IBOutlet private weak var tableView: UITableView!
 	@IBOutlet private weak var spinner: UIActivityIndicatorView!
@@ -66,6 +66,12 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 				self.performSegue(withIdentifier: "editMatch", sender: self.matches[indexPath.row])
 			}
 		])
+	}
+	
+	//MARK: EditMatchDelegate
+	
+	func matchEdited() {
+		reloadMatches()
 	}
 	
 	//MARK: Listeners

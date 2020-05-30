@@ -301,6 +301,8 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(4.05, Player.find(p1).singlesRating)
 		XCTAssertEqual(3.5, Player.find(p2).singlesRating)
 		XCTAssertEqual(3.44, Player.find(p3).singlesRating)
+		
+		XCTAssertEqual(2, Match.loadAll().count)
 	}
 	
 	func testDeletingDoublesMatchWithHistory() {
