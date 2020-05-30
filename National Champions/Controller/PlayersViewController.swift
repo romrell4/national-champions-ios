@@ -38,8 +38,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
-		allPlayers = Player.loadAll()
-		self.tableView.reloadData()
+		reloadPlayers()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -112,30 +111,16 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 			self.displayConfirmDialog(title: "Warning", message: "Are you sure you'd like to import data? This will delete all data currently saved on your device and replace it with the data from the server.") { (_) in
 				
 				self.spinner.startAnimating()
-				// Uncomment out the next line to test with another import file
-				// Player.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/test_players.json") {
-				Player.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/players.json") {
+				DataWrapper.load {
+					self.spinner.stopAnimating()
+
 					switch $0 {
 					case .Success:
-						//Load matches as well, after players have been downloaded
-						// Uncomment out the next line to test with another import file
-						// Match.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/test_matches.json") {
-						Match.loadFromUrl(url: "https://romrell4.github.io/national-champions-ios/matches.json") {
-							self.spinner.stopAnimating()
-							switch $0 {
-							case .Success:
-								self.allPlayers = Player.loadAll()
-								self.tableView.reloadData()
-							case .Error(let message):
-								self.displayAlert(title: "Error", message: message)
-							}
-						}
+						self.reloadPlayers()
 					case .Error(let message):
-						self.spinner.stopAnimating()
 						self.displayAlert(title: "Error", message: message)
 					}
 				}
-
 			}
 		}))
 		actionSheet.addAction(UIAlertAction(title: "Export", style: .default, handler: { (_) in
@@ -160,6 +145,11 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 	}
 	
 	//MARK: Private functions
+	
+	private func reloadPlayers() {
+		self.allPlayers = Player.loadAll()
+		self.tableView.reloadData()
+	}
 	
 	private func displayPlayerPopUp(title: String, playerIndex: Int? = nil, completionHandler: ((UIAlertAction) -> Void)? = nil) {
 		let player = displayedPlayers[safe: playerIndex]

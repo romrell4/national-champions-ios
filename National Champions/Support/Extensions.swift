@@ -85,37 +85,3 @@ extension UIViewController {
 		present(alert, animated: true)
 	}
 }
-
-enum Result<T> {
-	case Success(_ list: [T])
-	case Error(_ message: String?)
-}
-
-extension Optional where Wrapped == URL {
-	func get<T>(completionHandler: @escaping (Result<T>) -> Void, deserializer: @escaping (Data) throws -> [T]) -> Void {
-		if let url = self {
-			URLSession.shared.dataTask(with: url) { data, _, _ in
-				DispatchQueue.main.async {
-					do {
-						if let data = data {
-							do {
-								completionHandler(.Success(try deserializer(data)))
-							}
-						} else {
-							completionHandler(.Error("Unable to process data from \(url)"))
-						}
-					} catch {
-						switch error as? MyError {
-						case .unableToImport(let message):
-							completionHandler(.Error(message))
-						default:
-							completionHandler(.Error("Error processing data from \(url): \(error)"))
-						}
-					}
-				}
-			}.resume()
-		} else {
-			completionHandler(.Error("Unable to connect to that URL"))
-		}
-	}
-}

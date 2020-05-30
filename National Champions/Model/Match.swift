@@ -103,51 +103,6 @@ struct Match: Codable {
 		}
 	}
 	
-	static func loadFromUrl(url: String, completionHandler: @escaping (Result<Match>) -> Void) {
-		URL(string: url).get(completionHandler: completionHandler) { data in
-			//First try deserializing with the JSONDecoder. This will only succeed if the data was exported using the encoder
-			if let matches = try? JSONDecoder().decode([Match].self, from: data) {
-				matches.save()
-				return matches
-			}
-			
-			[Match]().save()
-			
-			let dictArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] ?? []
-			
-			try dictArray.forEach { dict in
-				let getPlayerByKey: (String) throws -> Player? = {
-					guard let name = dict[$0] as? String, !name.isEmpty else { return nil }
-					
-					guard let player = Player.loadAll().first(where: { $0.name == name }) else {
-						throw MyError.unableToImport("Attempting to import \(name), but no player found with that name")
-					}
-					return player
-				}
-				
-				guard let winner1 = try getPlayerByKey("winner1"),
-					let loser1 = try getPlayerByKey("loser1"),
-					let score = dict["score"] as? String
-					else { return }
-				
-				let scores = score.split(separator: ",").flatMap {
-					$0.trimmingCharacters(in: .whitespaces).split(separator: "-").map {
-						Int($0.trimmingCharacters(in: .whitespaces)) ?? 0
-					}
-				}
-				
-				Match(
-					matchId: UUID().uuidString,
-					matchDate: Date(),
-					winners: [winner1, try getPlayerByKey("winner2")].compactMap { $0 },
-					losers: [loser1, try getPlayerByKey("loser2")].compactMap { $0 },
-					scores: scores
-				).insert()
-			}
-			return Match.loadAll()
-		}
-	}
-	
 	var wasCompleted: Bool {
 		if set1.wasCompleted, set2.wasCompleted {
 			if set1.winnerWon == true && set2.winnerWon == true && !set3.wasPlayed {
@@ -346,6 +301,38 @@ struct MatchSet {
 			return winnerScore > loserScore
 		}
 		return nil
+	}
+}
+
+extension Match {
+	init?(dict: [String: Any]) throws {
+		let getPlayerByKey: (String) throws -> Player? = {
+			guard let name = dict[$0] as? String, !name.isEmpty else { return nil }
+			
+			guard let player = Player.loadAll().first(where: { $0.name == name }) else {
+				throw MyError.unableToImport("Attempting to import \(name), but no player found with that name")
+			}
+			return player
+		}
+		
+		guard let winner1 = try getPlayerByKey("winner1"),
+			let loser1 = try getPlayerByKey("loser1"),
+			let score = dict["score"] as? String
+			else { return nil }
+		
+		let scores = score.split(separator: ",").flatMap {
+			$0.trimmingCharacters(in: .whitespaces).split(separator: "-").map {
+				Int($0.trimmingCharacters(in: .whitespaces)) ?? 0
+			}
+		}
+		
+		self.init(
+			matchId: UUID().uuidString,
+			matchDate: Date(),
+			winners: [winner1, try getPlayerByKey("winner2")].compactMap { $0 },
+			losers: [loser1, try getPlayerByKey("loser2")].compactMap { $0 },
+			scores: scores
+		)
 	}
 }
 

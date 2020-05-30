@@ -78,45 +78,32 @@ struct Player: Codable, Equatable {
 		return array
 	}
 	
-	static func loadFromUrl(url urlString: String, completionHandler: @escaping (Result<Player>) -> Void) {
-		URL(string: urlString).get(completionHandler: completionHandler) { data in
-			//First try deserializing with the JSONDecoder. This will only succeed if the data was exported using the encoder
-			if let players = try? JSONDecoder().decode([Player].self, from: data) {
-				players.save()
-				return players
-			}
-			
-			let dictArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] ?? []
-			
-			let newPlayers = dictArray.compactMap { dict -> Player? in
-				if let name = dict["name"] as? String,
-					let singlesRating = dict["singles_rating"] as? Double,
-					let doublesRating = dict["doubles_rating"] as? Double,
-					let onCurrentTeam = dict["current_team"] as? String {
-					
-					return Player(
-						playerId: UUID().uuidString,
-						name: name,
-						singlesRating: singlesRating,
-						doublesRating: doublesRating,
-						onCurrentTeam: onCurrentTeam.lowercased() == "y"
-					)
-				} else {
-					return nil
-				}
-			}
-			
-			newPlayers.save()
-			return newPlayers
-		}
-	}
-	
 	static func find(_ player: Player, playerList: [Player] = Player.loadAll()) -> Player {
 		return playerList.first { $0 == player }!
 	}
 	
 	static func == (lhs: Player, rhs: Player) -> Bool {
 		return lhs.playerId == rhs.playerId
+	}
+}
+
+extension Player {
+	init?(dict: [String: Any]) {
+		if let name = dict["name"] as? String,
+			let singlesRating = dict["singles_rating"] as? Double,
+			let doublesRating = dict["doubles_rating"] as? Double,
+			let onCurrentTeam = dict["current_team"] as? String {
+			
+			self.init(
+				playerId: UUID().uuidString,
+				name: name,
+				singlesRating: singlesRating,
+				doublesRating: doublesRating,
+				onCurrentTeam: onCurrentTeam.lowercased() == "y"
+			)
+		} else {
+			return nil
+		}
 	}
 }
 
