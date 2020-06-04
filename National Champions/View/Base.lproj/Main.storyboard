@@ -457,8 +457,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ZaQ-Vx-zbe">
-                                <rect key="frame" x="16" y="104" width="382" height="370.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZaQ-Vx-zbe">
+                                <rect key="frame" x="16" y="104" width="382" height="298.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dlo-ff-ZVn">
                                         <rect key="frame" x="67" y="0.0" width="248" height="88.5"/>
@@ -514,7 +514,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="LtF-UV-zGA">
-                                        <rect key="frame" x="61" y="120.5" width="260" height="84"/>
+                                        <rect key="frame" x="61" y="108.5" width="260" height="84"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-an-1hd">
                                                 <rect key="frame" x="0.0" y="0.0" width="76" height="84"/>
@@ -640,7 +640,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.77287079020000005" blue="0.094083471279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8d-i1-NVV">
-                                        <rect key="frame" x="173" y="236.5" width="36" height="30"/>
+                                        <rect key="frame" x="173" y="212.5" width="36" height="30"/>
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" name="PrimaryColor"/>
                                         </state>
@@ -648,9 +648,8 @@
                                             <action selector="clear:" destination="wwX-UN-So8" eventType="touchUpInside" id="wPi-Rf-BN7"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oW-C3-OaB">
-                                        <rect key="frame" x="3.5" y="298.5" width="375.5" height="72"/>
-                                        <string key="text">Please report all match scores from the perspective of the winner. Report games scores only; no tiebreaks. In the case of a third set tiebreak, report the winner as 1 and the loser as 0.</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report all match scores from the perspective of the winner." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oW-C3-OaB">
+                                        <rect key="frame" x="26" y="262.5" width="330.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -658,7 +657,7 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wa3-pP-GJ3">
-                                <rect key="frame" x="8" y="482.5" width="398" height="322.5"/>
+                                <rect key="frame" x="8" y="410.5" width="398" height="394.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
