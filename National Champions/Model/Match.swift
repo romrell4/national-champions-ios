@@ -212,20 +212,25 @@ struct Match: Codable {
 
 	
 	func getChangeDescription() -> String {
-		let getPlayerChangeDesc: (Player, Double) -> String = { (old, newRating) in
+		let getPlayerChangeDesc: (Player, Double) -> String = { (player, newRating) in
 			if self.isSingles {
-				return "- \(old.name): \(old.singlesRating) -> \(newRating)"
+				return "- \(player.name): \(player.singlesRating) -> \(newRating)"
 			} else if self.isDoubles {
-				return "- \(old.name): \(old.doublesRating) -> \(newRating)"
+				return "- \(player.name): \(player.doublesRating) -> \(newRating)"
 			} else {
 				return "Shouldn't ever hit this..."
 			}
 		}
 		
 		return """
-		Changes:
-		\(zip(self.winners + self.losers, winnerDynamicRatings + loserDynamicRatings).map { (old, new) in
-			getPlayerChangeDesc(old, new)
+		Dynamic Rating Changes:
+		\(zip(self.winners + self.losers, winnerDynamicRatings + loserDynamicRatings).map { (player, newRating) in
+			getPlayerChangeDesc(player, newRating)
+		}.joined(separator: "\n"))
+		
+		Match Ratings:
+		\(zip(self.winners + self.losers, winnerMatchRatings + loserMatchRatings).map { (player, matchRating) in
+			"- \(player.name): \(matchRating)"
 		}.joined(separator: "\n"))
 		"""
 	}

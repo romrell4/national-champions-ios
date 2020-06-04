@@ -81,9 +81,13 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(3.78, match.loserDynamicRatings[0])
 		XCTAssertEqual(3.81, match.loserCompRating)
 		XCTAssertEqual("""
-			Changes:
+			Dynamic Rating Changes:
 			- 4.05: 4.05 -> 4.01
 			- 3.76: 3.76 -> 3.78
+
+			Match Ratings:
+			- 4.05: 4.0
+			- 3.76: 3.81
 			""", match.getChangeDescription())
 	}
 
@@ -112,11 +116,17 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(3.74, match.loserDynamicRatings[1])
 		XCTAssertEqual(7.59, match.loserCompRating)
 		XCTAssertEqual("""
-			Changes:
+			Dynamic Rating Changes:
 			- 4.01: 4.01 -> 3.98
 			- 3.78: 3.78 -> 3.78
 			- 3.78: 3.78 -> 3.75
 			- 3.73: 3.73 -> 3.74
+
+			Match Ratings:
+			- 4.01: 3.97
+			- 3.78: 3.74
+			- 3.78: 3.82
+			- 3.73: 3.77
 			""", match.getChangeDescription())
 	}
 	
