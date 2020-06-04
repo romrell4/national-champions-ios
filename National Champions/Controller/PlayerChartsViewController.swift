@@ -18,6 +18,8 @@ class PlayerChartsViewController: UIViewController {
 	private var matches: [Match] {
 		let playerMatches = Match.loadAll().filter {
 			$0.allPlayers.contains(player)
+		}.sorted { (lhs, rhs) -> Bool in
+			lhs.matchDate < rhs.matchDate
 		}
 		if segmentedControl.selectedSegmentIndex == 0 {
 			return playerMatches.filter { $0.isSingles }
