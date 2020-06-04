@@ -420,7 +420,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qWb-cj-4Sf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Previous Match Ratings" id="v9L-3E-6Xw"/>
+                    <navigationItem key="navigationItem" title="Previous Match Ratings" id="v9L-3E-6Xw">
+                        <barButtonItem key="rightBarButtonItem" title="Charts" id="IsH-S9-Jgq">
+                            <connections>
+                                <segue destination="ohY-h2-JbT" kind="show" id="dGH-bg-jBS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="filterControl" destination="THg-75-C4I" id="5F5-4d-wSe"/>
                         <outlet property="tableView" destination="58p-Mt-C4y" id="fMM-oc-p7G"/>
@@ -429,6 +435,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6T-RO-lVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2944.8000000000002" y="628.07881773399015"/>
+        </scene>
+        <!--Player Charts View Controller-->
+        <scene sceneID="gKE-8i-poi">
+            <objects>
+                <viewController id="ohY-h2-JbT" customClass="PlayerChartsViewController" customModule="National_Champs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OnD-VD-04a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-Qb-rZS">
+                                <rect key="frame" x="8" y="96" width="398" height="32"/>
+                                <segments>
+                                    <segment title="Singles"/>
+                                    <segment title="Doubles"/>
+                                </segments>
+                                <connections>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="valueChanged" id="TuY-kp-3k8"/>
+                                    <action selector="segmentedViewTapped:" destination="ohY-h2-JbT" eventType="valueChanged" id="yYR-gs-j2B"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6D-PY-IBa" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="135" width="414" height="678"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="S6D-PY-IBa" secondAttribute="bottom" constant="83" id="094-OW-nb6"/>
+                            <constraint firstItem="Ept-Qb-rZS" firstAttribute="top" secondItem="wz2-eT-baZ" secondAttribute="top" constant="8" id="9yh-wF-b05"/>
+                            <constraint firstItem="Ept-Qb-rZS" firstAttribute="leading" secondItem="wz2-eT-baZ" secondAttribute="leading" constant="8" id="I5f-yH-UHO"/>
+                            <constraint firstItem="S6D-PY-IBa" firstAttribute="leading" secondItem="wz2-eT-baZ" secondAttribute="leading" id="MpF-OC-Zi2"/>
+                            <constraint firstItem="wz2-eT-baZ" firstAttribute="trailing" secondItem="Ept-Qb-rZS" secondAttribute="trailing" constant="8" id="ch7-mY-alR"/>
+                            <constraint firstItem="wz2-eT-baZ" firstAttribute="trailing" secondItem="S6D-PY-IBa" secondAttribute="trailing" id="gYT-hL-cmp"/>
+                            <constraint firstItem="S6D-PY-IBa" firstAttribute="top" secondItem="Ept-Qb-rZS" secondAttribute="bottom" constant="8" id="pYX-xZ-hkC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wz2-eT-baZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uii-ad-HaF"/>
+                    <connections>
+                        <outlet property="chartView" destination="S6D-PY-IBa" id="jhb-re-Uix"/>
+                        <outlet property="segmentedControl" destination="Ept-Qb-rZS" id="Vs0-go-WJn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSA-cL-yqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3817" y="629"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pdw-Oi-n9Z">

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		0C78659C2482F9D9001356FB /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78659B2482F9D9001356FB /* DataWrapper.swift */; };
 		0C9EE907242D9747005737B7 /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EE906242D9747005737B7 /* MatchTests.swift */; };
 		0C9EE90F242DA0B9005737B7 /* PlayerMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EE90E242DA0B9005737B7 /* PlayerMatchesViewController.swift */; };
+		0CAB23BF2488921800C233D8 /* PlayerChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB23BE2488921800C233D8 /* PlayerChartsViewController.swift */; };
 		0CAEE0112429A4A800BB60D9 /* MatchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */; };
 		0CAEE0132429A4EF00BB60D9 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */; };
 		0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0C4C124245399000714F1 /* PlayersViewController.swift */; };
@@ -48,6 +49,7 @@
 		0C9EE906242D9747005737B7 /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
 		0C9EE908242D9747005737B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9EE90E242DA0B9005737B7 /* PlayerMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMatchesViewController.swift; sourceTree = "<group>"; };
+		0CAB23BE2488921800C233D8 /* PlayerChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerChartsViewController.swift; sourceTree = "<group>"; };
 		0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchHistoryViewController.swift; sourceTree = "<group>"; };
 		0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		0CD0C4C124245399000714F1 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
@@ -113,11 +115,12 @@
 			children = (
 				0CE75E3C2423121E006CD68B /* ReportMatchViewController.swift */,
 				0CAEE0102429A4A800BB60D9 /* MatchHistoryViewController.swift */,
+				0CF539EE247C762800B9133C /* EditMatchViewController.swift */,
 				0CAEE0122429A4EF00BB60D9 /* MatchTableViewCell.swift */,
 				0CD0C4C124245399000714F1 /* PlayersViewController.swift */,
 				0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */,
 				0C9EE90E242DA0B9005737B7 /* PlayerMatchesViewController.swift */,
-				0CF539EE247C762800B9133C /* EditMatchViewController.swift */,
+				0CAB23BE2488921800C233D8 /* PlayerChartsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				0CE75E312423121E006CD68B /* Sources */,
 				0CE75E322423121E006CD68B /* Frameworks */,
 				0CE75E332423121E006CD68B /* Resources */,
+				AB2D11DBF309D02ABE09DEFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,6 +315,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AB2D11DBF309D02ABE09DEFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-National Champions/Pods-National Champions-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-National Champions/Pods-National Champions-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-National Champions/Pods-National Champions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -330,6 +351,7 @@
 			files = (
 				0CE7F6232424775D004242C3 /* PlayerTableViewCell.swift in Sources */,
 				0CE75E3D2423121E006CD68B /* ReportMatchViewController.swift in Sources */,
+				0CAB23BF2488921800C233D8 /* PlayerChartsViewController.swift in Sources */,
 				0CF539EF247C762800B9133C /* EditMatchViewController.swift in Sources */,
 				0CD0C4C72424587F000714F1 /* Extensions.swift in Sources */,
 				0C44D6C42428506100BA96AF /* Match.swift in Sources */,

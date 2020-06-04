@@ -41,6 +41,12 @@ class PlayerMatchesViewController: UIViewController, UITableViewDataSource, UITa
 		tableView.reloadData()
     }
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let vc = segue.destination as? PlayerChartsViewController {
+			vc.player = player
+		}
+	}
+	
 	//UITableView
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
