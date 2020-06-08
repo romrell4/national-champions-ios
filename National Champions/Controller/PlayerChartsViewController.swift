@@ -30,6 +30,11 @@ class PlayerChartsViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		loadChart()
+		
+		let axisFont = UIFont.systemFont(ofSize: 16)
+		chartView.xAxis.labelFont = axisFont
+		chartView.leftAxis.labelFont = axisFont
+		chartView.rightAxis.labelFont = axisFont
 	}
 	
 	//MARK: Listeners
