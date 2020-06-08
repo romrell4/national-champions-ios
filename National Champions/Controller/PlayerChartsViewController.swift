@@ -53,7 +53,7 @@ class PlayerChartsViewController: UIViewController {
 				return nil
 			}
 		}, label: "Ratings")
-		lineDataSet.colors = [.blue]
+		lineDataSet.colors = [.orange]
 		chartView.data = LineChartData(dataSet: lineDataSet)
 	}
 }
