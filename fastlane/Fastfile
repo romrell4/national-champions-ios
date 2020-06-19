@@ -12,7 +12,17 @@ platform :ios do
     #git_commit(path: "*", message: "Upgraded to build #{new_build_number}")
     #add_git_tag
     #push_to_git_remote
-    gym(output_directory: "s3", output_name: "National Champions.ipa", export_method: "ad-hoc")
+    gym(
+      output_directory: "s3",
+      output_name: "National Champions.ipa",
+      export_method: "ad-hoc",
+      export_options: {
+        provisioningProfiles: {
+          "com.romrell4.national-champions" => "National Champions Distribution Profile",
+          "com.romrell4.national-champions-league" => "National Champions League Distribution Profile"
+        }
+      }
+    )
     sh("aws", "s3", "sync", "../s3", "s3://national-champions-league", "--profile", "personal", "--acl", "public-read")
   end
 end
