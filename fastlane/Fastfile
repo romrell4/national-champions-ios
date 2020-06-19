@@ -19,7 +19,7 @@ platform :ios do
       export_options: {
         provisioningProfiles: {
           # "com.romrell4.national-champions" => "National Champions Distribution Profile",
-          "com.romrell4.national-champions-league" => "National Champions League Distribution Profile"
+          "com.romrell4.NationalChampionsLeague" => "National Champions League Distribution Profile"
         }
       }
     )
