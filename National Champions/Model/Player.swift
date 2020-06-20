@@ -19,7 +19,7 @@ struct Player: Codable, Equatable {
 	let initialSinglesRating: Double
 	let initialDoublesRating: Double
 	func previousSinglesRatings() -> [Double] {
-		Array((Match.loadAll().filter { $0.isSingles }.compactMap {
+		Array(Match.loadAll().filter { $0.isSingles }.compactMap {
 			if let winnerIndex = $0.winners.firstIndex(of: self) {
 				return $0.winnerDynamicRatings[winnerIndex]
 			} else if let loserIndex = $0.losers.firstIndex(of: self) {
@@ -27,10 +27,10 @@ struct Player: Codable, Equatable {
 			} else {
 				return nil
 			}
-		} + Array(repeating: initialSinglesRating, count: 3)).prefix(3))
+		}.prefix(3))
 	}
 	func previousDoublesRatings() -> [Double] {
-		Array((Match.loadAll().filter { $0.isDoubles }.compactMap {
+		Array(Match.loadAll().filter { $0.isDoubles }.compactMap {
 			if let winnerIndex = $0.winners.firstIndex(of: self) {
 				return $0.winnerDynamicRatings[winnerIndex]
 			} else if let loserIndex = $0.losers.firstIndex(of: self) {
@@ -38,7 +38,7 @@ struct Player: Codable, Equatable {
 			} else {
 				return nil
 			}
-		} + Array(repeating: initialDoublesRating, count: 3)).prefix(3))
+		}.prefix(3))
 	}
 	var record: (Int, Int) {
 		let matches = Match.loadAll()
