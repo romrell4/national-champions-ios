@@ -348,6 +348,7 @@
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWr-gY-3Kh">
                                                                     <rect key="frame" x="132.5" y="0.0" width="133" height="20"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                                     <state key="normal" title="Comp: 7.25">
                                                                         <color key="titleColor" name="PrimaryColor"/>
                                                                     </state>
