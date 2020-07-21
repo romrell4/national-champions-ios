@@ -10,7 +10,7 @@ import Foundation
 
 private let DEFAULTS_KEY = "players"
 
-struct Player: Codable, Equatable {
+struct Player: Codable, Equatable, Hashable {
 	let playerId: String
 	var name: String
 	var singlesRating: Double
@@ -18,28 +18,6 @@ struct Player: Codable, Equatable {
 	var onCurrentTeam: Bool
 	let initialSinglesRating: Double
 	let initialDoublesRating: Double
-	func previousSinglesRatings() -> [Double] {
-		Array((Match.loadAll().filter { $0.isSingles }.compactMap {
-			if let winnerIndex = $0.winners.firstIndex(of: self) {
-				return $0.winnerDynamicRatings[winnerIndex]
-			} else if let loserIndex = $0.losers.firstIndex(of: self) {
-				return $0.loserDynamicRatings[loserIndex]
-			} else {
-				return nil
-			}
-		} + Array(repeating: initialSinglesRating, count: 3)).prefix(3))
-	}
-	func previousDoublesRatings() -> [Double] {
-		Array((Match.loadAll().filter { $0.isDoubles }.compactMap {
-			if let winnerIndex = $0.winners.firstIndex(of: self) {
-				return $0.winnerDynamicRatings[winnerIndex]
-			} else if let loserIndex = $0.losers.firstIndex(of: self) {
-				return $0.loserDynamicRatings[loserIndex]
-			} else {
-				return nil
-			}
-		} + Array(repeating: initialDoublesRating, count: 3)).prefix(3))
-	}
 	var record: (Int, Int) {
 		let matches = Match.loadAll()
 		let wins = matches.filter {
@@ -59,6 +37,38 @@ struct Player: Codable, Equatable {
 		self.initialSinglesRating = singlesRating
 		self.initialDoublesRating = doublesRating
 		self.onCurrentTeam = onCurrentTeam
+	}
+	
+	func previousSinglesMatches() -> [Match] {
+		Match.loadAll().filter { $0.isSingles && $0.findPlayer(player: self) != nil }
+	}
+	
+	func previousSinglesRatings() -> [Double] {
+		Array((previousSinglesMatches().compactMap {
+			if let winnerIndex = $0.winners.firstIndex(of: self) {
+				return $0.winnerDynamicRatings[winnerIndex]
+			} else if let loserIndex = $0.losers.firstIndex(of: self) {
+				return $0.loserDynamicRatings[loserIndex]
+			} else {
+				return nil
+			}
+		} + Array(repeating: initialSinglesRating, count: 3)).prefix(3))
+	}
+	
+	func previousDoublesMatches() -> [Match] {
+		Match.loadAll().filter { $0.isDoubles && $0.findPlayer(player: self) != nil }
+	}
+	
+	func previousDoublesRatings() -> [Double] {
+		Array((previousDoublesMatches().compactMap {
+			if let winnerIndex = $0.winners.firstIndex(of: self) {
+				return $0.winnerDynamicRatings[winnerIndex]
+			} else if let loserIndex = $0.losers.firstIndex(of: self) {
+				return $0.loserDynamicRatings[loserIndex]
+			} else {
+				return nil
+			}
+		} + Array(repeating: initialDoublesRating, count: 3)).prefix(3))
 	}
 	
 	func update() {

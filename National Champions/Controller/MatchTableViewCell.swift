@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MatchTableViewCellDelegate {
+	func displayCompRating(me: Player, comp: Player)
+}
+
 class MatchTableViewCell: UITableViewCell {
 	
 	@IBOutlet private weak var winner1Label: UILabel!
@@ -26,13 +30,17 @@ class MatchTableViewCell: UITableViewCell {
 	
 	@IBOutlet private weak var ratingsStackView: UIStackView?
 	@IBOutlet private weak var matchRatingLabel: UILabel?
-	@IBOutlet private weak var companionshipRatingLabel: UILabel!
+	@IBOutlet private weak var companionshipRatingButton: UIButton?
 	@IBOutlet private weak var dynamicRatingLabel: UILabel?
 	
 	private var match: Match!
+	private var player: Player?
+	private var delegate: MatchTableViewCellDelegate?
 	
-	func setMatch(_ match: Match, forPlayer player: Player? = nil) {
+	func setMatch(_ match: Match, forPlayer player: Player? = nil, delegate: MatchTableViewCellDelegate? = nil) {
 		self.match = match
+		self.player = player
+		self.delegate = delegate
 		
 		winner1Label.setTextOrHide(text: getPlayerName(for: match.winner1))
 		winner2Label.setTextOrHide(text: getPlayerName(for: match.winner2), additionalViewsToHide: [winnerDividerLabel])
@@ -55,9 +63,9 @@ class MatchTableViewCell: UITableViewCell {
 		if let player = player, let (matchRating, compRating, dynamicRating) = match.findRatings(for: player) {
 			ratingsStackView?.isHidden = false
 			//Only display the comp rating if it's a double match
-			companionshipRatingLabel?.isHidden = !match.isDoubles
+			companionshipRatingButton?.isHidden = !match.isDoubles
 			matchRatingLabel?.text = "Match: \(matchRating)"
-			companionshipRatingLabel?.text = "Comp: \(compRating)"
+			companionshipRatingButton?.setTitle("Comp: \(compRating)", for: .normal)
 			dynamicRatingLabel?.text = "Dynamic: \(dynamicRating)"
 		} else {
 			ratingsStackView?.isHidden = true
@@ -86,6 +94,12 @@ class MatchTableViewCell: UITableViewCell {
 			UIView.animate(withDuration: 0.5) {
 				labels.forEach { $0?.alpha = 1 }
 			}
+		}
+	}
+	
+	@IBAction func companionshipRatingButtonTapped(_ sender: Any) {
+		if let me = player, let comp = match.findCompanion(for: me) {
+			delegate?.displayCompRating(me: me, comp: comp)
 		}
 	}
 	

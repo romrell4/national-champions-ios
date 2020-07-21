@@ -366,4 +366,26 @@ class MatchTests: XCTestCase {
 		XCTAssertEqual(3.63, Player.find(po).doublesRating)
 		XCTAssertEqual(3.89, Player.find(bc).doublesRating)
 	}
+	
+	func testFindPlayer() {
+		let p1 = p(0.1)
+		let p2 = p(0.2)
+		let match = m(players: ([p1], [p2]), score: [6, 0, 6, 0])
+		XCTAssertEqual(p1, match.findPlayer(player: p1))
+		XCTAssertEqual(p2, match.findPlayer(player: p2))
+	}
+	
+	func testFindCompanion() {
+		let p1 = p(0.1)
+		let p2 = p(0.2)
+		let p3 = p(0.3)
+		let p4 = p(0.4)
+		let p5 = p(0.5)
+		let match = m(players: ([p1, p2], [p3, p4]), score: [6, 0, 6, 0])
+		XCTAssertEqual(p2, match.findCompanion(for: p1))
+		XCTAssertEqual(p1, match.findCompanion(for: p2))
+		XCTAssertEqual(p4, match.findCompanion(for: p3))
+		XCTAssertEqual(p3, match.findCompanion(for: p4))
+		XCTAssertNil(match.findCompanion(for: p5))
+	}
 }
