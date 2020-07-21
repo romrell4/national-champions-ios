@@ -76,4 +76,37 @@ class PlayerTests: XCTestCase {
 		XCTAssertEqual(2, p4.previousDoublesMatches().count)
 		XCTAssertEqual(0, p5.previousDoublesMatches().count)
 	}
+	
+	func testGetCompanionships() {
+		let p1 = p(0.1)
+		let p2 = p(0.2)
+		let p3 = p(0.3)
+		let p4 = p(0.4)
+		let p5 = p(0.5)
+		[p1, p2, p3, p4, p5].save()
+		
+		
+		[
+			([p1], [p2]),
+			([p1, p3], [p2, p4]),
+			([p2, p1], [p4, p3]),
+			([p3, p4], [p1, p2]),
+			([p3, p2], [p1, p4]),
+			([p2, p5], [p3, p4])
+		].forEach {
+			m(players: $0, score: [6, 0, 6, 0]).insert()
+		}
+		let comps1 = p1.getCompanionships()
+		XCTAssertEqual(3, comps1.count)
+		XCTAssertEqual(2, comps1.first { $0.player1 == p1 && $0.player2 == p2 }?.matchesPlayed)
+		XCTAssertEqual(1, comps1.first { $0.player1 == p1 && $0.player2 == p3 }?.matchesPlayed)
+		XCTAssertEqual(1, comps1.first { $0.player1 == p1 && $0.player2 == p4 }?.matchesPlayed)
+		
+		let comps2 = p2.getCompanionships()
+		XCTAssertEqual(4, comps2.count)
+		XCTAssertEqual(2, comps2.first { $0.player1 == p2 && $0.player2 == p1 }?.matchesPlayed)
+		XCTAssertEqual(1, comps2.first { $0.player1 == p2 && $0.player2 == p3 }?.matchesPlayed)
+		XCTAssertEqual(1, comps2.first { $0.player1 == p2 && $0.player2 == p4 }?.matchesPlayed)
+		XCTAssertEqual(1, comps2.first { $0.player1 == p2 && $0.player2 == p5 }?.matchesPlayed)
+	}
 }

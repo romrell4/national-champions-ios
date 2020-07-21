@@ -71,6 +71,32 @@ struct Player: Codable, Equatable, Hashable {
 		} + Array(repeating: initialDoublesRating, count: 3)).prefix(3))
 	}
 	
+	func getCompanionships() -> [Companionship] {
+		let companionsWithRatings: [(Player, Double)] = previousDoublesMatches().compactMap {
+			guard let winner1 = $0.winner1, let winner2 = $0.winner2, let loser1 = $0.loser1, let loser2 = $0.loser2 else { return nil }
+
+			if winner1 == self {
+				return (winner2, $0.winnerCompRating)
+			} else if winner2 == self {
+				return (winner1, $0.winnerCompRating)
+			} else if loser1 == self {
+				return (loser2, $0.loserCompRating)
+			} else if loser2 == self {
+				return (loser1, $0.loserCompRating)
+			} else {
+				return nil
+			}
+		}
+		return Dictionary(grouping: companionsWithRatings) { $0.0 }.map { (player, compRatings) in
+			Companionship(
+				player1: self,
+				player2: player,
+				matchesPlayed: compRatings.count,
+				averageRating: compRatings.map { $0.1 }.average()
+			)
+		}
+	}
+	
 	func update() {
 		var players = Player.loadAll()
 		if let index = players.firstIndex(where: { $0.playerId == playerId }) {
@@ -94,6 +120,10 @@ struct Player: Codable, Equatable, Hashable {
 	
 	static func == (lhs: Player, rhs: Player) -> Bool {
 		return lhs.playerId == rhs.playerId
+	}
+	
+	func hash(into hasher: inout Hasher) {
+		hasher.combine(playerId)
 	}
 }
 
@@ -121,4 +151,11 @@ extension Array where Element == Player {
 	func save() {
 		try? UserDefaults.standard.set(JSONEncoder().encode(self), forKey: DEFAULTS_KEY)
 	}
+}
+
+struct Companionship {
+	let player1: Player
+	let player2: Player
+	let matchesPlayed: Int
+	let averageRating: Double
 }

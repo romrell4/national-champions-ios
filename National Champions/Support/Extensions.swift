@@ -34,6 +34,7 @@ extension Collection {
 
 extension String {
 	func toDouble() -> Double? { Double(self) }
+	func toInt() -> Int? { Int(self) }
 }
 
 extension UITableView {

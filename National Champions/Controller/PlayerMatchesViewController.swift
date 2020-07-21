@@ -44,6 +44,8 @@ class PlayerMatchesViewController: UIViewController, UITableViewDataSource, UITa
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if let vc = segue.destination as? PlayerChartsViewController {
 			vc.player = player
+		} else if let vc = segue.destination as? PlayerCompanionshipsViewController {
+			vc.player = player
 		}
 	}
 	
@@ -79,6 +81,18 @@ class PlayerMatchesViewController: UIViewController, UITableViewDataSource, UITa
 	}
 	
 	//Listeners
+	
+	@IBAction func optionsTapped(_ sender: Any) {
+		let alert = UIAlertController(title: "Select an Option", message: nil, preferredStyle: .actionSheet)
+		alert.addAction(UIAlertAction(title: "Charts", style: .default) { (_) in
+			self.performSegue(withIdentifier: "charts", sender: nil)
+		})
+		alert.addAction(UIAlertAction(title: "Companionships", style: .default) { (_) in
+			self.performSegue(withIdentifier: "comps", sender: nil)
+		})
+		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		self.present(alert, animated: true)
+	}
 	
 	@IBAction func filterAndReload(_ sender: Any? = nil) {
 		filteredMatches = allMatches.filter {
