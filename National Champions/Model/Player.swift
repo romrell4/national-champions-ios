@@ -60,7 +60,7 @@ struct Player: Codable, Equatable, Hashable {
 	}
 
 	func previousDoublesRatings() -> [Double] {
-		Array((previousDoublesMatches().compactMap {
+		Array(previousDoublesMatches().compactMap {
 			if let winnerIndex = $0.winners.firstIndex(of: self) {
 				return $0.winnerDynamicRatings[winnerIndex]
 			} else if let loserIndex = $0.losers.firstIndex(of: self) {
