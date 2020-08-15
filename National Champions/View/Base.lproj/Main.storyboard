@@ -21,6 +21,7 @@
                                 <segments>
                                     <segment title="Singles"/>
                                     <segment title="Doubles"/>
+                                    <segment title="A - Z"/>
                                 </segments>
                                 <connections>
                                     <action selector="reload:" destination="BYZ-38-t0r" eventType="valueChanged" id="EgD-LP-naY"/>

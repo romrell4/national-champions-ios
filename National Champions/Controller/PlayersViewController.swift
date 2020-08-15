@@ -23,10 +23,10 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
 			//Only filter if the switch is on
 			!filterTeamSwitch.isOn || $0.onCurrentTeam
 		}.sorted { (lhs, rhs) -> Bool in
-			if self.sortControl.selectedSegmentIndex == 0 {
-				return lhs.singlesRating > rhs.singlesRating
-			} else {
-				return lhs.doublesRating > rhs.doublesRating
+			switch (self.sortControl.selectedSegmentIndex) {
+			case 0: return lhs.singlesRating > rhs.singlesRating
+			case 1: return lhs.doublesRating > rhs.doublesRating
+			default: return lhs.name < rhs.name
 			}
 		}
 	}
