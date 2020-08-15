@@ -38,8 +38,8 @@ struct Match: Codable {
 	private (set) var winnerSet3Score: Int?
 	private (set) var loserSet3Score: Int?
 	
-	var winnerCompRating: Double { trunc(winnerMatchRatings.sum()) }
-	var loserCompRating: Double { trunc(loserMatchRatings.sum()) }
+	var winnerCompRating: Double { winnerMatchRatings.sum().trunc() }
+	var loserCompRating: Double { loserMatchRatings.sum().trunc() }
 	
 	var winnerMatchRatings: [Double] { winners.map { computeMatchRating(for: $0, truncated: true) } }
 	var loserMatchRatings: [Double] { losers.map { computeMatchRating(for: $0, truncated: true) } }
@@ -80,6 +80,21 @@ struct Match: Codable {
 			return allPlayers[index]
 		}
 		return nil
+	}
+	
+	func findCompanion(for player: Player) -> Player? {
+		switch player {
+		case winner1:
+			return winner2
+		case winner2:
+			return winner1
+		case loser1:
+			return loser2
+		case loser2:
+			return loser1
+		default:
+			return nil
+		}
 	}
 	
 	func findRatings(for player: Player) -> (Double, Double, Double)? {
@@ -247,7 +262,7 @@ struct Match: Codable {
 		
 		let matchRating = computeMatchRating(for: player)
 		let previousRatings = isSingles ? player.previousSinglesRatings() : player.previousDoublesRatings()
-		return trunc((previousRatings + [matchRating]).average())
+		return (previousRatings + [matchRating]).average().trunc()
 	}
 	
 	private func computeMatchRating(for player: Player, truncated: Bool = false) -> Double {
@@ -256,7 +271,7 @@ struct Match: Codable {
 		let ratingDiff = Double(gameDiff) * (isWinner ? GAME_VALUE : -GAME_VALUE)
 		let teamMatchRating = opponents.map { isSingles ? $0.singlesRating : $0.doublesRating }.sum() + ratingDiff
 		let myRating = teamMatchRating - myTeam.filter { $0 != player }.map { isSingles ? $0.singlesRating : $0.doublesRating }.sum()
-		return truncated ? trunc(myRating) : myRating
+		return truncated ? myRating.trunc() : myRating
 	}
 
 	private var gameDiff: Int {
@@ -264,10 +279,12 @@ struct Match: Codable {
 		let loserTotalGames = [loserSet1Score, loserSet2Score, loserSet3Score].compactMap { $0 }.reduce(0, { $0 + $1 })
 		return winnerTotalGames - loserTotalGames
 	}
-	
-	private func trunc(_ value: Double) -> Double {
-		//Round to the nearest thousands place, then truncate to the hundreds palce
-		floor(round(value * 1000) / 10) / 100.0
+}
+
+extension Double {
+	func trunc(places: Double = 2) -> Double {
+		//Round to the nearest thousands place, then truncate to the hundreds place
+		return floor((self * pow(10.0, places + 1)).rounded(.toNearestOrAwayFromZero) / 10) / pow(10.0, places)
 	}
 }
 	

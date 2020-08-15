@@ -21,6 +21,7 @@
                                 <segments>
                                     <segment title="Singles"/>
                                     <segment title="Doubles"/>
+                                    <segment title="A - Z"/>
                                 </segments>
                                 <connections>
                                     <action selector="reload:" destination="BYZ-38-t0r" eventType="valueChanged" id="EgD-LP-naY"/>
@@ -185,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="2094.202898550725" y="628.79464285714278"/>
         </scene>
-        <!--Previous Match Ratings-->
+        <!--Player Name-->
         <scene sceneID="gyT-Ta-ckR">
             <objects>
                 <viewController id="078-xF-Hqg" customClass="PlayerMatchesViewController" customModule="National_Champs" customModuleProvider="target" sceneMemberID="viewController">
@@ -346,12 +347,16 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Comp: 7.25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEQ-xv-EKz">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWr-gY-3Kh">
                                                                     <rect key="frame" x="132.5" y="0.0" width="133" height="20"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                    <state key="normal" title="Comp: 7.25">
+                                                                        <color key="titleColor" name="PrimaryColor"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="companionshipRatingButtonTapped:" destination="47s-29-San" eventType="touchUpInside" id="DQ8-1d-K1g"/>
+                                                                    </connections>
+                                                                </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Dynamic: 3.75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmS-0N-lOv">
                                                                     <rect key="frame" x="265.5" y="0.0" width="132.5" height="20"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -371,7 +376,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="companionshipRatingLabel" destination="QEQ-xv-EKz" id="zRN-Nd-r1c"/>
+                                            <outlet property="companionshipRatingButton" destination="IWr-gY-3Kh" id="3wc-22-cqE"/>
                                             <outlet property="dynamicRatingLabel" destination="AmS-0N-lOv" id="nbk-U4-jFw"/>
                                             <outlet property="loser1Label" destination="emg-UY-C19" id="oz3-1U-RXJ"/>
                                             <outlet property="loser2Label" destination="UCB-5b-vz6" id="fXO-DR-p52"/>
@@ -420,23 +425,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qWb-cj-4Sf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Previous Match Ratings" id="v9L-3E-6Xw">
-                        <barButtonItem key="rightBarButtonItem" title="Charts" id="IsH-S9-Jgq">
+                    <navigationItem key="navigationItem" title="Player Name" id="v9L-3E-6Xw">
+                        <barButtonItem key="rightBarButtonItem" title="Options" id="IsH-S9-Jgq">
                             <connections>
-                                <segue destination="ohY-h2-JbT" kind="show" id="dGH-bg-jBS"/>
+                                <action selector="optionsTapped:" destination="078-xF-Hqg" id="s1j-fz-Sid"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="filterControl" destination="THg-75-C4I" id="5F5-4d-wSe"/>
                         <outlet property="tableView" destination="58p-Mt-C4y" id="fMM-oc-p7G"/>
+                        <segue destination="ohY-h2-JbT" kind="show" identifier="charts" id="7se-S5-K9c"/>
+                        <segue destination="Mce-77-58h" kind="show" identifier="comps" id="5F8-tr-Mua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6T-RO-lVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2944.8000000000002" y="628.07881773399015"/>
         </scene>
-        <!--Player Charts View Controller-->
+        <!--Charts-->
         <scene sceneID="gKE-8i-poi">
             <objects>
                 <viewController id="ohY-h2-JbT" customClass="PlayerChartsViewController" customModule="National_Champs" customModuleProvider="target" sceneMemberID="viewController">
@@ -471,7 +478,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wz2-eT-baZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Uii-ad-HaF"/>
+                    <navigationItem key="navigationItem" title="Charts" id="Uii-ad-HaF"/>
                     <connections>
                         <outlet property="chartView" destination="S6D-PY-IBa" id="jhb-re-Uix"/>
                         <outlet property="segmentedControl" destination="Ept-Qb-rZS" id="Vs0-go-WJn"/>
@@ -479,7 +486,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSA-cL-yqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3817" y="629"/>
+            <point key="canvasLocation" x="2943" y="1405"/>
+        </scene>
+        <!--Companionships-->
+        <scene sceneID="nu5-D5-SZJ">
+            <objects>
+                <viewController id="Mce-77-58h" customClass="PlayerCompanionshipsViewController" customModule="National_Champs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2At-WK-RyG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ord-QM-cgb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="VHo-6Z-usK" detailTextLabel="pgJ-Xn-3zb" style="IBUITableViewCellStyleValue1" id="iUR-0c-4hy">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iUR-0c-4hy" id="7aD-vd-dde">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Comp Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VHo-6Z-usK">
+                                                    <rect key="frame" x="20" y="12" width="95.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Avg Rating (# matches)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pgJ-Xn-3zb">
+                                                    <rect key="frame" x="233.5" y="14" width="160.5" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mce-77-58h" id="KXM-JY-xib"/>
+                                    <outlet property="delegate" destination="Mce-77-58h" id="HM6-cy-0oS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ord-QM-cgb" firstAttribute="leading" secondItem="Y2e-bE-jca" secondAttribute="leading" id="edI-Xp-3eX"/>
+                            <constraint firstItem="ord-QM-cgb" firstAttribute="top" secondItem="Y2e-bE-jca" secondAttribute="top" id="lW7-BS-uq7"/>
+                            <constraint firstItem="ord-QM-cgb" firstAttribute="trailing" secondItem="Y2e-bE-jca" secondAttribute="trailing" id="ljE-fl-L35"/>
+                            <constraint firstItem="ord-QM-cgb" firstAttribute="bottom" secondItem="Y2e-bE-jca" secondAttribute="bottom" id="s2u-Un-bBb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y2e-bE-jca"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Companionships" id="9u5-iX-7dd">
+                        <barButtonItem key="rightBarButtonItem" title="Filter (0)" id="ffF-LC-75x">
+                            <connections>
+                                <action selector="filterButtonTapped:" destination="Mce-77-58h" id="FQk-ov-DA1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="filterButton" destination="ffF-LC-75x" id="tsa-Mn-M6h"/>
+                        <outlet property="tableView" destination="ord-QM-cgb" id="NTy-eF-XBh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Inm-Qg-I9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3631.884057971015" y="1404.9107142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pdw-Oi-n9Z">

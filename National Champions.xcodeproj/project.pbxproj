@@ -10,6 +10,7 @@
 		0C44D6C42428506100BA96AF /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44D6C32428506100BA96AF /* Match.swift */; };
 		0C5742862468720500013B0A /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5742852468720500013B0A /* PlayerTests.swift */; };
 		0C5742882468725500013B0A /* TestFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5742872468725500013B0A /* TestFixtures.swift */; };
+		0C63D1F124C76375003CFE97 /* PlayerCompanionshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C63D1F024C76375003CFE97 /* PlayerCompanionshipsViewController.swift */; };
 		0C78659C2482F9D9001356FB /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78659B2482F9D9001356FB /* DataWrapper.swift */; };
 		0C9EE907242D9747005737B7 /* MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EE906242D9747005737B7 /* MatchTests.swift */; };
 		0C9EE90F242DA0B9005737B7 /* PlayerMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9EE90E242DA0B9005737B7 /* PlayerMatchesViewController.swift */; };
@@ -44,6 +45,7 @@
 		0C44D6C32428506100BA96AF /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		0C5742852468720500013B0A /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		0C5742872468725500013B0A /* TestFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFixtures.swift; sourceTree = "<group>"; };
+		0C63D1F024C76375003CFE97 /* PlayerCompanionshipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCompanionshipsViewController.swift; sourceTree = "<group>"; };
 		0C78659B2482F9D9001356FB /* DataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWrapper.swift; sourceTree = "<group>"; };
 		0C9EE904242D9747005737B7 /* NationalChampionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NationalChampionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9EE906242D9747005737B7 /* MatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTests.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				0CE7F6222424775D004242C3 /* PlayerTableViewCell.swift */,
 				0C9EE90E242DA0B9005737B7 /* PlayerMatchesViewController.swift */,
 				0CAB23BE2488921800C233D8 /* PlayerChartsViewController.swift */,
+				0C63D1F024C76375003CFE97 /* PlayerCompanionshipsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				0CE75E392423121E006CD68B /* AppDelegate.swift in Sources */,
 				0CE7F62124246B3A004242C3 /* Player.swift in Sources */,
 				0CAEE0132429A4EF00BB60D9 /* MatchTableViewCell.swift in Sources */,
+				0C63D1F124C76375003CFE97 /* PlayerCompanionshipsViewController.swift in Sources */,
 				0CD0C4C224245399000714F1 /* PlayersViewController.swift in Sources */,
 				0C9EE90F242DA0B9005737B7 /* PlayerMatchesViewController.swift in Sources */,
 				0CE75E3B2423121E006CD68B /* SceneDelegate.swift in Sources */,
@@ -557,7 +561,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = G9JN5J3VZ9;
 				INFOPLIST_FILE = "National Champions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -579,7 +583,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 50;
 				DEVELOPMENT_TEAM = G9JN5J3VZ9;
 				INFOPLIST_FILE = "National Champions/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
