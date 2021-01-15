@@ -216,7 +216,7 @@ struct Match: Codable {
 		}
 	}
 		
-    mutating func edit(winners: [Player]? = nil, losers: [Player]? = nil, scores: [Int?], progressCallback: @escaping (Double) -> Void) {
+    mutating func edit(winners: [Player]? = nil, losers: [Player]? = nil, scores: [Int?], progressCallback: ((Double) -> Void)? = nil) {
         self.delete(progressCallback: progressCallback) {
 			//Apply score changes
 			let players = Player.loadAll()
