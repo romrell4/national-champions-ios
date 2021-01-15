@@ -85,4 +85,25 @@ extension UIViewController {
 		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		present(alert, animated: true)
 	}
+    
+    func displayProgressDialog(title: String, message: String? = nil) -> (UIAlertController, UIProgressView) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let progressView = UIProgressView()
+        self.present(alert, animated: false) {
+            // Add the progressbar after alert is shown (and measured)
+            let horizontalMargin: CGFloat = 8.0
+            let bottomMargin: CGFloat = 12.0
+            let barHeight: CGFloat = 2.0
+            let rect = CGRect(
+                x: horizontalMargin,
+                y: alert.view.frame.height - bottomMargin - barHeight,
+                width: alert.view.frame.width - horizontalMargin * 2.0,
+                height: barHeight
+            )
+            progressView.frame = rect
+            progressView.tintColor = UIColor.systemOrange
+            alert.view.addSubview(progressView)
+        }
+        return (alert, progressView)
+    }
 }

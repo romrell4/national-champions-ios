@@ -170,21 +170,37 @@ struct Match: Codable {
 		(Match.loadAll() + [self]).save()
 	}
 	
-	func delete(unwindCompletionHandler: () -> Void = {}) {
+    func delete(progressCallback: ((Double) -> Void)? = nil, unwindCompletionHandler: () -> Void = {}) {
 		//Delete all future matches in descending order
 		let matches = Match.loadAll().filter { $0.matchDate > matchDate }.sorted { (lhs, rhs) -> Bool in
 			lhs.matchDate > rhs.matchDate
 		}
-		matches.forEach { $0.undo() }
+        
+        //The total number of operation that need to be completed
+        // (double the matches in front of us, plus 2 for our own undo and the unwindCompletionHandler)
+        let totalProgress = Double(matches.count) * 2.0 + 2.0
+        var currentProgress = 0.0
+        
+        let step = {
+            currentProgress += 1
+            progressCallback?(currentProgress / totalProgress)
+        }
+        
+        matches.enumerated().forEach { (index, match) in
+            match.undo()
+            step()
+        }
 		
 		//Delete this match
 		self.undo()
+        step()
 		
 		//Allow the caller to specify an action to be done after unwinding
 		unwindCompletionHandler()
+        step()
 		
 		//Re-insert all other future matches, in ascending order
-		matches.reversed().forEach { oldMatch in
+        matches.reversed().enumerated().forEach { (index, oldMatch) in
 			//Reload the players each time, so that their new scores are reflected
 			let players = Player.loadAll()
 			
@@ -196,11 +212,12 @@ struct Match: Codable {
 				losers: oldMatch.losers.map { Player.find($0, playerList: players) },
 				scores: oldMatch.scores
 			).insert()
+            step()
 		}
 	}
 		
-	mutating func edit(winners: [Player]? = nil, losers: [Player]? = nil, scores: [Int?]) {
-		self.delete {
+    mutating func edit(winners: [Player]? = nil, losers: [Player]? = nil, scores: [Int?], progressCallback: ((Double) -> Void)? = nil) {
+        self.delete(progressCallback: progressCallback) {
 			//Apply score changes
 			let players = Player.loadAll()
 			if let winners = winners {
