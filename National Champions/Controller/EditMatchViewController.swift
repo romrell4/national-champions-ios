@@ -170,7 +170,23 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 	@IBAction func saveMatch(_ sender: Any) {
 		if var match = getMatch() {
 			let save = {
-				match.edit(winners: match.winners, losers: match.losers, scores: match.scores)
+                let (alert, progressView) = self.displayProgressDialog(title: "Saving", message: "Your match is being updated. Please do not close out of the app until this process completes, or some of your data may disappear or become corrupt.")
+                
+                DispatchQueue.global(qos: .userInitiated).async {
+                    match.edit(winners: match.winners, losers: match.losers, scores: match.scores) { progress in
+                        DispatchQueue.main.async {
+                            progressView.progress = Float(progress)
+                        }
+                    }
+                    
+                    DispatchQueue.main.async {
+                        alert.dismiss(animated: false)
+                        self.displayAlert(title: "Success", message: "Match was updated successfully") { _ in
+                            self.delegate?.matchEdited()
+                            self.dismiss(animated: true)
+                        }
+                    }
+                }
 			}
 			
 			if !match.wasCompleted {
@@ -182,11 +198,6 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 				present(alert, animated: true)
 			} else {
 				save()
-			}
-			
-			displayAlert(title: "Success", message: "Match was updated successfully") { _ in
-				self.delegate?.matchEdited()
-				self.dismiss(animated: true)
 			}
 		} else {
 			displayAlert(title: "Error", message: "An error occurred while trying to save your match. Please make sure all fields are entered properly.")

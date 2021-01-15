@@ -54,8 +54,20 @@ class MatchHistoryViewController: UIViewController, UITableViewDelegate, UITable
 	func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		return UISwipeActionsConfiguration(actions: [
 			UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
-				self.matches[indexPath.row].delete()
-				self.reloadMatches()
+                self.displayConfirmDialog(title: "Are you sure you'd like to delete this match?") { _ in
+                    let (alert, progressView) = self.displayProgressDialog(title: "Deleting...", message: "Your match is being deleted. Please do not close out of the app until this process completes, or some of your data may disappear or become corrupt.")
+                    DispatchQueue.global(qos: .userInitiated).async {
+                        self.matches[indexPath.row].delete(progressCallback: { progress in
+                            DispatchQueue.main.async {
+                                progressView.progress = Float(progress)
+                            }
+                        })
+                        DispatchQueue.main.async {
+                            alert.dismiss(animated: true)
+                            self.reloadMatches()
+                        }
+                    }
+                }
 			}
 		])
 	}
