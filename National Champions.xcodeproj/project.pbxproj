@@ -568,6 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.romrell4.NationalChampions;
 				PRODUCT_NAME = "National Champs";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -590,6 +591,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.romrell4.NationalChampions;
 				PRODUCT_NAME = "National Champs";
 				PROVISIONING_PROFILE_SPECIFIER = "National Champions Distribution Profile";
