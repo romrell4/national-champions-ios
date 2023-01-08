@@ -2,5 +2,8 @@ Pods
 *.ipa
 *.swp
 *.dSYM.zip
+.DS_Store
+xcuserdata
+xcshareddata
 fastlane/report.xml
 fastlane/test_output
