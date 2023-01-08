@@ -13,6 +13,6 @@ platform :ios do
     #add_git_tag
     #push_to_git_remote
     gym(output_directory: "s3", output_name: "National Champions.ipa", export_method: "ad-hoc")
-    sh("aws", "s3", "sync", "../s3", "s3://national-champions-league", "--profile", "personal", "--acl", "public-read")
+    sh("aws", "s3", "sync", "../s3", "s3://national-champions-league", "--acl", "public-read")
   end
 end
