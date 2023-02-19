@@ -9,7 +9,8 @@
 import Foundation
 
 private let DEFAULTS_KEY = "matches"
-private let GAME_VALUE = 0.06
+private let WINNER_GAME_VALUE = 0.06
+private let LOSER_GAME_VALUE = 0.05
 
 struct Match: Codable {
 	let matchId: String
@@ -285,7 +286,7 @@ struct Match: Codable {
 	private func computeMatchRating(for player: Player, truncated: Bool = false) -> Double {
 		let isWinner = winners.contains(player)
 		let (myTeam, opponents) = isWinner ? (winners, losers) : (losers, winners)
-		let ratingDiff = Double(gameDiff) * (isWinner ? GAME_VALUE : -GAME_VALUE)
+		let ratingDiff = Double(gameDiff) * (isWinner ? WINNER_GAME_VALUE : -LOSER_GAME_VALUE)
 		let teamMatchRating = opponents.map { isSingles ? $0.singlesRating : $0.doublesRating }.sum() + ratingDiff
 		let myRating = teamMatchRating - myTeam.filter { $0 != player }.map { isSingles ? $0.singlesRating : $0.doublesRating }.sum()
 		return truncated ? myRating.trunc() : myRating
