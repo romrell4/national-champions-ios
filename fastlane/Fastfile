@@ -15,12 +15,7 @@ platform :ios do
     gym(
       output_directory: "s3", 
       output_name: "National Champions.ipa", 
-      export_method: "ad-hoc",
-      export_options: {
-        provisioningProfiles: {
-          "com.romrell4.NationalChampionsLeague" => "National Champions League Distribution Profile"
-        }
-      }
+      export_method: "ad-hoc"
     )
     sh("aws", "s3", "sync", "../s3", "s3://national-champions-league", "--acl", "public-read")
   end
